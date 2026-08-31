@@ -1,6 +1,5 @@
 import {
   ArrowRight,
-  BadgeCheck,
   BriefcaseBusiness,
   Compass,
   FileCheck2,
@@ -47,11 +46,6 @@ const services = [
     icon: BriefcaseBusiness,
     title: 'Skill Development',
     text: 'Identify certified, high-demand upskilling programs that directly accelerate your career growth.',
-  },
-  {
-    icon: BadgeCheck,
-    title: 'Application Support',
-    text: 'Review documentation, entrance prerequisites, and statements of purpose with calm expert feedback.',
   },
 ]
 

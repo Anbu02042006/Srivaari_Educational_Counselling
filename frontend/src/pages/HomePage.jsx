@@ -8,7 +8,6 @@ import {
   HeartHandshake,
   Mail,
   MapPin,
-  MessageCircle,
   Phone,
   ShieldCheck,
   Sparkles,
@@ -17,12 +16,14 @@ import {
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import BenefitSlider from '../components/BenefitSlider'
+import EducationSlideshow from '../components/EducationSlideshow'
 import EnquiryForm from '../components/EnquiryForm'
 import EnquiryModal from '../components/EnquiryModal'
 import GallerySection from '../components/GallerySection'
 import SectionHeading from '../components/SectionHeading'
 import StatCounter from '../components/StatCounter'
 import TestimonialSlider from '../components/TestimonialSlider'
+import WhatsAppIcon from '../components/WhatsAppIcon'
 import { contactInfo } from '../data/contactInfo'
 import { benefits } from '../data/homeData'
 
@@ -42,18 +43,7 @@ function HomePage() {
       <section className="home-section home-section--about">
         <div className="container about-split">
           <div className="about-split__media">
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80"
-              alt="Friendly education counselling session"
-              loading="lazy"
-            />
-            <div className="about-split__floating-card">
-              <ShieldCheck size={24} className="about-split__floating-icon" aria-hidden="true" />
-              <div>
-                <strong>100% Honest Guidance</strong>
-                <span>Treating every student like family</span>
-              </div>
-            </div>
+            <EducationSlideshow />
           </div>
 
           <div className="about-split__content">
@@ -175,7 +165,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* 5. PHOTO GALLERY (Curated Preview with View Gallery Link) */}
+      {/* 5. PHOTO GALLERY (Layered PhotoStack Section) */}
       <GallerySection showViewAll={true} />
 
       {/* 6. STUDENT TESTIMONIALS */}
@@ -232,7 +222,7 @@ function HomePage() {
                 className="contact-card contact-card--whatsapp"
               >
                 <span className="contact-card__icon contact-card__icon--whatsapp" aria-hidden="true">
-                  <MessageCircle size={20} />
+                  <WhatsAppIcon size={20} />
                 </span>
                 <div className="contact-card__info">
                   <small className="contact-card__label">WhatsApp</small>

@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react'
 import {
   ArrowRight,
   CheckCircle2,
@@ -64,6 +65,31 @@ const journey = [
 ]
 
 function AboutPage() {
+  const [mobileValueIndex, setMobileValueIndex] = useState(0)
+  const valuesViewportRef = useRef(null)
+
+  const handleValueScroll = () => {
+    if (!valuesViewportRef.current) return
+    const { scrollLeft, offsetWidth } = valuesViewportRef.current
+    if (offsetWidth > 0) {
+      const newIndex = Math.round(scrollLeft / offsetWidth)
+      if (newIndex !== mobileValueIndex && newIndex >= 0 && newIndex < values.length) {
+        setMobileValueIndex(newIndex)
+      }
+    }
+  }
+
+  const scrollToValueIndex = (index) => {
+    if (valuesViewportRef.current) {
+      const width = valuesViewportRef.current.offsetWidth
+      valuesViewportRef.current.scrollTo({
+        left: index * width,
+        behavior: 'smooth',
+      })
+    }
+    setMobileValueIndex(index)
+  }
+
   return (
     <main className="about-page">
       {/* 1. HERO */}
@@ -96,8 +122,8 @@ function AboutPage() {
         <div className="container about-story-grid">
           <div className="about-story-media">
             <img
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80"
-              alt="Education counselling mentors"
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80"
+              alt="Indian education counselling mentors and students"
               loading="lazy"
             />
             <div className="about-story-badge">
@@ -172,7 +198,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* 4. CORE VALUES */}
+      {/* 4. CORE VALUES (Desktop Grid | Mobile Slider) */}
       <section className="home-section">
         <div className="container">
           <SectionHeading
@@ -181,7 +207,8 @@ function AboutPage() {
             description="The four cornerstones of how we counsel, communicate, and support every family."
           />
 
-          <div className="benefit-grid">
+          {/* Desktop Grid (Hidden on Mobile) - 4 Cards in Single Row */}
+          <div className="values-grid values-grid--desktop">
             {values.map((val, index) => (
               <ServiceCard
                 key={val.title}
@@ -193,6 +220,51 @@ function AboutPage() {
                 to="/services"
               />
             ))}
+          </div>
+
+          {/* Mobile Only: Smooth Hardware-Accelerated Swipe Slider */}
+          <div
+            className="benefit-slider benefit-slider--mobile"
+            role="region"
+            aria-label="Core values carousel"
+          >
+            <div
+              ref={valuesViewportRef}
+              className="benefit-slider__viewport"
+              onScroll={handleValueScroll}
+            >
+              <div className="benefit-slider__track">
+                {values.map((val, index) => (
+                  <div key={val.title} className="benefit-slider__slide">
+                    <ServiceCard
+                      title={val.title}
+                      description={val.text}
+                      icon={val.icon}
+                      number={`0${index + 1}`}
+                      actionLabel="Learn more"
+                      to="/services"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile Centered Pagination Indicator Dots */}
+            <div className="benefit-slider__controls">
+              <div className="benefit-slider__dots" role="tablist" aria-label="Core values slides">
+                {values.map((val, index) => (
+                  <button
+                    key={val.title}
+                    type="button"
+                    role="tab"
+                    aria-selected={mobileValueIndex === index}
+                    aria-label={`Go to value ${index + 1} (${val.title})`}
+                    className={`benefit-slider__dot ${mobileValueIndex === index ? 'is-active' : ''}`}
+                    onClick={() => scrollToValueIndex(index)}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

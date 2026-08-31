@@ -10,9 +10,12 @@ function ServiceCard({
   to,
   onClick,
   className = '',
+  isFeatured = true,
 }) {
   const content = (
-    <article className={`service-card ${className}`.trim()}>
+    <article
+      className={`service-card ${isFeatured ? 'service-card--featured' : ''} ${className}`.trim()}
+    >
       <div className="service-card__top">
         <span className="service-card__icon" aria-hidden="true">
           {Icon && <Icon size={22} />}
@@ -22,8 +25,8 @@ function ServiceCard({
       <h3 className="service-card__title">{title}</h3>
       <p className="service-card__desc">{description}</p>
       <div className="service-card__bottom">
-        <span className="text-link">
-          {actionLabel}
+        <span className={`text-link ${isFeatured ? 'text-link--light' : ''}`}>
+          <span>{actionLabel}</span>
           <ArrowUpRight size={17} aria-hidden="true" />
         </span>
       </div>
@@ -40,7 +43,18 @@ function ServiceCard({
 
   if (onClick) {
     return (
-      <div className="card-link" onClick={onClick} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(e); } }}>
+      <div
+        className="card-link"
+        onClick={onClick}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            onClick(e)
+          }
+        }}
+      >
         {content}
       </div>
     )

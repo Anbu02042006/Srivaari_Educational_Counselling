@@ -1,7 +1,8 @@
-import { ArrowUp, Clock3, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
+import { Clock3, Mail, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { contactInfo } from '../data/contactInfo'
 import Logo from './Logo'
+import WhatsAppIcon from './WhatsAppIcon'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -26,9 +27,9 @@ function Footer() {
           <h3 className="site-footer__heading">Explore</h3>
           <ul className="site-footer__nav-list">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
             <li><Link to="/services">Services</Link></li>
             <li><Link to="/gallery">Photo Gallery</Link></li>
+            <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
@@ -49,9 +50,9 @@ function Footer() {
               href={contactInfo.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="site-footer__contact-item"
+              className="site-footer__contact-link"
             >
-              <MessageCircle size={16} aria-hidden="true" />
+              <WhatsAppIcon size={16} aria-hidden="true" />
               <span>WhatsApp Advisory</span>
             </a>
             <div className="site-footer__contact-item">
@@ -71,10 +72,6 @@ function Footer() {
         <p className="site-footer__copyright">
           © {currentYear} Sri Vaari Educational Counselling. All rights reserved. Built for student success.
         </p>
-        <a href="#top" className="site-footer__back-to-top" aria-label="Back to top of page">
-          <span>Back to top</span>
-          <ArrowUp size={15} aria-hidden="true" />
-        </a>
       </div>
     </footer>
   )

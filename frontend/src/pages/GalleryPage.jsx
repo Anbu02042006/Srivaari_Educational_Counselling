@@ -22,7 +22,7 @@ function GalleryPage() {
       </header>
 
       {/* 2. GALLERY SECTION WITH FILTERS & LIGHTBOX */}
-      <GallerySection />
+      <GallerySection showHeading={false} />
 
       {/* 3. CTA SECTION */}
       <CTASection

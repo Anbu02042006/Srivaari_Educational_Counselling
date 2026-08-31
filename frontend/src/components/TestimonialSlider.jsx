@@ -1,55 +1,31 @@
 import { Quote, Star } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { testimonials } from '../data/homeData'
 
 function TestimonialSlider({ className = '' }) {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const handlePrev = () => {
-    setActiveIndex((curr) => (curr > 0 ? curr - 1 : testimonials.length - 1))
-  }
+  const [mobileActiveIndex, setMobileActiveIndex] = useState(0)
+  const viewportRef = useRef(null)
 
-  const handleNext = () => {
-    setActiveIndex((curr) => (curr < testimonials.length - 1 ? curr + 1 : 0))
-  }
-
-  // Mobile smooth touch gesture
-  const [dragOffset, setDragOffset] = useState(0)
-  const [isDragging, setIsDragging] = useState(false)
-  const touchStartX = useRef(0)
-  const touchCurrentX = useRef(0)
-
-  const handleTouchStart = (e) => {
-    setIsDragging(true)
-    touchStartX.current = e.touches ? e.touches[0].clientX : e.clientX
-    touchCurrentX.current = touchStartX.current
-  }
-
-  const handleTouchMove = (e) => {
-    if (!isDragging) return
-    touchCurrentX.current = e.touches ? e.touches[0].clientX : e.clientX
-    const diff = touchCurrentX.current - touchStartX.current
-    if (
-      (activeIndex === 0 && diff > 0) ||
-      (activeIndex === testimonials.length - 1 && diff < 0)
-    ) {
-      setDragOffset(diff * 0.3)
-    } else {
-      setDragOffset(diff)
+  const handleScroll = () => {
+    if (!viewportRef.current) return
+    const { scrollLeft, offsetWidth } = viewportRef.current
+    if (offsetWidth > 0) {
+      const newIndex = Math.round(scrollLeft / offsetWidth)
+      if (newIndex !== mobileActiveIndex && newIndex >= 0 && newIndex < testimonials.length) {
+        setMobileActiveIndex(newIndex)
+      }
     }
   }
 
-  const handleTouchEnd = () => {
-    if (!isDragging) return
-    setIsDragging(false)
-    const diff = touchCurrentX.current - touchStartX.current
-    const threshold = 35
-
-    if (diff < -threshold && activeIndex < testimonials.length - 1) {
-      setActiveIndex((curr) => curr + 1)
-    } else if (diff > threshold && activeIndex > 0) {
-      setActiveIndex((curr) => curr - 1)
+  const scrollToIndex = (index) => {
+    if (viewportRef.current) {
+      const width = viewportRef.current.offsetWidth
+      viewportRef.current.scrollTo({
+        left: index * width,
+        behavior: 'smooth',
+      })
     }
-    setDragOffset(0)
+    setMobileActiveIndex(index)
   }
 
   return (
@@ -84,28 +60,18 @@ function TestimonialSlider({ className = '' }) {
         ))}
       </div>
 
-      {/* 2. Mobile View: Slideshow with smooth gesture drag */}
+      {/* 2. Mobile View: Smooth Hardware-Accelerated Slideshow matching ServicesPage */}
       <div
         className="testimonial-slider testimonial-slider--mobile"
         role="region"
         aria-label="Student testimonials carousel"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        onMouseDown={handleTouchStart}
-        onMouseMove={handleTouchMove}
-        onMouseUp={handleTouchEnd}
-        onMouseLeave={handleTouchEnd}
-        style={{ cursor: isDragging ? 'grabbing' : 'grab', userSelect: 'none' }}
       >
-        <div className="testimonial-slider__viewport">
-          <div
-            className="testimonial-slider__track"
-            style={{
-              transform: `translateX(calc(-${activeIndex * 100}% + ${dragOffset}px))`,
-              transition: isDragging ? 'none' : 'transform 0.42s cubic-bezier(0.22, 1, 0.36, 1)',
-            }}
-          >
+        <div
+          ref={viewportRef}
+          className="testimonial-slider__viewport"
+          onScroll={handleScroll}
+        >
+          <div className="testimonial-slider__track">
             {testimonials.map((item) => (
               <div key={item.name} className="testimonial-slider__slide">
                 <div className="testimonial-slider__card">
@@ -145,10 +111,10 @@ function TestimonialSlider({ className = '' }) {
                 key={item.name}
                 type="button"
                 role="tab"
-                aria-selected={activeIndex === index}
+                aria-selected={mobileActiveIndex === index}
                 aria-label={`Go to slide ${index + 1} (${item.name})`}
-                className={`testimonial-slider__dot ${activeIndex === index ? 'is-active' : ''}`}
-                onClick={() => setActiveIndex(index)}
+                className={`testimonial-slider__dot ${mobileActiveIndex === index ? 'is-active' : ''}`}
+                onClick={() => scrollToIndex(index)}
               />
             ))}
           </div>

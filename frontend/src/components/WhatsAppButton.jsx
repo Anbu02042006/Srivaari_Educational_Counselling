@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react'
+import WhatsAppIcon from './WhatsAppIcon'
 import { contactInfo } from '../data/contactInfo'
 
 function WhatsAppButton() {
@@ -12,7 +12,7 @@ function WhatsAppButton() {
         aria-label="Chat with education counsellor on WhatsApp (opens in new tab)"
       >
         <div className="whatsapp-button__icon-wrapper">
-          <MessageCircle size={26} aria-hidden="true" />
+          <WhatsAppIcon size={24} aria-hidden="true" />
         </div>
         <span className="whatsapp-button__tooltip">Chat with us</span>
       </a>

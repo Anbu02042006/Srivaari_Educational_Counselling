@@ -13,8 +13,15 @@ function LightboxModal({
   onPrev,
   onNext,
 }) {
-  const touchStartX = useRef(null)
-  const touchEndX = useRef(null)
+  const viewportRef = useRef(null)
+
+  // Synchronize scroll position to current index
+  useEffect(() => {
+    if (!isOpen || !viewportRef.current) return
+    const el = viewportRef.current
+    const width = el.offsetWidth
+    el.scrollTo({ left: currentIndex * width, behavior: 'auto' })
+  }, [isOpen, currentIndex])
 
   // Keyboard navigation & body scroll lock
   useEffect(() => {
@@ -41,30 +48,19 @@ function LightboxModal({
 
   if (!isOpen || images.length === 0) return null
 
-  const currentImage = images[currentIndex] || images[0]
-
-  // Touch swipe handling
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX
-  }
-
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX
-  }
-
-  const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return
-    const diff = touchStartX.current - touchEndX.current
-    const minSwipeDistance = 40
-
-    if (diff > minSwipeDistance) {
-      onNext?.()
-    } else if (diff < -minSwipeDistance) {
-      onPrev?.()
+  const handleScroll = () => {
+    if (!viewportRef.current) return
+    const { scrollLeft, offsetWidth } = viewportRef.current
+    if (offsetWidth > 0) {
+      const newIndex = Math.round(scrollLeft / offsetWidth)
+      if (newIndex !== currentIndex && newIndex >= 0 && newIndex < images.length) {
+        if (newIndex > currentIndex) {
+          onNext?.()
+        } else if (newIndex < currentIndex) {
+          onPrev?.()
+        }
+      }
     }
-
-    touchStartX.current = null
-    touchEndX.current = null
   }
 
   return (
@@ -77,54 +73,78 @@ function LightboxModal({
     >
       <div className="lightbox-backdrop" aria-hidden="true" />
 
+      {/* Floating Close Button (X icon) */}
+      <button
+        type="button"
+        className="lightbox-btn lightbox-btn--close"
+        onClick={(e) => {
+          e.stopPropagation()
+          onClose?.()
+        }}
+        aria-label="Close image preview"
+      >
+        <X size={24} aria-hidden="true" />
+      </button>
+
+      {/* Desktop Previous Button (Left side of screen) */}
+      {images.length > 1 && (
+        <button
+          type="button"
+          className="lightbox-btn lightbox-btn--nav lightbox-btn--prev"
+          onClick={(e) => {
+            e.stopPropagation()
+            onPrev?.()
+          }}
+          aria-label="Previous image"
+        >
+          <ChevronLeft size={30} aria-hidden="true" />
+        </button>
+      )}
+
+      {/* Desktop Next Button (Right side of screen) */}
+      {images.length > 1 && (
+        <button
+          type="button"
+          className="lightbox-btn lightbox-btn--nav lightbox-btn--next"
+          onClick={(e) => {
+            e.stopPropagation()
+            onNext?.()
+          }}
+          aria-label="Next image"
+        >
+          <ChevronRight size={30} aria-hidden="true" />
+        </button>
+      )}
+
+      {/* Touch-Swipeable / Scrollable Slide Viewport */}
       <div
         className="lightbox-container"
         onClick={(e) => e.stopPropagation()}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
       >
-        {/* Floating Close Button Only */}
-        <button
-          type="button"
-          className="lightbox-btn lightbox-btn--close"
-          onClick={onClose}
-          aria-label="Close image preview"
+        <div
+          ref={viewportRef}
+          className="lightbox-viewport"
+          onScroll={handleScroll}
         >
-          <X size={24} aria-hidden="true" />
-        </button>
-
-        {/* Pure Image Display (No text overlays) */}
-        <div className="lightbox-stage">
-          {images.length > 1 && (
-            <button
-              type="button"
-              className="lightbox-btn lightbox-btn--nav lightbox-btn--prev"
-              onClick={onPrev}
-              aria-label="Previous image"
-            >
-              <ChevronLeft size={28} aria-hidden="true" />
-            </button>
-          )}
-
-          <div className="lightbox-media-wrapper">
-            <img
-              src={currentImage.src || currentImage.image || currentImage}
-              alt={currentImage.alt || currentImage.title || `Gallery photo ${currentIndex + 1}`}
-              className="lightbox-image"
-            />
+          <div className="lightbox-track">
+            {images.map((img, idx) => (
+              <div key={img.id || idx} className="lightbox-slide">
+                <div className="lightbox-media-wrapper">
+                  <img
+                    src={img.src || img.image || img}
+                    alt={img.alt || img.title || `Gallery photo ${idx + 1}`}
+                    className="lightbox-image"
+                    loading={Math.abs(idx - currentIndex) <= 1 ? 'eager' : 'lazy'}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {images.length > 1 && (
-            <button
-              type="button"
-              className="lightbox-btn lightbox-btn--nav lightbox-btn--next"
-              onClick={onNext}
-              aria-label="Next image"
-            >
-              <ChevronRight size={28} aria-hidden="true" />
-            </button>
-          )}
+        {/* Counter indicator */}
+        <div className="lightbox-counter">
+          <span>{currentIndex + 1}</span> / <span>{images.length}</span>
         </div>
       </div>
     </div>

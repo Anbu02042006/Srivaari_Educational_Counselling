@@ -2,12 +2,12 @@ import {
   Clock3,
   Mail,
   MapPin,
-  MessageCircle,
   Phone,
   Sparkles,
 } from 'lucide-react'
 import EnquiryForm from '../components/EnquiryForm'
 import SectionHeading from '../components/SectionHeading'
+import WhatsAppIcon from '../components/WhatsAppIcon'
 import { contactInfo } from '../data/contactInfo'
 
 function ContactPage() {
@@ -69,7 +69,7 @@ function ContactPage() {
                 className="contact-card contact-card--whatsapp"
               >
                 <span className="contact-card__icon contact-card__icon--whatsapp" aria-hidden="true">
-                  <MessageCircle size={20} />
+                  <WhatsAppIcon size={20} />
                 </span>
                 <div className="contact-card__info">
                   <small className="contact-card__label">WhatsApp Chat</small>

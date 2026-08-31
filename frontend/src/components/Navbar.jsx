@@ -1,14 +1,13 @@
-import { ArrowRight, Menu, MessageCircle, Phone, PhoneCall, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { contactInfo } from '../data/contactInfo'
 import Logo from './Logo'
 
 const navRoutes = [
   { to: '/', label: 'Home', end: true },
-  { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
   { to: '/gallery', label: 'Gallery' },
+  { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -16,32 +15,20 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
 
-  const closeMenu = () => setIsOpen(false)
-  const toggleMenu = () => setIsOpen((prev) => !prev)
-
-  // Close mobile menu on route change
+  // Close menu on route change
   useEffect(() => {
     setIsOpen(false)
   }, [location.pathname])
 
-  // Handle Escape key to close mobile menu & lock body scrolling
+  // Lock body scroll when mobile menu is open
   useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape' && isOpen) {
-        closeMenu()
-      }
-    }
-
     if (isOpen) {
       document.body.style.overflow = 'hidden'
-      window.addEventListener('keydown', handleKeyDown)
     } else {
       document.body.style.overflow = ''
     }
-
     return () => {
       document.body.style.overflow = ''
-      window.removeEventListener('keydown', handleKeyDown)
     }
   }, [isOpen])
 
@@ -49,7 +36,7 @@ function Navbar() {
     <header className="site-header">
       <div className="navbar container" aria-label="Primary navigation">
         {/* Left: Logo */}
-        <Logo onNavigate={closeMenu} />
+        <Logo />
 
         {/* Center: Desktop Navigation Links */}
         <nav className="nav__desktop-links" aria-label="Desktop menu">
@@ -67,98 +54,81 @@ function Navbar() {
           ))}
         </nav>
 
-        {/* Right: Desktop CTA & Mobile Hamburger */}
-        <div className="nav__actions">
+        {/* Right: Enquire CTA Action (Desktop Only) */}
+        <div className="nav__actions nav__actions--desktop">
           <Link className="button button--primary nav__enquire" to="/contact">
             <span>Enquire Now</span>
-            <ArrowRight size={16} aria-hidden="true" />
           </Link>
-
-          <button
-            className="nav__toggle"
-            type="button"
-            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            aria-expanded={isOpen}
-            aria-controls="mobile-navigation"
-            onClick={toggleMenu}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
+
+        {/* Right: Hamburger Menu Toggle Button (Mobile Only) */}
+        <button
+          type="button"
+          className="nav__hamburger-btn"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+        >
+          {isOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+        </button>
       </div>
 
-      {/* Mobile Drawer Overlay Backdrop */}
-      <div
-        className={`mobile-nav-backdrop ${isOpen ? 'mobile-nav-backdrop--visible' : ''}`}
-        onClick={closeMenu}
-        aria-hidden={!isOpen}
-      />
+      {/* Mobile Drawer Navigation Menu Backdrop */}
+      {isOpen && (
+        <div
+          className="mobile-drawer-backdrop"
+          onClick={() => setIsOpen(false)}
+          aria-hidden="true"
+        />
+      )}
 
-      {/* Mobile Navigation Drawer */}
+      {/* Mobile Drawer Slide-over Panel (Half Screen) */}
       <div
-        id="mobile-navigation"
-        className={`mobile-nav ${isOpen ? 'mobile-nav--open' : ''}`}
-        aria-hidden={!isOpen}
+        className={`mobile-drawer ${isOpen ? 'mobile-drawer--open' : ''}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation menu"
       >
-        <div className="mobile-nav__container">
-          <div className="mobile-nav__header">
-            <Logo onNavigate={closeMenu} />
+        <div className="mobile-drawer__content">
+          <div className="mobile-drawer__header">
+            <Logo onNavigate={() => setIsOpen(false)} />
             <button
-              className="mobile-nav__close-btn"
               type="button"
-              onClick={closeMenu}
+              className="mobile-drawer__close-btn"
+              onClick={() => setIsOpen(false)}
               aria-label="Close menu"
             >
-              <X size={20} />
+              <X size={18} aria-hidden="true" />
             </button>
           </div>
 
-          <nav className="mobile-nav__links" aria-label="Mobile menu">
+          <nav className="mobile-drawer__nav" aria-label="Mobile menu links">
             {navRoutes.map(({ to, label, end }) => (
               <NavLink
                 key={to}
                 to={to}
                 end={end}
-                onClick={closeMenu}
+                onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `mobile-nav__link ${isActive ? 'mobile-nav__link--active' : ''}`.trim()
+                  `mobile-drawer__link ${isActive ? 'mobile-drawer__link--active' : ''}`.trim()
                 }
               >
-                <span>{label}</span>
+                {label}
               </NavLink>
             ))}
           </nav>
 
-          <div className="mobile-nav__footer">
+          <div className="mobile-drawer__footer">
             <Link
-              className="button button--primary mobile-nav__cta"
               to="/contact"
-              onClick={closeMenu}
+              className="button button--primary mobile-drawer__cta"
+              onClick={() => setIsOpen(false)}
             >
-              <PhoneCall size={17} aria-hidden="true" />
               <span>Enquire Now</span>
             </Link>
-
-            <div className="mobile-nav__quick-actions">
-              <a
-                href={contactInfo.phoneHref}
-                className="mobile-nav__quick-btn"
-                aria-label="Call support desk"
-              >
-                <Phone size={15} aria-hidden="true" />
-                <span>Call Us</span>
-              </a>
-              <a
-                href={contactInfo.whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="mobile-nav__quick-btn mobile-nav__quick-btn--whatsapp"
-                aria-label="WhatsApp quick chat"
-              >
-                <MessageCircle size={15} aria-hidden="true" />
-                <span>WhatsApp</span>
-              </a>
-            </div>
+            <p className="mobile-drawer__helpline">
+              Call <strong>+91 94432 77764</strong>
+            </p>
           </div>
         </div>
       </div>
