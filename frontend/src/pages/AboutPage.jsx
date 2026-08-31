@@ -48,7 +48,7 @@ const stats = [
 const journey = [
   {
     year: '2021',
-    title: 'Pathway Begins',
+    title: 'Sri Vaari Begins',
     text: 'Founded with a small, dedicated team focused entirely on student-first education counselling.',
   },
   {
@@ -71,7 +71,7 @@ function AboutPage() {
         <div className="container">
           <span className="eyebrow page-hero__eyebrow">
             <Sparkles size={14} aria-hidden="true" />
-            About Pathway Education
+            About Sri Vaari
           </span>
           <h1 className="page-hero__title">
             Education Guidance With a Human Point of View.
@@ -80,7 +80,7 @@ function AboutPage() {
             We help students turn possibility into a thoughtful, practical plan for what comes next — combining academic insight with genuine empathy.
           </p>
 
-          <div className="hero__actions" style={{ marginTop: 'var(--space-6)' }}>
+          <div className="hero__actions" style={{ marginTop: 'var(--space-4)' }}>
             <Link className="button button--primary" to="/contact">
               <span>Book Free Counselling</span>
               <ArrowRight size={17} aria-hidden="true" />
@@ -114,7 +114,7 @@ function AboutPage() {
             <SectionHeading
               eyebrow="Our Story"
               title="A Clearer, Calmer Way to Choose."
-              description="Pathway was founded around a simple belief: students make better career decisions when they have enough context, kind support, and room to ask honest questions."
+              description="Sri Vaari was founded around a simple belief: students make better career decisions when they have enough context, kind support, and room to ask honest questions."
             />
 
             <p className="about-story-text">
@@ -228,7 +228,7 @@ function AboutPage() {
           <SectionHeading
             eyebrow="Our Journey"
             title="Built One Helpful Step at a Time."
-            description="A quick look at how Pathway has evolved to serve students better each year."
+            description="A quick look at how Sri Vaari has evolved to serve students better each year."
             align="center"
           />
 

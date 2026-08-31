@@ -1,7 +1,6 @@
 import {
   ChevronLeft,
   ChevronRight,
-  Maximize2,
   X,
 } from 'lucide-react'
 import { useEffect, useRef } from 'react'
@@ -56,13 +55,11 @@ function LightboxModal({
   const handleTouchEnd = () => {
     if (!touchStartX.current || !touchEndX.current) return
     const diff = touchStartX.current - touchEndX.current
-    const minSwipeDistance = 50
+    const minSwipeDistance = 40
 
     if (diff > minSwipeDistance) {
-      // Swiped left -> next
       onNext?.()
     } else if (diff < -minSwipeDistance) {
-      // Swiped right -> prev
       onPrev?.()
     }
 
@@ -75,7 +72,7 @@ function LightboxModal({
       className="lightbox-overlay"
       role="dialog"
       aria-modal="true"
-      aria-label="Image gallery lightbox"
+      aria-label="Image preview"
       onClick={onClose}
     >
       <div className="lightbox-backdrop" aria-hidden="true" />
@@ -87,26 +84,17 @@ function LightboxModal({
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Top bar with counter and close button */}
-        <div className="lightbox-topbar">
-          <div className="lightbox-counter">
-            <span>{currentIndex + 1} / {images.length}</span>
-            {currentImage.caption && (
-              <span className="lightbox-caption">{currentImage.caption}</span>
-            )}
-          </div>
+        {/* Floating Close Button Only */}
+        <button
+          type="button"
+          className="lightbox-btn lightbox-btn--close"
+          onClick={onClose}
+          aria-label="Close image preview"
+        >
+          <X size={24} aria-hidden="true" />
+        </button>
 
-          <button
-            type="button"
-            className="lightbox-btn lightbox-btn--close"
-            onClick={onClose}
-            aria-label="Close image gallery"
-          >
-            <X size={22} aria-hidden="true" />
-          </button>
-        </div>
-
-        {/* Center image view */}
+        {/* Pure Image Display (No text overlays) */}
         <div className="lightbox-stage">
           {images.length > 1 && (
             <button
@@ -125,12 +113,6 @@ function LightboxModal({
               alt={currentImage.alt || currentImage.title || `Gallery photo ${currentIndex + 1}`}
               className="lightbox-image"
             />
-            {currentImage.title && (
-              <div className="lightbox-title-badge">
-                <strong>{currentImage.title}</strong>
-                {currentImage.category && <span>{currentImage.category}</span>}
-              </div>
-            )}
           </div>
 
           {images.length > 1 && (

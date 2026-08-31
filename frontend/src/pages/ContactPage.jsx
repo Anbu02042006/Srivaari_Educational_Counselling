@@ -18,7 +18,7 @@ function ContactPage() {
         <div className="container">
           <span className="eyebrow page-hero__eyebrow">
             <Sparkles size={14} aria-hidden="true" />
-            Contact Pathway Education
+            Contact Sri Vaari
           </span>
           <h1 className="page-hero__title">Let’s Start a Conversation.</h1>
           <p className="page-hero__lead">
@@ -105,7 +105,7 @@ function ContactPage() {
               <div className="map-placeholder__icon-wrapper">
                 <MapPin size={28} aria-hidden="true" />
               </div>
-              <strong className="map-placeholder__title">Pathway Advisory Center</strong>
+              <strong className="map-placeholder__title">Sri Vaari Advisory Center</strong>
               <span className="map-placeholder__address">{contactInfo.officeLocation}</span>
               <span className="map-placeholder__note">In-person consultations available by appointment</span>
             </div>

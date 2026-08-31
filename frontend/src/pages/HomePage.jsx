@@ -15,11 +15,11 @@ import {
 } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import BenefitSlider from '../components/BenefitSlider'
 import EnquiryForm from '../components/EnquiryForm'
 import EnquiryModal from '../components/EnquiryModal'
 import GallerySection from '../components/GallerySection'
 import SectionHeading from '../components/SectionHeading'
-import ServiceCard from '../components/ServiceCard'
 import StatCounter from '../components/StatCounter'
 import TestimonialSlider from '../components/TestimonialSlider'
 import { contactInfo } from '../data/contactInfo'
@@ -37,7 +37,57 @@ function HomePage() {
 
   return (
     <main className="home-page">
-      {/* 1. HERO SECTION */}
+      {/* 1. ABOUT PATHWAY / WHO WE ARE (Below Navigation Bar) */}
+      <section className="home-section home-section--about">
+        <div className="container about-split">
+          <div className="about-split__media">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80"
+              alt="Education counselling session"
+              loading="lazy"
+            />
+            <div className="about-split__floating-card">
+              <ShieldCheck size={24} className="about-split__floating-icon" aria-hidden="true" />
+              <div>
+                <strong>100% Unbiased Advice</strong>
+                <span>Matching students to verified programs</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-split__content">
+            <SectionHeading
+              eyebrow="Who We Are"
+              title="Personalized Guidance Built Around Your Ambition."
+              description="Sri Vaari Educational Counselling is dedicated to helping students navigate the complex world of higher education with clarity, confidence, and human-first counselling."
+            />
+
+            <div className="about-split__points">
+              <div className="about-split__point">
+                <CheckCircle2 size={18} aria-hidden="true" />
+                <span>Customised course recommendations aligned with your long-term goals.</span>
+              </div>
+              <div className="about-split__point">
+                <CheckCircle2 size={18} aria-hidden="true" />
+                <span>Direct admission support and transparent timeline management.</span>
+              </div>
+              <div className="about-split__point">
+                <CheckCircle2 size={18} aria-hidden="true" />
+                <span>Verified partnerships with recognized autonomous colleges and universities.</span>
+              </div>
+            </div>
+
+            <div className="about-split__action">
+              <Link className="button button--primary" to="/about">
+                <span>Learn More About Us</span>
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. HERO / INTRODUCTION */}
       <section className="hero">
         <div className="container hero__grid">
           <div className="hero__content">
@@ -97,7 +147,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* 2. IMPACT STATISTICS */}
+      {/* 3. IMPACT STATISTICS */}
       <section className="stats-section" aria-label="Key statistics">
         <div className="container stats-grid">
           {statsData.map(({ value, label, icon: Icon }) => (
@@ -112,78 +162,16 @@ function HomePage() {
         </div>
       </section>
 
-      {/* 3. ABOUT PATHWAY (Concise Editorial Preview) */}
-      <section className="home-section home-section--about">
-        <div className="container about-split">
-          <div className="about-split__media">
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80"
-              alt="Education counselling session"
-              loading="lazy"
-            />
-            <div className="about-split__floating-card">
-              <ShieldCheck size={24} className="about-split__floating-icon" aria-hidden="true" />
-              <div>
-                <strong>100% Unbiased Advice</strong>
-                <span>Matching students to verified programs</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="about-split__content">
-            <SectionHeading
-              eyebrow="Who We Are"
-              title="Personalized Guidance Built Around Your Ambition."
-              description="Pathway Education is dedicated to helping students navigate the complex world of higher education with clarity, confidence, and human-first counselling."
-            />
-
-            <div className="about-split__points">
-              <div className="about-split__point">
-                <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Customised course recommendations aligned with your long-term goals.</span>
-              </div>
-              <div className="about-split__point">
-                <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Direct admission support and transparent timeline management.</span>
-              </div>
-              <div className="about-split__point">
-                <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Verified partnerships with recognized autonomous colleges and universities.</span>
-              </div>
-            </div>
-
-            <div className="about-split__action">
-              <Link className="button button--primary" to="/about">
-                <span>Learn More About Us</span>
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. OUR SERVICES / WHY CHOOSE US */}
+      {/* 4. OUR SERVICES / WHY CHOOSE US (Slideshow) */}
       <section className="home-section home-section--tint">
         <div className="container">
           <SectionHeading
-            eyebrow="Why Choose Pathway"
+            eyebrow="Why Choose Sri Vaari"
             title="Guidance Designed Around Your Success."
             description="We eliminate confusion and replace guesswork with structured, student-first consultancy services."
           />
 
-          <div className="benefit-grid">
-            {benefits.map((benefit, index) => (
-              <ServiceCard
-                key={benefit.title}
-                title={benefit.title}
-                description={benefit.text}
-                icon={benefit.icon}
-                number={`0${index + 1}`}
-                actionLabel="Learn more"
-                to="/services"
-              />
-            ))}
-          </div>
+          <BenefitSlider />
         </div>
       </section>
 

@@ -102,7 +102,7 @@ function Navbar() {
       >
         <div className="mobile-nav__container">
           <div className="mobile-nav__header">
-            <span className="mobile-nav__title">Navigation Menu</span>
+            <Logo onNavigate={closeMenu} />
             <button
               className="mobile-nav__close-btn"
               type="button"
@@ -125,7 +125,6 @@ function Navbar() {
                 }
               >
                 <span>{label}</span>
-                <ArrowRight size={16} className="mobile-nav__arrow" aria-hidden="true" />
               </NavLink>
             ))}
           </nav>

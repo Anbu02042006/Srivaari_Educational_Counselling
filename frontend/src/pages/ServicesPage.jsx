@@ -74,7 +74,7 @@ function ServicesPage() {
             Choose the guidance you need today; our counsellors will make the path ahead clear, structured, and achievable.
           </p>
 
-          <div className="hero__actions" style={{ marginTop: 'var(--space-6)' }}>
+          <div className="hero__actions" style={{ marginTop: 'var(--space-4)' }}>
             <button
               className="button button--primary"
               type="button"

@@ -45,7 +45,7 @@ export const testimonials = [
   { name: 'Aarav N.', detail: 'BBA student · Chennai', quote: 'The guidance was clear from the first call. I found a college that genuinely fits my goals.' },
   { name: 'Meera S.', detail: 'Data Analytics learner · Bengaluru', quote: 'I was overwhelmed by online options. My counsellor made the decision feel focused and easy.' },
   { name: 'Riya P.', detail: 'Psychology student · Coimbatore', quote: 'Every question was handled patiently, including the practical parts of my application.' },
-  { name: 'Karthik R.', detail: 'Design student · Hyderabad', quote: 'Pathway helped me see a route into design that I had not considered before.' },
+  { name: 'Karthik R.', detail: 'Design student · Hyderabad', quote: 'Sri Vaari helped me see a route into design that I had not considered before.' },
 ]
 
 export const institutionNames = ['Ridgeway University', 'Nexa Institute', 'Aster College', 'Crescent School', 'Summit Academy', 'Orion University', 'Lumen College', 'Evergreen Institute']

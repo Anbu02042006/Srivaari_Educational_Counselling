@@ -69,7 +69,7 @@ function Footer() {
       {/* Bottom Bar */}
       <div className="container site-footer__bottom">
         <p className="site-footer__copyright">
-          © {currentYear} Pathway Education. All rights reserved. Built for student success.
+          © {currentYear} Sri Vaari Educational Counselling. All rights reserved. Built for student success.
         </p>
         <a href="#top" className="site-footer__back-to-top" aria-label="Back to top of page">
           <span>Back to top</span>

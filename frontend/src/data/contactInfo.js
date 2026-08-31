@@ -1,26 +1,23 @@
 /**
  * Global Contact & Organization Information
- *
- * NOTE FOR PRODUCTION:
- * Replace these placeholder values with verified organization credentials.
- * Kept as standard placeholders to prevent unverified production claims.
+ * Sri Vaari Educational Counselling
  */
 
 export const contactInfo = {
-  // TODO: Replace with official support phone number
-  phoneDisplay: '+91 00000 00000',
-  phoneHref: 'tel:+910000000000',
+  // Official support phone number
+  phoneDisplay: '+91 93429 99268',
+  phoneHref: 'tel:+919342999268',
 
-  // TODO: Replace with official support email
-  email: 'hello@pathway.education',
-  emailHref: 'mailto:hello@pathway.education',
+  // Official support email
+  email: 'srivaarieducational@gmail.com',
+  emailHref: 'mailto:srivaarieducational@gmail.com',
 
-  // TODO: Replace with official WhatsApp business number
-  whatsappNumber: '910000000000',
-  whatsappUrl: 'https://wa.me/910000000000?text=Hello%2C%20I%20would%20like%20education%20guidance.',
+  // Official WhatsApp business contact
+  whatsappNumber: '919342999268',
+  whatsappUrl: 'https://wa.me/919342999268?text=Hello%2C%20I%20would%20like%20education%20counselling%20guidance.',
 
-  // TODO: Replace with registered office address
-  officeLocation: 'Education District, India',
+  // Office Location
+  officeLocation: 'Tamil Nadu, India',
 
   // Office working hours
   officeHours: 'Mon–Sat, 9:30 AM–6:30 PM',

@@ -1,4 +1,3 @@
-import { GraduationCap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 function Logo({ onNavigate, isDark = false }) {
@@ -7,14 +6,16 @@ function Logo({ onNavigate, isDark = false }) {
       className={`brand ${isDark ? 'brand--dark' : ''}`.trim()} 
       to="/" 
       onClick={onNavigate} 
-      aria-label="Pathway Education home"
+      aria-label="Sri Vaari home"
     >
-      <span className="brand__mark" aria-hidden="true">
-        <GraduationCap size={20} strokeWidth={2.25} />
-      </span>
-      <span className="brand__text">
-        Pathway<span className="brand__sub">Education</span>
-      </span>
+      <img
+        src="/logo.png"
+        alt="Sri Vaari Logo"
+        className="brand__img"
+        width="44"
+        height="44"
+      />
+      <span className="brand__text">Sri Vaari</span>
     </Link>
   )
 }
