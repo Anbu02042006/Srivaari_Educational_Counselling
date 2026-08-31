@@ -7,6 +7,7 @@ import {
   GraduationCap,
   HeartHandshake,
   Mail,
+  MapPin,
   MessageCircle,
   Phone,
   ShieldCheck,
@@ -43,14 +44,14 @@ function HomePage() {
           <div className="about-split__media">
             <img
               src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80"
-              alt="Education counselling session"
+              alt="Friendly education counselling session"
               loading="lazy"
             />
             <div className="about-split__floating-card">
               <ShieldCheck size={24} className="about-split__floating-icon" aria-hidden="true" />
               <div>
-                <strong>100% Unbiased Advice</strong>
-                <span>Matching students to verified programs</span>
+                <strong>100% Honest Guidance</strong>
+                <span>Treating every student like family</span>
               </div>
             </div>
           </div>
@@ -58,22 +59,22 @@ function HomePage() {
           <div className="about-split__content">
             <SectionHeading
               eyebrow="Who We Are"
-              title="Personalized Guidance Built Around Your Ambition."
-              description="Sri Vaari Educational Counselling is dedicated to helping students navigate the complex world of higher education with clarity, confidence, and human-first counselling."
+              title="Dedicated Mentors for Your Education Journey."
+              description="We understand that choosing a college is one of the most important decisions for you and your family. At Sri Vaari, we replace confusion with patient, honest, and caring guidance."
             />
 
             <div className="about-split__points">
               <div className="about-split__point">
                 <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Customised course recommendations aligned with your long-term goals.</span>
+                <span>Customized course recommendations based on your marks, budget, and passion.</span>
               </div>
               <div className="about-split__point">
                 <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Direct admission support and transparent timeline management.</span>
+                <span>Direct support for government counselling (TNEA) and verified management seats.</span>
               </div>
               <div className="about-split__point">
                 <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Verified partnerships with recognized autonomous colleges and universities.</span>
+                <span>Transparent fee breakdowns and guidance on scholarships and education loans.</span>
               </div>
             </div>
 
@@ -93,22 +94,21 @@ function HomePage() {
           <div className="hero__content">
             <span className="eyebrow hero__eyebrow">
               <Sparkles size={14} aria-hidden="true" />
-              Education Guidance Made Clear
+              Personal, Caring Education Counselling
             </span>
 
             <h1 className="hero__title">
-              Find the Right Path. <br />
-              <span>Build the Future You Want.</span>
+              Find Your Ideal College. <br />
+              <span>Step Confidently Into Tomorrow.</span>
             </h1>
 
             <p className="hero__lead">
-              Discover verified courses, top-tier colleges, and career directions tailored to your ambitions — with personalized counselling at every important milestone.
+              Confused about courses, cut-offs, or college options? We sit down with you and your parents to help you choose the right academic path with complete clarity.
             </p>
 
             <div className="hero__actions">
               <Link className="button button--primary hero__btn-primary" to="/services">
                 <span>Explore Our Services</span>
-                <ArrowRight size={17} aria-hidden="true" />
               </Link>
               <button
                 className="button button--secondary hero__btn-secondary"
@@ -129,7 +129,7 @@ function HomePage() {
             <div className="hero__image-wrapper">
               <img
                 src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1100&q=85"
-                alt="Students collaborating on campus"
+                alt="Students discussing academic roadmaps"
                 loading="eager"
               />
             </div>
@@ -167,8 +167,8 @@ function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Why Choose Sri Vaari"
-            title="Guidance Designed Around Your Success."
-            description="We eliminate confusion and replace guesswork with structured, student-first consultancy services."
+            title="Guidance Built with Care & Integrity."
+            description="We don't believe in one-size-fits-all advice. We tailor every recommendation to your individual strengths, career ambitions, and family budget."
           />
 
           <BenefitSlider />
@@ -182,9 +182,9 @@ function HomePage() {
       <section className="home-section home-section--tint">
         <div className="container">
           <SectionHeading
-            eyebrow="Student Stories"
-            title="Confidence Starts With the Right Conversation."
-            description="Real experiences from students and families who discovered clarity and academic direction through our guidance."
+            eyebrow="Real Student Experiences"
+            title="Stories of Clarity, Relief & Success."
+            description="Hear how students and families found peace of mind and secured admissions into top colleges through our patient guidance."
           />
 
           <div className="testimonials-showcase">
@@ -200,8 +200,8 @@ function HomePage() {
           <div className="contact-details">
             <SectionHeading
               eyebrow="Get in Touch"
-              title="Start Your Guidance Journey Today."
-              description="Reach our advisory desk directly or send us your details. A senior education counsellor will connect with you for a personalized session."
+              title="Let’s Talk About Your Future."
+              description="Reach our advisory desk directly or leave your details below. A caring senior counsellor will connect with you for a personalized session."
             />
 
             <div className="contact-cards-grid">
@@ -249,6 +249,16 @@ function HomePage() {
                   <strong className="contact-card__value">{contactInfo.officeHours}</strong>
                 </div>
               </div>
+            </div>
+
+            {/* Map & In-Person Advisory Card */}
+            <div className="map-placeholder">
+              <div className="map-placeholder__icon-wrapper">
+                <MapPin size={28} aria-hidden="true" />
+              </div>
+              <strong className="map-placeholder__title">Sri Vaari Advisory Center</strong>
+              <span className="map-placeholder__address">{contactInfo.officeLocation}</span>
+              <span className="map-placeholder__note">In-person counselling sessions available by appointment</span>
             </div>
           </div>
 

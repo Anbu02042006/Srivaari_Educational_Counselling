@@ -9,7 +9,7 @@ import {
   Lightbulb,
   Sparkles,
 } from 'lucide-react'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import CTASection from '../components/CTASection'
 import EnquiryModal from '../components/EnquiryModal'
@@ -57,6 +57,30 @@ const services = [
 
 function ServicesPage() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false)
+  const [mobileActiveIndex, setMobileActiveIndex] = useState(0)
+  const viewportRef = useRef(null)
+
+  const handleScroll = () => {
+    if (!viewportRef.current) return
+    const { scrollLeft, offsetWidth } = viewportRef.current
+    if (offsetWidth > 0) {
+      const newIndex = Math.round(scrollLeft / offsetWidth)
+      if (newIndex !== mobileActiveIndex && newIndex >= 0 && newIndex < services.length) {
+        setMobileActiveIndex(newIndex)
+      }
+    }
+  }
+
+  const scrollToIndex = (index) => {
+    if (viewportRef.current) {
+      const width = viewportRef.current.offsetWidth
+      viewportRef.current.scrollTo({
+        left: index * width,
+        behavior: 'smooth',
+      })
+    }
+    setMobileActiveIndex(index)
+  }
 
   return (
     <main className="services-page">
@@ -65,13 +89,13 @@ function ServicesPage() {
         <div className="container">
           <span className="eyebrow page-hero__eyebrow">
             <Sparkles size={14} aria-hidden="true" />
-            How We Can Help
+            Support When You Need It Most
           </span>
           <h1 className="page-hero__title">
-            Useful Support for Every Education Decision.
+            Patient, Clear Guidance for Every College Decision.
           </h1>
           <p className="page-hero__lead">
-            Choose the guidance you need today; our counsellors will make the path ahead clear, structured, and achievable.
+            Whether you are feeling lost about your 12th cut-off, choosing between degrees, or planning your budget, our counsellors are here to guide you step-by-step.
           </p>
 
           <div className="hero__actions" style={{ marginTop: 'var(--space-4)' }}>
@@ -81,7 +105,6 @@ function ServicesPage() {
               onClick={() => setIsEnquiryOpen(true)}
             >
               <span>Request Free Counselling</span>
-              <ArrowRight size={17} aria-hidden="true" />
             </button>
             <Link className="button button--secondary" to="/contact">
               <span>Contact Advisory Desk</span>
@@ -90,16 +113,17 @@ function ServicesPage() {
         </div>
       </header>
 
-      {/* 2. SERVICES GRID */}
+      {/* 2. SERVICES GRID & MOBILE SLIDER */}
       <section className="home-section">
         <div className="container">
           <SectionHeading
-            eyebrow="Our Guidance Areas"
-            title="Comprehensive Services Tailored to Your Journey."
-            description="From early goal discovery to application submission, explore how our advisors support you at every milestone."
+            eyebrow="How We Support You"
+            title="Practical Help for Every Step of Admission."
+            description="From initial branch shortlisting to application paperwork, scholarship support, and campus visits, we make your journey peaceful and organized."
           />
 
-          <div className="services-catalog-grid">
+          {/* Desktop 3-Column Grid (Hidden on Mobile) */}
+          <div className="services-catalog-grid services-catalog-grid--desktop">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.title}
@@ -112,6 +136,51 @@ function ServicesPage() {
               />
             ))}
           </div>
+
+          {/* Mobile Only: Smooth Hardware-Accelerated 7 Cards Slideshow */}
+          <div
+            className="service-slider service-slider--mobile"
+            role="region"
+            aria-label="Services carousel"
+          >
+            <div
+              ref={viewportRef}
+              className="service-slider__viewport"
+              onScroll={handleScroll}
+            >
+              <div className="service-slider__track">
+                {services.map((service, index) => (
+                  <div key={service.title} className="service-slider__slide">
+                    <ServiceCard
+                      title={service.title}
+                      description={service.text}
+                      icon={service.icon}
+                      number={`0${index + 1}`}
+                      actionLabel="Request Counselling"
+                      to="/contact"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile Centered Pagination Indicator Dots */}
+            <div className="service-slider__controls">
+              <div className="service-slider__dots" role="tablist" aria-label="Service slides">
+                {services.map((service, index) => (
+                  <button
+                    key={service.title}
+                    type="button"
+                    role="tab"
+                    aria-selected={mobileActiveIndex === index}
+                    aria-label={`Go to service ${index + 1} (${service.title})`}
+                    className={`service-slider__dot ${mobileActiveIndex === index ? 'is-active' : ''}`}
+                    onClick={() => scrollToIndex(index)}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -119,9 +188,9 @@ function ServicesPage() {
       <section className="home-section home-section--tint">
         <div className="container">
           <SectionHeading
-            eyebrow="Structured Process"
-            title="How We Guide You Step by Step."
-            description="Our simple, reliable four-step framework turns confusion into confident admission."
+            eyebrow="Simple 4-Step Journey"
+            title="How We Help You Get Started."
+            description="No complicated bureaucracy. Just a relaxed conversation, honest recommendations, and direct admission support."
             align="center"
           />
 

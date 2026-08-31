@@ -35,7 +35,6 @@ function CTASection({
               onClick={onPrimaryClick}
             >
               <span>{primaryLabel}</span>
-              <ArrowRight size={17} aria-hidden="true" />
             </Link>
           ) : (
             <button
@@ -44,7 +43,6 @@ function CTASection({
               onClick={onPrimaryClick}
             >
               <span>{primaryLabel}</span>
-              <ArrowRight size={17} aria-hidden="true" />
             </button>
           )}
 

@@ -49,10 +49,6 @@ function GallerySection({ className = '', showViewAll = false }) {
   const [activeCategory, setActiveCategory] = useState('All')
   const [lightboxIndex, setLightboxIndex] = useState(-1)
   const [mobileActiveIndex, setMobileActiveIndex] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
-  const touchStartX = useRef(null)
-  const touchEndX = useRef(null)
-
   const filteredImages = galleryImages.filter((img) =>
     activeCategory === 'All' ? true : img.category === activeCategory
   )
@@ -69,41 +65,38 @@ function GallerySection({ className = '', showViewAll = false }) {
     setLightboxIndex((curr) => (curr < filteredImages.length - 1 ? curr + 1 : 0))
   }
 
-  // Mobile slideshow next/prev
-  const handleMobileNext = () => {
-    setMobileActiveIndex((curr) => (curr < filteredImages.length - 1 ? curr + 1 : 0))
+  // Native smooth scroll-snap carousel controller
+  const viewportRef = useRef(null)
+
+  const handleScroll = () => {
+    if (!viewportRef.current) return
+    const { scrollLeft, offsetWidth } = viewportRef.current
+    if (offsetWidth > 0) {
+      const newIndex = Math.round(scrollLeft / offsetWidth)
+      if (newIndex !== mobileActiveIndex && newIndex >= 0 && newIndex < filteredImages.length) {
+        setMobileActiveIndex(newIndex)
+      }
+    }
   }
 
-  const handleMobilePrev = () => {
-    setMobileActiveIndex((curr) => (curr > 0 ? curr - 1 : filteredImages.length - 1))
+  const scrollToIndex = (index) => {
+    if (viewportRef.current) {
+      const width = viewportRef.current.offsetWidth
+      viewportRef.current.scrollTo({
+        left: index * width,
+        behavior: 'smooth',
+      })
+    }
+    setMobileActiveIndex(index)
   }
 
-  // Mobile slideshow autoplay
+  // Reset scroll when category changes
   useEffect(() => {
-    if (isPaused || filteredImages.length <= 1) return
-    const timer = setInterval(() => {
-      handleMobileNext()
-    }, 4500)
-    return () => clearInterval(timer)
-  }, [isPaused, mobileActiveIndex, filteredImages.length])
-
-  // Touch gestures for mobile slider
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX
-  }
-
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX
-  }
-
-  const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return
-    const diff = touchStartX.current - touchEndX.current
-    if (diff > 40) handleMobileNext()
-    else if (diff < -40) handleMobilePrev()
-    touchStartX.current = null
-    touchEndX.current = null
-  }
+    if (viewportRef.current) {
+      viewportRef.current.scrollTo({ left: 0, behavior: 'instant' })
+    }
+    setMobileActiveIndex(0)
+  }, [activeCategory])
 
   return (
     <section className={`home-section gallery-section ${className}`.trim()} aria-label="Photo Gallery">
@@ -173,22 +166,18 @@ function GallerySection({ className = '', showViewAll = false }) {
           ))}
         </div>
 
-        {/* 2. Mobile Gallery Slideshow: No buttons, autoplay + touch swipe (Visible on Mobile only) */}
+        {/* 2. Mobile Gallery Slideshow: 120Hz Hardware-Accelerated Smooth Swipe */}
         <div
           className="gallery-slider gallery-slider--mobile"
           role="region"
           aria-label="Gallery slideshow"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
         >
-          <div className="gallery-slider__viewport">
-            <div
-              className="gallery-slider__track"
-              style={{ transform: `translateX(-${mobileActiveIndex * 100}%)` }}
-            >
+          <div
+            ref={viewportRef}
+            className="gallery-slider__viewport"
+            onScroll={handleScroll}
+          >
+            <div className="gallery-slider__track">
               {filteredImages.map((image, index) => (
                 <div
                   key={image.id}
@@ -232,7 +221,7 @@ function GallerySection({ className = '', showViewAll = false }) {
                   aria-selected={mobileActiveIndex === index}
                   aria-label={`Go to photo ${index + 1}`}
                   className={`gallery-slider__dot ${mobileActiveIndex === index ? 'is-active' : ''}`}
-                  onClick={() => setMobileActiveIndex(index)}
+                  onClick={() => scrollToIndex(index)}
                 />
               ))}
             </div>

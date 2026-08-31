@@ -18,48 +18,48 @@ import StatCounter from '../components/StatCounter'
 const values = [
   {
     icon: Compass,
-    title: 'Clarity First',
-    text: 'We make complex education choices easier to understand without overwhelming jargon.',
+    title: 'Clarity Over Jargon',
+    text: 'We explain cut-offs, seat matrices, and college fees in simple language that students and parents easily understand.',
   },
   {
     icon: HeartHandshake,
-    title: 'People Before Process',
-    text: 'Every student deserves respectful, individual attention shaped around their unique circumstances.',
+    title: 'People Before Profits',
+    text: 'Every student’s career is guided with the same care and responsibility we would give to our own family.',
   },
   {
     icon: ShieldCheck,
-    title: 'Honest Guidance',
-    text: 'We explain trade-offs openly so decisions remain authentic, informed, and truly yours.',
+    title: 'Unfiltered Honesty',
+    text: 'If a course or college does not match your career goals or budget, we tell you openly and show you better options.',
   },
   {
     icon: Lightbulb,
-    title: 'Practical Optimism',
-    text: 'We focus on the next useful step and realistic milestones, avoiding empty guarantees.',
+    title: 'Step-by-Step Handholding',
+    text: 'We stay right beside you through counselling dates, document verification, and final campus admission.',
   },
 ]
 
 const stats = [
-  { value: '10K+', label: 'Students Guided', icon: GraduationCap },
-  { value: '100+', label: 'Institution Connections', icon: Target },
-  { value: '8+', label: 'Education Streams', icon: Compass },
-  { value: '95%', label: 'Positive Outcomes', icon: HeartHandshake },
+  { value: '10K+', label: 'Happy Students Guided', icon: GraduationCap },
+  { value: '100+', label: 'Verified Partner Campuses', icon: Target },
+  { value: '8+', label: 'Academic Streams', icon: Compass },
+  { value: '98%', label: 'Parent Satisfaction Rate', icon: HeartHandshake },
 ]
 
 const journey = [
   {
     year: '2021',
-    title: 'Sri Vaari Begins',
-    text: 'Founded with a small, dedicated team focused entirely on student-first education counselling.',
+    title: 'Sri Vaari is Born',
+    text: 'Started with a passionate group of mentors in Tamil Nadu to protect students from misleading admission brokers.',
   },
   {
     year: '2023',
-    title: 'Expanded Learning Horizons',
-    text: 'Broadened counselling networks across professional, hybrid, and specialized creative disciplines.',
+    title: 'Expanding Healthcare & Tech',
+    text: 'Broadened trusted counselling networks across Engineering, Medical, Allied Health, and Creative design institutions.',
   },
   {
     year: 'Today',
-    title: 'Human-First Guidance',
-    text: 'Continuing to bring transparency, calm support, and actionable clarity to thousands of learners.',
+    title: '10,000+ Dreams Nurtured',
+    text: 'Proud to have helped thousands of students from across Tamil Nadu and South India enter top accredited colleges.',
   },
 ]
 
@@ -74,16 +74,15 @@ function AboutPage() {
             About Sri Vaari
           </span>
           <h1 className="page-hero__title">
-            Education Guidance With a Human Point of View.
+            Education Guidance With Genuine Care & Empathy.
           </h1>
           <p className="page-hero__lead">
-            We help students turn possibility into a thoughtful, practical plan for what comes next — combining academic insight with genuine empathy.
+            We started Sri Vaari because we believe every student deserves patient, honest guidance without high pressure or misleading promises.
           </p>
 
           <div className="hero__actions" style={{ marginTop: 'var(--space-4)' }}>
             <Link className="button button--primary" to="/contact">
               <span>Book Free Counselling</span>
-              <ArrowRight size={17} aria-hidden="true" />
             </Link>
             <Link className="button button--secondary" to="/services">
               <span>Explore Our Services</span>
@@ -112,27 +111,27 @@ function AboutPage() {
 
           <div className="about-story-content">
             <SectionHeading
-              eyebrow="Our Story"
-              title="A Clearer, Calmer Way to Choose."
-              description="Sri Vaari was founded around a simple belief: students make better career decisions when they have enough context, kind support, and room to ask honest questions."
+              eyebrow="Why We Started"
+              title="No High Pressure. No Fake Rankings. Just Honest Help."
+              description="We have seen how stressful and confusing college admissions can be for families. We built Sri Vaari to be the trusted mentor parents and students can turn to with open hearts."
             />
 
             <p className="about-story-text">
-              We bring course discovery, college selection, and long-term career planning into one grounded, supportive conversation — eliminating stress and replacing guesswork with real clarity.
+              We sit down with you, understand your academic marks and financial comfort, and guide you through real college environments, branch scopes, and career realities with complete transparency.
             </p>
 
             <div className="about-story-points">
               <div className="about-story-point">
                 <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Transparent insights into eligibility, campus cultures, and actual outcomes.</span>
+                <span>Honest insights on actual campus placements, faculty strength, and lab facilities.</span>
               </div>
               <div className="about-story-point">
                 <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Zero sales pressure — only objective, student-first guidance.</span>
+                <span>Zero sales bias — we recommend only what is genuinely best for your future.</span>
               </div>
               <div className="about-story-point">
                 <CheckCircle2 size={18} aria-hidden="true" />
-                <span>End-to-end assistance from application shortlisting to final admission.</span>
+                <span>End-to-end handholding from cut-off calculation to final college admission.</span>
               </div>
             </div>
           </div>
@@ -143,7 +142,7 @@ function AboutPage() {
       <section className="home-section home-section--tint">
         <div className="container">
           <SectionHeading
-            eyebrow="Purpose & Direction"
+            eyebrow="Our Promise"
             title="Our Guiding Principles."
             description="The core commitments that inspire our counselling team every single day."
             align="center"
@@ -153,20 +152,20 @@ function AboutPage() {
             <div className="mission-card-primary">
               <span className="eyebrow mission-card__eyebrow">Our Mission</span>
               <h2 className="mission-card__heading">
-                Make quality education choices feel possible, practical, and personal.
+                Make quality higher education accessible, transparent, and stress-free for every family.
               </h2>
               <p className="mission-card__desc">
-                We bridge the gap between student aspirations and institutional reality through dedicated 1-on-1 mentorship.
+                We guide students towards accredited colleges and high-growth careers through dedicated, patient 1-on-1 mentorship.
               </p>
             </div>
 
             <div className="vision-card-surface">
               <span className="eyebrow vision-card__eyebrow">Our Vision</span>
               <h2 className="vision-card__heading">
-                Every learner can see a route forward that respects their ambition and reality.
+                A world where every student finds a rewarding career path with dignity and clarity.
               </h2>
               <p className="vision-card__desc">
-                Building an ecosystem where no student is left behind due to lack of transparent education guidance.
+                Building an ecosystem where no learner is misled or left behind due to a lack of genuine academic guidance.
               </p>
             </div>
           </div>

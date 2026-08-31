@@ -1,6 +1,7 @@
 import { CheckCircle2, ChevronRight, LoaderCircle, Send } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import CustomSelect from './CustomSelect'
 import { courses } from '../data/coursesData'
 
 const initialValues = {
@@ -14,6 +15,20 @@ const initialValues = {
   goal: '',
   message: '',
 }
+
+const qualificationOptions = [
+  'Class 10',
+  'Class 12',
+  'Undergraduate degree',
+  'Postgraduate degree',
+  'Working professional',
+]
+
+const modeOptions = [
+  'On campus',
+  'Online',
+  'Hybrid',
+]
 
 const courseNames = courses.map((course) => course.title)
 
@@ -183,22 +198,16 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
           <label htmlFor="enquiry-qualification" className="form-label">
             Current Qualification <span className="form-required">*</span>
           </label>
-          <select
+          <CustomSelect
             id="enquiry-qualification"
-            className={`form-select ${errors.qualification ? 'form-input--error' : ''}`}
             name="qualification"
             value={values.qualification}
             onChange={change}
-            aria-invalid={!!errors.qualification}
-            aria-describedby={errors.qualification ? 'enquiry-qualification-error' : undefined}
-          >
-            <option value="">Select your qualification</option>
-            <option value="Class 10">Class 10</option>
-            <option value="Class 12">Class 12</option>
-            <option value="Undergraduate degree">Undergraduate degree</option>
-            <option value="Postgraduate degree">Postgraduate degree</option>
-            <option value="Working professional">Working professional</option>
-          </select>
+            options={qualificationOptions}
+            placeholder="Select your qualification"
+            hasError={!!errors.qualification}
+            ariaDescribedby={errors.qualification ? 'enquiry-qualification-error' : undefined}
+          />
           {errors.qualification && (
             <small id="enquiry-qualification-error" className="form-error-msg">
               {errors.qualification}
@@ -211,22 +220,16 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
           <label htmlFor="enquiry-course" className="form-label">
             Interested Course <span className="form-required">*</span>
           </label>
-          <select
+          <CustomSelect
             id="enquiry-course"
-            className={`form-select ${errors.course ? 'form-input--error' : ''}`}
             name="course"
             value={values.course}
             onChange={change}
-            aria-invalid={!!errors.course}
-            aria-describedby={errors.course ? 'enquiry-course-error' : undefined}
-          >
-            <option value="">Select a course</option>
-            {courseNames.map((name) => (
-              <option key={name} value={name}>
-                {name}
-              </option>
-            ))}
-          </select>
+            options={courseNames}
+            placeholder="Select a course"
+            hasError={!!errors.course}
+            ariaDescribedby={errors.course ? 'enquiry-course-error' : undefined}
+          />
           {errors.course && (
             <small id="enquiry-course-error" className="form-error-msg">
               {errors.course}
@@ -239,18 +242,14 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
           <label htmlFor="enquiry-mode" className="form-label">
             Preferred Study Mode
           </label>
-          <select
+          <CustomSelect
             id="enquiry-mode"
-            className="form-select"
             name="mode"
             value={values.mode}
             onChange={change}
-          >
-            <option value="">Select mode</option>
-            <option value="On campus">On campus</option>
-            <option value="Online">Online</option>
-            <option value="Hybrid">Hybrid</option>
-          </select>
+            options={modeOptions}
+            placeholder="Select mode"
+          />
         </div>
 
         {/* Preferred Location */}
@@ -279,7 +278,7 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
             name="goal"
             value={values.goal}
             onChange={change}
-            placeholder="e.g. Software Engineer, Management Consultant"
+            placeholder="e.g. Software Engineer"
           />
         </div>
       </div>

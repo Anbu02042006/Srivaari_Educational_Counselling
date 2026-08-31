@@ -13,11 +13,11 @@ function Footer() {
         <div className="site-footer__brand">
           <Logo isDark />
           <p className="site-footer__tagline">
-            Empowering students with personalized guidance, verified institutions, and clarity for their education journey.
+            Dedicated to helping students and parents navigate college admissions with complete honesty, personal care, and zero stress.
           </p>
           <div className="site-footer__trust-badge">
-            <span>◆ 10,000+ Students Guided</span>
-            <span>◆ 100+ Partner Campuses</span>
+            <span>◆ 10,000+ Families Supported</span>
+            <span>◆ 100+ Verified Partner Campuses</span>
           </div>
         </div>
 

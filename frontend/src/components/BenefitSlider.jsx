@@ -5,10 +5,6 @@ import { benefits } from '../data/homeData'
 
 function BenefitSlider({ className = '' }) {
   const [activeIndex, setActiveIndex] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
-  const touchStartX = useRef(null)
-  const touchEndX = useRef(null)
-
   const handlePrev = () => {
     setActiveIndex((curr) => (curr > 0 ? curr - 1 : benefits.length - 1))
   }
@@ -17,29 +13,44 @@ function BenefitSlider({ className = '' }) {
     setActiveIndex((curr) => (curr < benefits.length - 1 ? curr + 1 : 0))
   }
 
-  useEffect(() => {
-    if (isPaused) return
-    const timer = setInterval(() => {
-      handleNext()
-    }, 4000)
-    return () => clearInterval(timer)
-  }, [isPaused, activeIndex])
+  // Mobile smooth touch gesture
+  const [dragOffset, setDragOffset] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
+  const touchStartX = useRef(0)
+  const touchCurrentX = useRef(0)
 
   const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX
+    setIsDragging(true)
+    touchStartX.current = e.touches ? e.touches[0].clientX : e.clientX
+    touchCurrentX.current = touchStartX.current
   }
 
   const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX
+    if (!isDragging) return
+    touchCurrentX.current = e.touches ? e.touches[0].clientX : e.clientX
+    const diff = touchCurrentX.current - touchStartX.current
+    if (
+      (activeIndex === 0 && diff > 0) ||
+      (activeIndex === benefits.length - 1 && diff < 0)
+    ) {
+      setDragOffset(diff * 0.3)
+    } else {
+      setDragOffset(diff)
+    }
   }
 
   const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return
-    const diff = touchStartX.current - touchEndX.current
-    if (diff > 40) handleNext()
-    else if (diff < -40) handlePrev()
-    touchStartX.current = null
-    touchEndX.current = null
+    if (!isDragging) return
+    setIsDragging(false)
+    const diff = touchCurrentX.current - touchStartX.current
+    const threshold = 35
+
+    if (diff < -threshold && activeIndex < benefits.length - 1) {
+      setActiveIndex((curr) => curr + 1)
+    } else if (diff > threshold && activeIndex > 0) {
+      setActiveIndex((curr) => curr - 1)
+    }
+    setDragOffset(0)
   }
 
   return (
@@ -76,21 +87,27 @@ function BenefitSlider({ className = '' }) {
         })}
       </div>
 
-      {/* Mobile Only: Slideshow without arrow buttons */}
+      {/* Mobile Only: Slideshow with smooth gesture drag */}
       <div
         className="benefit-slider benefit-slider--mobile"
         role="region"
         aria-label="Why Choose Sri Vaari slideshow"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
+        onMouseDown={handleTouchStart}
+        onMouseMove={handleTouchMove}
+        onMouseUp={handleTouchEnd}
+        onMouseLeave={handleTouchEnd}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab', userSelect: 'none' }}
       >
         <div className="benefit-slider__viewport">
           <div
             className="benefit-slider__track"
-            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            style={{
+              transform: `translateX(calc(-${activeIndex * 100}% + ${dragOffset}px))`,
+              transition: isDragging ? 'none' : 'transform 0.42s cubic-bezier(0.22, 1, 0.36, 1)',
+            }}
           >
             {benefits.map((item, index) => {
               const Icon = item.icon

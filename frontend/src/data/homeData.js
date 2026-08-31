@@ -1,59 +1,199 @@
-import { BadgeCheck, BriefcaseBusiness, Compass, FileCheck2, Lightbulb, ShieldCheck } from 'lucide-react'
+import { BadgeCheck, BriefcaseBusiness, Compass, FileCheck2, HeartHandshake, Lightbulb, ShieldCheck, Users } from 'lucide-react'
 
 export const programmeCategories = [
-  { name: 'Undergraduate', detail: 'Build a strong foundation', icon: Compass },
-  { name: 'Postgraduate', detail: 'Advance your expertise', icon: Lightbulb },
-  { name: 'Professional Courses', detail: 'Move your career forward', icon: BriefcaseBusiness },
-  { name: 'Online Learning', detail: 'Study around your schedule', icon: FileCheck2 },
-  { name: 'Study Abroad', detail: 'Discover global opportunities', icon: BadgeCheck },
-  { name: 'Skill Development', detail: 'Learn practical, in-demand skills', icon: ShieldCheck },
+  { name: 'Engineering & Technology', detail: 'B.E, B.Tech, M.Tech, Diploma', icon: Compass },
+  { name: 'Arts, Science & Commerce', detail: 'B.Com, BBA, B.Sc, BCA, BA', icon: Lightbulb },
+  { name: 'Medical & Allied Health', detail: 'Nursing, Pharmacy, Physiotherapy, Lab Tech', icon: ShieldCheck },
+  { name: 'Postgraduate & MBA', detail: 'MBA, MCA, M.Sc, M.Com', icon: BriefcaseBusiness },
+  { name: 'Emerging Tech & AI', detail: 'Data Science, Cyber Security, AI & ML', icon: BadgeCheck },
+  { name: 'Study Abroad & Distance', detail: 'Global Degrees & Flexible Online Programs', icon: FileCheck2 },
 ]
 
 export const benefits = [
-  { title: 'Personalized Guidance', text: 'Advice shaped around your ambitions, strengths, and circumstances.', icon: Compass },
-  { title: 'Verified Institutions', text: 'Thoughtful choices from a carefully reviewed education network.', icon: BadgeCheck },
-  { title: 'Career-Focused Recommendations', text: 'Course suggestions that connect learning with the future you want.', icon: BriefcaseBusiness },
-  { title: 'Transparent Process', text: 'Clear timelines, honest guidance, and no confusing surprises.', icon: ShieldCheck },
-  { title: 'Expert Counselling', text: 'Practical support from people who understand education decisions.', icon: Lightbulb },
-  { title: 'Application Support', text: 'Help staying organized from shortlist to submission.', icon: FileCheck2 },
+  {
+    title: '1-on-1 Attentive Listening',
+    text: 'We take time to understand your 12th / degree marks, your interests, and your family budget before suggesting anything.',
+    icon: Users,
+  },
+  {
+    title: 'Genuine & Verified Colleges',
+    text: 'No fake rankings or sponsored promotions. We only recommend recognized, NAAC/AICTE-accredited institutions.',
+    icon: BadgeCheck,
+  },
+  {
+    title: 'Honest Career Roadmaps',
+    text: 'We share practical insights on real placement records, syllabus depth, and long-term industry job demands.',
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: 'Zero Hidden Costs & Full Transparency',
+    text: 'Clear breakdown of tuition fees, hostel expenses, scholarship eligibility, and loan documentation assistance.',
+    icon: ShieldCheck,
+  },
+  {
+    title: 'Friendly, Caring Counsellors',
+    text: 'Talk freely with seasoned advisors who treat you like family and patiently answer every question from you and your parents.',
+    icon: HeartHandshake,
+  },
+  {
+    title: 'End-to-End Handholding',
+    text: 'From comparing branches to submitting applications and college visits, we stand right beside you until day one of college.',
+    icon: FileCheck2,
+  },
 ]
 
 export const processSteps = [
-  ['01', 'Tell Us Your Goal', 'Share what excites you, where you are today, and what you hope to achieve.'],
-  ['02', 'Get Personalized Guidance', 'Meet a counsellor who helps turn your options into a clear direction.'],
-  ['03', 'Shortlist Courses & Colleges', 'Compare the right-fit choices with confidence and useful context.'],
-  ['04', 'Complete Your Admission', 'Stay supported through documents, applications, and your next step.'],
+  ['01', 'Sit Down & Talk With Us', 'Share your marks, favorite subjects, future dreams, and any worries you or your parents have.'],
+  ['02', 'Explore Your Best-Fit Options', 'Our counsellor shortlists matching courses and accredited colleges tailored to your budget and cut-off.'],
+  ['03', 'Campus & Branch Selection', 'Compare realistic placement stats, faculty reputation, and campus culture before making your final pick.'],
+  ['04', 'Smooth & Confident Admission', 'We assist with application paperwork, verification documents, and scholarship guidance with zero stress.'],
 ]
 
 export const featuredCourses = [
-  { id: 'business-management', title: 'Business Management', category: 'Undergraduate', duration: '3 years', mode: 'On campus', description: 'Develop strategic thinking, leadership, and commercial confidence.', image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80' },
-  { id: 'computer-science', title: 'Computer Science', category: 'Undergraduate', duration: '4 years', mode: 'On campus', description: 'Learn to design thoughtful digital products and intelligent systems.', image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80' },
-  { id: 'clinical-psychology', title: 'Clinical Psychology', category: 'Postgraduate', duration: '2 years', mode: 'On campus', description: 'Build a deeper understanding of people, wellbeing, and care.', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80' },
-  { id: 'digital-marketing', title: 'Digital Marketing', category: 'Professional', duration: '6 months', mode: 'Hybrid', description: 'Create modern campaigns using insights, content, and strategy.', image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=900&q=80' },
-  { id: 'data-analytics', title: 'Data Analytics', category: 'Professional', duration: '8 months', mode: 'Online', description: 'Turn data into clear, practical decisions for growing teams.', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80' },
-  { id: 'interior-design', title: 'Interior Design', category: 'Undergraduate', duration: '3 years', mode: 'On campus', description: 'Combine creative vision with the skills to shape meaningful spaces.', image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80' },
+  {
+    id: 'computer-science-engineering',
+    title: 'B.E. Computer Science & AI',
+    category: 'Engineering',
+    duration: '4 years',
+    mode: 'On campus',
+    description: 'Master full-stack programming, cloud computing, artificial intelligence, and software systems.',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'business-administration',
+    title: 'BBA & Financial Management',
+    category: 'Management',
+    duration: '3 years',
+    mode: 'On campus',
+    description: 'Build core business leadership, corporate strategy, accounting, and communication confidence.',
+    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'allied-health-sciences',
+    title: 'B.Sc. Allied Health Sciences',
+    category: 'Healthcare',
+    duration: '3 - 4 years',
+    mode: 'On campus + Hospital Training',
+    description: 'Hands-on hospital training across medical lab technology, radiology, cardio perfusion, and diagnostics.',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'bca-data-science',
+    title: 'BCA & Cloud Computing',
+    category: 'Computer Applications',
+    duration: '3 years',
+    mode: 'On campus',
+    description: 'Practical curriculum covering Python, web technologies, database management, and cloud architecture.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'digital-marketing-media',
+    title: 'Digital Marketing & Media Strategy',
+    category: 'Professional Diploma',
+    duration: '6 months',
+    mode: 'Hybrid',
+    description: 'Learn real campaign analytics, SEO, social media growth, and content marketing from industry mentors.',
+    image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'interior-design-architecture',
+    title: 'B.Des. Interior & Space Design',
+    category: 'Design',
+    duration: '3 - 4 years',
+    mode: 'On campus',
+    description: 'Blend creative spatial imagination with 3D modeling, sustainable materials, and real project studios.',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80',
+  },
 ]
 
 export const featuredColleges = [
-  { id: 'northbridge-institute', name: 'Northbridge Institute', location: 'Bengaluru', type: 'Private university', accreditation: 'NAAC A+ rated', image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80' },
-  { id: 'harbor-school-of-design', name: 'Harbor School of Design', location: 'Chennai', type: 'Design school', accreditation: 'Recognised design institution', image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=900&q=80' },
-  { id: 'greenfield-college', name: 'Greenfield College', location: 'Coimbatore', type: 'Autonomous college', accreditation: 'NAAC A rated', image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80' },
-  { id: 'meridian-academy', name: 'Meridian Academy', location: 'Hyderabad', type: 'Professional academy', accreditation: 'Industry-recognised programs', image: 'https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=900&q=80' },
+  {
+    id: 'chennai-tech-campus',
+    name: 'Premier Engineering Institute',
+    location: 'Chennai',
+    type: 'Autonomous College',
+    accreditation: 'NAAC A++ · NBA Accredited',
+    image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'coimbatore-arts-science',
+    name: 'Coimbatore College of Arts & Science',
+    location: 'Coimbatore',
+    type: 'Autonomous Institution',
+    accreditation: 'NAAC A+ Rated · Top NIRF Rank',
+    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'madurai-medical-allied',
+    name: 'Institute of Medical & Allied Health',
+    location: 'Madurai',
+    type: 'Healthcare Academy',
+    accreditation: 'Affiliated Hospital & MGR University',
+    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'bengaluru-management-school',
+    name: 'Apex School of Management',
+    location: 'Bengaluru',
+    type: 'Business Academy',
+    accreditation: 'AICTE Approved · Global Industry Tie-ups',
+    image: 'https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=900&q=80',
+  },
 ]
 
 export const testimonials = [
-  { name: 'Aarav N.', detail: 'BBA student · Chennai', quote: 'The guidance was clear from the first call. I found a college that genuinely fits my goals.' },
-  { name: 'Meera S.', detail: 'Data Analytics learner · Bengaluru', quote: 'I was overwhelmed by online options. My counsellor made the decision feel focused and easy.' },
-  { name: 'Riya P.', detail: 'Psychology student · Coimbatore', quote: 'Every question was handled patiently, including the practical parts of my application.' },
-  { name: 'Karthik R.', detail: 'Design student · Hyderabad', quote: 'Sri Vaari helped me see a route into design that I had not considered before.' },
+  {
+    name: 'Aarav N.',
+    detail: 'B.E. Computer Science · Chennai',
+    quote: 'After 12th results, my parents and I were stressed about cut-offs and counselling. Sri Vaari took time to sit with us, explained every college fee openly, and helped me get into a top college in Chennai.',
+  },
+  {
+    name: 'Meera S.',
+    detail: 'B.Sc Data Science · Coimbatore',
+    quote: 'I was torn between engineering and BCA. My counsellor patiently broke down the syllabus, job scope, and future career without any pressure. That honest talk made all the difference.',
+  },
+  {
+    name: 'Riya P.',
+    detail: 'Allied Health Sciences · Madurai',
+    quote: 'Finding a genuine paramedical college with real hospital training was scary because of fake agents. Sri Vaari showed us verified institutions and helped with all the paperwork.',
+  },
+  {
+    name: 'Karthik R.',
+    detail: 'BBA & Finance · Salem',
+    quote: 'They treated us like family from day one. Even after admission, they checked in to make sure I settled in well at my hostel. Highly recommend them to any student in Tamil Nadu.',
+  },
 ]
 
-export const institutionNames = ['Ridgeway University', 'Nexa Institute', 'Aster College', 'Crescent School', 'Summit Academy', 'Orion University', 'Lumen College', 'Evergreen Institute']
+export const institutionNames = [
+  'Premier Institute of Technology',
+  'Apex College of Arts & Science',
+  'City Institute of Allied Health',
+  'National Academy of Management',
+  'Heritage College of Engineering',
+  'Global School of Design & Media',
+  'Metro Institute of Science',
+  'St. Thomas Autonomous College',
+]
 
 export const faqs = [
-  ['How does the counselling process begin?', 'Start with a no-pressure conversation about your goals. We then suggest a focused next step based on what matters to you.'],
-  ['Do you help with course and college shortlisting?', 'Yes. We help you compare suitable courses and institutions using your interests, eligibility, location preferences, and career direction.'],
-  ['Is the first counselling session free?', 'Yes. Your initial discussion is complimentary and is designed to help you understand your options.'],
-  ['Can you support applications?', 'We can guide you through planning documents and staying on track with application steps.'],
-  ['Do you offer online counselling?', 'Yes. Counselling can be arranged remotely, so you can speak with us from wherever you are.'],
+  [
+    'How does your counselling process work?',
+    'We start with a relaxed, no-pressure conversation with you and your parents. We understand your marks, interests, preferred locations, and budget, then shortlist colleges where you can thrive.',
+  ],
+  [
+    'Is the first counselling session really free?',
+    'Yes, 100% free. We believe every student deserves clarity without paying an upfront fee just to know their genuine options.',
+  ],
+  [
+    'Do you assist with college cut-offs and government counselling?',
+    'Yes. We guide you through Anna University (TNEA), Arts & Science counselling dates, choice filling orders, and verified management seat processes.',
+  ],
+  [
+    'Can you help students from outside Chennai / Tamil Nadu?',
+    'Absolutely! We provide phone and WhatsApp video counselling so students and parents anywhere can get personalized guidance from home.',
+  ],
+  [
+    'Will you help with college scholarships and education loans?',
+    'Yes. We explain available merit/community scholarships and provide complete documentation checklists to help you apply for education loans easily.',
+  ],
 ]

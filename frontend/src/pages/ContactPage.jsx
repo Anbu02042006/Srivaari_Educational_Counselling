@@ -18,11 +18,11 @@ function ContactPage() {
         <div className="container">
           <span className="eyebrow page-hero__eyebrow">
             <Sparkles size={14} aria-hidden="true" />
-            Contact Sri Vaari
+            We Are Here For You
           </span>
-          <h1 className="page-hero__title">Let’s Start a Conversation.</h1>
+          <h1 className="page-hero__title">Let’s Sit Down and Talk About Your Future.</h1>
           <p className="page-hero__lead">
-            Reach out with any questions, arrange a consultation, or submit an enquiry and our team will get back to you promptly.
+            Have questions about 12th cut-offs, college fees, seats, or courses? Give us a call or drop us a WhatsApp message anytime.
           </p>
         </div>
       </header>
@@ -33,9 +33,9 @@ function ContactPage() {
           {/* Left Column: Direct Contact Details & Location */}
           <div className="contact-details">
             <SectionHeading
-              eyebrow="Get in Touch"
-              title="We Are Here to Help."
-              description="Reach our advisory desk through phone, email, WhatsApp, or visit our education office."
+              eyebrow="Direct Contact"
+              title="Reach Out Whenever You Need Us."
+              description="Speak directly with a caring counsellor who will listen attentively to your goals and worries."
             />
 
             <div className="contact-cards-grid">
@@ -45,7 +45,7 @@ function ContactPage() {
                   <Phone size={20} />
                 </span>
                 <div className="contact-card__info">
-                  <small className="contact-card__label">Phone Support</small>
+                  <small className="contact-card__label">Direct Call</small>
                   <strong className="contact-card__value">{contactInfo.phoneDisplay}</strong>
                 </div>
               </a>
@@ -56,7 +56,7 @@ function ContactPage() {
                   <Mail size={20} />
                 </span>
                 <div className="contact-card__info">
-                  <small className="contact-card__label">Email Address</small>
+                  <small className="contact-card__label">Email Support</small>
                   <strong className="contact-card__value">{contactInfo.email}</strong>
                 </div>
               </a>
@@ -73,7 +73,7 @@ function ContactPage() {
                 </span>
                 <div className="contact-card__info">
                   <small className="contact-card__label">WhatsApp Chat</small>
-                  <strong className="contact-card__value">Message our counsellor</strong>
+                  <strong className="contact-card__value">Chat with a Counsellor</strong>
                 </div>
               </a>
 
@@ -107,17 +107,17 @@ function ContactPage() {
               </div>
               <strong className="map-placeholder__title">Sri Vaari Advisory Center</strong>
               <span className="map-placeholder__address">{contactInfo.officeLocation}</span>
-              <span className="map-placeholder__note">In-person consultations available by appointment</span>
+              <span className="map-placeholder__note">In-person counselling sessions available by appointment</span>
             </div>
           </div>
 
           {/* Right Column: Contact Form Panel */}
           <div className="enquiry-panel">
             <div className="enquiry-panel__header">
-              <span className="eyebrow">Send an Enquiry</span>
-              <h2 className="enquiry-panel__title">We would love to hear from you.</h2>
+              <span className="eyebrow">Direct Counselling Enquiry</span>
+              <h2 className="enquiry-panel__title">Request a Free 1-on-1 Callback.</h2>
               <p className="enquiry-panel__desc">
-                Fill in your contact details and message below; an education counsellor will respond within 24 hours.
+                Leave your details below and a senior counsellor will personally connect with you to guide you through your options.
               </p>
             </div>
             <EnquiryForm />
