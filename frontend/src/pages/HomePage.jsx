@@ -17,6 +17,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import BenefitSlider from '../components/BenefitSlider'
 import EducationSlideshow from '../components/EducationSlideshow'
+import HeroImageCard from '../components/HeroImageCard'
 import EnquiryForm from '../components/EnquiryForm'
 import EnquiryModal from '../components/EnquiryModal'
 import GallerySection from '../components/GallerySection'
@@ -40,13 +41,50 @@ function HomePage() {
   return (
     <main className="home-page">
       {/* 1. ABOUT PATHWAY / WHO WE ARE (Below Navigation Bar) */}
+      {/* 1. ABOUT PATHWAY / WHO WE ARE (Below Navigation Bar) */}
       <section className="home-section home-section--about">
         <div className="container about-split">
           <div className="about-split__media">
-            <EducationSlideshow onEnquire={() => setIsEnquiryOpen(true)} />
+            <HeroImageCard onEnquire={() => setIsEnquiryOpen(true)}>
+              <div className="hero-image-card__content">
+                <span className="eyebrow hero-image-card__eyebrow">Who We Are</span>
+                <h2 className="hero-image-card__title">Dedicated Mentors for Your Education Journey.</h2>
+                <p className="hero-image-card__description">
+                  We understand that choosing a college is one of the most important decisions for you and your family. At Sri Vaari, we replace confusion with patient, honest, and caring guidance.
+                </p>
+
+                <div className="hero-image-card__points">
+                  <div className="hero-image-card__point">
+                    <CheckCircle2 size={17} aria-hidden="true" />
+                    <span>Customized course recommendations based on your marks, budget, and passion.</span>
+                  </div>
+                  <div className="hero-image-card__point">
+                    <CheckCircle2 size={17} aria-hidden="true" />
+                    <span>Direct support for government counselling (TNEA) and verified management seats.</span>
+                  </div>
+                  <div className="hero-image-card__point">
+                    <CheckCircle2 size={17} aria-hidden="true" />
+                    <span>Transparent fee breakdowns and guidance on scholarships and education loans.</span>
+                  </div>
+                </div>
+
+                <div className="hero-image-card__action">
+                  <Link className="button button--primary hero-image-card__btn" to="/about">
+                    <span>Know More About Us</span>
+                  </Link>
+                  <Link className="button button--primary hero-image-card__btn" to="/gallery">
+                    <span>View Gallery</span>
+                  </Link>
+                </div>
+              </div>
+            </HeroImageCard>
+
+            <div className="desktop-only">
+              <EducationSlideshow onEnquire={() => setIsEnquiryOpen(true)} />
+            </div>
           </div>
 
-          <div className="about-split__content">
+          <div className="about-split__content desktop-only">
             <SectionHeading
               eyebrow="Who We Are"
               title="Dedicated Mentors for Your Education Journey."

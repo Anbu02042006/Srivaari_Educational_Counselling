@@ -1096,178 +1096,219 @@ main {
   box-shadow: none;
 }
 
-/* Education Slideshow Card - Reference Image UI */
+/* Hero Image Card / Education Slideshow Card (Desktop & Tablet Default) */
+/* Desktop/Tablet protection: Hide new mobile hero */
+.hero-image-card {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
 .education-slideshow {
   position: relative;
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background: transparent;
 }
 
 .education-slideshow__viewport {
-  position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1.35;
-  background: #ffffff;
-  border-radius: 28px;
+  aspect-ratio: 16 / 10.5;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
 }
 
-.education-slideshow__slide {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.education-slideshow__slide img,
 .education-slideshow__img {
-  clip-path: url(#hero-notched-clip);
-  -webkit-clip-path: url(#hero-notched-clip);
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
-  display: block;
-  z-index: 1;
 }
 
-/* Notches (Top-Left Logo Cutout & Bottom-Right Button Cutout) */
-.education-slideshow__notch {
-  display: flex !important;
-  position: absolute;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  z-index: 3;
-}
-
-/* 1. Top-Left Notch (Logo Area) */
-.education-slideshow__notch--tl {
-  top: 0;
-  left: 0;
-  width: 27%;
-  height: 16.8%;
-  min-width: 86px;
-  min-height: 76px;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  background: transparent !important;
-  pointer-events: none;
-  padding: 0 !important;
-  z-index: 3;
-}
-
-.education-slideshow__notch-logo {
-  position: relative;
-  width: 50px;
-  height: auto;
-  max-width: 54px;
-  max-height: 54px;
-  object-fit: contain;
-  display: block;
-  z-index: 3;
-}
-
-/* 2. Bottom-Right Notch (Button Area) */
-.education-slideshow__notch--br {
-  bottom: 0;
-  right: 0;
-  width: 46.5%;
-  height: 14.5%;
-  min-width: 148px;
-  min-height: 54px;
-  background: transparent !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  padding: 0 !important;
-}
-
-/* 3. Enquire Now Button (Inside Bottom-Right Notch) */
-.education-slideshow__notch-btn {
-  height: 40px;
-  padding: 0 18px;
-  font-family: var(--font-sans);
-  font-size: 13.5px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  border-radius: 9999px;
-  background: #0066ff;
-  color: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.45rem;
-  z-index: 3;
-  border: none !important;
-  outline: none !important;
-  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.45);
-  text-decoration: none;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.education-slideshow__notch-btn:hover {
-  background-color: #0052cc;
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(0, 102, 255, 0.55);
-  color: #ffffff;
-}
-
-.education-slideshow__notch-btn:active {
-  transform: translateY(0);
-}
-
-.education-slideshow__notch-btn svg {
-  transition: transform 0.2s ease;
-  width: 14px;
-  height: 14px;
-  color: #ffffff;
-  flex-shrink: 0;
-}
-
-.education-slideshow__notch-btn:hover svg {
-  transform: translateX(2px);
-}
-
-@media (max-width: 480px) {
-  .education-slideshow {
-    width: calc(100% - 32px);
-    max-width: 380px;
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none !important;
   }
 
-  .education-slideshow__notch--tl {
-    width: 90px;
-    height: 78px;
+  .hero-image-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto 16px;
+    overflow: visible;
   }
 
-  .education-slideshow__notch-logo {
-    width: 46px;
-    height: auto;
+  .hero-image-card__container {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
 
-  .education-slideshow__notch--br {
-    width: 148px;
-    height: 54px;
+  .hero-image-card__image-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    clip-path: url(#hero-organic-clip);
+    -webkit-clip-path: url(#hero-organic-clip);
   }
 
-  .education-slideshow__notch-btn {
-    height: 38px;
-    padding: 0 16px;
-    font-size: 13px;
+  .hero-image-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+  }
+
+  .hero-image-card__gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.08) 0%,
+      rgba(15, 23, 42, 0.35) 24%,
+      rgba(10, 17, 34, 0.86) 52%,
+      rgba(7, 13, 30, 0.98) 92%
+    );
+    pointer-events: none;
+  }
+
+  .hero-image-card__notch {
+    position: absolute;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+    border: none;
+    outline: none;
+  }
+
+  .hero-image-card__notch--tl {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6px;
+    padding-left: 8px;
+  }
+
+  .hero-image-card__logo {
+    width: 42px;
+    height: 42px;
+    max-width: 42px;
+    max-height: 42px;
+    object-fit: contain;
+    display: block;
+    transform: none;
+  }
+
+  .hero-image-card__content {
+    position: relative;
+    z-index: 5;
+    padding: 72px 18px 24px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-image-card__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    width: fit-content;
+    margin-bottom: 2px;
+    display: inline-flex;
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-image-card__title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-heading);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+    margin: 0 0 4px 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .hero-image-card__description {
+    font-size: var(--font-size-body-sm);
+    line-height: var(--line-height-body);
+    color: rgba(241, 245, 249, 0.92);
+    margin: 0 0 6px 0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-image-card__points {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .hero-image-card__point {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: var(--font-size-body-sm);
+    line-height: 1.45;
+    color: #ffffff;
+  }
+
+  .hero-image-card__point svg {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+    color: #38bdf8;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .hero-image-card__action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+
+  .hero-image-card__btn {
+    width: fit-content;
+    padding: 0.5rem 1.15rem;
+    font-size: var(--font-size-btn);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, #4f8cff 0%, #6a5cff 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(79, 140, 255, 0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    text-decoration: none;
+  }
+
+  .hero-image-card__btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(79, 140, 255, 0.45);
   }
 }
 
@@ -3641,12 +3682,92 @@ a.site-footer__contact-item:hover {
    -------------------------------------------------------------------------- */
 @media (max-width: 48rem) {
   .container {
-    padding-left: 0.875rem;
-    padding-right: 0.875rem;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   :root {
     --section-space: 1.75rem;
+  }
+
+  .home-section--about {
+    padding-top: 0.85rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .about-split {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-split__content {
+    width: 100%;
+  }
+
+  .about-split__content .section-heading {
+    margin-bottom: 0;
+  }
+
+  .about-split__content .section-heading .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-primary-600);
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+
+  .about-split__content .section-heading h2 {
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+    max-width: 340px;
+    margin: 0 0 10px 0;
+  }
+
+  .about-split__content .section-heading .section-heading__description {
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: #4b5563;
+    max-width: 360px;
+    margin: 0 0 18px 0;
+  }
+
+  .about-split__points {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .about-split__point {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #374151;
+  }
+
+  .about-split__point svg {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+    color: var(--color-primary-600);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .about-split__action .button {
+    width: fit-content;
+    padding: 11px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
   }
 
   h1 {
@@ -3699,10 +3820,6 @@ a.site-footer__contact-item:hover {
     bottom: -0.45rem;
     left: 0.5rem;
     padding: 0.35rem 0.6rem;
-  }
-
-  .about-split {
-    gap: 1.15rem;
   }
 
   .about-split__floating-card {
