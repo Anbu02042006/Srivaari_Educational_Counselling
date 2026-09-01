@@ -50,7 +50,7 @@ function Footer() {
               href={contactInfo.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="site-footer__contact-link"
+              className="site-footer__contact-link site-footer__contact-item"
             >
               <WhatsAppIcon size={16} aria-hidden="true" />
               <span>WhatsApp Advisory</span>

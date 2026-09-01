@@ -3150,21 +3150,28 @@ select:focus,
   gap: 0.35rem;
 }
 
-.site-footer__contact-item {
+.site-footer__contact-item,
+.site-footer__contact-link {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.45rem;
   color: var(--color-text-inverse-muted);
   font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 .site-footer__contact-item svg {
   color: var(--color-primary-400);
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
-a.site-footer__contact-item:hover {
+.site-footer__contact-link svg {
+  color: #25D366;
+  flex-shrink: 0;
+}
+
+a.site-footer__contact-item:hover,
+a.site-footer__contact-link:hover {
   color: #ffffff;
 }
 
