@@ -70,7 +70,7 @@ function HomePage() {
 
                 <div className="hero-image-card__action">
                   <Link className="button button--primary hero-image-card__btn" to="/about">
-                    <span>Know More About Us</span>
+                    <span>About Us</span>
                   </Link>
                   <Link className="button button--primary hero-image-card__btn" to="/gallery">
                     <span>View Gallery</span>

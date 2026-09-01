@@ -1140,9 +1140,9 @@ main {
   .hero-image-card__container {
     position: relative;
     width: 100%;
-    min-height: 520px;
-    background: transparent;
-    border-radius: 28px;
+    min-height: clamp(490px, 128vw, 560px);
+    background: transparent !important;
+    border-radius: clamp(20px, 5.5vw, 28px);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1196,41 +1196,45 @@ main {
   .hero-image-card__notch--tl {
     top: 0;
     left: 0;
-    width: 92px;
-    height: 76px;
+    width: 22%;
+    height: 13.5%;
+    min-width: 68px;
+    min-height: 58px;
+    max-width: 96px;
+    max-height: 78px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 2px;
-    padding-left: 2px;
+    padding: 0;
     background: transparent !important;
   }
 
   .hero-image-card__logo {
-    width: 58px;
-    height: 58px;
-    max-width: 58px;
-    max-height: 58px;
+    width: clamp(44px, 12vw, 56px);
+    height: clamp(44px, 12vw, 56px);
+    max-width: 82%;
+    max-height: 82%;
     object-fit: contain;
     display: block;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
-    transform: translate(-4px, -3px);
+    margin: auto;
+    transform: translate(-1px, -2px);
   }
 
   .hero-image-card__content {
     position: relative;
     z-index: 5;
-    padding: 72px 18px 24px 18px;
+    padding: clamp(64px, 15vw, 78px) clamp(14px, 4.2vw, 20px) clamp(18px, 4vw, 24px) clamp(14px, 4.2vw, 20px);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: clamp(8px, 2.5vw, 12px);
   }
 
   .hero-image-card__eyebrow {
-    font-size: 0.75rem;
+    font-size: clamp(0.6875rem, 2.6vw, 0.75rem);
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -1247,7 +1251,7 @@ main {
 
   .hero-image-card__title {
     font-family: var(--font-display);
-    font-size: var(--font-size-h2);
+    font-size: clamp(1.3rem, 5.4vw, 1.7rem);
     line-height: var(--line-height-heading);
     font-weight: 700;
     letter-spacing: -0.025em;
@@ -1257,25 +1261,25 @@ main {
   }
 
   .hero-image-card__description {
-    font-size: var(--font-size-body-sm);
+    font-size: clamp(0.8125rem, 3.4vw, 0.9rem);
     line-height: var(--line-height-body);
     color: rgba(241, 245, 249, 0.92);
-    margin: 0 0 6px 0;
+    margin: 0 0 4px 0;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   }
 
   .hero-image-card__points {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 14px;
+    gap: clamp(6px, 2.2vw, 10px);
+    margin-bottom: clamp(8px, 2.5vw, 14px);
   }
 
   .hero-image-card__point {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-size: var(--font-size-body-sm);
+    font-size: clamp(0.78rem, 3.2vw, 0.875rem);
     line-height: 1.45;
     color: #ffffff;
   }
@@ -1292,15 +1296,15 @@ main {
   .hero-image-card__action {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: clamp(6px, 2vw, 10px);
     margin-top: 4px;
     flex-wrap: wrap;
   }
 
   .hero-image-card__btn {
     width: fit-content;
-    padding: 0.5rem 1.15rem;
-    font-size: var(--font-size-btn);
+    padding: 0.5rem clamp(0.75rem, 2.8vw, 1.15rem);
+    font-size: clamp(0.78rem, 3vw, 0.875rem);
     font-weight: 600;
     border-radius: var(--radius-md);
     background: linear-gradient(135deg, #4f8cff 0%, #6a5cff 100%);
@@ -1315,6 +1319,24 @@ main {
   .hero-image-card__btn:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 6px 20px rgba(79, 140, 255, 0.45);
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-image-card__container {
+    min-height: 480px;
+    border-radius: 20px;
+  }
+
+  .hero-image-card__action {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-image-card__btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
