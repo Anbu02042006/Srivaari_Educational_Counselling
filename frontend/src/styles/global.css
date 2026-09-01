@@ -1141,7 +1141,7 @@ main {
     position: relative;
     width: 100%;
     min-height: 520px;
-    background: #ffffff;
+    background: transparent;
     border-radius: 28px;
     overflow: hidden;
     display: flex;
@@ -1182,36 +1182,42 @@ main {
 
   .hero-image-card__notch {
     position: absolute;
-    background: transparent;
+    background: transparent !important;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
     pointer-events: none;
-    border: none;
-    outline: none;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
   }
 
   .hero-image-card__notch--tl {
     top: 0;
     left: 0;
-    width: 80px;
-    height: 66px;
+    width: 92px;
+    height: 76px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 6px;
-    padding-left: 8px;
+    padding-top: 2px;
+    padding-left: 2px;
+    background: transparent !important;
   }
 
   .hero-image-card__logo {
-    width: 42px;
-    height: 42px;
-    max-width: 42px;
-    max-height: 42px;
+    width: 58px;
+    height: 58px;
+    max-width: 58px;
+    max-height: 58px;
     object-fit: contain;
     display: block;
-    transform: none;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    transform: translate(-4px, -3px);
   }
 
   .hero-image-card__content {
