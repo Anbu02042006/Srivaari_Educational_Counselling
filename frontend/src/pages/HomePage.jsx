@@ -43,7 +43,7 @@ function HomePage() {
       <section className="home-section home-section--about">
         <div className="container about-split">
           <div className="about-split__media">
-            <EducationSlideshow />
+            <EducationSlideshow onEnquire={() => setIsEnquiryOpen(true)} />
           </div>
 
           <div className="about-split__content">

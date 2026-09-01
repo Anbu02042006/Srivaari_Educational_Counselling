@@ -3,7 +3,7 @@ import {
   ChevronRight,
   X,
 } from 'lucide-react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 
 function LightboxModal({
   isOpen,
@@ -14,14 +14,49 @@ function LightboxModal({
   onNext,
 }) {
   const viewportRef = useRef(null)
+  const isUserScrollingRef = useRef(false)
+  const scrollTimeoutRef = useRef(null)
 
-  // Synchronize scroll position to current index
+  // Synchronize scroll position smoothly when currentIndex changes externally
   useEffect(() => {
     if (!isOpen || !viewportRef.current) return
     const el = viewportRef.current
     const width = el.offsetWidth
-    el.scrollTo({ left: currentIndex * width, behavior: 'auto' })
+    if (width <= 0) return
+
+    const targetLeft = currentIndex * width
+    // Only scroll if not already at position (avoids fighting native swipe/momentum)
+    if (Math.abs(el.scrollLeft - targetLeft) > 8) {
+      el.scrollTo({ left: targetLeft, behavior: 'smooth' })
+    }
   }, [isOpen, currentIndex])
+
+  // Handle scroll end to sync index without interrupting swipe physics
+  const syncIndexFromScroll = useCallback(() => {
+    if (!viewportRef.current) return
+    const el = viewportRef.current
+    const { scrollLeft, offsetWidth } = el
+    if (offsetWidth > 0) {
+      const newIndex = Math.round(scrollLeft / offsetWidth)
+      if (newIndex >= 0 && newIndex < images.length && newIndex !== currentIndex) {
+        if (newIndex > currentIndex) {
+          onNext?.()
+        } else if (newIndex < currentIndex) {
+          onPrev?.()
+        }
+      }
+    }
+    isUserScrollingRef.current = false
+  }, [currentIndex, images.length, onNext, onPrev])
+
+  const handleScroll = () => {
+    isUserScrollingRef.current = true
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current)
+    }
+    // Debounce index update until swipe momentum settles
+    scrollTimeoutRef.current = setTimeout(syncIndexFromScroll, 120)
+  }
 
   // Keyboard navigation & body scroll lock
   useEffect(() => {
@@ -43,25 +78,13 @@ function LightboxModal({
     return () => {
       document.body.style.overflow = ''
       window.removeEventListener('keydown', handleKeyDown)
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current)
+      }
     }
   }, [isOpen, onClose, onPrev, onNext])
 
   if (!isOpen || images.length === 0) return null
-
-  const handleScroll = () => {
-    if (!viewportRef.current) return
-    const { scrollLeft, offsetWidth } = viewportRef.current
-    if (offsetWidth > 0) {
-      const newIndex = Math.round(scrollLeft / offsetWidth)
-      if (newIndex !== currentIndex && newIndex >= 0 && newIndex < images.length) {
-        if (newIndex > currentIndex) {
-          onNext?.()
-        } else if (newIndex < currentIndex) {
-          onPrev?.()
-        }
-      }
-    }
-  }
 
   return (
     <div
@@ -73,7 +96,7 @@ function LightboxModal({
     >
       <div className="lightbox-backdrop" aria-hidden="true" />
 
-      {/* Floating Close Button (X icon) */}
+      {/* Floating Close Button */}
       <button
         type="button"
         className="lightbox-btn lightbox-btn--close"
@@ -86,7 +109,7 @@ function LightboxModal({
         <X size={24} aria-hidden="true" />
       </button>
 
-      {/* Desktop Previous Button (Left side of screen) */}
+      {/* Desktop Previous Button */}
       {images.length > 1 && (
         <button
           type="button"
@@ -101,7 +124,7 @@ function LightboxModal({
         </button>
       )}
 
-      {/* Desktop Next Button (Right side of screen) */}
+      {/* Desktop Next Button */}
       {images.length > 1 && (
         <button
           type="button"
@@ -134,7 +157,9 @@ function LightboxModal({
                     src={img.src || img.image || img}
                     alt={img.alt || img.title || `Gallery photo ${idx + 1}`}
                     className="lightbox-image"
-                    loading={Math.abs(idx - currentIndex) <= 1 ? 'eager' : 'lazy'}
+                    loading="eager"
+                    decoding="async"
+                    draggable={false}
                   />
                 </div>
               </div>

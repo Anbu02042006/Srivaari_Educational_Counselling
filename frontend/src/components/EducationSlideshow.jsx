@@ -1,131 +1,76 @@
-import { ShieldCheck } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
-const educationSlides = [
-  {
-    src: '/images/counselling-slide-1.jpg',
-    fallbackSrc: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80',
-    alt: 'Friendly 1-on-1 education counselling session',
-    title: 'Personalized Career Counselling',
-  },
-  {
-    src: '/images/counselling-slide-2.jpg',
-    fallbackSrc: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=80',
-    alt: 'Premier college campus environment and infrastructure',
-    title: 'Top Partner Campuses',
-  },
-  {
-    src: '/images/counselling-slide-3.jpg',
-    fallbackSrc: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80',
-    alt: 'College students collaborating and studying together',
-    title: 'Student Growth & Community',
-  },
-  {
-    src: '/images/counselling-slide-4.jpg',
-    fallbackSrc: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80',
-    alt: 'Advanced technology and computing laboratories',
-    title: 'State-of-the-Art Labs & Infrastructure',
-  },
-  {
-    src: '/images/counselling-slide-5.jpg',
-    fallbackSrc: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1000&q=80',
-    alt: 'Proud graduation ceremony and academic achievement',
-    title: 'Celebrating Graduation Success',
-  },
-]
-
-// Add clone of first slide for a seamless, continuous infinite loop without rewind
-const extendedSlides = [...educationSlides, educationSlides[0]]
-
-function EducationSlideshow() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [withTransition, setWithTransition] = useState(true)
-
-  // Auto-advance slideshow towards the left every 2 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setWithTransition(true)
-      setCurrentIndex((prev) => prev + 1)
-    }, 2000)
-
-    return () => clearInterval(timer)
-  }, [])
-
-  // Seamless jump from clone back to initial index without reverse animation
-  const handleTransitionEnd = () => {
-    if (currentIndex >= educationSlides.length) {
-      setWithTransition(false)
-      setCurrentIndex(0)
-    }
-  }
-
-  const activeDotIndex = currentIndex % educationSlides.length
-
-  const handleDotClick = (idx) => {
-    setWithTransition(true)
-    setCurrentIndex(idx)
-  }
-
+function EducationSlideshow({ onEnquire }) {
   return (
     <div
       className="education-slideshow"
-      aria-roledescription="carousel"
-      aria-label="Education and counselling gallery slideshow"
+      aria-label="Education and counselling card"
     >
+      {/* Responsive SVG Notch ClipPath */}
+      <svg
+        width="0"
+        height="0"
+        style={{ position: 'absolute', width: 0, height: 0, pointerEvents: 'none' }}
+        aria-hidden="true"
+      >
+        <defs>
+          <clipPath id="hero-notched-clip" clipPathUnits="objectBoundingBox">
+            <path d="M 0.27,0 L 0.92,0 C 0.965,0 1.00,0.035 1.00,0.08 L 1.00,0.82 C 1.00,0.855 0.97,0.875 0.93,0.875 L 0.59,0.875 C 0.555,0.875 0.535,0.93 0.535,1.00 L 0.08,1.00 C 0.035,1.00 0.00,0.965 0.00,0.92 L 0.00,0.22 C 0.00,0.185 0.02,0.168 0.08,0.168 L 0.18,0.168 C 0.235,0.168 0.27,0.09 0.27,0 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+
       <div className="education-slideshow__viewport">
-        {/* Horizontal sliding track */}
-        <div
-          className="education-slideshow__track"
-          style={{
-            transform: `translateX(-${currentIndex * 100}%)`,
-            transition: withTransition ? 'transform 0.65s cubic-bezier(0.25, 1, 0.5, 1)' : 'none',
-          }}
-          onTransitionEnd={handleTransitionEnd}
-        >
-          {extendedSlides.map((slide, index) => (
-            <div
-              key={`${slide.src}-${index}`}
-              className="education-slideshow__slide"
-              aria-hidden={index !== currentIndex}
-            >
-              <img
-                src={slide.src}
-                alt={slide.alt}
-                loading={index === 0 ? 'eager' : 'lazy'}
-                onError={(e) => {
-                  if (e.target.src !== slide.fallbackSrc) {
-                    e.target.src = slide.fallbackSrc
-                  }
-                }}
-              />
-            </div>
-          ))}
+        {/* Main Image */}
+        <div className="education-slideshow__slide">
+          <img
+            src="/images/counselling-partnership.jpg"
+            alt="Education counselling partnership and mentorship handshake"
+            loading="eager"
+            className="education-slideshow__img"
+            onError={(e) => {
+              const fallback = 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80'
+              if (e.target.src !== fallback) {
+                e.target.src = fallback
+              }
+            }}
+          />
         </div>
 
-        {/* Floating Trust Badge */}
-        <div className="about-split__floating-card">
-          <ShieldCheck size={24} className="about-split__floating-icon" aria-hidden="true" />
-          <div>
-            <strong>100% Honest Guidance</strong>
-            <span>Treating every student like family</span>
-          </div>
+        {/* Top-Left Notch (White Cut-Out) with Logo */}
+        <div className="education-slideshow__notch education-slideshow__notch--tl">
+          <img
+            src="/logo.png"
+            alt="Sri Vaari"
+            className="education-slideshow__notch-logo"
+            width="44"
+            height="44"
+          />
         </div>
 
-        {/* Slide Indicators */}
-        <div className="education-slideshow__dots" role="tablist">
-          {educationSlides.map((slide, index) => (
+        {/* Bottom-Right Notch (White Cut-Out) with Enquire Button */}
+        <div className="education-slideshow__notch education-slideshow__notch--br">
+          {onEnquire ? (
             <button
-              key={slide.src}
               type="button"
-              role="tab"
-              aria-selected={index === activeDotIndex}
-              aria-label={`Slide ${index + 1}: ${slide.title}`}
-              className={`education-slideshow__dot ${
-                index === activeDotIndex ? 'education-slideshow__dot--active' : ''
-              }`}
-              onClick={() => handleDotClick(index)}
-            />
-          ))}
+              className="education-slideshow__notch-btn"
+              onClick={onEnquire}
+              aria-label="Enquire now"
+            >
+              <span>Enquire Now</span>
+              <ArrowRight size={15} strokeWidth={2.4} aria-hidden="true" />
+            </button>
+          ) : (
+            <Link
+              to="/contact"
+              className="education-slideshow__notch-btn"
+              aria-label="Enquire now"
+            >
+              <span>Enquire Now</span>
+              <ArrowRight size={15} strokeWidth={2.4} aria-hidden="true" />
+            </Link>
+          )}
         </div>
       </div>
     </div>
