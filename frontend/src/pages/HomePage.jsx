@@ -40,77 +40,14 @@ function HomePage() {
 
   return (
     <main className="home-page">
-      {/* 1. ABOUT PATHWAY / WHO WE ARE (Below Navigation Bar) */}
-      {/* 1. ABOUT PATHWAY / WHO WE ARE (Below Navigation Bar) */}
+      {/* 1. TOP HERO CARD (Below Navigation Bar) */}
       <section className="home-section home-section--about">
-        <div className="container about-split">
+        <div className="container">
           <div className="about-split__media">
-            <HeroImageCard onEnquire={() => setIsEnquiryOpen(true)}>
-              <div className="hero-image-card__content">
-                <span className="eyebrow hero-image-card__eyebrow">Who We Are</span>
-                <h2 className="hero-image-card__title">Dedicated Mentors for Your Education Journey.</h2>
-                <p className="hero-image-card__description">
-                  We understand that choosing a college is one of the most important decisions for you and your family. At Sri Vaari, we replace confusion with patient, honest, and caring guidance.
-                </p>
-
-                <div className="hero-image-card__points">
-                  <div className="hero-image-card__point">
-                    <CheckCircle2 size={17} aria-hidden="true" />
-                    <span>Customized course recommendations based on your marks, budget, and passion.</span>
-                  </div>
-                  <div className="hero-image-card__point">
-                    <CheckCircle2 size={17} aria-hidden="true" />
-                    <span>Direct support for government counselling (TNEA) and verified management seats.</span>
-                  </div>
-                  <div className="hero-image-card__point">
-                    <CheckCircle2 size={17} aria-hidden="true" />
-                    <span>Transparent fee breakdowns and guidance on scholarships and education loans.</span>
-                  </div>
-                </div>
-
-                <div className="hero-image-card__action">
-                  <Link className="button button--primary hero-image-card__btn" to="/about">
-                    <span>About Us</span>
-                  </Link>
-                  <Link className="button button--primary hero-image-card__btn" to="/gallery">
-                    <span>View Gallery</span>
-                  </Link>
-                </div>
-              </div>
-            </HeroImageCard>
+            <HeroImageCard onEnquire={() => setIsEnquiryOpen(true)} />
 
             <div className="desktop-only">
               <EducationSlideshow onEnquire={() => setIsEnquiryOpen(true)} />
-            </div>
-          </div>
-
-          <div className="about-split__content desktop-only">
-            <SectionHeading
-              eyebrow="Who We Are"
-              title="Dedicated Mentors for Your Education Journey."
-              description="We understand that choosing a college is one of the most important decisions for you and your family. At Sri Vaari, we replace confusion with patient, honest, and caring guidance."
-            />
-
-            <div className="about-split__points">
-              <div className="about-split__point">
-                <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Customized course recommendations based on your marks, budget, and passion.</span>
-              </div>
-              <div className="about-split__point">
-                <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Direct support for government counselling (TNEA) and verified management seats.</span>
-              </div>
-              <div className="about-split__point">
-                <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Transparent fee breakdowns and guidance on scholarships and education loans.</span>
-              </div>
-            </div>
-
-            <div className="about-split__action">
-              <Link className="button button--primary" to="/about">
-                <span>Learn More About Us</span>
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
             </div>
           </div>
         </div>
@@ -138,13 +75,12 @@ function HomePage() {
               <Link className="button button--primary hero__btn-primary" to="/services">
                 <span>Explore Our Services</span>
               </Link>
-              <button
+              <Link
                 className="button button--secondary hero__btn-secondary"
-                type="button"
-                onClick={() => setIsEnquiryOpen(true)}
+                to="/about"
               >
-                <span>Talk to a Counsellor</span>
-              </button>
+                <span>About Us</span>
+              </Link>
             </div>
 
             <div className="hero__note">
@@ -222,7 +158,7 @@ function HomePage() {
       </section>
 
       {/* 7. CONTACT / DIRECT ENQUIRY */}
-      <section className="home-section" id="enquire" aria-label="Contact and Enquiry">
+      <section className="home-section" id="contact" aria-label="Contact and Enquiry">
         <div className="container contact-layout">
           {/* Left Column: Direct Contact Details */}
           <div className="contact-details">
