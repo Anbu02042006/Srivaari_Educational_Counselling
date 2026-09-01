@@ -26,6 +26,15 @@ function HeroImageCard({ children, onEnquire }) {
         </defs>
       </svg>
 
+      {/* Top-Left Notch (Logo) */}
+      <div className="hero-image-card__notch hero-image-card__notch--tl">
+        <img
+          src="/logo.png"
+          alt="Sri Vaari Logo"
+          className="hero-image-card__logo"
+        />
+      </div>
+
       <div className="hero-image-card__container">
         {/* Main Hero Photograph */}
         <div className="hero-image-card__image-wrapper">
@@ -42,15 +51,6 @@ function HeroImageCard({ children, onEnquire }) {
             }}
           />
           <div className="hero-image-card__gradient-overlay" />
-        </div>
-
-        {/* Top-Left Notch (Logo) */}
-        <div className="hero-image-card__notch hero-image-card__notch--tl">
-          <img
-            src="/logo.png"
-            alt="Sri Vaari Logo"
-            className="hero-image-card__logo"
-          />
         </div>
 
         {/* Card Content Overlay */}
