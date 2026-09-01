@@ -143,24 +143,24 @@ export const featuredColleges = [
 
 export const testimonials = [
   {
-    name: 'Aarav N.',
+    name: 'Aarav N',
     detail: 'B.E. Computer Science · Chennai',
-    quote: 'After 12th results, my parents and I were stressed about cut-offs and counselling. Sri Vaari took time to sit with us, explained every college fee openly, and helped me get into a top college in Chennai.',
+    quote: 'After 12th results, we were stressed about cut-offs. Sri Vaari sat with us, explained every college fee openly, and guided me into a top college in Chennai.',
   },
   {
-    name: 'Meera S.',
+    name: 'Meera S',
     detail: 'B.Sc Data Science · Coimbatore',
-    quote: 'I was torn between engineering and BCA. My counsellor patiently broke down the syllabus, job scope, and future career without any pressure. That honest talk made all the difference.',
+    quote: 'I was torn between engineering and BCA. My counsellor patiently broke down the syllabus, job scope, and fee structure. That honest talk made all the difference.',
   },
   {
-    name: 'Riya P.',
+    name: 'Riya P',
     detail: 'Allied Health Sciences · Madurai',
-    quote: 'Finding a genuine paramedical college with real hospital training was scary because of fake agents. Sri Vaari showed us verified institutions and helped with all the paperwork.',
+    quote: 'Finding a genuine paramedical college with real hospital training was stressful. Sri Vaari showed us verified campuses and guided all our admission paperwork.',
   },
   {
-    name: 'Karthik R.',
+    name: 'Karthik R',
     detail: 'BBA & Finance · Salem',
-    quote: 'They treated us like family from day one. Even after admission, they checked in to make sure I settled in well at my hostel. Highly recommend them to any student in Tamil Nadu.',
+    quote: 'They treated us like family from day one. Even after admission, they checked in to make sure I settled in well at my hostel. Truly caring mentors for every student.',
   },
 ]
 

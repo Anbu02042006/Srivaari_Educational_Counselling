@@ -1,5 +1,6 @@
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { scrollToContact } from '../utils/scrollToContact'
 
 function CTASection({
   eyebrow = 'Take the next step',
@@ -7,12 +8,28 @@ function CTASection({
   description,
   primaryLabel = 'Talk to an expert',
   secondaryLabel = 'Explore services',
-  primaryTo = '/contact',
+  primaryTo = '/#contact',
   secondaryTo = '/services',
   onPrimaryClick,
   onSecondaryClick,
   className = '',
 }) {
+  const handlePrimary = (e) => {
+    if (onPrimaryClick) {
+      onPrimaryClick(e)
+    } else if (primaryTo === '/contact' || primaryTo === '/#contact') {
+      scrollToContact(e)
+    }
+  }
+
+  const handleSecondary = (e) => {
+    if (onSecondaryClick) {
+      onSecondaryClick(e)
+    } else if (secondaryTo === '/contact' || secondaryTo === '/#contact') {
+      scrollToContact(e)
+    }
+  }
+
   return (
     <section className={`cta-section ${className}`.trim()}>
       <div className="container cta-section__content">
@@ -32,7 +49,7 @@ function CTASection({
             <Link
               className="button button--primary cta-section__primary-btn"
               to={primaryTo}
-              onClick={onPrimaryClick}
+              onClick={handlePrimary}
             >
               <span>{primaryLabel}</span>
             </Link>
@@ -40,7 +57,7 @@ function CTASection({
             <button
               type="button"
               className="button button--primary cta-section__primary-btn"
-              onClick={onPrimaryClick}
+              onClick={handlePrimary}
             >
               <span>{primaryLabel}</span>
             </button>
@@ -51,7 +68,7 @@ function CTASection({
               <Link
                 className="button button--secondary cta-section__secondary-btn"
                 to={secondaryTo}
-                onClick={onSecondaryClick}
+                onClick={handleSecondary}
               >
                 <span>{secondaryLabel}</span>
               </Link>
@@ -59,7 +76,7 @@ function CTASection({
               <button
                 type="button"
                 className="button button--secondary cta-section__secondary-btn"
-                onClick={onSecondaryClick}
+                onClick={handleSecondary}
               >
                 <span>{secondaryLabel}</span>
               </button>

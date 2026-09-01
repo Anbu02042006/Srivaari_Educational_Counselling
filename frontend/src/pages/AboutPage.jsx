@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react'
 import {
-  ArrowRight,
   CheckCircle2,
   Compass,
   GraduationCap,
@@ -15,6 +14,7 @@ import CTASection from '../components/CTASection'
 import SectionHeading from '../components/SectionHeading'
 import ServiceCard from '../components/ServiceCard'
 import StatCounter from '../components/StatCounter'
+import { scrollToContact } from '../utils/scrollToContact'
 
 const values = [
   {
@@ -107,7 +107,11 @@ function AboutPage() {
           </p>
 
           <div className="hero__actions" style={{ marginTop: 'var(--space-4)' }}>
-            <Link className="button button--primary" to="/contact">
+            <Link
+              className="button button--primary"
+              to="/#contact"
+              onClick={scrollToContact}
+            >
               <span>Book Free Counselling</span>
             </Link>
             <Link className="button button--secondary" to="/services">

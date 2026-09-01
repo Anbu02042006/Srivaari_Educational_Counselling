@@ -13,10 +13,9 @@ import {
   Sparkles,
   Users,
 } from 'lucide-react'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import BenefitSlider from '../components/BenefitSlider'
-import EducationSlideshow from '../components/EducationSlideshow'
 import HeroImageCard from '../components/HeroImageCard'
 import EnquiryForm from '../components/EnquiryForm'
 import EnquiryModal from '../components/EnquiryModal'
@@ -37,18 +36,38 @@ const statsData = [
 
 function HomePage() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    // If navigated from another page via scrollToContact
+    try {
+      const shouldScroll = sessionStorage.getItem('scroll_to_contact')
+      if (shouldScroll) {
+        sessionStorage.removeItem('scroll_to_contact')
+        const el = document.getElementById('contact') || document.getElementById('enquire')
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }, 150)
+        }
+      }
+    } catch {
+      // ignore
+    }
+
+    // Clear any hash if present so page refreshes stay at the top
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname)
+    }
+  }, [location])
 
   return (
     <main className="home-page">
-      {/* 1. TOP HERO CARD (Below Navigation Bar) */}
+      {/* 1. TOP HERO CARD (Below Navigation Bar - Same for Desktop & Mobile) */}
       <section className="home-section home-section--about">
         <div className="container">
           <div className="about-split__media">
             <HeroImageCard onEnquire={() => setIsEnquiryOpen(true)} />
-
-            <div className="desktop-only">
-              <EducationSlideshow onEnquire={() => setIsEnquiryOpen(true)} />
-            </div>
           </div>
         </div>
       </section>
@@ -92,8 +111,8 @@ function HomePage() {
           <div className="hero__visual">
             <div className="hero__image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1100&q=85"
-                alt="Students discussing academic roadmaps"
+                src="/images/indian-admissions-guidance.jpg"
+                alt="Indian students and counsellor discussing academic roadmap"
                 loading="eager"
               />
             </div>

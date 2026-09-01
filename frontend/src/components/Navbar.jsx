@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import { scrollToContact } from '../utils/scrollToContact'
 import Logo from './Logo'
 
 const navRoutes = [
@@ -8,7 +9,7 @@ const navRoutes = [
   { to: '/services', label: 'Services' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/', label: 'Contact', isContact: true },
 ]
 
 function Navbar() {
@@ -40,13 +41,14 @@ function Navbar() {
 
         {/* Center: Desktop Navigation Links */}
         <nav className="nav__desktop-links" aria-label="Desktop menu">
-          {navRoutes.map(({ to, label, end }) => (
+          {navRoutes.map(({ to, label, end, isContact }) => (
             <NavLink
-              key={to}
+              key={label}
               to={to}
               end={end}
+              onClick={isContact ? scrollToContact : undefined}
               className={({ isActive }) =>
-                `nav__link ${isActive ? 'nav__link--active' : ''}`.trim()
+                `nav__link ${isActive && !isContact ? 'nav__link--active' : ''}`.trim()
               }
             >
               {label}
@@ -56,7 +58,11 @@ function Navbar() {
 
         {/* Right: Enquire CTA Action (Desktop Only) */}
         <div className="nav__actions nav__actions--desktop">
-          <Link className="button button--primary nav__enquire" to="/contact">
+          <Link
+            className="button button--primary nav__enquire"
+            to="/"
+            onClick={scrollToContact}
+          >
             <span>Enquire Now</span>
           </Link>
         </div>
@@ -103,14 +109,19 @@ function Navbar() {
           </div>
 
           <nav className="mobile-drawer__nav" aria-label="Mobile menu links">
-            {navRoutes.map(({ to, label, end }) => (
+            {navRoutes.map(({ to, label, end, isContact }) => (
               <NavLink
-                key={to}
+                key={label}
                 to={to}
                 end={end}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  setIsOpen(false)
+                  if (isContact) {
+                    scrollToContact(e)
+                  }
+                }}
                 className={({ isActive }) =>
-                  `mobile-drawer__link ${isActive ? 'mobile-drawer__link--active' : ''}`.trim()
+                  `mobile-drawer__link ${isActive && !isContact ? 'mobile-drawer__link--active' : ''}`.trim()
                 }
               >
                 {label}
@@ -120,9 +131,12 @@ function Navbar() {
 
           <div className="mobile-drawer__footer">
             <Link
-              to="/contact"
+              to="/"
               className="button button--primary mobile-drawer__cta"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                setIsOpen(false)
+                scrollToContact(e)
+              }}
             >
               <span>Enquire Now</span>
             </Link>

@@ -80,13 +80,14 @@ const galleryImages = [
 
 const categories = ['All', 'Mentorship', 'Campus', 'Academics']
 
-function GalleryCard({ image, onOpenLightbox }) {
+function GalleryCard({ image, heightType, onOpenLightbox }) {
   const [activeSlide, setActiveSlide] = useState(0)
   const touchStartX = useRef(null)
   const touchEndX = useRef(null)
 
   const slides = image.slides && image.slides.length > 0 ? image.slides : [image.src]
   const totalSlides = slides.length
+  const cardHeight = heightType || image.heightType || 'short'
 
   const handleNext = (e) => {
     e?.stopPropagation()
@@ -124,7 +125,7 @@ function GalleryCard({ image, onOpenLightbox }) {
 
   return (
     <div
-      className={`gallery-image-card gallery-image-card--${image.heightType || 'short'}`}
+      className={`gallery-image-card gallery-image-card--${cardHeight}`}
       onClick={() => onOpenLightbox(activeSlide)}
       role="button"
       tabIndex={0}
@@ -231,12 +232,13 @@ function GallerySection({ className = '', showViewAll = false, showHeading = tru
           </div>
         </div>
 
-        {/* GALLERY GRID: Clean 3-Col Equal Rows on Desktop | 2-Col Staggered Masonry on Mobile */}
+        {/* GALLERY GRID: Clean 4-Col Equal Rows on Desktop | 2-Col Staggered Masonry on Mobile */}
         <div className="gallery-grid">
           {filteredImages.map((image, index) => (
             <GalleryCard
               key={image.id}
               image={image}
+              heightType={index % 2 === 0 ? 'short' : 'tall'}
               onOpenLightbox={() => handleOpenLightbox(index)}
             />
           ))}
@@ -244,9 +246,8 @@ function GallerySection({ className = '', showViewAll = false, showHeading = tru
 
         {showViewAll && (
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-            <Link to="/gallery" className="button button--secondary">
+            <Link to="/gallery" className="button button--primary">
               <span>View Full Gallery</span>
-              <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
         )}

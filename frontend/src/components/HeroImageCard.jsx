@@ -1,43 +1,61 @@
-import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { scrollToContact } from '../utils/scrollToContact'
 
-function HeroImageCard({ onEnquire, onContactClick }) {
+function HeroImageCard({ onContactClick }) {
   const handleContact = (e) => {
     if (onContactClick) {
       onContactClick(e)
       return
     }
-    const target = document.getElementById('contact') || document.getElementById('enquire')
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    } else if (onEnquire) {
-      onEnquire(e)
-    }
+    scrollToContact(e)
   }
 
   return (
     <div className="hero-image-card">
-      {/* SVG ClipPath for smooth organic curvy notches (Top-Left Logo + Bottom-Right Contact Us) */}
+      {/* SVG ClipPaths: Mobile and Extended Desktop (with extended image near logo & button curves) */}
       <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
         <defs>
-          <clipPath id="hero-organic-clip" clipPathUnits="objectBoundingBox">
-            <path d="M 0.24,0
-                     L 0.92,0
-                     C 0.97,0 1,0.03 1,0.08
+          {/* Mobile ClipPath */}
+          <clipPath id="hero-organic-clip-mobile" clipPathUnits="objectBoundingBox">
+            <path d="M 0.22,0
+                     L 0.90,0
+                     C 0.96,0 1,0.04 1,0.10
                      L 1,0.845
                      C 1,0.86 0.97,0.87 0.94,0.87
-                     L 0.67,0.87
-                     C 0.63,0.87 0.61,0.90 0.61,0.93
-                     L 0.61,0.96
-                     C 0.61,0.988 0.58,1 0.54,1
+                     L 0.74,0.87
+                     C 0.70,0.87 0.68,0.90 0.68,0.93
+                     L 0.68,0.96
+                     C 0.68,0.988 0.66,1 0.63,1
+                     L 0.10,1
+                     C 0.04,1 0,0.96 0,0.90
+                     L 0,0.20
+                     C 0,0.165 0.03,0.155 0.07,0.155
+                     L 0.15,0.155
+                     C 0.19,0.155 0.205,0.115 0.205,0.075
+                     L 0.205,0.045
+                     C 0.205,0.01 0.21,0 0.22,0
+                     Z" />
+          </clipPath>
+
+          {/* Desktop ClipPath (Extended Image around Curves + Fully Visible Logo) */}
+          <clipPath id="hero-organic-clip-desktop" clipPathUnits="objectBoundingBox">
+            <path d="M 0.18,0
+                     L 0.92,0
+                     C 0.97,0 1,0.03 1,0.08
+                     L 1,0.885
+                     C 1,0.895 0.98,0.905 0.95,0.905
+                     L 0.80,0.905
+                     C 0.77,0.905 0.75,0.93 0.75,0.95
+                     L 0.75,0.97
+                     C 0.75,0.99 0.73,1 0.70,1
                      L 0.08,1
                      C 0.03,1 0,0.97 0,0.92
-                     L 0,0.205
-                     C 0,0.18 0.02,0.164 0.06,0.164
-                     L 0.16,0.164
-                     C 0.20,0.164 0.22,0.135 0.22,0.09
-                     L 0.22,0.048
-                     C 0.22,0.012 0.23,0 0.24,0
+                     L 0,0.17
+                     C 0,0.14 0.02,0.125 0.06,0.125
+                     L 0.12,0.125
+                     C 0.155,0.125 0.165,0.09 0.165,0.055
+                     L 0.165,0.035
+                     C 0.165,0.01 0.17,0 0.18,0
                      Z" />
           </clipPath>
         </defs>

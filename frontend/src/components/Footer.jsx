@@ -1,6 +1,7 @@
 import { Clock3, Mail, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { contactInfo } from '../data/contactInfo'
+import { scrollToContact } from '../utils/scrollToContact'
 import Logo from './Logo'
 import WhatsAppIcon from './WhatsAppIcon'
 
@@ -30,7 +31,7 @@ function Footer() {
             <li><Link to="/services">Services</Link></li>
             <li><Link to="/gallery">Photo Gallery</Link></li>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/" onClick={scrollToContact}>Contact</Link></li>
           </ul>
         </div>
 

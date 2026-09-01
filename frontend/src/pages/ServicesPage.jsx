@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   BriefcaseBusiness,
   Compass,
   FileCheck2,
@@ -15,6 +14,7 @@ import EnquiryModal from '../components/EnquiryModal'
 import SectionHeading from '../components/SectionHeading'
 import ServiceCard from '../components/ServiceCard'
 import { processSteps } from '../data/homeData'
+import { scrollToContact } from '../utils/scrollToContact'
 
 const services = [
   {
@@ -100,7 +100,11 @@ function ServicesPage() {
             >
               <span>Request Free Counselling</span>
             </button>
-            <Link className="button button--secondary" to="/contact">
+            <Link
+              className="button button--secondary"
+              to="/#contact"
+              onClick={scrollToContact}
+            >
               <span>Contact Advisory Desk</span>
             </Link>
           </div>
