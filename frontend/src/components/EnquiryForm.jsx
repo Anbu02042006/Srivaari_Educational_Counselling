@@ -1,43 +1,16 @@
 import { CheckCircle2, ChevronRight, LoaderCircle, Send } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import CustomSelect from './CustomSelect'
-import { courses } from '../data/coursesData'
 
 const initialValues = {
   name: '',
   mobile: '',
   email: '',
-  qualification: '',
-  course: '',
-  mode: '',
-  location: '',
-  goal: '',
   message: '',
 }
 
-const qualificationOptions = [
-  'Class 10',
-  'Class 12',
-  'Undergraduate degree',
-  'Postgraduate degree',
-  'Working professional',
-]
-
-const modeOptions = [
-  'On campus',
-  'Online',
-  'Hybrid',
-]
-
-const courseNames = courses.map((course) => course.title)
-
-function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
-  const [values, setValues] = useState({
-    ...initialValues,
-    course: initialCourse,
-    location: initialLocation,
-  })
+function EnquiryForm({ onSuccess }) {
+  const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [storageError, setStorageError] = useState('')
@@ -58,8 +31,6 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())) {
       next.email = 'Enter a valid email address.'
     }
-    if (!values.qualification) next.qualification = 'Please select your qualification.'
-    if (!values.course) next.course = 'Please select an interested course.'
     return next
   }
 
@@ -100,11 +71,10 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
         <span className="eyebrow enquiry-success__eyebrow">Request received</span>
         <h2 className="enquiry-success__title">Thank you, {values.name}!</h2>
         <p className="enquiry-success__desc">
-          Your counselling enquiry for <strong>{values.course}</strong>
-          {values.location && <> in <strong>{values.location}</strong></>} has been securely received.
+          Your counselling enquiry has been securely received.
         </p>
         <p className="enquiry-success__note">
-          Our education counsellor will review your profile and reach out within 24 hours.
+          Our education counsellor will review your details and reach out to you within 24 hours.
         </p>
         <div className="enquiry-success__actions">
           <Link className="button button--primary" to="/">
@@ -145,10 +115,10 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
           )}
         </div>
 
-        {/* Mobile Number */}
+        {/* Mobile / Phone Number */}
         <div className="form-group">
           <label htmlFor="enquiry-mobile" className="form-label">
-            Mobile Number <span className="form-required">*</span>
+            Phone Number <span className="form-required">*</span>
           </label>
           <input
             id="enquiry-mobile"
@@ -170,7 +140,7 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
         </div>
 
         {/* Email Address */}
-        <div className="form-group">
+        <div className="form-group form-group--full">
           <label htmlFor="enquiry-email" className="form-label">
             Email Address <span className="form-required">*</span>
           </label>
@@ -192,101 +162,12 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
             </small>
           )}
         </div>
-
-        {/* Current Qualification */}
-        <div className="form-group">
-          <label htmlFor="enquiry-qualification" className="form-label">
-            Current Qualification <span className="form-required">*</span>
-          </label>
-          <CustomSelect
-            id="enquiry-qualification"
-            name="qualification"
-            value={values.qualification}
-            onChange={change}
-            options={qualificationOptions}
-            placeholder="Select your qualification"
-            hasError={!!errors.qualification}
-            ariaDescribedby={errors.qualification ? 'enquiry-qualification-error' : undefined}
-          />
-          {errors.qualification && (
-            <small id="enquiry-qualification-error" className="form-error-msg">
-              {errors.qualification}
-            </small>
-          )}
-        </div>
-
-        {/* Interested Course */}
-        <div className="form-group">
-          <label htmlFor="enquiry-course" className="form-label">
-            Interested Course <span className="form-required">*</span>
-          </label>
-          <CustomSelect
-            id="enquiry-course"
-            name="course"
-            value={values.course}
-            onChange={change}
-            options={courseNames}
-            placeholder="Select a course"
-            hasError={!!errors.course}
-            ariaDescribedby={errors.course ? 'enquiry-course-error' : undefined}
-          />
-          {errors.course && (
-            <small id="enquiry-course-error" className="form-error-msg">
-              {errors.course}
-            </small>
-          )}
-        </div>
-
-        {/* Preferred Study Mode */}
-        <div className="form-group">
-          <label htmlFor="enquiry-mode" className="form-label">
-            Preferred Study Mode
-          </label>
-          <CustomSelect
-            id="enquiry-mode"
-            name="mode"
-            value={values.mode}
-            onChange={change}
-            options={modeOptions}
-            placeholder="Select mode"
-          />
-        </div>
-
-        {/* Preferred Location */}
-        <div className="form-group">
-          <label htmlFor="enquiry-location" className="form-label">
-            Preferred Location
-          </label>
-          <input
-            id="enquiry-location"
-            className="form-input"
-            name="location"
-            value={values.location}
-            onChange={change}
-            placeholder="e.g. Bengaluru, Chennai, or Abroad"
-          />
-        </div>
-
-        {/* Career Goal */}
-        <div className="form-group">
-          <label htmlFor="enquiry-goal" className="form-label">
-            Career Goal
-          </label>
-          <input
-            id="enquiry-goal"
-            className="form-input"
-            name="goal"
-            value={values.goal}
-            onChange={change}
-            placeholder="e.g. Software Engineer"
-          />
-        </div>
       </div>
 
       {/* Message */}
       <div className="form-group form-group--full">
         <label htmlFor="enquiry-message" className="form-label">
-          Additional Message (Optional)
+          Message
         </label>
         <textarea
           id="enquiry-message"
@@ -295,7 +176,7 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
           value={values.message}
           onChange={change}
           rows="4"
-          placeholder="Tell us any specific preferences, budget expectations, or questions you have."
+          placeholder="Tell us about the courses, colleges, or questions you have."
         />
       </div>
 
@@ -319,7 +200,7 @@ function EnquiryForm({ initialCourse = '', initialLocation = '', onSuccess }) {
           ) : (
             <>
               <Send size={16} aria-hidden="true" />
-              <span>Request Free Counselling</span>
+              <span>Send Counselling Request</span>
             </>
           )}
         </button>

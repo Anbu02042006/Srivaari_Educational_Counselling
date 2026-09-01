@@ -126,8 +126,8 @@ function AboutPage() {
         <div className="container about-story-grid">
           <div className="about-story-media">
             <img
-              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80"
-              alt="Indian education counselling mentors and students"
+              src="/images/indian-counselling-story.jpg"
+              alt="Indian education counsellor guiding student and parent with honesty"
               loading="lazy"
             />
             <div className="about-story-badge">

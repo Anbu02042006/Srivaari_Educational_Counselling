@@ -249,7 +249,7 @@ function HomePage() {
           <div className="enquiry-panel">
             <div className="enquiry-panel__header">
               <span className="eyebrow">Direct Enquiry</span>
-              <h2 className="enquiry-panel__title">Request Free Counselling</h2>
+              <h2 className="enquiry-panel__title">Request for counselling</h2>
               <p className="enquiry-panel__desc">
                 Fill in your details below to schedule a 1-on-1 personalized academic guidance session.
               </p>
