@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { Menu, X, Home, Compass, Image, Info, PhoneCall } from 'lucide-react'
+import { Menu, X, Home, Compass, Image, Info, PhoneCall, Building } from 'lucide-react'
 import { Link, NavLink } from 'react-router-dom'
 import { scrollToContact } from '../utils/scrollToContact'
 import Logo from './Logo'
 
 const navLinks = [
   { to: '/', label: 'Home', icon: Home, end: true },
+  { to: '/colleges', label: 'Colleges', icon: Building },
   { to: '/services', label: 'Services', icon: Compass },
   { to: '/gallery', label: 'Gallery', icon: Image },
   { to: '/about', label: 'About Us', icon: Info },
@@ -102,25 +103,25 @@ function HeroImageCard({ onContactClick, onEnquire }) {
                      Z" />
           </clipPath>
 
-          {/* Desktop ClipPath (Extended Image around Curves + Fully Visible Logo) */}
+          {/* Desktop ClipPath (Expanded image area tightly hugging Contact Us button) */}
           <clipPath id="hero-organic-clip-desktop" clipPathUnits="objectBoundingBox">
-            <path d="M 0.18,0
+            <path d="M 0.16,0
                      L 0.92,0
                      C 0.97,0 1,0.03 1,0.08
                      L 1,0.885
-                     C 1,0.895 0.98,0.905 0.95,0.905
-                     L 0.80,0.905
-                     C 0.77,0.905 0.75,0.93 0.75,0.95
-                     L 0.75,0.97
-                     C 0.75,0.99 0.73,1 0.70,1
+                     C 1,0.895 0.985,0.905 0.96,0.905
+                     L 0.76,0.905
+                     C 0.735,0.905 0.72,0.92 0.72,0.945
+                     L 0.72,0.965
+                     C 0.72,0.99 0.70,1 0.66,1
                      L 0.08,1
                      C 0.03,1 0,0.97 0,0.92
-                     L 0,0.17
-                     C 0,0.14 0.02,0.125 0.06,0.125
-                     L 0.12,0.125
-                     C 0.155,0.125 0.165,0.09 0.165,0.055
-                     L 0.165,0.035
-                     C 0.165,0.01 0.17,0 0.18,0
+                     L 0,0.15
+                     C 0,0.12 0.02,0.105 0.05,0.105
+                     L 0.12,0.105
+                     C 0.15,0.105 0.16,0.08 0.16,0.05
+                     L 0.16,0.03
+                     C 0.16,0.01 0.16,0 0.16,0
                      Z" />
           </clipPath>
         </defs>

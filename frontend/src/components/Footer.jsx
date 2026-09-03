@@ -28,6 +28,7 @@ function Footer() {
           <h3 className="site-footer__heading">Explore</h3>
           <ul className="site-footer__nav-list">
             <li><Link to="/">Home</Link></li>
+            <li><Link to="/colleges">Colleges</Link></li>
             <li><Link to="/services">Services</Link></li>
             <li><Link to="/gallery">Photo Gallery</Link></li>
             <li><Link to="/about">About Us</Link></li>

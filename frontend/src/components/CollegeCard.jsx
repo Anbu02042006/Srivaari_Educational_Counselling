@@ -1,85 +1,37 @@
-import { ArrowUpRight, Award, MapPin } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Building2 } from 'lucide-react'
 
 function CollegeCard({
   name,
-  location,
-  city,
-  state,
-  type,
-  accreditation,
-  popularCourses = [],
-  description,
   image,
-  to,
-  actionLabel = 'View Details',
   className = '',
 }) {
-  const displayLocation = location || (city && state ? `${city}, ${state}` : city || state || '')
-
-  const cardContent = (
-    <article className={`content-card college-card ${className}`.trim()}>
-      <div className="content-card__media">
-        {image && (
-          <img
-            className="content-card__image"
-            src={image}
-            alt={`${name} campus`}
-            loading="lazy"
-          />
-        )}
-        {type && <span className="content-card__badge">{type}</span>}
-      </div>
-
-      <div className="content-card__body">
-        <div className="college-card__header">
-          <h3 className="college-card__title">{name}</h3>
-          {displayLocation && (
-            <span className="card-meta">
-              <MapPin size={15} aria-hidden="true" />
-              <span>{displayLocation}</span>
-            </span>
+  return (
+    <article className={`college-grid-card ${className}`.trim()}>
+      {/* Circle Logo Frame */}
+      <div className="college-grid-card__circle-wrap">
+        <div className="college-grid-card__circle">
+          {image ? (
+            <img
+              className="college-grid-card__img"
+              src={image}
+              alt={`${name} logo`}
+              loading="lazy"
+            />
+          ) : (
+            <div className="college-grid-card__placeholder">
+              <Building2 size={36} aria-hidden="true" />
+            </div>
           )}
         </div>
+      </div>
 
-        {accreditation && (
-          <div className="college-card__accreditation">
-            <Award size={15} aria-hidden="true" />
-            <span>{accreditation}</span>
-          </div>
-        )}
-
-        {description && <p className="college-card__desc">{description}</p>}
-
-        {popularCourses && popularCourses.length > 0 && (
-          <div className="college-card__courses">
-            <span className="college-card__courses-label">Popular Programs:</span>
-            <div className="college-card__pills">
-              {popularCourses.map((course) => (
-                <span key={course} className="college-card__pill">
-                  {course}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-
-        <div className="college-card__footer">
-          <span className="text-link">
-            <span>{actionLabel}</span>
-            <ArrowUpRight size={17} aria-hidden="true" />
-          </span>
-        </div>
+      {/* Body Content - College Name Only */}
+      <div className="college-grid-card__body college-grid-card__body--minimal">
+        <h3 className="college-grid-card__title">
+          {name}
+        </h3>
       </div>
     </article>
-  )
-
-  return to ? (
-    <Link className="card-link" to={to} aria-label={`${actionLabel}: ${name}`}>
-      {cardContent}
-    </Link>
-  ) : (
-    cardContent
   )
 }
 

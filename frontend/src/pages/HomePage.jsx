@@ -2,6 +2,7 @@ import {
   ArrowRight,
   Award,
   BookOpen,
+  Building2,
   CheckCircle2,
   Clock3,
   GraduationCap,
@@ -11,6 +12,7 @@ import {
   Phone,
   ShieldCheck,
   Sparkles,
+  UserCheck,
   Users,
 } from 'lucide-react'
 import { useEffect, useState } from 'react'
@@ -63,32 +65,109 @@ function HomePage() {
 
   return (
     <main className="home-page">
-      {/* 1. TOP HERO CARD (Below Navigation Bar - Same for Desktop & Mobile) */}
-      <section className="home-section home-section--about">
-        <div className="container">
-          <div className="about-split__media">
+      {/* 1. TOP HERO SECTION (Split on Desktop, Compact on Mobile) */}
+      <section className="home-hero-split">
+        <div className="container home-hero-split__grid">
+          {/* Left: Hero Image Card */}
+          <div className="home-hero-split__media">
             <HeroImageCard onEnquire={() => setIsEnquiryOpen(true)} />
+          </div>
+
+          {/* Right: Desktop Hero Content (Only shown on Desktop view) */}
+          <div className="home-hero-split__content desktop-only-hero">
+            <span className="eyebrow home-hero-split__eyebrow">
+              <Sparkles size={16} aria-hidden="true" className="home-hero-split__eyebrow-icon" />
+              PERSONAL, CARING EDUCATION COUNSELLING
+            </span>
+
+            <h1 className="home-hero-split__title">
+              Find Your Ideal College. <br />
+              <span className="home-hero-split__title-accent">
+                Step Confidently Into{' '}
+                <span className="home-hero-split__highlight">
+                  Tomorrow
+                  <svg
+                    className="home-hero-split__underline-svg"
+                    viewBox="0 0 240 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 14C50 4 150 2 237 12C180 18 80 18 20 16"
+                      stroke="currentColor"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </h1>
+
+            <p className="home-hero-split__lead">
+              At Sri Vaari, we help students discover the right colleges and career paths that match their interests and ambitions. From expert guidance to end-to-end admission support, we are with you at every step of your academic journey.
+            </p>
+
+            {/* Core Value Highlights (Clean Compact Text Content) */}
+            <div className="home-hero-split__highlights">
+              <div className="home-hero-split__highlight-item">
+                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
+                <span><strong>Top Medical & Engineering Colleges:</strong> Guidance for premier NMC & AICTE recognized institutions across Tamil Nadu, Puducherry, Karnataka & Abroad.</span>
+              </div>
+              <div className="home-hero-split__highlight-item">
+                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
+                <span><strong>Cut-off & Rank Mapping:</strong> Accurate marks-to-rank evaluation with category-wise seat matrix and cutoff analysis.</span>
+              </div>
+              <div className="home-hero-split__highlight-item">
+                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
+                <span><strong>Management & NRI Quota Support:</strong> Transparent fee structures and verified seat reservation guidance.</span>
+              </div>
+              <div className="home-hero-split__highlight-item">
+                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
+                <span><strong>End-to-End Admission Support:</strong> Dedicated 1-on-1 parent & student counselling from choice filling to campus reporting.</span>
+              </div>
+              <div className="home-hero-split__highlight-item">
+                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
+                <span><strong>Scholarship & Educational Aid:</strong> Assistance with institutional fee concessions and education loan documentation.</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 2. HERO / INTRODUCTION */}
+      {/* 2. ABOUT SRI VAARI SECTION */}
       <section className="hero">
         <div className="container hero__grid">
           <div className="hero__content">
             <span className="eyebrow hero__eyebrow">
               <Sparkles size={14} aria-hidden="true" />
-              Personal, Caring Education Counselling
+              About Sri Vaari
             </span>
 
-            <h1 className="hero__title">
-              Find Your Ideal College. <br />
-              <span>Step Confidently Into Tomorrow.</span>
-            </h1>
+            <h2 className="hero__title">
+              Guiding Students Towards <br />
+              <span>Better Futures</span>
+            </h2>
 
             <p className="hero__lead">
-              Confused about courses, cut-offs, or college options? We sit down with you and your parents to help you choose the right academic path with complete clarity.
+              Confused about courses, cut-offs, or college options? We sit down with you and your parents to help you choose the right academic path with complete clarity and trusted advice.
             </p>
+
+            <div className="hero__features">
+              <div className="hero__feature-item">
+                <CheckCircle2 size={16} className="hero__feature-icon" aria-hidden="true" />
+                <span><strong>Personalized Academic Roadmap:</strong> Tailored college shortlists matching your rank, budget, and career ambitions.</span>
+              </div>
+              <div className="hero__feature-item">
+                <CheckCircle2 size={16} className="hero__feature-icon" aria-hidden="true" />
+                <span><strong>Verified Seat Matrix & Fee Clarity:</strong> Transparent cut-off analysis, scholarship assistance, and genuine guidance.</span>
+              </div>
+              <div className="hero__feature-item">
+                <CheckCircle2 size={16} className="hero__feature-icon" aria-hidden="true" />
+                <span><strong>Direct Choice Filling Guidance:</strong> Step-by-step assistance through state & national counselling rounds.</span>
+              </div>
+            </div>
 
             <div className="hero__actions">
               <Link className="button button--primary hero__btn-primary" to="/services">

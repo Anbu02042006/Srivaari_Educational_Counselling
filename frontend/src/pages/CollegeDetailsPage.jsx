@@ -75,7 +75,7 @@ function CollegeDetailsPage() {
               </span>
               <span className="college-detail__location-pill">
                 <MapPin size={14} aria-hidden="true" />
-                <span>{college.city}, {college.state}</span>
+                <span>{college.city}, {college.region === 'Abroad' ? college.country : college.state}</span>
               </span>
             </div>
 
@@ -229,7 +229,7 @@ function CollegeDetailsPage() {
                   </span>
                   <div className="college-facts__data">
                     <span className="college-facts__label">Location</span>
-                    <strong className="college-facts__value">{college.city}, {college.state}</strong>
+                    <strong className="college-facts__value">{college.city}, {college.region === 'Abroad' ? college.country : college.state}</strong>
                   </div>
                 </div>
 

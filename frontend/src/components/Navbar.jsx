@@ -1,35 +1,52 @@
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Home, Building, Compass, Image, Info, PhoneCall } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { scrollToContact } from '../utils/scrollToContact'
 import Logo from './Logo'
 
 const navRoutes = [
-  { to: '/', label: 'Home', end: true },
-  { to: '/services', label: 'Services' },
-  { to: '/gallery', label: 'Gallery' },
-  { to: '/about', label: 'About' },
-  { to: '/', label: 'Contact', isContact: true },
+  { to: '/', label: 'Home', icon: Home, isHome: true },
+  { to: '/colleges', label: 'Colleges', icon: Building },
+  { to: '/services', label: 'Services', icon: Compass },
+  { to: '/gallery', label: 'Gallery', icon: Image },
+  { to: '/about', label: 'About', icon: Info },
+  { to: '/', label: 'Contact', icon: PhoneCall, isContact: true },
 ]
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isContactInView, setIsContactInView] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
   const isHomePage = location.pathname === '/'
 
-  // Track scroll position on mobile for Home page
+  // Track scroll position for header visibility and contact section highlight
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop
       setIsScrolled(scrollY > 80)
+
+      if (isHomePage) {
+        const contactEl = document.getElementById('contact') || document.getElementById('enquire')
+        if (contactEl) {
+          const rect = contactEl.getBoundingClientRect()
+          // Active when contact section top is within viewport
+          const inView = rect.top <= window.innerHeight * 0.6 && rect.bottom >= 100
+          setIsContactInView(inView)
+        } else {
+          setIsContactInView(false)
+        }
+      } else {
+        setIsContactInView(false)
+      }
     }
 
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [location.pathname])
+  }, [isHomePage, location.pathname])
 
   // Listen to mobile menu toggle events & escape key
   useEffect(() => {
@@ -70,6 +87,50 @@ function Navbar() {
     }
   }, [isOpen])
 
+  const handleLinkClick = (route, e) => {
+    if (route.isHome) {
+      if (isHomePage) {
+        if (e && typeof e.preventDefault === 'function') {
+          e.preventDefault()
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    } else if (route.isContact) {
+      if (e && typeof e.preventDefault === 'function') {
+        e.preventDefault()
+      }
+      if (isHomePage) {
+        const contactEl = document.getElementById('contact') || document.getElementById('enquire')
+        if (contactEl) {
+          contactEl.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      } else {
+        sessionStorage.setItem('scroll_to_contact', '1')
+        navigate('/')
+      }
+    }
+  }
+
+  const getLinkClass = (route, isActive) => {
+    if (route.isHome) {
+      return `nav__link ${isHomePage && !isContactInView ? 'nav__link--active' : ''}`.trim()
+    }
+    if (route.isContact) {
+      return `nav__link ${isHomePage && isContactInView ? 'nav__link--active' : ''}`.trim()
+    }
+    return `nav__link ${isActive ? 'nav__link--active' : ''}`.trim()
+  }
+
+  const getMobileLinkClass = (route, isActive) => {
+    if (route.isHome) {
+      return `mobile-drawer__link ${isHomePage && !isContactInView ? 'mobile-drawer__link--active' : ''}`.trim()
+    }
+    if (route.isContact) {
+      return `mobile-drawer__link ${isHomePage && isContactInView ? 'mobile-drawer__link--active' : ''}`.trim()
+    }
+    return `mobile-drawer__link ${isActive ? 'mobile-drawer__link--active' : ''}`.trim()
+  }
+
   return (
     <>
       <header
@@ -83,17 +144,14 @@ function Navbar() {
 
           {/* Center: Desktop Navigation Links */}
           <nav className="nav__desktop-links" aria-label="Desktop menu">
-            {navRoutes.map(({ to, label, end, isContact }) => (
+            {navRoutes.map((route) => (
               <NavLink
-                key={label}
-                to={to}
-                end={end}
-                onClick={isContact ? scrollToContact : undefined}
-                className={({ isActive }) =>
-                  `nav__link ${isActive && !isContact ? 'nav__link--active' : ''}`.trim()
-                }
+                key={route.label}
+                to={route.to}
+                onClick={(e) => handleLinkClick(route, e)}
+                className={({ isActive }) => getLinkClass(route, isActive)}
               >
-                {label}
+                {route.label}
               </NavLink>
             ))}
           </nav>
@@ -117,12 +175,12 @@ function Navbar() {
             aria-expanded={isOpen}
             aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           >
-            {isOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+            <Menu size={22} aria-hidden="true" />
           </button>
         </div>
       </header>
 
-      {/* Mobile Drawer rendered directly to document.body via Portal */}
+      {/* Mobile Slide-Over Drawer Navigation rendered via Portal to document.body */}
       {typeof document !== 'undefined' && createPortal(
         <>
           {isOpen && (
@@ -153,24 +211,23 @@ function Navbar() {
               </div>
 
               <nav className="mobile-drawer__nav" aria-label="Mobile menu links">
-                {navRoutes.map(({ to, label, end, isContact }) => (
-                  <NavLink
-                    key={label}
-                    to={to}
-                    end={end}
-                    onClick={(e) => {
-                      setIsOpen(false)
-                      if (isContact) {
-                        scrollToContact(e)
-                      }
-                    }}
-                    className={({ isActive }) =>
-                      `mobile-drawer__link ${isActive && !isContact ? 'mobile-drawer__link--active' : ''}`.trim()
-                    }
-                  >
-                    {label}
-                  </NavLink>
-                ))}
+                {navRoutes.map((route) => {
+                  const Icon = route.icon
+                  return (
+                    <NavLink
+                      key={route.label}
+                      to={route.to}
+                      onClick={(e) => {
+                        setIsOpen(false)
+                        handleLinkClick(route, e)
+                      }}
+                      className={({ isActive }) => getMobileLinkClass(route, isActive)}
+                    >
+                      {Icon && <Icon size={18} aria-hidden="true" style={{ marginRight: '10px', color: 'var(--color-primary-500)' }} />}
+                      <span>{route.label}</span>
+                    </NavLink>
+                  )
+                })}
               </nav>
 
               <div className="mobile-drawer__footer">
