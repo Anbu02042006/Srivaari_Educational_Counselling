@@ -170,8 +170,8 @@ function HomePage() {
             </div>
 
             <div className="hero__actions">
-              <Link className="button button--primary hero__btn-primary" to="/services">
-                <span>Explore Our Services</span>
+              <Link className="button button--primary hero__btn-primary" to="/colleges">
+                <span>Explore Colleges</span>
               </Link>
               <Link
                 className="button button--secondary hero__btn-secondary"

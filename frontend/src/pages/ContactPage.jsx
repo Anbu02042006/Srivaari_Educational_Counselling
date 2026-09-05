@@ -14,16 +14,57 @@ function ContactPage() {
   return (
     <main className="contact-page">
       {/* 1. HERO */}
-      <header className="page-hero">
-        <div className="container">
-          <span className="eyebrow page-hero__eyebrow">
-            <Sparkles size={14} aria-hidden="true" />
-            We Are Here For You
-          </span>
-          <h1 className="page-hero__title">Let’s Sit Down and Talk About Your Future.</h1>
-          <p className="page-hero__lead">
-            Have questions about 12th cut-offs, college fees, seats, or courses? Give us a call or drop us a WhatsApp message anytime.
+      <header className="page-hero contact-hero">
+        <div className="container contact-hero__container">
+          <div className="contact-hero__eyebrow">
+            <span className="contact-hero__eyebrow-line" aria-hidden="true" />
+            <span>GET IN TOUCH</span>
+          </div>
+          <h1 className="contact-hero__title">
+            Let’s Sit Down and Talk About <span className="text-highlight">Your Future</span>.
+          </h1>
+          <p className="contact-hero__lead">
+            Have questions about cut-offs, college fees, seats, or courses? Give us a call or drop us a message anytime for honest, caring guidance.
           </p>
+
+          <div className="contact-hero__features">
+            <div className="contact-hero__feature-item">
+              <div className="contact-hero__feature-icon">
+                <Phone size={16} aria-hidden="true" />
+              </div>
+              <span className="contact-hero__feature-text">
+                Direct Call &
+                <br />
+                WhatsApp Support
+              </span>
+            </div>
+
+            <div className="contact-hero__feature-divider" aria-hidden="true" />
+
+            <div className="contact-hero__feature-item">
+              <div className="contact-hero__feature-icon">
+                <Clock3 size={16} aria-hidden="true" />
+              </div>
+              <span className="contact-hero__feature-text">
+                Quick 15-Min
+                <br />
+                Response Time
+              </span>
+            </div>
+
+            <div className="contact-hero__feature-divider" aria-hidden="true" />
+
+            <div className="contact-hero__feature-item">
+              <div className="contact-hero__feature-icon">
+                <Sparkles size={16} aria-hidden="true" />
+              </div>
+              <span className="contact-hero__feature-text">
+                100% Free
+                <br />
+                Consultation
+              </span>
+            </div>
+          </div>
         </div>
       </header>
 

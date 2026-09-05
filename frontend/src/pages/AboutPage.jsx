@@ -6,15 +6,12 @@ import {
   HeartHandshake,
   Lightbulb,
   ShieldCheck,
-  Sparkles,
   Target,
+  Users,
 } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import CTASection from '../components/CTASection'
 import SectionHeading from '../components/SectionHeading'
 import ServiceCard from '../components/ServiceCard'
 import StatCounter from '../components/StatCounter'
-import { scrollToContact } from '../utils/scrollToContact'
 
 const values = [
   {
@@ -93,30 +90,46 @@ function AboutPage() {
   return (
     <main className="about-page">
       {/* 1. HERO */}
-      <header className="page-hero">
-        <div className="container">
-          <span className="eyebrow page-hero__eyebrow">
-            <Sparkles size={14} aria-hidden="true" />
-            About Sri Vaari
-          </span>
-          <h1 className="page-hero__title">
-            Education Guidance With Genuine Care & Empathy.
+      <header className="page-hero about-hero">
+        <div className="container about-hero__container">
+          <div className="about-hero__eyebrow">
+            <span className="about-hero__eyebrow-line" aria-hidden="true" />
+            <span>ABOUT SRI VAARI</span>
+          </div>
+
+          <h1 className="page-hero__title about-hero__title">
+            Education Guidance With <span className="text-highlight">Genuine Care & Empathy.</span>
           </h1>
-          <p className="page-hero__lead">
-            We started Sri Vaari because we believe every student deserves patient, honest guidance without high pressure or misleading promises.
+
+          <p className="page-hero__lead about-hero__lead">
+            Empower students and parents with honest college recommendations, verified placement data, transparent fees, and compassionate lifelong academic mentorship.
           </p>
 
-          <div className="hero__actions" style={{ marginTop: 'var(--space-4)' }}>
-            <Link
-              className="button button--primary"
-              to="/#contact"
-              onClick={scrollToContact}
-            >
-              <span>Book Free Counselling</span>
-            </Link>
-            <Link className="button button--secondary" to="/services">
-              <span>Explore Our Services</span>
-            </Link>
+          <div className="about-hero__features">
+            <div className="about-hero__feature-item">
+              <div className="about-hero__feature-icon">
+                <GraduationCap size={16} aria-hidden="true" />
+              </div>
+              <span className="about-hero__feature-text">Verified<br />Information</span>
+            </div>
+
+            <div className="about-hero__feature-divider" aria-hidden="true" />
+
+            <div className="about-hero__feature-item">
+              <div className="about-hero__feature-icon">
+                <ShieldCheck size={16} aria-hidden="true" />
+              </div>
+              <span className="about-hero__feature-text">Honest<br />Guidance</span>
+            </div>
+
+            <div className="about-hero__feature-divider" aria-hidden="true" />
+
+            <div className="about-hero__feature-item">
+              <div className="about-hero__feature-icon">
+                <Users size={16} aria-hidden="true" />
+              </div>
+              <span className="about-hero__feature-text">Student-First<br />Approach</span>
+            </div>
           </div>
         </div>
       </header>
@@ -320,17 +333,6 @@ function AboutPage() {
           </ol>
         </div>
       </section>
-
-      {/* 7. ABOUT CTA */}
-      <CTASection
-        eyebrow="Start Your Journey"
-        title="Let’s Find a Direction That Feels Right."
-        description="Speak with an experienced education counsellor today and receive actionable, personalized advice."
-        primaryLabel="Schedule Free Counselling"
-        primaryTo="/contact"
-        secondaryLabel="Contact Support"
-        secondaryTo="/contact"
-      />
     </main>
   )
 }

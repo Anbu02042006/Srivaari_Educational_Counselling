@@ -4,17 +4,15 @@ import {
   FileCheck2,
   Globe2,
   GraduationCap,
+  IndianRupee,
   Lightbulb,
-  Sparkles,
+  Users,
 } from 'lucide-react'
 import { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
-import CTASection from '../components/CTASection'
 import EnquiryModal from '../components/EnquiryModal'
 import SectionHeading from '../components/SectionHeading'
 import ServiceCard from '../components/ServiceCard'
 import { processSteps } from '../data/homeData'
-import { scrollToContact } from '../utils/scrollToContact'
 
 const services = [
   {
@@ -79,34 +77,55 @@ function ServicesPage() {
   return (
     <main className="services-page">
       {/* 1. HERO */}
-      <header className="page-hero">
-        <div className="container">
-          <span className="eyebrow page-hero__eyebrow">
-            <Sparkles size={14} aria-hidden="true" />
-            Support When You Need It Most
-          </span>
-          <h1 className="page-hero__title">
-            Patient, Clear Guidance for Every College Decision.
+      <header className="page-hero services-hero">
+        <div className="container services-hero__container">
+          <div className="services-hero__eyebrow">
+            <span className="services-hero__eyebrow-line" aria-hidden="true" />
+            <span>OUR GUIDANCE</span>
+          </div>
+
+          <h1 className="page-hero__title services-hero__title">
+            Patient, Clear Guidance for <span className="text-highlight">Every College Decision.</span>
           </h1>
-          <p className="page-hero__lead">
-            Whether you are feeling lost about your 12th cut-off, choosing between degrees, or planning your budget, our counsellors are here to guide you step-by-step.
+
+          <p className="page-hero__lead services-hero__lead">
+            Receive dedicated 1-on-1 counselling, transparent seat matrix insights, budget planning, and personalized admission guidance for your academic future.
           </p>
 
-          <div className="hero__actions" style={{ marginTop: 'var(--space-4)' }}>
-            <button
-              className="button button--primary"
-              type="button"
-              onClick={() => setIsEnquiryOpen(true)}
-            >
-              <span>Request Free Counselling</span>
-            </button>
-            <Link
-              className="button button--secondary"
-              to="/#contact"
-              onClick={scrollToContact}
-            >
-              <span>Contact Advisory Desk</span>
-            </Link>
+          <div className="services-hero__features">
+            <div className="services-hero__feature-item">
+              <div className="services-hero__feature-icon">
+                <Users size={16} aria-hidden="true" />
+              </div>
+              <span className="services-hero__feature-text">1-on-1<br />Counselling</span>
+            </div>
+
+            <div className="services-hero__feature-divider" aria-hidden="true" />
+
+            <div className="services-hero__feature-item">
+              <div className="services-hero__feature-icon">
+                <FileCheck2 size={16} aria-hidden="true" />
+              </div>
+              <span className="services-hero__feature-text">Transparent<br />Information</span>
+            </div>
+
+            <div className="services-hero__feature-divider" aria-hidden="true" />
+
+            <div className="services-hero__feature-item">
+              <div className="services-hero__feature-icon">
+                <IndianRupee size={16} aria-hidden="true" />
+              </div>
+              <span className="services-hero__feature-text">Smart<br />Budget Planning</span>
+            </div>
+
+            <div className="services-hero__feature-divider" aria-hidden="true" />
+
+            <div className="services-hero__feature-item">
+              <div className="services-hero__feature-icon">
+                <GraduationCap size={16} aria-hidden="true" />
+              </div>
+              <span className="services-hero__feature-text">Personalized<br />Guidance</span>
+            </div>
           </div>
         </div>
       </header>
@@ -206,18 +225,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* 4. SERVICES CTA */}
-      <CTASection
-        eyebrow="Personalized Support"
-        title="Ready to Discuss Your Academic Future?"
-        description="Connect with a senior education advisor today and get a customized recommendation report."
-        primaryLabel="Schedule Free Consultation"
-        primaryTo="/contact"
-        secondaryLabel="View Photo Gallery"
-        secondaryTo="/gallery"
-      />
-
-      {/* 5. ENQUIRY MODAL */}
+      {/* 4. ENQUIRY MODAL */}
       <EnquiryModal
         isOpen={isEnquiryOpen}
         onClose={() => setIsEnquiryOpen(false)}

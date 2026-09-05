@@ -2,10 +2,13 @@ import {
   Building,
   Compass,
   Cpu,
+  FileCheck2,
   Globe2,
   GraduationCap,
   Sparkles,
   Stethoscope,
+  TrendingUp,
+  Users,
 } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import CollegeCard from '../components/CollegeCard'
@@ -24,7 +27,7 @@ const regionIcons = {
 }
 
 function CollegesPage() {
-  const [activeStream, setActiveStream] = useState('medical') // 'medical' | 'engineering'
+  const [activeStream, setActiveStream] = useState('engineering') // 'engineering' | 'medical'
   const [activeMedicalRegion, setActiveMedicalRegion] = useState('Tamilnadu')
 
   const handleStreamClick = (stream, e) => {
@@ -60,22 +63,75 @@ function CollegesPage() {
   return (
     <main className="colleges-page">
       {/* 1. HERO HEADER */}
-      <section className="colleges-hero">
-        <div className="container">
-          <div className="colleges-hero__content">
-            <span className="eyebrow colleges-hero__eyebrow">
-              <Sparkles size={14} aria-hidden="true" />
-              Verified Campuses & Direct Admissions
-            </span>
-            <h1 className="colleges-hero__title">
-              Find the Right Medical & Engineering College.
-            </h1>
-            <p className="colleges-hero__lead">
-              Explore leading Medical institutions across Tamil Nadu, Puducherry, Karnataka, Abroad, and Premier Engineering & Technology Colleges.
-            </p>
+      <header className="page-hero colleges-hero">
+        <div className="container colleges-hero__container">
+          <div className="colleges-hero__eyebrow">
+            <span className="colleges-hero__eyebrow-line" aria-hidden="true" />
+            <span>COLLEGE GUIDANCE</span>
+          </div>
+
+          <h1 className="page-hero__title colleges-hero__title">
+            Find the Right <br />
+            <span className="text-highlight">Medical & Engineering</span> College.
+          </h1>
+
+          <p className="page-hero__lead colleges-hero__lead">
+            Explore leading medical and engineering colleges across Tamil Nadu, Puducherry, Karnataka, and accredited international institutions for your future.
+          </p>
+
+          <div className="colleges-hero__features">
+            <div className="colleges-hero__feature-item">
+              <div className="colleges-hero__feature-icon">
+                <GraduationCap size={16} aria-hidden="true" />
+              </div>
+              <span className="colleges-hero__feature-text">
+                Verified
+                <br />
+                Colleges
+              </span>
+            </div>
+
+            <div className="colleges-hero__feature-divider" aria-hidden="true" />
+
+            <div className="colleges-hero__feature-item">
+              <div className="colleges-hero__feature-icon">
+                <FileCheck2 size={16} aria-hidden="true" />
+              </div>
+              <span className="colleges-hero__feature-text">
+                Updated
+                <br />
+                Information
+              </span>
+            </div>
+
+            <div className="colleges-hero__feature-divider" aria-hidden="true" />
+
+            <div className="colleges-hero__feature-item">
+              <div className="colleges-hero__feature-icon">
+                <Users size={16} aria-hidden="true" />
+              </div>
+              <span className="colleges-hero__feature-text">
+                Personalized
+                <br />
+                Guidance
+              </span>
+            </div>
+
+            <div className="colleges-hero__feature-divider" aria-hidden="true" />
+
+            <div className="colleges-hero__feature-item">
+              <div className="colleges-hero__feature-icon">
+                <TrendingUp size={16} aria-hidden="true" />
+              </div>
+              <span className="colleges-hero__feature-text">
+                Brighter
+                <br />
+                Futures
+              </span>
+            </div>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* 2. NAVIGATION BAR (Stream Selector + Medical Sub-regions) */}
       <nav className="colleges-nav-sticky" aria-label="Colleges navigation">
@@ -83,19 +139,6 @@ function CollegesPage() {
           {/* PRIMARY CATEGORY / STREAM TABS */}
           <div className="colleges-stream-wrapper">
             <div className="colleges-stream-tabs" role="tablist" aria-label="College Stream Categories">
-              <button
-                type="button"
-                role="tab"
-                id="tab-stream-medical"
-                aria-selected={activeStream === 'medical'}
-                className={`colleges-stream-btn ${activeStream === 'medical' ? 'colleges-stream-btn--active' : ''}`}
-                onClick={(e) => handleStreamClick('medical', e)}
-              >
-                <Stethoscope size={18} aria-hidden="true" className="colleges-stream-btn__icon" />
-                <span className="colleges-stream-btn__label">Medical Colleges</span>
-                <span className="colleges-stream-btn__count">{medicalColleges.length}</span>
-              </button>
-
               <button
                 type="button"
                 role="tab"
@@ -107,6 +150,19 @@ function CollegesPage() {
                 <Cpu size={18} aria-hidden="true" className="colleges-stream-btn__icon" />
                 <span className="colleges-stream-btn__label">Engineering Colleges</span>
                 <span className="colleges-stream-btn__count">{engineeringColleges.length}</span>
+              </button>
+
+              <button
+                type="button"
+                role="tab"
+                id="tab-stream-medical"
+                aria-selected={activeStream === 'medical'}
+                className={`colleges-stream-btn ${activeStream === 'medical' ? 'colleges-stream-btn--active' : ''}`}
+                onClick={(e) => handleStreamClick('medical', e)}
+              >
+                <Stethoscope size={18} aria-hidden="true" className="colleges-stream-btn__icon" />
+                <span className="colleges-stream-btn__label">Medical Colleges</span>
+                <span className="colleges-stream-btn__count">{medicalColleges.length}</span>
               </button>
             </div>
           </div>
