@@ -1,0 +1,316 @@
+const sharedFaqs = [
+	["Who can apply for this course?", "Applicants should meet the listed eligibility criteria. Our counsellors can help you understand equivalencies and institution-specific requirements."],
+	["Can I study this course online?", "Availability depends on the institution and the learning mode shown for this course. Hybrid and online options may be available."],
+	["Is application support available?", "Yes. We can help you shortlist options, prepare your documents, and keep your application on schedule."]
+];
+export const courseCategories = [
+	"Undergraduate",
+	"Postgraduate",
+	"Diploma",
+	"Certificate",
+	"Online",
+	"Professional",
+	"Study Abroad",
+	"Skill Development"
+];
+export const courses = [
+	{
+		id: "business-management",
+		title: "Business Management",
+		category: "Undergraduate",
+		duration: "3 years",
+		durationValue: 36,
+		mode: "On campus",
+		eligibility: "10+2 or equivalent",
+		fee: "From ₹85,000 / year",
+		feeValue: 85e3,
+		description: "Develop strategic thinking, leadership, and commercial confidence.",
+		overview: "A broad, practical introduction to business strategy, finance, marketing, operations, and people management.",
+		curriculum: [
+			"Business communication",
+			"Marketing fundamentals",
+			"Financial decision-making",
+			"Operations and leadership"
+		],
+		careers: [
+			"Business development executive",
+			"Marketing associate",
+			"Operations coordinator",
+			"Management trainee"
+		],
+		image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "computer-science",
+		title: "Computer Science",
+		category: "Undergraduate",
+		duration: "4 years",
+		durationValue: 48,
+		mode: "On campus",
+		eligibility: "10+2 with Mathematics",
+		fee: "From ₹1,10,000 / year",
+		feeValue: 11e4,
+		description: "Learn to design thoughtful digital products and intelligent systems.",
+		overview: "Build the technical and problem-solving skills needed to create dependable software and emerging technology solutions.",
+		curriculum: [
+			"Programming foundations",
+			"Data structures",
+			"Web technologies",
+			"Artificial intelligence basics"
+		],
+		careers: [
+			"Software developer",
+			"Systems analyst",
+			"QA engineer",
+			"Product associate"
+		],
+		image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "clinical-psychology",
+		title: "Clinical Psychology",
+		category: "Postgraduate",
+		duration: "2 years",
+		durationValue: 24,
+		mode: "On campus",
+		eligibility: "Bachelor’s degree in Psychology",
+		fee: "From ₹1,40,000 / year",
+		feeValue: 14e4,
+		description: "Build a deeper understanding of people, wellbeing, and care.",
+		overview: "Study psychological assessment, evidence-based intervention, ethics, and the human experience in a structured setting.",
+		curriculum: [
+			"Psychological assessment",
+			"Counselling approaches",
+			"Research methods",
+			"Ethics in practice"
+		],
+		careers: [
+			"Mental health support worker",
+			"Research assistant",
+			"Wellbeing coordinator",
+			"Behavioural health associate"
+		],
+		image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "digital-marketing",
+		title: "Digital Marketing",
+		category: "Professional",
+		duration: "6 months",
+		durationValue: 6,
+		mode: "Hybrid",
+		eligibility: "Open to graduates and working professionals",
+		fee: "From ₹38,000",
+		feeValue: 38e3,
+		description: "Create modern campaigns using insights, content, and strategy.",
+		overview: "Learn the connected skills behind high-performing digital campaigns, from audience research to channel optimisation.",
+		curriculum: [
+			"Content strategy",
+			"Search marketing",
+			"Social media campaigns",
+			"Performance reporting"
+		],
+		careers: [
+			"Digital marketing specialist",
+			"Content strategist",
+			"SEO associate",
+			"Campaign coordinator"
+		],
+		image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "data-analytics",
+		title: "Data Analytics",
+		category: "Professional",
+		duration: "8 months",
+		durationValue: 8,
+		mode: "Online",
+		eligibility: "Graduates or professionals with basic numeracy",
+		fee: "From ₹45,000",
+		feeValue: 45e3,
+		description: "Turn data into clear, practical decisions for growing teams.",
+		overview: "Learn to prepare, explore, and communicate data using accessible industry tools and real business questions.",
+		curriculum: [
+			"Spreadsheet analysis",
+			"SQL essentials",
+			"Dashboard design",
+			"Data storytelling"
+		],
+		careers: [
+			"Data analyst",
+			"Business intelligence associate",
+			"Reporting analyst",
+			"Operations analyst"
+		],
+		image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "interior-design",
+		title: "Interior Design",
+		category: "Undergraduate",
+		duration: "3 years",
+		durationValue: 36,
+		mode: "On campus",
+		eligibility: "10+2 or equivalent",
+		fee: "From ₹95,000 / year",
+		feeValue: 95e3,
+		description: "Combine creative vision with skills to shape meaningful spaces.",
+		overview: "Develop concepts, visual communication, materials knowledge, and practical planning skills for interior spaces.",
+		curriculum: [
+			"Design principles",
+			"Space planning",
+			"Materials and finishes",
+			"Portfolio studio"
+		],
+		careers: [
+			"Interior designer",
+			"Space planner",
+			"Visual merchandiser",
+			"Design consultant"
+		],
+		image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "hotel-management-diploma",
+		title: "Hotel Management Diploma",
+		category: "Diploma",
+		duration: "1 year",
+		durationValue: 12,
+		mode: "On campus",
+		eligibility: "10+2 or equivalent",
+		fee: "From ₹62,000",
+		feeValue: 62e3,
+		description: "Prepare for guest-focused roles in a dynamic hospitality industry.",
+		overview: "Gain operational awareness and service confidence across front office, food service, accommodation, and events.",
+		curriculum: [
+			"Front office operations",
+			"Food and beverage service",
+			"Housekeeping",
+			"Event basics"
+		],
+		careers: [
+			"Guest relations executive",
+			"Front office associate",
+			"Event coordinator",
+			"Hospitality supervisor"
+		],
+		image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "graphic-design-certificate",
+		title: "Graphic Design Certificate",
+		category: "Certificate",
+		duration: "5 months",
+		durationValue: 5,
+		mode: "Hybrid",
+		eligibility: "Open to learners after Class 10",
+		fee: "From ₹28,000",
+		feeValue: 28e3,
+		description: "Learn visual communication through hands-on creative projects.",
+		overview: "Build essential visual design skills and create a portfolio that shows your ideas, process, and craft.",
+		curriculum: [
+			"Typography",
+			"Brand identity",
+			"Digital illustration",
+			"Portfolio development"
+		],
+		careers: [
+			"Junior graphic designer",
+			"Content designer",
+			"Brand assistant",
+			"Freelance creative"
+		],
+		image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "global-business-masters",
+		title: "Global Business Master’s",
+		category: "Study Abroad",
+		duration: "18 months",
+		durationValue: 18,
+		mode: "On campus",
+		eligibility: "Bachelor’s degree and language score",
+		fee: "From ₹13,50,000",
+		feeValue: 135e4,
+		description: "Prepare for international business opportunities and global teams.",
+		overview: "Explore strategy, markets, and leadership in a cross-cultural learning environment with global perspectives.",
+		curriculum: [
+			"International markets",
+			"Global strategy",
+			"Cross-cultural leadership",
+			"Capstone project"
+		],
+		careers: [
+			"International business associate",
+			"Market analyst",
+			"Strategy consultant",
+			"Account manager"
+		],
+		image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "ux-ui-bootcamp",
+		title: "UX/UI Design Bootcamp",
+		category: "Skill Development",
+		duration: "16 weeks",
+		durationValue: 4,
+		mode: "Online",
+		eligibility: "Open to all motivated learners",
+		fee: "From ₹32,000",
+		feeValue: 32e3,
+		description: "Create useful digital experiences with user-centred design skills.",
+		overview: "Move from user research to polished interface concepts through hands-on, portfolio-focused studio work.",
+		curriculum: [
+			"User research",
+			"Wireframing",
+			"Interface design",
+			"Usability testing"
+		],
+		careers: [
+			"UX designer",
+			"UI designer",
+			"Product design intern",
+			"Design researcher"
+		],
+		image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	},
+	{
+		id: "project-management-online",
+		title: "Project Management Essentials",
+		category: "Online",
+		duration: "12 weeks",
+		durationValue: 3,
+		mode: "Online",
+		eligibility: "Open to students and professionals",
+		fee: "From ₹18,000",
+		feeValue: 18e3,
+		description: "Plan, organise, and deliver work with greater confidence.",
+		overview: "Build practical planning, stakeholder, and delivery habits for projects across industries.",
+		curriculum: [
+			"Project planning",
+			"Risk management",
+			"Agile fundamentals",
+			"Stakeholder communication"
+		],
+		careers: [
+			"Project coordinator",
+			"Operations associate",
+			"Delivery analyst",
+			"PMO assistant"
+		],
+		image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+		faqs: sharedFaqs
+	}
+];
+
+//# sourceMappingURL=data:application/json;base64,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QUNwdUIiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiY291cnNlc0RhdGEuanMiXSwidmVyc2lvbiI6Mywic291cmNlc0NvbnRlbnQiOlsiY29uc3Qgc2hhcmVkRmFxcyA9IFtcbiAgWydXaG8gY2FuIGFwcGx5IGZvciB0aGlzIGNvdXJzZT8nLCAnQXBwbGljYW50cyBzaG91bGQgbWVldCB0aGUgbGlzdGVkIGVsaWdpYmlsaXR5IGNyaXRlcmlhLiBPdXIgY291bnNlbGxvcnMgY2FuIGhlbHAgeW91IHVuZGVyc3RhbmQgZXF1aXZhbGVuY2llcyBhbmQgaW5zdGl0dXRpb24tc3BlY2lmaWMgcmVxdWlyZW1lbnRzLiddLFxuICBbJ0NhbiBJIHN0dWR5IHRoaXMgY291cnNlIG9ubGluZT8nLCAnQXZhaWxhYmlsaXR5IGRlcGVuZHMgb24gdGhlIGluc3RpdHV0aW9uIGFuZCB0aGUgbGVhcm5pbmcgbW9kZSBzaG93biBmb3IgdGhpcyBjb3Vyc2UuIEh5YnJpZCBhbmQgb25saW5lIG9wdGlvbnMgbWF5IGJlIGF2YWlsYWJsZS4nXSxcbiAgWydJcyBhcHBsaWNhdGlvbiBzdXBwb3J0IGF2YWlsYWJsZT8nLCAnWWVzLiBXZSBjYW4gaGVscCB5b3Ugc2hvcnRsaXN0IG9wdGlvbnMsIHByZXBhcmUgeW91ciBkb2N1bWVudHMsIGFuZCBrZWVwIHlvdXIgYXBwbGljYXRpb24gb24gc2NoZWR1bGUuJ10sXG5dXG5cbmV4cG9ydCBjb25zdCBjb3Vyc2VDYXRlZ29yaWVzID0gWydVbmRlcmdyYWR1YXRlJywgJ1Bvc3RncmFkdWF0ZScsICdEaXBsb21hJywgJ0NlcnRpZmljYXRlJywgJ09ubGluZScsICdQcm9mZXNzaW9uYWwnLCAnU3R1ZHkgQWJyb2FkJywgJ1NraWxsIERldmVsb3BtZW50J11cblxuZXhwb3J0IGNvbnN0IGNvdXJzZXMgPSBbXG4gIHsgaWQ6ICdidXNpbmVzcy1tYW5hZ2VtZW50JywgdGl0bGU6ICdCdXNpbmVzcyBNYW5hZ2VtZW50JywgY2F0ZWdvcnk6ICdVbmRlcmdyYWR1YXRlJywgZHVyYXRpb246ICczIHllYXJzJywgZHVyYXRpb25WYWx1ZTogMzYsIG1vZGU6ICdPbiBjYW1wdXMnLCBlbGlnaWJpbGl0eTogJzEwKzIgb3IgZXF1aXZhbGVudCcsIGZlZTogJ0Zyb20g4oK5ODUsMDAwIC8geWVhcicsIGZlZVZhbHVlOiA4NTAwMCwgZGVzY3JpcHRpb246ICdEZXZlbG9wIHN0cmF0ZWdpYyB0aGlua2luZywgbGVhZGVyc2hpcCwgYW5kIGNvbW1lcmNpYWwgY29uZmlkZW5jZS4nLCBvdmVydmlldzogJ0EgYnJvYWQsIHByYWN0aWNhbCBpbnRyb2R1Y3Rpb24gdG8gYnVzaW5lc3Mgc3RyYXRlZ3ksIGZpbmFuY2UsIG1hcmtldGluZywgb3BlcmF0aW9ucywgYW5kIHBlb3BsZSBtYW5hZ2VtZW50LicsIGN1cnJpY3VsdW06IFsnQnVzaW5lc3MgY29tbXVuaWNhdGlvbicsICdNYXJrZXRpbmcgZnVuZGFtZW50YWxzJywgJ0ZpbmFuY2lhbCBkZWNpc2lvbi1tYWtpbmcnLCAnT3BlcmF0aW9ucyBhbmQgbGVhZGVyc2hpcCddLCBjYXJlZXJzOiBbJ0J1c2luZXNzIGRldmVsb3BtZW50IGV4ZWN1dGl2ZScsICdNYXJrZXRpbmcgYXNzb2NpYXRlJywgJ09wZXJhdGlvbnMgY29vcmRpbmF0b3InLCAnTWFuYWdlbWVudCB0cmFpbmVlJ10sIGltYWdlOiAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1MjE3Mzc3MTE4NjctZTNiOTczNzVmOTAyP2F1dG89Zm9ybWF0JmZpdD1jcm9wJnc9MTIwMCZxPTgwJywgZmFxczogc2hhcmVkRmFxcyB9LFxuICB7IGlkOiAnY29tcHV0ZXItc2NpZW5jZScsIHRpdGxlOiAnQ29tcHV0ZXIgU2NpZW5jZScsIGNhdGVnb3J5OiAnVW5kZXJncmFkdWF0ZScsIGR1cmF0aW9uOiAnNCB5ZWFycycsIGR1cmF0aW9uVmFsdWU6IDQ4LCBtb2RlOiAnT24gY2FtcHVzJywgZWxpZ2liaWxpdHk6ICcxMCsyIHdpdGggTWF0aGVtYXRpY3MnLCBmZWU6ICdGcm9tIOKCuTEsMTAsMDAwIC8geWVhcicsIGZlZVZhbHVlOiAxMTAwMDAsIGRlc2NyaXB0aW9uOiAnTGVhcm4gdG8gZGVzaWduIHRob3VnaHRmdWwgZGlnaXRhbCBwcm9kdWN0cyBhbmQgaW50ZWxsaWdlbnQgc3lzdGVtcy4nLCBvdmVydmlldzogJ0J1aWxkIHRoZSB0ZWNobmljYWwgYW5kIHByb2JsZW0tc29sdmluZyBza2lsbHMgbmVlZGVkIHRvIGNyZWF0ZSBkZXBlbmRhYmxlIHNvZnR3YXJlIGFuZCBlbWVyZ2luZyB0ZWNobm9sb2d5IHNvbHV0aW9ucy4nLCBjdXJyaWN1bHVtOiBbJ1Byb2dyYW1taW5nIGZvdW5kYXRpb25zJywgJ0RhdGEgc3RydWN0dXJlcycsICdXZWIgdGVjaG5vbG9naWVzJywgJ0FydGlmaWNpYWwgaW50ZWxsaWdlbmNlIGJhc2ljcyddLCBjYXJlZXJzOiBbJ1NvZnR3YXJlIGRldmVsb3BlcicsICdTeXN0ZW1zIGFuYWx5c3QnLCAnUUEgZW5naW5lZXInLCAnUHJvZHVjdCBhc3NvY2lhdGUnXSwgaW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTUxNjMyMTMxODQyMy1mMDZmODVlNTA0YjM/YXV0bz1mb3JtYXQmZml0PWNyb3Amdz0xMjAwJnE9ODAnLCBmYXFzOiBzaGFyZWRGYXFzIH0sXG4gIHsgaWQ6ICdjbGluaWNhbC1wc3ljaG9sb2d5JywgdGl0bGU6ICdDbGluaWNhbCBQc3ljaG9sb2d5JywgY2F0ZWdvcnk6ICdQb3N0Z3JhZHVhdGUnLCBkdXJhdGlvbjogJzIgeWVhcnMnLCBkdXJhdGlvblZhbHVlOiAyNCwgbW9kZTogJ09uIGNhbXB1cycsIGVsaWdpYmlsaXR5OiAnQmFjaGVsb3LigJlzIGRlZ3JlZSBpbiBQc3ljaG9sb2d5JywgZmVlOiAnRnJvbSDigrkxLDQwLDAwMCAvIHllYXInLCBmZWVWYWx1ZTogMTQwMDAwLCBkZXNjcmlwdGlvbjogJ0J1aWxkIGEgZGVlcGVyIHVuZGVyc3RhbmRpbmcgb2YgcGVvcGxlLCB3ZWxsYmVpbmcsIGFuZCBjYXJlLicsIG92ZXJ2aWV3OiAnU3R1ZHkgcHN5Y2hvbG9naWNhbCBhc3Nlc3NtZW50LCBldmlkZW5jZS1iYXNlZCBpbnRlcnZlbnRpb24sIGV0aGljcywgYW5kIHRoZSBodW1hbiBleHBlcmllbmNlIGluIGEgc3RydWN0dXJlZCBzZXR0aW5nLicsIGN1cnJpY3VsdW06IFsnUHN5Y2hvbG9naWNhbCBhc3Nlc3NtZW50JywgJ0NvdW5zZWxsaW5nIGFwcHJvYWNoZXMnLCAnUmVzZWFyY2ggbWV0aG9kcycsICdFdGhpY3MgaW4gcHJhY3RpY2UnXSwgY2FyZWVyczogWydNZW50YWwgaGVhbHRoIHN1cHBvcnQgd29ya2VyJywgJ1Jlc2VhcmNoIGFzc2lzdGFudCcsICdXZWxsYmVpbmcgY29vcmRpbmF0b3InLCAnQmVoYXZpb3VyYWwgaGVhbHRoIGFzc29jaWF0ZSddLCBpbWFnZTogJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNTc2MDkxMTYwMzk5LTExMmJhOGQyNWQxZD9hdXRvPWZvcm1hdCZmaXQ9Y3JvcCZ3PTEyMDAmcT04MCcsIGZhcXM6IHNoYXJlZEZhcXMgfSxcbiAgeyBpZDogJ2RpZ2l0YWwtbWFya2V0aW5nJywgdGl0bGU6ICdEaWdpdGFsIE1hcmtldGluZycsIGNhdGVnb3J5OiAnUHJvZmVzc2lvbmFsJywgZHVyYXRpb246ICc2IG1vbnRocycsIGR1cmF0aW9uVmFsdWU6IDYsIG1vZGU6ICdIeWJyaWQnLCBlbGlnaWJpbGl0eTogJ09wZW4gdG8gZ3JhZHVhdGVzIGFuZCB3b3JraW5nIHByb2Zlc3Npb25hbHMnLCBmZWU6ICdGcm9tIOKCuTM4LDAwMCcsIGZlZVZhbHVlOiAzODAwMCwgZGVzY3JpcHRpb246ICdDcmVhdGUgbW9kZXJuIGNhbXBhaWducyB1c2luZyBpbnNpZ2h0cywgY29udGVudCwgYW5kIHN0cmF0ZWd5LicsIG92ZXJ2aWV3OiAnTGVhcm4gdGhlIGNvbm5lY3RlZCBza2lsbHMgYmVoaW5kIGhpZ2gtcGVyZm9ybWluZyBkaWdpdGFsIGNhbXBhaWducywgZnJvbSBhdWRpZW5jZSByZXNlYXJjaCB0byBjaGFubmVsIG9wdGltaXNhdGlvbi4nLCBjdXJyaWN1bHVtOiBbJ0NvbnRlbnQgc3RyYXRlZ3knLCAnU2VhcmNoIG1hcmtldGluZycsICdTb2NpYWwgbWVkaWEgY2FtcGFpZ25zJywgJ1BlcmZvcm1hbmNlIHJlcG9ydGluZyddLCBjYXJlZXJzOiBbJ0RpZ2l0YWwgbWFya2V0aW5nIHNwZWNpYWxpc3QnLCAnQ29udGVudCBzdHJhdGVnaXN0JywgJ1NFTyBhc3NvY2lhdGUnLCAnQ2FtcGFpZ24gY29vcmRpbmF0b3InXSwgaW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTUzMzc1MDM0OTA4OC1jZDg3MWE5MmYzMTI/YXV0bz1mb3JtYXQmZml0PWNyb3Amdz0xMjAwJnE9ODAnLCBmYXFzOiBzaGFyZWRGYXFzIH0sXG4gIHsgaWQ6ICdkYXRhLWFuYWx5dGljcycsIHRpdGxlOiAnRGF0YSBBbmFseXRpY3MnLCBjYXRlZ29yeTogJ1Byb2Zlc3Npb25hbCcsIGR1cmF0aW9uOiAnOCBtb250aHMnLCBkdXJhdGlvblZhbHVlOiA4LCBtb2RlOiAnT25saW5lJywgZWxpZ2liaWxpdHk6ICdHcmFkdWF0ZXMgb3IgcHJvZmVzc2lvbmFscyB3aXRoIGJhc2ljIG51bWVyYWN5JywgZmVlOiAnRnJvbSDigrk0NSwwMDAnLCBmZWVWYWx1ZTogNDUwMDAsIGRlc2NyaXB0aW9uOiAnVHVybiBkYXRhIGludG8gY2xlYXIsIHByYWN0aWNhbCBkZWNpc2lvbnMgZm9yIGdyb3dpbmcgdGVhbXMuJywgb3ZlcnZpZXc6ICdMZWFybiB0byBwcmVwYXJlLCBleHBsb3JlLCBhbmQgY29tbXVuaWNhdGUgZGF0YSB1c2luZyBhY2Nlc3NpYmxlIGluZHVzdHJ5IHRvb2xzIGFuZCByZWFsIGJ1c2luZXNzIHF1ZXN0aW9ucy4nLCBjdXJyaWN1bHVtOiBbJ1NwcmVhZHNoZWV0IGFuYWx5c2lzJywgJ1NRTCBlc3NlbnRpYWxzJywgJ0Rhc2hib2FyZCBkZXNpZ24nLCAnRGF0YSBzdG9yeXRlbGxpbmcnXSwgY2FyZWVyczogWydEYXRhIGFuYWx5c3QnLCAnQnVzaW5lc3MgaW50ZWxsaWdlbmNlIGFzc29jaWF0ZScsICdSZXBvcnRpbmcgYW5hbHlzdCcsICdPcGVyYXRpb25zIGFuYWx5c3QnXSwgaW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTU1MTI4ODA0OS1iZWJkYTRlMzhmNzE/YXV0bz1mb3JtYXQmZml0PWNyb3Amdz0xMjAwJnE9ODAnLCBmYXFzOiBzaGFyZWRGYXFzIH0sXG4gIHsgaWQ6ICdpbnRlcmlvci1kZXNpZ24nLCB0aXRsZTogJ0ludGVyaW9yIERlc2lnbicsIGNhdGVnb3J5OiAnVW5kZXJncmFkdWF0ZScsIGR1cmF0aW9uOiAnMyB5ZWFycycsIGR1cmF0aW9uVmFsdWU6IDM2LCBtb2RlOiAnT24gY2FtcHVzJywgZWxpZ2liaWxpdHk6ICcxMCsyIG9yIGVxdWl2YWxlbnQnLCBmZWU6ICdGcm9tIOKCuTk1LDAwMCAvIHllYXInLCBmZWVWYWx1ZTogOTUwMDAsIGRlc2NyaXB0aW9uOiAnQ29tYmluZSBjcmVhdGl2ZSB2aXNpb24gd2l0aCBza2lsbHMgdG8gc2hhcGUgbWVhbmluZ2Z1bCBzcGFjZXMuJywgb3ZlcnZpZXc6ICdEZXZlbG9wIGNvbmNlcHRzLCB2aXN1YWwgY29tbXVuaWNhdGlvbiwgbWF0ZXJpYWxzIGtub3dsZWRnZSwgYW5kIHByYWN0aWNhbCBwbGFubmluZyBza2lsbHMgZm9yIGludGVyaW9yIHNwYWNlcy4nLCBjdXJyaWN1bHVtOiBbJ0Rlc2lnbiBwcmluY2lwbGVzJywgJ1NwYWNlIHBsYW5uaW5nJywgJ01hdGVyaWFscyBhbmQgZmluaXNoZXMnLCAnUG9ydGZvbGlvIHN0dWRpbyddLCBjYXJlZXJzOiBbJ0ludGVyaW9yIGRlc2lnbmVyJywgJ1NwYWNlIHBsYW5uZXInLCAnVmlzdWFsIG1lcmNoYW5kaXNlcicsICdEZXNpZ24gY29uc3VsdGFudCddLCBpbWFnZTogJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNjAwMjEwNDkyNDg2LTcyNGZlNWM2N2ZiMD9hdXRvPWZvcm1hdCZmaXQ9Y3JvcCZ3PTEyMDAmcT04MCcsIGZhcXM6IHNoYXJlZEZhcXMgfSxcbiAgeyBpZDogJ2hvdGVsLW1hbmFnZW1lbnQtZGlwbG9tYScsIHRpdGxlOiAnSG90ZWwgTWFuYWdlbWVudCBEaXBsb21hJywgY2F0ZWdvcnk6ICdEaXBsb21hJywgZHVyYXRpb246ICcxIHllYXInLCBkdXJhdGlvblZhbHVlOiAxMiwgbW9kZTogJ09uIGNhbXB1cycsIGVsaWdpYmlsaXR5OiAnMTArMiBvciBlcXVpdmFsZW50JywgZmVlOiAnRnJvbSDigrk2MiwwMDAnLCBmZWVWYWx1ZTogNjIwMDAsIGRlc2NyaXB0aW9uOiAnUHJlcGFyZSBmb3IgZ3Vlc3QtZm9jdXNlZCByb2xlcyBpbiBhIGR5bmFtaWMgaG9zcGl0YWxpdHkgaW5kdXN0cnkuJywgb3ZlcnZpZXc6ICdHYWluIG9wZXJhdGlvbmFsIGF3YXJlbmVzcyBhbmQgc2VydmljZSBjb25maWRlbmNlIGFjcm9zcyBmcm9udCBvZmZpY2UsIGZvb2Qgc2VydmljZSwgYWNjb21tb2RhdGlvbiwgYW5kIGV2ZW50cy4nLCBjdXJyaWN1bHVtOiBbJ0Zyb250IG9mZmljZSBvcGVyYXRpb25zJywgJ0Zvb2QgYW5kIGJldmVyYWdlIHNlcnZpY2UnLCAnSG91c2VrZWVwaW5nJywgJ0V2ZW50IGJhc2ljcyddLCBjYXJlZXJzOiBbJ0d1ZXN0IHJlbGF0aW9ucyBleGVjdXRpdmUnLCAnRnJvbnQgb2ZmaWNlIGFzc29jaWF0ZScsICdFdmVudCBjb29yZGluYXRvcicsICdIb3NwaXRhbGl0eSBzdXBlcnZpc29yJ10sIGltYWdlOiAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1NjYwNzM3NzEyNTktNmE4NTA2MDk5OTQ1P2F1dG89Zm9ybWF0JmZpdD1jcm9wJnc9MTIwMCZxPTgwJywgZmFxczogc2hhcmVkRmFxcyB9LFxuICB7IGlkOiAnZ3JhcGhpYy1kZXNpZ24tY2VydGlmaWNhdGUnLCB0aXRsZTogJ0dyYXBoaWMgRGVzaWduIENlcnRpZmljYXRlJywgY2F0ZWdvcnk6ICdDZXJ0aWZpY2F0ZScsIGR1cmF0aW9uOiAnNSBtb250aHMnLCBkdXJhdGlvblZhbHVlOiA1LCBtb2RlOiAnSHlicmlkJywgZWxpZ2liaWxpdHk6ICdPcGVuIHRvIGxlYXJuZXJzIGFmdGVyIENsYXNzIDEwJywgZmVlOiAnRnJvbSDigrkyOCwwMDAnLCBmZWVWYWx1ZTogMjgwMDAsIGRlc2NyaXB0aW9uOiAnTGVhcm4gdmlzdWFsIGNvbW11bmljYXRpb24gdGhyb3VnaCBoYW5kcy1vbiBjcmVhdGl2ZSBwcm9qZWN0cy4nLCBvdmVydmlldzogJ0J1aWxkIGVzc2VudGlhbCB2aXN1YWwgZGVzaWduIHNraWxscyBhbmQgY3JlYXRlIGEgcG9ydGZvbGlvIHRoYXQgc2hvd3MgeW91ciBpZGVhcywgcHJvY2VzcywgYW5kIGNyYWZ0LicsIGN1cnJpY3VsdW06IFsnVHlwb2dyYXBoeScsICdCcmFuZCBpZGVudGl0eScsICdEaWdpdGFsIGlsbHVzdHJhdGlvbicsICdQb3J0Zm9saW8gZGV2ZWxvcG1lbnQnXSwgY2FyZWVyczogWydKdW5pb3IgZ3JhcGhpYyBkZXNpZ25lcicsICdDb250ZW50IGRlc2lnbmVyJywgJ0JyYW5kIGFzc2lzdGFudCcsICdGcmVlbGFuY2UgY3JlYXRpdmUnXSwgaW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTYyNjc4NTc3NDU3My00Yjc5OTMxNTM0NWQ/YXV0bz1mb3JtYXQmZml0PWNyb3Amdz0xMjAwJnE9ODAnLCBmYXFzOiBzaGFyZWRGYXFzIH0sXG4gIHsgaWQ6ICdnbG9iYWwtYnVzaW5lc3MtbWFzdGVycycsIHRpdGxlOiAnR2xvYmFsIEJ1c2luZXNzIE1hc3RlcuKAmXMnLCBjYXRlZ29yeTogJ1N0dWR5IEFicm9hZCcsIGR1cmF0aW9uOiAnMTggbW9udGhzJywgZHVyYXRpb25WYWx1ZTogMTgsIG1vZGU6ICdPbiBjYW1wdXMnLCBlbGlnaWJpbGl0eTogJ0JhY2hlbG9y4oCZcyBkZWdyZWUgYW5kIGxhbmd1YWdlIHNjb3JlJywgZmVlOiAnRnJvbSDigrkxMyw1MCwwMDAnLCBmZWVWYWx1ZTogMTM1MDAwMCwgZGVzY3JpcHRpb246ICdQcmVwYXJlIGZvciBpbnRlcm5hdGlvbmFsIGJ1c2luZXNzIG9wcG9ydHVuaXRpZXMgYW5kIGdsb2JhbCB0ZWFtcy4nLCBvdmVydmlldzogJ0V4cGxvcmUgc3RyYXRlZ3ksIG1hcmtldHMsIGFuZCBsZWFkZXJzaGlwIGluIGEgY3Jvc3MtY3VsdHVyYWwgbGVhcm5pbmcgZW52aXJvbm1lbnQgd2l0aCBnbG9iYWwgcGVyc3BlY3RpdmVzLicsIGN1cnJpY3VsdW06IFsnSW50ZXJuYXRpb25hbCBtYXJrZXRzJywgJ0dsb2JhbCBzdHJhdGVneScsICdDcm9zcy1jdWx0dXJhbCBsZWFkZXJzaGlwJywgJ0NhcHN0b25lIHByb2plY3QnXSwgY2FyZWVyczogWydJbnRlcm5hdGlvbmFsIGJ1c2luZXNzIGFzc29jaWF0ZScsICdNYXJrZXQgYW5hbHlzdCcsICdTdHJhdGVneSBjb25zdWx0YW50JywgJ0FjY291bnQgbWFuYWdlciddLCBpbWFnZTogJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNTIzMDUwODU0MDU4LThkZjkwMTEwYzlmMT9hdXRvPWZvcm1hdCZmaXQ9Y3JvcCZ3PTEyMDAmcT04MCcsIGZhcXM6IHNoYXJlZEZhcXMgfSxcbiAgeyBpZDogJ3V4LXVpLWJvb3RjYW1wJywgdGl0bGU6ICdVWC9VSSBEZXNpZ24gQm9vdGNhbXAnLCBjYXRlZ29yeTogJ1NraWxsIERldmVsb3BtZW50JywgZHVyYXRpb246ICcxNiB3ZWVrcycsIGR1cmF0aW9uVmFsdWU6IDQsIG1vZGU6ICdPbmxpbmUnLCBlbGlnaWJpbGl0eTogJ09wZW4gdG8gYWxsIG1vdGl2YXRlZCBsZWFybmVycycsIGZlZTogJ0Zyb20g4oK5MzIsMDAwJywgZmVlVmFsdWU6IDMyMDAwLCBkZXNjcmlwdGlvbjogJ0NyZWF0ZSB1c2VmdWwgZGlnaXRhbCBleHBlcmllbmNlcyB3aXRoIHVzZXItY2VudHJlZCBkZXNpZ24gc2tpbGxzLicsIG92ZXJ2aWV3OiAnTW92ZSBmcm9tIHVzZXIgcmVzZWFyY2ggdG8gcG9saXNoZWQgaW50ZXJmYWNlIGNvbmNlcHRzIHRocm91Z2ggaGFuZHMtb24sIHBvcnRmb2xpby1mb2N1c2VkIHN0dWRpbyB3b3JrLicsIGN1cnJpY3VsdW06IFsnVXNlciByZXNlYXJjaCcsICdXaXJlZnJhbWluZycsICdJbnRlcmZhY2UgZGVzaWduJywgJ1VzYWJpbGl0eSB0ZXN0aW5nJ10sIGNhcmVlcnM6IFsnVVggZGVzaWduZXInLCAnVUkgZGVzaWduZXInLCAnUHJvZHVjdCBkZXNpZ24gaW50ZXJuJywgJ0Rlc2lnbiByZXNlYXJjaGVyJ10sIGltYWdlOiAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1ODY3MTc3OTE4MjEtM2Y0NGE1NjNmYTRjP2F1dG89Zm9ybWF0JmZpdD1jcm9wJnc9MTIwMCZxPTgwJywgZmFxczogc2hhcmVkRmFxcyB9LFxuICB7IGlkOiAncHJvamVjdC1tYW5hZ2VtZW50LW9ubGluZScsIHRpdGxlOiAnUHJvamVjdCBNYW5hZ2VtZW50IEVzc2VudGlhbHMnLCBjYXRlZ29yeTogJ09ubGluZScsIGR1cmF0aW9uOiAnMTIgd2Vla3MnLCBkdXJhdGlvblZhbHVlOiAzLCBtb2RlOiAnT25saW5lJywgZWxpZ2liaWxpdHk6ICdPcGVuIHRvIHN0dWRlbnRzIGFuZCBwcm9mZXNzaW9uYWxzJywgZmVlOiAnRnJvbSDigrkxOCwwMDAnLCBmZWVWYWx1ZTogMTgwMDAsIGRlc2NyaXB0aW9uOiAnUGxhbiwgb3JnYW5pc2UsIGFuZCBkZWxpdmVyIHdvcmsgd2l0aCBncmVhdGVyIGNvbmZpZGVuY2UuJywgb3ZlcnZpZXc6ICdCdWlsZCBwcmFjdGljYWwgcGxhbm5pbmcsIHN0YWtlaG9sZGVyLCBhbmQgZGVsaXZlcnkgaGFiaXRzIGZvciBwcm9qZWN0cyBhY3Jvc3MgaW5kdXN0cmllcy4nLCBjdXJyaWN1bHVtOiBbJ1Byb2plY3QgcGxhbm5pbmcnLCAnUmlzayBtYW5hZ2VtZW50JywgJ0FnaWxlIGZ1bmRhbWVudGFscycsICdTdGFrZWhvbGRlciBjb21tdW5pY2F0aW9uJ10sIGNhcmVlcnM6IFsnUHJvamVjdCBjb29yZGluYXRvcicsICdPcGVyYXRpb25zIGFzc29jaWF0ZScsICdEZWxpdmVyeSBhbmFseXN0JywgJ1BNTyBhc3Npc3RhbnQnXSwgaW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTQ1NDE2NTgwNDYwNi1jM2Q1N2JjODZiNDA/YXV0bz1mb3JtYXQmZml0PWNyb3Amdz0xMjAwJnE9ODAnLCBmYXFzOiBzaGFyZWRGYXFzIH0sXG5dXG4iXX0=
