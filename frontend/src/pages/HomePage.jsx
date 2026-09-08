@@ -146,7 +146,7 @@ function HomePage() {
             </span>
 
             <h2 className="hero__title">
-              Guiding Students Towards <br />
+              Guiding Students Towards <br className="hero__title-br" />
               <span>Better Futures</span>
             </h2>
 

@@ -850,6 +850,10 @@ main {
 
 /* Hero Section: Compact, Balanced & Symmetrical Spacing */
 .hero {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   padding: 2rem 0 2.25rem;
   background-color: #ffffff;
   background-image: radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.05) 0%, rgba(255, 255, 255, 0) 65%);
@@ -863,6 +867,7 @@ main {
   align-items: center;
   width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 .hero__grid > * {
@@ -871,8 +876,11 @@ main {
 }
 
 .hero__content {
-  min-width: 0;
+  width: 100%;
   max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 .hero__eyebrow {
@@ -884,6 +892,9 @@ main {
   font-size: clamp(1.9rem, 3.8vw, 2.75rem);
   line-height: 1.16;
   letter-spacing: -0.03em;
+  overflow-wrap: break-word;
+  word-break: normal;
+  max-width: 100%;
 }
 
 .hero__title span {
@@ -892,10 +903,13 @@ main {
 
 .hero__lead {
   max-width: 34rem;
+  width: 100%;
   margin-bottom: 0.95rem;
   color: var(--color-text-muted);
   font-size: 0.98rem;
   line-height: 1.55;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .hero__features {
@@ -904,6 +918,9 @@ main {
   gap: 0.55rem;
   margin-bottom: 1.35rem;
   max-width: 34rem;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .hero__feature-item {
@@ -913,12 +930,24 @@ main {
   font-size: 0.91rem;
   line-height: 1.45;
   color: #475569;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .hero__feature-icon {
   color: var(--color-primary-600);
   flex-shrink: 0;
   margin-top: 2px;
+}
+
+.hero__feature-item span {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: normal;
+  box-sizing: border-box;
 }
 
 .hero__feature-item strong {
@@ -931,6 +960,9 @@ main {
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .hero__note {
@@ -941,11 +973,21 @@ main {
   color: var(--color-text-muted);
   font-size: 0.8125rem;
   font-weight: 500;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 .hero__note svg {
   flex-shrink: 0;
   color: var(--color-success);
+}
+
+.hero__note span {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .hero__visual {
@@ -954,6 +996,7 @@ main {
   max-width: 100%;
   min-width: 0;
   padding-bottom: 0.85rem;
+  box-sizing: border-box;
 }
 
 .hero__image-wrapper {
@@ -983,6 +1026,8 @@ main {
   position: absolute;
   bottom: 0;
   left: 0.75rem;
+  max-width: calc(100% - 1.5rem);
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -1001,18 +1046,30 @@ main {
   background-color: var(--color-surface-soft);
   color: var(--color-primary-500);
   border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.hero__badge-text {
+  min-width: 0;
+  overflow: hidden;
 }
 
 .hero__badge-text strong {
   font-size: 0.85rem;
   color: var(--color-ink);
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hero__badge-text span {
   font-size: 0.72rem;
   color: var(--color-text-muted);
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hero__accent {
@@ -4459,14 +4516,18 @@ a.site-footer__contact-link:hover {
   /* Action Button Groups - Always in the Same Single Row */
   .hero__actions {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
     gap: clamp(6px, 2vw, 10px) !important;
     width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
     margin-top: 0.85rem !important;
   }
 
   .hero__actions .button {
     width: 100% !important;
+    max-width: 100% !important;
     min-width: 0 !important;
     min-height: clamp(38px, 9.5vw, 44px) !important;
     padding: 0 clamp(4px, 1.5vw, 10px) !important;
@@ -4480,6 +4541,9 @@ a.site-footer__contact-link:hover {
   }
 
   .hero__actions .button span {
+    display: block !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -4510,26 +4574,152 @@ a.site-footer__contact-link:hover {
     border-radius: 12px;
   }
 
-  /* Hero Section Mobile */
+  /* Hero Section Mobile: Symmetrical space & strict overflow prevention */
   .hero {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
     padding: clamp(1rem, 3.5vw, 1.5rem) 0;
   }
 
   .hero__grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: max(clamp(14px, 4.2vw, 20px), env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(clamp(14px, 4.2vw, 20px), env(safe-area-inset-right, 0px)) !important;
+    box-sizing: border-box !important;
     gap: clamp(1rem, 3.5vw, 1.35rem);
   }
 
+  .hero__content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .hero__title {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    box-sizing: border-box !important;
+  }
+
+  @media (max-width: 32rem) {
+    .hero__title br,
+    .hero__title-br {
+      display: none !important;
+    }
+  }
+
+  .hero__lead {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero__features {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 0.55rem !important;
+  }
+
+  .hero__feature-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.55rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero__feature-icon {
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+  }
+
+  .hero__feature-item span {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    box-sizing: border-box !important;
+    line-height: 1.45 !important;
+  }
+
   .hero__note {
-    font-size: clamp(0.76rem, 3vw, 0.82rem);
-    gap: 0.4rem;
-    margin-top: 0.75rem;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.45rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    font-size: clamp(0.76rem, 3vw, 0.82rem) !important;
+    margin-top: 0.75rem !important;
+  }
+
+  .hero__note svg {
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+  }
+
+  .hero__note span {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    white-space: normal !important;
+    line-height: 1.45 !important;
+  }
+
+  .hero__visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+
+  .hero__image-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
   }
 
   .hero__badge {
-    bottom: -0.45rem;
-    left: 0.5rem;
-    padding: 0.35rem 0.6rem;
-    border-radius: var(--radius-sm);
+    bottom: -0.45rem !important;
+    left: 0.5rem !important;
+    max-width: calc(100% - 1rem) !important;
+    box-sizing: border-box !important;
+    padding: 0.35rem 0.6rem !important;
+    border-radius: var(--radius-sm) !important;
+  }
+
+  .hero__badge-text {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .hero__badge-text strong,
+  .hero__badge-text span {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
   }
 
   /* Universal Cards & Surfaces */
@@ -4850,7 +5040,8 @@ a.site-footer__contact-link:hover {
 
 /* Extra-Compact Screen Optimization (< 360px - e.g. iPhone SE, Galaxy Fold cover) */
 @media (max-width: 23.5rem) {
-  .container {
+  .container,
+  .hero__grid {
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
