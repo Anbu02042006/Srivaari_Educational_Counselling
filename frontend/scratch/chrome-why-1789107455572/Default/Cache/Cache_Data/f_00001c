@@ -1,0 +1,234 @@
+import { BadgeCheck, BriefcaseBusiness, Compass, FileCheck2, HeartHandshake, Lightbulb, ShieldCheck, Users } from "/node_modules/.vite/deps/lucide-react.js?v=dfde8cfa";
+export const programmeCategories = [
+	{
+		name: "Engineering & Technology",
+		detail: "B.E, B.Tech, M.Tech, Diploma",
+		icon: Compass
+	},
+	{
+		name: "Arts, Science & Commerce",
+		detail: "B.Com, BBA, B.Sc, BCA, BA",
+		icon: Lightbulb
+	},
+	{
+		name: "Medical & Allied Health",
+		detail: "Nursing, Pharmacy, Physiotherapy, Lab Tech",
+		icon: ShieldCheck
+	},
+	{
+		name: "Postgraduate & MBA",
+		detail: "MBA, MCA, M.Sc, M.Com",
+		icon: BriefcaseBusiness
+	},
+	{
+		name: "Emerging Tech & AI",
+		detail: "Data Science, Cyber Security, AI & ML",
+		icon: BadgeCheck
+	},
+	{
+		name: "Study Abroad & Distance",
+		detail: "Global Degrees & Flexible Online Programs",
+		icon: FileCheck2
+	}
+];
+export const benefits = [
+	{
+		title: "1-on-1 Attentive Listening",
+		text: "We take time to understand your 12th / degree marks, your interests, and your family budget before suggesting anything.",
+		icon: Users
+	},
+	{
+		title: "Genuine & Verified Colleges",
+		text: "No fake rankings or sponsored promotions. We only recommend recognized, NAAC/AICTE-accredited institutions.",
+		icon: BadgeCheck
+	},
+	{
+		title: "Honest Career Roadmaps",
+		text: "We share practical insights on real placement records, syllabus depth, and long-term industry job demands.",
+		icon: BriefcaseBusiness
+	},
+	{
+		title: "Zero Hidden Costs & Full Transparency",
+		text: "Clear breakdown of tuition fees, hostel expenses, scholarship eligibility, and loan documentation assistance.",
+		icon: ShieldCheck
+	},
+	{
+		title: "Friendly, Caring Counsellors",
+		text: "Talk freely with seasoned advisors who treat you like family and patiently answer every question from you and your parents.",
+		icon: HeartHandshake
+	},
+	{
+		title: "End-to-End Handholding",
+		text: "From comparing branches to submitting applications and college visits, we stand right beside you until day one of college.",
+		icon: FileCheck2
+	}
+];
+export const processSteps = [
+	[
+		"01",
+		"Sit Down & Talk With Us",
+		"Share your marks, favorite subjects, future dreams, and any worries you or your parents have."
+	],
+	[
+		"02",
+		"Explore Your Best-Fit Options",
+		"Our counsellor shortlists matching courses and accredited colleges tailored to your budget and cut-off."
+	],
+	[
+		"03",
+		"Campus & Branch Selection",
+		"Compare realistic placement stats, faculty reputation, and campus culture before making your final pick."
+	],
+	[
+		"04",
+		"Smooth & Confident Admission",
+		"We assist with application paperwork, verification documents, and scholarship guidance with zero stress."
+	]
+];
+export const featuredCourses = [
+	{
+		id: "computer-science-engineering",
+		title: "B.E. Computer Science & AI",
+		category: "Engineering",
+		duration: "4 years",
+		mode: "On campus",
+		description: "Master full-stack programming, cloud computing, artificial intelligence, and software systems.",
+		image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+	},
+	{
+		id: "business-administration",
+		title: "BBA & Financial Management",
+		category: "Management",
+		duration: "3 years",
+		mode: "On campus",
+		description: "Build core business leadership, corporate strategy, accounting, and communication confidence.",
+		image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80"
+	},
+	{
+		id: "allied-health-sciences",
+		title: "B.Sc. Allied Health Sciences",
+		category: "Healthcare",
+		duration: "3 - 4 years",
+		mode: "On campus + Hospital Training",
+		description: "Hands-on hospital training across medical lab technology, radiology, cardio perfusion, and diagnostics.",
+		image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80"
+	},
+	{
+		id: "bca-data-science",
+		title: "BCA & Cloud Computing",
+		category: "Computer Applications",
+		duration: "3 years",
+		mode: "On campus",
+		description: "Practical curriculum covering Python, web technologies, database management, and cloud architecture.",
+		image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+	},
+	{
+		id: "digital-marketing-media",
+		title: "Digital Marketing & Media Strategy",
+		category: "Professional Diploma",
+		duration: "6 months",
+		mode: "Hybrid",
+		description: "Learn real campaign analytics, SEO, social media growth, and content marketing from industry mentors.",
+		image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=900&q=80"
+	},
+	{
+		id: "interior-design-architecture",
+		title: "B.Des. Interior & Space Design",
+		category: "Design",
+		duration: "3 - 4 years",
+		mode: "On campus",
+		description: "Blend creative spatial imagination with 3D modeling, sustainable materials, and real project studios.",
+		image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
+	}
+];
+export const featuredColleges = [
+	{
+		id: "chennai-tech-campus",
+		name: "Premier Engineering Institute",
+		location: "Chennai",
+		type: "Autonomous College",
+		accreditation: "NAAC A++ · NBA Accredited",
+		image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80"
+	},
+	{
+		id: "coimbatore-arts-science",
+		name: "Coimbatore College of Arts & Science",
+		location: "Coimbatore",
+		type: "Autonomous Institution",
+		accreditation: "NAAC A+ Rated · Top NIRF Rank",
+		image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=900&q=80"
+	},
+	{
+		id: "madurai-medical-allied",
+		name: "Institute of Medical & Allied Health",
+		location: "Madurai",
+		type: "Healthcare Academy",
+		accreditation: "Affiliated Hospital & MGR University",
+		image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80"
+	},
+	{
+		id: "bengaluru-management-school",
+		name: "Apex School of Management",
+		location: "Bengaluru",
+		type: "Business Academy",
+		accreditation: "AICTE Approved · Global Industry Tie-ups",
+		image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=900&q=80"
+	}
+];
+export const testimonials = [
+	{
+		name: "Aarav N",
+		course: "B.E. Computer Science",
+		city: "Chennai",
+		detail: "B.E. Computer Science · Chennai",
+		avatar: "/images/testimonials/aarav.jpg",
+		discipline: "engineering",
+		quote: "After 12th results, we were confused about cut-offs. Sri Vaari sat with us, explained every college option openly, and guided me into a top college in Chennai."
+	},
+	{
+		name: "Meera S",
+		course: "B.Sc Data Science",
+		city: "Coimbatore",
+		detail: "B.Sc Data Science · Coimbatore",
+		avatar: "/images/testimonials/meera.jpg",
+		discipline: "datascience",
+		quote: "I was torn between engineering and BCA. My counsellor patiently broke down the syllabus, job scope, and fee structure. That honest guidance made all the difference."
+	},
+	{
+		name: "Riya P",
+		course: "Allied Health Sciences",
+		city: "Madurai",
+		detail: "Allied Health Sciences · Madurai",
+		avatar: "/images/testimonials/riya.jpg",
+		discipline: "healthcare",
+		quote: "Finding a genuine paramedical college with real hospital training was stressful. Sri Vaari verified campuses and guided all our admission paperwork."
+	},
+	{
+		name: "Karthik R",
+		course: "BBA & Finance",
+		city: "Salem",
+		detail: "BBA & Finance · Salem",
+		avatar: "/images/testimonials/karthik.jpg",
+		discipline: "management",
+		quote: "They treated us like family from day one. Even after admission, they checked in to make sure I settled in well at my hostel. Truly caring mentors for every student."
+	}
+];
+export const institutionNames = [
+	"Premier Institute of Technology",
+	"Apex College of Arts & Science",
+	"City Institute of Allied Health",
+	"National Academy of Management",
+	"Heritage College of Engineering",
+	"Global School of Design & Media",
+	"Metro Institute of Science",
+	"St. Thomas Autonomous College"
+];
+export const faqs = [
+	["How does your counselling process work?", "We start with a relaxed, no-pressure conversation with you and your parents. We understand your marks, interests, preferred locations, and budget, then shortlist colleges where you can thrive."],
+	["Is the first counselling session really free?", "Yes, 100% free. We believe every student deserves clarity without paying an upfront fee just to know their genuine options."],
+	["Do you assist with college cut-offs and government counselling?", "Yes. We guide you through Anna University (TNEA), Arts & Science counselling dates, choice filling orders, and verified management seat processes."],
+	["Can you help students from outside Chennai / Tamil Nadu?", "Absolutely! We provide phone and WhatsApp video counselling so students and parents anywhere can get personalized guidance from home."],
+	["Will you help with college scholarships and education loans?", "Yes. We explain available merit/community scholarships and provide complete documentation checklists to help you apply for education loans easily."]
+];
+
+//# sourceMappingURL=data:application/json;base64,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O0VBQ1IsUUFBUTtFQUNSLFlBQVk7RUFDWixPQUFPO0NBQ1Q7Q0FDQTtFQUNFLE1BQU07RUFDTixRQUFRO0VBQ1IsTUFBTTtFQUNOLFFBQVE7RUFDUixRQUFRO0VBQ1IsWUFBWTtFQUNaLE9BQU87Q0FDVDtBQUNGO0FBRUEsT0FBTyxNQUFNLG1CQUFtQjtDQUM5QjtDQUNBO0NBQ0E7Q0FDQTtDQUNBO0NBQ0E7Q0FDQTtDQUNBO0FBQ0Y7QUFFQSxPQUFPLE1BQU0sT0FBTztDQUNsQixDQUNFLDJDQUNBLGtNQUNGO0NBQ0EsQ0FDRSxpREFDQSw2SEFDRjtDQUNBLENBQ0UsbUVBQ0Esb0pBQ0Y7Q0FDQSxDQUNFLDREQUNBLHVJQUNGO0NBQ0EsQ0FDRSxnRUFDQSxvSkFDRjtBQUNGIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbImhvbWVEYXRhLmpzIl0sInZlcnNpb24iOjMsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEJhZGdlQ2hlY2ssIEJyaWVmY2FzZUJ1c2luZXNzLCBDb21wYXNzLCBGaWxlQ2hlY2syLCBIZWFydEhhbmRzaGFrZSwgTGlnaHRidWxiLCBTaGllbGRDaGVjaywgVXNlcnMgfSBmcm9tICdsdWNpZGUtcmVhY3QnXG5cbmV4cG9ydCBjb25zdCBwcm9ncmFtbWVDYXRlZ29yaWVzID0gW1xuICB7IG5hbWU6ICdFbmdpbmVlcmluZyAmIFRlY2hub2xvZ3knLCBkZXRhaWw6ICdCLkUsIEIuVGVjaCwgTS5UZWNoLCBEaXBsb21hJywgaWNvbjogQ29tcGFzcyB9LFxuICB7IG5hbWU6ICdBcnRzLCBTY2llbmNlICYgQ29tbWVyY2UnLCBkZXRhaWw6ICdCLkNvbSwgQkJBLCBCLlNjLCBCQ0EsIEJBJywgaWNvbjogTGlnaHRidWxiIH0sXG4gIHsgbmFtZTogJ01lZGljYWwgJiBBbGxpZWQgSGVhbHRoJywgZGV0YWlsOiAnTnVyc2luZywgUGhhcm1hY3ksIFBoeXNpb3RoZXJhcHksIExhYiBUZWNoJywgaWNvbjogU2hpZWxkQ2hlY2sgfSxcbiAgeyBuYW1lOiAnUG9zdGdyYWR1YXRlICYgTUJBJywgZGV0YWlsOiAnTUJBLCBNQ0EsIE0uU2MsIE0uQ29tJywgaWNvbjogQnJpZWZjYXNlQnVzaW5lc3MgfSxcbiAgeyBuYW1lOiAnRW1lcmdpbmcgVGVjaCAmIEFJJywgZGV0YWlsOiAnRGF0YSBTY2llbmNlLCBDeWJlciBTZWN1cml0eSwgQUkgJiBNTCcsIGljb246IEJhZGdlQ2hlY2sgfSxcbiAgeyBuYW1lOiAnU3R1ZHkgQWJyb2FkICYgRGlzdGFuY2UnLCBkZXRhaWw6ICdHbG9iYWwgRGVncmVlcyAmIEZsZXhpYmxlIE9ubGluZSBQcm9ncmFtcycsIGljb246IEZpbGVDaGVjazIgfSxcbl1cblxuZXhwb3J0IGNvbnN0IGJlbmVmaXRzID0gW1xuICB7XG4gICAgdGl0bGU6ICcxLW9uLTEgQXR0ZW50aXZlIExpc3RlbmluZycsXG4gICAgdGV4dDogJ1dlIHRha2UgdGltZSB0byB1bmRlcnN0YW5kIHlvdXIgMTJ0aCAvIGRlZ3JlZSBtYXJrcywgeW91ciBpbnRlcmVzdHMsIGFuZCB5b3VyIGZhbWlseSBidWRnZXQgYmVmb3JlIHN1Z2dlc3RpbmcgYW55dGhpbmcuJyxcbiAgICBpY29uOiBVc2VycyxcbiAgfSxcbiAge1xuICAgIHRpdGxlOiAnR2VudWluZSAmIFZlcmlmaWVkIENvbGxlZ2VzJyxcbiAgICB0ZXh0OiAnTm8gZmFrZSByYW5raW5ncyBvciBzcG9uc29yZWQgcHJvbW90aW9ucy4gV2Ugb25seSByZWNvbW1lbmQgcmVjb2duaXplZCwgTkFBQy9BSUNURS1hY2NyZWRpdGVkIGluc3RpdHV0aW9ucy4nLFxuICAgIGljb246IEJhZGdlQ2hlY2ssXG4gIH0sXG4gIHtcbiAgICB0aXRsZTogJ0hvbmVzdCBDYXJlZXIgUm9hZG1hcHMnLFxuICAgIHRleHQ6ICdXZSBzaGFyZSBwcmFjdGljYWwgaW5zaWdodHMgb24gcmVhbCBwbGFjZW1lbnQgcmVjb3Jkcywgc3lsbGFidXMgZGVwdGgsIGFuZCBsb25nLXRlcm0gaW5kdXN0cnkgam9iIGRlbWFuZHMuJyxcbiAgICBpY29uOiBCcmllZmNhc2VCdXNpbmVzcyxcbiAgfSxcbiAge1xuICAgIHRpdGxlOiAnWmVybyBIaWRkZW4gQ29zdHMgJiBGdWxsIFRyYW5zcGFyZW5jeScsXG4gICAgdGV4dDogJ0NsZWFyIGJyZWFrZG93biBvZiB0dWl0aW9uIGZlZXMsIGhvc3RlbCBleHBlbnNlcywgc2Nob2xhcnNoaXAgZWxpZ2liaWxpdHksIGFuZCBsb2FuIGRvY3VtZW50YXRpb24gYXNzaXN0YW5jZS4nLFxuICAgIGljb246IFNoaWVsZENoZWNrLFxuICB9LFxuICB7XG4gICAgdGl0bGU6ICdGcmllbmRseSwgQ2FyaW5nIENvdW5zZWxsb3JzJyxcbiAgICB0ZXh0OiAnVGFsayBmcmVlbHkgd2l0aCBzZWFzb25lZCBhZHZpc29ycyB3aG8gdHJlYXQgeW91IGxpa2UgZmFtaWx5IGFuZCBwYXRpZW50bHkgYW5zd2VyIGV2ZXJ5IHF1ZXN0aW9uIGZyb20geW91IGFuZCB5b3VyIHBhcmVudHMuJyxcbiAgICBpY29uOiBIZWFydEhhbmRzaGFrZSxcbiAgfSxcbiAge1xuICAgIHRpdGxlOiAnRW5kLXRvLUVuZCBIYW5kaG9sZGluZycsXG4gICAgdGV4dDogJ0Zyb20gY29tcGFyaW5nIGJyYW5jaGVzIHRvIHN1Ym1pdHRpbmcgYXBwbGljYXRpb25zIGFuZCBjb2xsZWdlIHZpc2l0cywgd2Ugc3RhbmQgcmlnaHQgYmVzaWRlIHlvdSB1bnRpbCBkYXkgb25lIG9mIGNvbGxlZ2UuJyxcbiAgICBpY29uOiBGaWxlQ2hlY2syLFxuICB9LFxuXVxuXG5leHBvcnQgY29uc3QgcHJvY2Vzc1N0ZXBzID0gW1xuICBbJzAxJywgJ1NpdCBEb3duICYgVGFsayBXaXRoIFVzJywgJ1NoYXJlIHlvdXIgbWFya3MsIGZhdm9yaXRlIHN1YmplY3RzLCBmdXR1cmUgZHJlYW1zLCBhbmQgYW55IHdvcnJpZXMgeW91IG9yIHlvdXIgcGFyZW50cyBoYXZlLiddLFxuICBbJzAyJywgJ0V4cGxvcmUgWW91ciBCZXN0LUZpdCBPcHRpb25zJywgJ091ciBjb3Vuc2VsbG9yIHNob3J0bGlzdHMgbWF0Y2hpbmcgY291cnNlcyBhbmQgYWNjcmVkaXRlZCBjb2xsZWdlcyB0YWlsb3JlZCB0byB5b3VyIGJ1ZGdldCBhbmQgY3V0LW9mZi4nXSxcbiAgWycwMycsICdDYW1wdXMgJiBCcmFuY2ggU2VsZWN0aW9uJywgJ0NvbXBhcmUgcmVhbGlzdGljIHBsYWNlbWVudCBzdGF0cywgZmFjdWx0eSByZXB1dGF0aW9uLCBhbmQgY2FtcHVzIGN1bHR1cmUgYmVmb3JlIG1ha2luZyB5b3VyIGZpbmFsIHBpY2suJ10sXG4gIFsnMDQnLCAnU21vb3RoICYgQ29uZmlkZW50IEFkbWlzc2lvbicsICdXZSBhc3Npc3Qgd2l0aCBhcHBsaWNhdGlvbiBwYXBlcndvcmssIHZlcmlmaWNhdGlvbiBkb2N1bWVudHMsIGFuZCBzY2hvbGFyc2hpcCBndWlkYW5jZSB3aXRoIHplcm8gc3RyZXNzLiddLFxuXVxuXG5leHBvcnQgY29uc3QgZmVhdHVyZWRDb3Vyc2VzID0gW1xuICB7XG4gICAgaWQ6ICdjb21wdXRlci1zY2llbmNlLWVuZ2luZWVyaW5nJyxcbiAgICB0aXRsZTogJ0IuRS4gQ29tcHV0ZXIgU2NpZW5jZSAmIEFJJyxcbiAgICBjYXRlZ29yeTogJ0VuZ2luZWVyaW5nJyxcbiAgICBkdXJhdGlvbjogJzQgeWVhcnMnLFxuICAgIG1vZGU6ICdPbiBjYW1wdXMnLFxuICAgIGRlc2NyaXB0aW9uOiAnTWFzdGVyIGZ1bGwtc3RhY2sgcHJvZ3JhbW1pbmcsIGNsb3VkIGNvbXB1dGluZywgYXJ0aWZpY2lhbCBpbnRlbGxpZ2VuY2UsIGFuZCBzb2Z0d2FyZSBzeXN0ZW1zLicsXG4gICAgaW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTUxNjMyMTMxODQyMy1mMDZmODVlNTA0YjM/YXV0bz1mb3JtYXQmZml0PWNyb3Amdz05MDAmcT04MCcsXG4gIH0sXG4gIHtcbiAgICBpZDogJ2J1c2luZXNzLWFkbWluaXN0cmF0aW9uJyxcbiAgICB0aXRsZTogJ0JCQSAmIEZpbmFuY2lhbCBNYW5hZ2VtZW50JyxcbiAgICBjYXRlZ29yeTogJ01hbmFnZW1lbnQnLFxuICAgIGR1cmF0aW9uOiAnMyB5ZWFycycsXG4gICAgbW9kZTogJ09uIGNhbXB1cycsXG4gICAgZGVzY3JpcHRpb246ICdCdWlsZCBjb3JlIGJ1c2luZXNzIGxlYWRlcnNoaXAsIGNvcnBvcmF0ZSBzdHJhdGVneSwgYWNjb3VudGluZywgYW5kIGNvbW11bmljYXRpb24gY29uZmlkZW5jZS4nLFxuICAgIGltYWdlOiAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1MjE3Mzc3MTE4NjctZTNiOTczNzVmOTAyP2F1dG89Zm9ybWF0JmZpdD1jcm9wJnc9OTAwJnE9ODAnLFxuICB9LFxuICB7XG4gICAgaWQ6ICdhbGxpZWQtaGVhbHRoLXNjaWVuY2VzJyxcbiAgICB0aXRsZTogJ0IuU2MuIEFsbGllZCBIZWFsdGggU2NpZW5jZXMnLFxuICAgIGNhdGVnb3J5OiAnSGVhbHRoY2FyZScsXG4gICAgZHVyYXRpb246ICczIC0gNCB5ZWFycycsXG4gICAgbW9kZTogJ09uIGNhbXB1cyArIEhvc3BpdGFsIFRyYWluaW5nJyxcbiAgICBkZXNjcmlwdGlvbjogJ0hhbmRzLW9uIGhvc3BpdGFsIHRyYWluaW5nIGFjcm9zcyBtZWRpY2FsIGxhYiB0ZWNobm9sb2d5LCByYWRpb2xvZ3ksIGNhcmRpbyBwZXJmdXNpb24sIGFuZCBkaWFnbm9zdGljcy4nLFxuICAgIGltYWdlOiAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1NzYwOTExNjAzOTktMTEyYmE4ZDI1ZDFkP2F1dG89Zm9ybWF0JmZpdD1jcm9wJnc9OTAwJnE9ODAnLFxuICB9LFxuICB7XG4gICAgaWQ6ICdiY2EtZGF0YS1zY2llbmNlJyxcbiAgICB0aXRsZTogJ0JDQSAmIENsb3VkIENvbXB1dGluZycsXG4gICAgY2F0ZWdvcnk6ICdDb21wdXRlciBBcHBsaWNhdGlvbnMnLFxuICAgIGR1cmF0aW9uOiAnMyB5ZWFycycsXG4gICAgbW9kZTogJ09uIGNhbXB1cycsXG4gICAgZGVzY3JpcHRpb246ICdQcmFjdGljYWwgY3VycmljdWx1bSBjb3ZlcmluZyBQeXRob24sIHdlYiB0ZWNobm9sb2dpZXMsIGRhdGFiYXNlIG1hbmFnZW1lbnQsIGFuZCBjbG91ZCBhcmNoaXRlY3R1cmUuJyxcbiAgICBpbWFnZTogJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNTUxMjg4MDQ5LWJlYmRhNGUzOGY3MT9hdXRvPWZvcm1hdCZmaXQ9Y3JvcCZ3PTkwMCZxPTgwJyxcbiAgfSxcbiAge1xuICAgIGlkOiAnZGlnaXRhbC1tYXJrZXRpbmctbWVkaWEnLFxuICAgIHRpdGxlOiAnRGlnaXRhbCBNYXJrZXRpbmcgJiBNZWRpYSBTdHJhdGVneScsXG4gICAgY2F0ZWdvcnk6ICdQcm9mZXNzaW9uYWwgRGlwbG9tYScsXG4gICAgZHVyYXRpb246ICc2IG1vbnRocycsXG4gICAgbW9kZTogJ0h5YnJpZCcsXG4gICAgZGVzY3JpcHRpb246ICdMZWFybiByZWFsIGNhbXBhaWduIGFuYWx5dGljcywgU0VPLCBzb2NpYWwgbWVkaWEgZ3Jvd3RoLCBhbmQgY29udGVudCBtYXJrZXRpbmcgZnJvbSBpbmR1c3RyeSBtZW50b3JzLicsXG4gICAgaW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTUzMzc1MDM0OTA4OC1jZDg3MWE5MmYzMTI/YXV0bz1mb3JtYXQmZml0PWNyb3Amdz05MDAmcT04MCcsXG4gIH0sXG4gIHtcbiAgICBpZDogJ2ludGVyaW9yLWRlc2lnbi1hcmNoaXRlY3R1cmUnLFxuICAgIHRpdGxlOiAnQi5EZXMuIEludGVyaW9yICYgU3BhY2UgRGVzaWduJyxcbiAgICBjYXRlZ29yeTogJ0Rlc2lnbicsXG4gICAgZHVyYXRpb246ICczIC0gNCB5ZWFycycsXG4gICAgbW9kZTogJ09uIGNhbXB1cycsXG4gICAgZGVzY3JpcHRpb246ICdCbGVuZCBjcmVhdGl2ZSBzcGF0aWFsIGltYWdpbmF0aW9uIHdpdGggM0QgbW9kZWxpbmcsIHN1c3RhaW5hYmxlIG1hdGVyaWFscywgYW5kIHJlYWwgcHJvamVjdCBzdHVkaW9zLicsXG4gICAgaW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTYwMDIxMDQ5MjQ4Ni03MjRmZTVjNjdmYjA/YXV0bz1mb3JtYXQmZml0PWNyb3Amdz05MDAmcT04MCcsXG4gIH0sXG5dXG5cbmV4cG9ydCBjb25zdCBmZWF0dXJlZENvbGxlZ2VzID0gW1xuICB7XG4gICAgaWQ6ICdjaGVubmFpLXRlY2gtY2FtcHVzJyxcbiAgICBuYW1lOiAnUHJlbWllciBFbmdpbmVlcmluZyBJbnN0aXR1dGUnLFxuICAgIGxvY2F0aW9uOiAnQ2hlbm5haScsXG4gICAgdHlwZTogJ0F1dG9ub21vdXMgQ29sbGVnZScsXG4gICAgYWNjcmVkaXRhdGlvbjogJ05BQUMgQSsrIMK3IE5CQSBBY2NyZWRpdGVkJyxcbiAgICBpbWFnZTogJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNTYyNzc0MDUzLTcwMTkzOTM3NDU4NT9hdXRvPWZvcm1hdCZmaXQ9Y3JvcCZ3PTkwMCZxPTgwJyxcbiAgfSxcbiAge1xuICAgIGlkOiAnY29pbWJhdG9yZS1hcnRzLXNjaWVuY2UnLFxuICAgIG5hbWU6ICdDb2ltYmF0b3JlIENvbGxlZ2Ugb2YgQXJ0cyAmIFNjaWVuY2UnLFxuICAgIGxvY2F0aW9uOiAnQ29pbWJhdG9yZScsXG4gICAgdHlwZTogJ0F1dG9ub21vdXMgSW5zdGl0dXRpb24nLFxuICAgIGFjY3JlZGl0YXRpb246ICdOQUFDIEErIFJhdGVkIMK3IFRvcCBOSVJGIFJhbmsnLFxuICAgIGltYWdlOiAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1NDEzMzk5MDcxOTgtZTA4NzU2ZGVkZjNmP2F1dG89Zm9ybWF0JmZpdD1jcm9wJnc9OTAwJnE9ODAnLFxuICB9LFxuICB7XG4gICAgaWQ6ICdtYWR1cmFpLW1lZGljYWwtYWxsaWVkJyxcbiAgICBuYW1lOiAnSW5zdGl0dXRlIG9mIE1lZGljYWwgJiBBbGxpZWQgSGVhbHRoJyxcbiAgICBsb2NhdGlvbjogJ01hZHVyYWknLFxuICAgIHR5cGU6ICdIZWFsdGhjYXJlIEFjYWRlbXknLFxuICAgIGFjY3JlZGl0YXRpb246ICdBZmZpbGlhdGVkIEhvc3BpdGFsICYgTUdSIFVuaXZlcnNpdHknLFxuICAgIGltYWdlOiAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1MjMwNTA4NTQwNTgtOGRmOTAxMTBjOWYxP2F1dG89Zm9ybWF0JmZpdD1jcm9wJnc9OTAwJnE9ODAnLFxuICB9LFxuICB7XG4gICAgaWQ6ICdiZW5nYWx1cnUtbWFuYWdlbWVudC1zY2hvb2wnLFxuICAgIG5hbWU6ICdBcGV4IFNjaG9vbCBvZiBNYW5hZ2VtZW50JyxcbiAgICBsb2NhdGlvbjogJ0JlbmdhbHVydScsXG4gICAgdHlwZTogJ0J1c2luZXNzIEFjYWRlbXknLFxuICAgIGFjY3JlZGl0YXRpb246ICdBSUNURSBBcHByb3ZlZCDCtyBHbG9iYWwgSW5kdXN0cnkgVGllLXVwcycsXG4gICAgaW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTYwNjc2MTU2ODQ5OS02ZDI0NTFiMjNjNjY/YXV0bz1mb3JtYXQmZml0PWNyb3Amdz05MDAmcT04MCcsXG4gIH0sXG5dXG5cbmV4cG9ydCBjb25zdCB0ZXN0aW1vbmlhbHMgPSBbXG4gIHtcbiAgICBuYW1lOiAnQWFyYXYgTicsXG4gICAgY291cnNlOiAnQi5FLiBDb21wdXRlciBTY2llbmNlJyxcbiAgICBjaXR5OiAnQ2hlbm5haScsXG4gICAgZGV0YWlsOiAnQi5FLiBDb21wdXRlciBTY2llbmNlIMK3IENoZW5uYWknLFxuICAgIGF2YXRhcjogJy9pbWFnZXMvdGVzdGltb25pYWxzL2FhcmF2LmpwZycsXG4gICAgZGlzY2lwbGluZTogJ2VuZ2luZWVyaW5nJyxcbiAgICBxdW90ZTogJ0FmdGVyIDEydGggcmVzdWx0cywgd2Ugd2VyZSBjb25mdXNlZCBhYm91dCBjdXQtb2Zmcy4gU3JpIFZhYXJpIHNhdCB3aXRoIHVzLCBleHBsYWluZWQgZXZlcnkgY29sbGVnZSBvcHRpb24gb3Blbmx5LCBhbmQgZ3VpZGVkIG1lIGludG8gYSB0b3AgY29sbGVnZSBpbiBDaGVubmFpLicsXG4gIH0sXG4gIHtcbiAgICBuYW1lOiAnTWVlcmEgUycsXG4gICAgY291cnNlOiAnQi5TYyBEYXRhIFNjaWVuY2UnLFxuICAgIGNpdHk6ICdDb2ltYmF0b3JlJyxcbiAgICBkZXRhaWw6ICdCLlNjIERhdGEgU2NpZW5jZSDCtyBDb2ltYmF0b3JlJyxcbiAgICBhdmF0YXI6ICcvaW1hZ2VzL3Rlc3RpbW9uaWFscy9tZWVyYS5qcGcnLFxuICAgIGRpc2NpcGxpbmU6ICdkYXRhc2NpZW5jZScsXG4gICAgcXVvdGU6ICdJIHdhcyB0b3JuIGJldHdlZW4gZW5naW5lZXJpbmcgYW5kIEJDQS4gTXkgY291bnNlbGxvciBwYXRpZW50bHkgYnJva2UgZG93biB0aGUgc3lsbGFidXMsIGpvYiBzY29wZSwgYW5kIGZlZSBzdHJ1Y3R1cmUuIFRoYXQgaG9uZXN0IGd1aWRhbmNlIG1hZGUgYWxsIHRoZSBkaWZmZXJlbmNlLicsXG4gIH0sXG4gIHtcbiAgICBuYW1lOiAnUml5YSBQJyxcbiAgICBjb3Vyc2U6ICdBbGxpZWQgSGVhbHRoIFNjaWVuY2VzJyxcbiAgICBjaXR5OiAnTWFkdXJhaScsXG4gICAgZGV0YWlsOiAnQWxsaWVkIEhlYWx0aCBTY2llbmNlcyDCtyBNYWR1cmFpJyxcbiAgICBhdmF0YXI6ICcvaW1hZ2VzL3Rlc3RpbW9uaWFscy9yaXlhLmpwZycsXG4gICAgZGlzY2lwbGluZTogJ2hlYWx0aGNhcmUnLFxuICAgIHF1b3RlOiAnRmluZGluZyBhIGdlbnVpbmUgcGFyYW1lZGljYWwgY29sbGVnZSB3aXRoIHJlYWwgaG9zcGl0YWwgdHJhaW5pbmcgd2FzIHN0cmVzc2Z1bC4gU3JpIFZhYXJpIHZlcmlmaWVkIGNhbXB1c2VzIGFuZCBndWlkZWQgYWxsIG91ciBhZG1pc3Npb24gcGFwZXJ3b3JrLicsXG4gIH0sXG4gIHtcbiAgICBuYW1lOiAnS2FydGhpayBSJyxcbiAgICBjb3Vyc2U6ICdCQkEgJiBGaW5hbmNlJyxcbiAgICBjaXR5OiAnU2FsZW0nLFxuICAgIGRldGFpbDogJ0JCQSAmIEZpbmFuY2UgwrcgU2FsZW0nLFxuICAgIGF2YXRhcjogJy9pbWFnZXMvdGVzdGltb25pYWxzL2thcnRoaWsuanBnJyxcbiAgICBkaXNjaXBsaW5lOiAnbWFuYWdlbWVudCcsXG4gICAgcXVvdGU6ICdUaGV5IHRyZWF0ZWQgdXMgbGlrZSBmYW1pbHkgZnJvbSBkYXkgb25lLiBFdmVuIGFmdGVyIGFkbWlzc2lvbiwgdGhleSBjaGVja2VkIGluIHRvIG1ha2Ugc3VyZSBJIHNldHRsZWQgaW4gd2VsbCBhdCBteSBob3N0ZWwuIFRydWx5IGNhcmluZyBtZW50b3JzIGZvciBldmVyeSBzdHVkZW50LicsXG4gIH0sXG5dXG5cbmV4cG9ydCBjb25zdCBpbnN0aXR1dGlvbk5hbWVzID0gW1xuICAnUHJlbWllciBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neScsXG4gICdBcGV4IENvbGxlZ2Ugb2YgQXJ0cyAmIFNjaWVuY2UnLFxuICAnQ2l0eSBJbnN0aXR1dGUgb2YgQWxsaWVkIEhlYWx0aCcsXG4gICdOYXRpb25hbCBBY2FkZW15IG9mIE1hbmFnZW1lbnQnLFxuICAnSGVyaXRhZ2UgQ29sbGVnZSBvZiBFbmdpbmVlcmluZycsXG4gICdHbG9iYWwgU2Nob29sIG9mIERlc2lnbiAmIE1lZGlhJyxcbiAgJ01ldHJvIEluc3RpdHV0ZSBvZiBTY2llbmNlJyxcbiAgJ1N0LiBUaG9tYXMgQXV0b25vbW91cyBDb2xsZWdlJyxcbl1cblxuZXhwb3J0IGNvbnN0IGZhcXMgPSBbXG4gIFtcbiAgICAnSG93IGRvZXMgeW91ciBjb3Vuc2VsbGluZyBwcm9jZXNzIHdvcms/JyxcbiAgICAnV2Ugc3RhcnQgd2l0aCBhIHJlbGF4ZWQsIG5vLXByZXNzdXJlIGNvbnZlcnNhdGlvbiB3aXRoIHlvdSBhbmQgeW91ciBwYXJlbnRzLiBXZSB1bmRlcnN0YW5kIHlvdXIgbWFya3MsIGludGVyZXN0cywgcHJlZmVycmVkIGxvY2F0aW9ucywgYW5kIGJ1ZGdldCwgdGhlbiBzaG9ydGxpc3QgY29sbGVnZXMgd2hlcmUgeW91IGNhbiB0aHJpdmUuJyxcbiAgXSxcbiAgW1xuICAgICdJcyB0aGUgZmlyc3QgY291bnNlbGxpbmcgc2Vzc2lvbiByZWFsbHkgZnJlZT8nLFxuICAgICdZZXMsIDEwMCUgZnJlZS4gV2UgYmVsaWV2ZSBldmVyeSBzdHVkZW50IGRlc2VydmVzIGNsYXJpdHkgd2l0aG91dCBwYXlpbmcgYW4gdXBmcm9udCBmZWUganVzdCB0byBrbm93IHRoZWlyIGdlbnVpbmUgb3B0aW9ucy4nLFxuICBdLFxuICBbXG4gICAgJ0RvIHlvdSBhc3Npc3Qgd2l0aCBjb2xsZWdlIGN1dC1vZmZzIGFuZCBnb3Zlcm5tZW50IGNvdW5zZWxsaW5nPycsXG4gICAgJ1llcy4gV2UgZ3VpZGUgeW91IHRocm91Z2ggQW5uYSBVbml2ZXJzaXR5IChUTkVBKSwgQXJ0cyAmIFNjaWVuY2UgY291bnNlbGxpbmcgZGF0ZXMsIGNob2ljZSBmaWxsaW5nIG9yZGVycywgYW5kIHZlcmlmaWVkIG1hbmFnZW1lbnQgc2VhdCBwcm9jZXNzZXMuJyxcbiAgXSxcbiAgW1xuICAgICdDYW4geW91IGhlbHAgc3R1ZGVudHMgZnJvbSBvdXRzaWRlIENoZW5uYWkgLyBUYW1pbCBOYWR1PycsXG4gICAgJ0Fic29sdXRlbHkhIFdlIHByb3ZpZGUgcGhvbmUgYW5kIFdoYXRzQXBwIHZpZGVvIGNvdW5zZWxsaW5nIHNvIHN0dWRlbnRzIGFuZCBwYXJlbnRzIGFueXdoZXJlIGNhbiBnZXQgcGVyc29uYWxpemVkIGd1aWRhbmNlIGZyb20gaG9tZS4nLFxuICBdLFxuICBbXG4gICAgJ1dpbGwgeW91IGhlbHAgd2l0aCBjb2xsZWdlIHNjaG9sYXJzaGlwcyBhbmQgZWR1Y2F0aW9uIGxvYW5zPycsXG4gICAgJ1llcy4gV2UgZXhwbGFpbiBhdmFpbGFibGUgbWVyaXQvY29tbXVuaXR5IHNjaG9sYXJzaGlwcyBhbmQgcHJvdmlkZSBjb21wbGV0ZSBkb2N1bWVudGF0aW9uIGNoZWNrbGlzdHMgdG8gaGVscCB5b3UgYXBwbHkgZm9yIGVkdWNhdGlvbiBsb2FucyBlYXNpbHkuJyxcbiAgXSxcbl1cbiJdfQ==

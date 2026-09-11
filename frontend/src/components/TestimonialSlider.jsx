@@ -1,123 +1,69 @@
-import { Quote, Star } from 'lucide-react'
-import { useRef, useState } from 'react'
+import { BarChart3, GraduationCap, HeartPulse, Users } from 'lucide-react'
 import { testimonials } from '../data/homeData'
 
-function TestimonialSlider({ className = '' }) {
-  const [mobileActiveIndex, setMobileActiveIndex] = useState(0)
-  const viewportRef = useRef(null)
+const disciplineIconMap = {
+  engineering: GraduationCap,
+  datascience: BarChart3,
+  healthcare: HeartPulse,
+  management: Users,
+}
 
-  const handleScroll = () => {
-    if (!viewportRef.current) return
-    const { scrollLeft, offsetWidth } = viewportRef.current
-    if (offsetWidth > 0) {
-      const newIndex = Math.round(scrollLeft / offsetWidth)
-      if (newIndex !== mobileActiveIndex && newIndex >= 0 && newIndex < testimonials.length) {
-        setMobileActiveIndex(newIndex)
-      }
-    }
-  }
-
-  const scrollToIndex = (index) => {
-    if (viewportRef.current) {
-      const width = viewportRef.current.offsetWidth
-      viewportRef.current.scrollTo({
-        left: index * width,
-        behavior: 'smooth',
-      })
-    }
-    setMobileActiveIndex(index)
-  }
+function TestimonialCard({ item }) {
+  const IconComponent = disciplineIconMap[item.discipline] || GraduationCap
 
   return (
-    <div className={`testimonial-section-wrapper ${className}`.trim()}>
-      {/* 1. Desktop System View: 2 Cards per Row Grid */}
-      <div className="testimonial-grid testimonial-grid--desktop">
-        {testimonials.map((item) => (
-          <div key={item.name} className="testimonial-slider__card">
-            <div className="testimonial-slider__header">
-              <div className="testimonial-slider__stars" aria-label="5 out of 5 stars">
-                {Array.from({ length: 5 }, (_, i) => (
-                  <Star key={i} size={16} fill="currentColor" aria-hidden="true" />
-                ))}
-              </div>
-              <Quote className="testimonial-slider__quote-icon" size={24} aria-hidden="true" />
-            </div>
-
-            <blockquote className="testimonial-slider__quote">
-              “{item.quote}”
-            </blockquote>
-
-            <footer className="testimonial-slider__person">
-              <div className="avatar-placeholder" aria-hidden="true">
-                {item.name.slice(0, 1)}
-              </div>
-              <div className="testimonial-slider__meta">
-                <strong className="testimonial-slider__name">{item.name}</strong>
-                <span className="testimonial-slider__detail">{item.detail}</span>
-              </div>
-            </footer>
-          </div>
-        ))}
-      </div>
-
-      {/* 2. Mobile View: Smooth Hardware-Accelerated Slideshow matching ServicesPage */}
-      <div
-        className="testimonial-slider testimonial-slider--mobile"
-        role="region"
-        aria-label="Student testimonials carousel"
-      >
-        <div
-          ref={viewportRef}
-          className="testimonial-slider__viewport"
-          onScroll={handleScroll}
-        >
-          <div className="testimonial-slider__track">
-            {testimonials.map((item) => (
-              <div key={item.name} className="testimonial-slider__slide">
-                <div className="testimonial-slider__card">
-                  <div className="testimonial-slider__header">
-                    <div className="testimonial-slider__stars" aria-label="5 out of 5 stars">
-                      {Array.from({ length: 5 }, (_, i) => (
-                        <Star key={i} size={16} fill="currentColor" aria-hidden="true" />
-                      ))}
-                    </div>
-                    <Quote className="testimonial-slider__quote-icon" size={24} aria-hidden="true" />
-                  </div>
-
-                  <blockquote className="testimonial-slider__quote">
-                    “{item.quote}”
-                  </blockquote>
-
-                  <footer className="testimonial-slider__person">
-                    <div className="avatar-placeholder" aria-hidden="true">
-                      {item.name.slice(0, 1)}
-                    </div>
-                    <div className="testimonial-slider__meta">
-                      <strong className="testimonial-slider__name">{item.name}</strong>
-                      <span className="testimonial-slider__detail">{item.detail}</span>
-                    </div>
-                  </footer>
-                </div>
-              </div>
-            ))}
+    <div className="testimonial-slider__card">
+      <header className="testimonial-slider__person">
+        <div className="testimonial-slider__person-info">
+          <img
+            src={item.avatar}
+            alt={item.name}
+            className="testimonial-slider__avatar"
+            loading="lazy"
+          />
+          <div className="testimonial-slider__meta">
+            <strong className="testimonial-slider__name">{item.name}</strong>
+            <span className="testimonial-slider__course">{item.course}</span>
+            <span className="testimonial-slider__city">{item.city}</span>
           </div>
         </div>
 
-        {/* Mobile Pagination Indicator Dots */}
-        <div className="testimonial-slider__controls">
-          <div className="testimonial-slider__dots" role="tablist" aria-label="Testimonial slides">
-            {testimonials.map((item, index) => (
-              <button
-                key={item.name}
-                type="button"
-                role="tab"
-                aria-selected={mobileActiveIndex === index}
-                aria-label={`Go to slide ${index + 1} (${item.name})`}
-                className={`testimonial-slider__dot ${mobileActiveIndex === index ? 'is-active' : ''}`}
-                onClick={() => scrollToIndex(index)}
-              />
-            ))}
-          </div>
+        <div className="testimonial-slider__discipline-icon" aria-hidden="true">
+          <IconComponent size={28} strokeWidth={1.75} />
+        </div>
+      </header>
+
+      <blockquote className="testimonial-slider__quote">
+        “{item.quote}”
+      </blockquote>
+    </div>
+  )
+}
+
+function TestimonialSlider({ className = '' }) {
+  return (
+    <div
+      className={`testimonial-slideshow-container ${className}`.trim()}
+      role="region"
+      aria-label="Continuous student testimonials slideshow"
+    >
+      <div className="testimonial-slideshow-track">
+        {/* Set 1: Primary cards */}
+        <div className="testimonial-slideshow-group">
+          {testimonials.map((item) => (
+            <div key={`primary-${item.name}`} className="testimonial-slideshow-item">
+              <TestimonialCard item={item} />
+            </div>
+          ))}
+        </div>
+
+        {/* Set 2: Seamless loop clone */}
+        <div className="testimonial-slideshow-group" aria-hidden="true">
+          {testimonials.map((item) => (
+            <div key={`clone-${item.name}`} className="testimonial-slideshow-item">
+              <TestimonialCard item={item} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

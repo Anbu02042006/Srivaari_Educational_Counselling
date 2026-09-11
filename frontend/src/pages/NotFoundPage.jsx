@@ -1,6 +1,6 @@
 import {
-  Camera,
   Compass,
+  GraduationCap,
   Home,
   PhoneCall,
   Sparkles,
@@ -34,9 +34,9 @@ function NotFoundPage() {
               <Home size={17} aria-hidden="true" />
               <span>Back to Home</span>
             </Link>
-            <Link className="button button--secondary" to="/services">
+            <Link className="button button--secondary" to="/colleges">
               <Compass size={17} aria-hidden="true" />
-              <span>Explore Services</span>
+              <span>Explore Colleges</span>
             </Link>
           </div>
 
@@ -47,13 +47,13 @@ function NotFoundPage() {
                 <Sparkles size={16} aria-hidden="true" />
                 <span>About Us</span>
               </Link>
-              <Link to="/services" className="not-found-link-item">
+              <Link to="/domestic-studies" className="not-found-link-item">
                 <Compass size={16} aria-hidden="true" />
-                <span>Advisory Services</span>
+                <span>Domestic Studies</span>
               </Link>
-              <Link to="/gallery" className="not-found-link-item">
-                <Camera size={16} aria-hidden="true" />
-                <span>Photo Gallery</span>
+              <Link to="/colleges" className="not-found-link-item">
+                <GraduationCap size={16} aria-hidden="true" />
+                <span>Colleges</span>
               </Link>
               <Link to="/contact" className="not-found-link-item">
                 <PhoneCall size={16} aria-hidden="true" />

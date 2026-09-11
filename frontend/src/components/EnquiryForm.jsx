@@ -80,8 +80,8 @@ function EnquiryForm({ onSuccess }) {
           <Link className="button button--primary" to="/">
             <span>Back to Home</span>
           </Link>
-          <Link className="button button--secondary" to="/services">
-            <span>Explore Services</span>
+          <Link className="button button--secondary" to="/colleges">
+            <span>Explore Colleges</span>
             <ChevronRight size={16} aria-hidden="true" />
           </Link>
         </div>
@@ -200,7 +200,7 @@ function EnquiryForm({ onSuccess }) {
           ) : (
             <>
               <Send size={16} aria-hidden="true" />
-              <span>Send Counselling Request</span>
+              <span>Send Contact request</span>
             </>
           )}
         </button>

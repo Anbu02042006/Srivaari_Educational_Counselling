@@ -1,12 +1,34 @@
 import { Clock3, Mail, MapPin, Phone } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { contactInfo } from '../data/contactInfo'
-import { scrollToContact } from '../utils/scrollToContact'
 import Logo from './Logo'
 import WhatsAppIcon from './WhatsAppIcon'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
+  const location = useLocation()
+  const navigate = useNavigate()
+  const isHomePage = location.pathname === '/'
+
+  const handleContactClick = (e) => {
+    if (e && typeof e.preventDefault === 'function') {
+      e.preventDefault()
+    }
+
+    if (isHomePage) {
+      const el = document.getElementById('contact') || document.getElementById('enquire')
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    } else {
+      try {
+        sessionStorage.setItem('scroll_to_contact', '1')
+      } catch {
+        // ignore
+      }
+      navigate('/')
+    }
+  }
 
   return (
     <footer className="site-footer">
@@ -28,11 +50,12 @@ function Footer() {
           <h3 className="site-footer__heading">Explore</h3>
           <ul className="site-footer__nav-list">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/colleges">Colleges</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/gallery">Photo Gallery</Link></li>
+            <li><Link to="/domestic-studies">Domestic Studies</Link></li>
+            <li><Link to="/abroad-studies">Abroad Studies</Link></li>
+            <li><Link to="/colleges">Colleges &amp; Universities</Link></li>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/" onClick={scrollToContact}>Contact</Link></li>
+            <li><Link to="/gallery">Gallery</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
@@ -41,11 +64,15 @@ function Footer() {
           <h3 className="site-footer__heading">Get in Touch</h3>
           <address className="site-footer__address">
             <a href={contactInfo.phoneHref} className="site-footer__contact-item">
-              <Phone size={16} aria-hidden="true" />
+              <span className="site-footer__contact-icon" aria-hidden="true">
+                <Phone size={16} />
+              </span>
               <span>{contactInfo.phoneDisplay}</span>
             </a>
             <a href={contactInfo.emailHref} className="site-footer__contact-item">
-              <Mail size={16} aria-hidden="true" />
+              <span className="site-footer__contact-icon" aria-hidden="true">
+                <Mail size={16} />
+              </span>
               <span>{contactInfo.email}</span>
             </a>
             <a
@@ -54,15 +81,21 @@ function Footer() {
               rel="noreferrer"
               className="site-footer__contact-link site-footer__contact-item"
             >
-              <WhatsAppIcon size={16} aria-hidden="true" />
+              <span className="site-footer__contact-icon" aria-hidden="true">
+                <WhatsAppIcon size={16} />
+              </span>
               <span>WhatsApp Advisory</span>
             </a>
             <div className="site-footer__contact-item">
-              <MapPin size={16} aria-hidden="true" />
+              <span className="site-footer__contact-icon" aria-hidden="true">
+                <MapPin size={16} />
+              </span>
               <span>{contactInfo.officeLocation}</span>
             </div>
             <div className="site-footer__contact-item">
-              <Clock3 size={16} aria-hidden="true" />
+              <span className="site-footer__contact-icon" aria-hidden="true">
+                <Clock3 size={16} />
+              </span>
               <span>{contactInfo.officeHours}</span>
             </div>
           </address>

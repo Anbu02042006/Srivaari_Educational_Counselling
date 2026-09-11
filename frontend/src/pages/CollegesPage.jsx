@@ -1,19 +1,23 @@
 import {
+  Award,
   Building,
   Compass,
   Cpu,
   FileCheck2,
-  Globe2,
   GraduationCap,
+  Landmark,
+  School,
   Sparkles,
   Stethoscope,
   TrendingUp,
   Users,
 } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import CollegeCard from '../components/CollegeCard'
 import EmptyState from '../components/EmptyState'
 import {
+  engineeringCategoryTabs,
   engineeringColleges,
   medicalColleges,
   medicalRegionTabs,
@@ -23,15 +27,50 @@ const regionIcons = {
   Tamilnadu: Building,
   Puducherry: Compass,
   Karnataka: GraduationCap,
-  Abroad: Globe2,
+}
+
+const engineeringCategoryIcons = {
+  autonomous: Award,
+  deemed: Landmark,
+  university: School,
 }
 
 function CollegesPage() {
+  const [searchParams] = useSearchParams()
   const [activeStream, setActiveStream] = useState('engineering') // 'engineering' | 'medical'
+  const [activeEnggCategory, setActiveEnggCategory] = useState('autonomous') // 'autonomous' | 'deemed' | 'university'
   const [activeMedicalRegion, setActiveMedicalRegion] = useState('Tamilnadu')
+
+  useEffect(() => {
+    const stream = searchParams.get('stream')
+    const region = searchParams.get('region')
+    const category = searchParams.get('category') || searchParams.get('type')
+    if (stream === 'medical') {
+      setActiveStream('medical')
+      if (region && ['Tamilnadu', 'Puducherry', 'Karnataka'].includes(region)) {
+        setActiveMedicalRegion(region)
+      }
+    } else if (stream === 'engineering') {
+      setActiveStream('engineering')
+      if (category && ['autonomous', 'deemed', 'university'].includes(category.toLowerCase())) {
+        setActiveEnggCategory(category.toLowerCase())
+      }
+    }
+  }, [searchParams])
 
   const handleStreamClick = (stream, e) => {
     setActiveStream(stream)
+    if (e?.currentTarget) {
+      e.currentTarget.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center',
+      })
+    }
+  }
+
+  const handleEnggCategoryClick = (categoryKey, e) => {
+    setActiveEnggCategory(categoryKey)
     if (e?.currentTarget) {
       e.currentTarget.scrollIntoView({
         behavior: 'smooth',
@@ -52,13 +91,16 @@ function CollegesPage() {
     }
   }
 
-  // Colleges list based on active stream and region
+  // Colleges list based on active stream and sub-filters
   const displayedColleges = useMemo(() => {
     if (activeStream === 'medical') {
       return medicalColleges.filter((c) => c.region === activeMedicalRegion)
     }
-    return engineeringColleges
-  }, [activeStream, activeMedicalRegion])
+    // Engineering stream: filter by 3 sub-categories (Autonomous Colleges, Deemed Universities, Universities)
+    return engineeringColleges.filter(
+      (c) => c.engineeringCategory === activeEnggCategory
+    )
+  }, [activeStream, activeMedicalRegion, activeEnggCategory])
 
   return (
     <main className="colleges-page">
@@ -76,7 +118,7 @@ function CollegesPage() {
           </h1>
 
           <p className="page-hero__lead colleges-hero__lead">
-            Explore leading medical and engineering colleges across Tamil Nadu, Puducherry, Karnataka, and accredited international institutions for your future.
+            Explore leading medical and engineering colleges across Tamil Nadu, Puducherry, Karnataka, and accredited institutions for your future.
           </p>
 
           <div className="colleges-hero__features">
@@ -166,6 +208,34 @@ function CollegesPage() {
               </button>
             </div>
           </div>
+
+          {/* SECONDARY NAVIGATION: SUB-CATEGORIES UNDER ENGINEERING COLLEGES (3 FILTER OPTIONS) */}
+          {activeStream === 'engineering' && (
+            <div className="colleges-subnav-wrapper">
+              <div className="colleges-subnav-tabs" role="tablist" aria-label="Engineering College Categories">
+                {engineeringCategoryTabs.map((tab) => {
+                  const isActive = activeEnggCategory === tab.key
+                  const TabIcon = engineeringCategoryIcons[tab.key] || Award
+
+                  return (
+                    <button
+                      key={tab.key}
+                      type="button"
+                      role="tab"
+                      id={`tab-engg-${tab.key}`}
+                      aria-selected={isActive}
+                      className={`colleges-subnav-btn ${isActive ? 'colleges-subnav-btn--active' : ''}`}
+                      onClick={(e) => handleEnggCategoryClick(tab.key, e)}
+                    >
+                      <TabIcon size={16} aria-hidden="true" className="colleges-subnav-btn__icon" />
+                      <span className="colleges-subnav-btn__label">{tab.label}</span>
+                      <span className="colleges-subnav-btn__count">{tab.count}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          )}
 
           {/* SECONDARY NAVIGATION: SUB-REGIONS UNDER MEDICAL COLLEGES */}
           {activeStream === 'medical' && (

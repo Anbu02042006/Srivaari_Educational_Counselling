@@ -1,0 +1,448 @@
+export const abroadStudiesList = [
+	{
+		slug: "russia",
+		name: "Russia",
+		courseTitle: "MBBS in Russia",
+		flag: "/img/abroad/falgs/russia.png",
+		image: "/images/abroad/russia.jpg",
+		overview: "Russia is one of the most popular places for students who want to get an international medical education with approximately 180,000 international students every year. Russian government medical universities are recognized worldwide which means students from all over the world choose Russia to build prestigious medical careers. Top universities offer subsidized tuition fees, state-of-the-art simulation laboratories, and extensive clinical hospital exposure in Moscow, Saint Petersburg, Kazan, Novosibirsk, and Kursk.",
+		quickFacts: "The Russian Federation spans Eastern Europe and Northern Asia across eleven time zones. Russian government medical universities maintain an optimal 1:10 student-to-faculty ratio, subsidized state healthcare facilities, comfortable campus hostels with dedicated Indian mess facilities, and convenient direct flights connecting major Indian cities.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Russia"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine)"
+			},
+			{
+				label: "Course Duration",
+				value: "5.8 to 6 years"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 to 3 years"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with min 50% in Biology, Chemistry & Physics | NEET UG Qualified | English Language Proficiency"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET - Accepted (No IELTS or TOEFL required)"
+			},
+			{
+				label: "Top Universities",
+				value: "Kazan Federal University, Bashkir State Medical University, Crimea Federal University, I.M. Sechenov First Moscow State Medical University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 18 Lakhs to 32 Lakhs"
+			},
+			{
+				label: "Average Annual Salary",
+				value: "INR 25 Lakhs to 65 Lakhs"
+			},
+			{
+				label: "Travel Distance",
+				value: "4,300 kilometres"
+			}
+		]
+	},
+	{
+		slug: "georgia",
+		name: "Georgia",
+		courseTitle: "MBBS in Georgia",
+		flag: "/img/abroad/falgs/georgia.png",
+		image: "/images/abroad/georgia.jpg",
+		overview: "Georgia has emerged as a premier European medical education hub for Indian students, combining rigorous European clinical curricula with safe, modern living standards. Medical academies in Georgia follow the European Credit Transfer System (ECTS) and are aligned with USMLE and WFME standards. With a peaceful atmosphere, warm hospitality, and 100% English-medium instruction, Georgia attracts thousands of ambitious medical students every year.",
+		quickFacts: "Georgia is situated at the intersection of Eastern Europe and Western Asia, bordered by the Black Sea. Ranked among the top 10 safest nations in the world for international scholars, popular university hubs like Tbilisi and Batumi offer vibrant Indian student associations, Indian dining facilities, and seamless visa processing.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Georgia"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine)"
+			},
+			{
+				label: "Course Duration",
+				value: "6 years"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 to 3 years"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with min 50% in Physics, Chemistry, Biology | NEET UG Qualified | English Language Proficiency"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET - Accepted"
+			},
+			{
+				label: "Top Universities",
+				value: "Tbilisi State Medical University, Batumi Shota Rustaveli State University, New Vision University, David Tvildiani Medical University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 22 Lakhs to 38 Lakhs"
+			},
+			{
+				label: "Average Annual Salary",
+				value: "INR 28 Lakhs to 70 Lakhs"
+			},
+			{
+				label: "Travel Distance",
+				value: "3,800 kilometres"
+			}
+		]
+	},
+	{
+		slug: "uzbekistan",
+		name: "Uzbekistan",
+		courseTitle: "MBBS in Uzbekistan",
+		flag: "/img/abroad/falgs/uzbekistan.png",
+		image: "/images/abroad/uzbekistan.jpg",
+		overview: "Uzbekistan has rapidly become one of the most preferred destinations for Indian medical aspirants seeking an NMC-compliant 5+1 year MBBS program with unmatched affordability and proximity to India. National medical universities in Uzbekistan combine centuries-old academic traditions with modern multi-specialty teaching hospitals, digital anatomy labs, and dedicated Indian mentors providing FMGE/NEXT guidance.",
+		quickFacts: "Uzbekistan is a historic Central Asian nation famous for the Silk Road, divided into 12 provinces and the autonomous Republic of Karakalpakstan. With direct 3-hour flights from Delhi to Tashkent, affordable flight fares, low living costs, and dedicated Indian hostel mess setups serving authentic vegetarian and non-vegetarian food, Uzbekistan feels like a second home.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Uzbekistan"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine)"
+			},
+			{
+				label: "Course Duration",
+				value: "5 to 6 years"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 to 2 years"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with min 50% in PCB (40% for Reserved categories) | NEET UG Qualified | English Language Proficiency"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET - Accepted"
+			},
+			{
+				label: "Top Universities",
+				value: "Tashkent Medical Academy, Samarkand State Medical University, Bukhara State Medical Institute, Andijan State Medical Institute"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 14 Lakhs to 20 Lakhs"
+			},
+			{
+				label: "Average Annual Salary",
+				value: "INR 22 Lakhs to 50 Lakhs"
+			},
+			{
+				label: "Travel Distance",
+				value: "2,050 kilometres"
+			}
+		]
+	},
+	{
+		slug: "kazakhstan",
+		name: "Kazakhstan",
+		courseTitle: "MBBS in Kazakhstan",
+		flag: "/img/abroad/falgs/kazakhstan.png",
+		image: "/images/abroad/kazakhstan.jpg",
+		overview: "Kazakhstan stands out as a leading destination in Central Asia offering government-accredited 5-year MBBS programs designed strictly per latest NMC guidelines. Equipped with cutting-edge robotic simulation centers, advanced diagnostic labs, and international partnerships with European universities, Kazakh medical academies ensure comprehensive clinical exposure in high-volume tertiary care hospitals.",
+		quickFacts: "Kazakhstan is the largest landlocked country in the world, spanning 14 administrative regions and modern metropolitan centers including Almaty and Astana. The nation enjoys economic stability, a high standard of student safety, well-established international student support cells, and Indian hostels operating directly inside the university campuses.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Kazakhstan"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine)"
+			},
+			{
+				label: "Course Duration",
+				value: "5 to 6 years"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 to 3 years"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with 50% aggregate in Physics, Chemistry, Biology | NEET UG Qualified | English Language Proficiency"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET - Accepted"
+			},
+			{
+				label: "Top Universities",
+				value: "Kazakh National Medical University, Semey State Medical University, West Kazakhstan Marat Ospanov Medical University, Astana Medical University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 15 Lakhs to 24 Lakhs"
+			},
+			{
+				label: "Average Annual Salary",
+				value: "INR 24 Lakhs to 55 Lakhs"
+			},
+			{
+				label: "Travel Distance",
+				value: "2,400 kilometres"
+			}
+		]
+	},
+	{
+		slug: "kyrgyzstan",
+		name: "Kyrgyzstan",
+		courseTitle: "MBBS in Kyrgyzstan",
+		flag: "/img/abroad/falgs/kyrgyzstan.png",
+		image: "/images/abroad/kyrgyzstan.jpg",
+		overview: "Kyrgyzstan has been a trusted study destination for Indian medical aspirants for over three decades. Government medical institutions in Kyrgyzstan offer economical 5-year MBBS courses taught completely in English, combined with rigorous practical bedside training in major municipal and regional hospitals. Over 15,000 Indian doctors practicing today have graduated from Kyrgyz medical academies.",
+		quickFacts: "Located in the heart of Central Asia amidst the picturesque Tian Shan mountain range, Kyrgyzstan comprises seven provinces and two independent cities (Bishkek and Osh). It offers mild weather, cost-effective living, active Indian student associations, celebrated Indian festivals on campus, and dedicated Indian mess chefs.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Kyrgyzstan"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine)"
+			},
+			{
+				label: "Course Duration",
+				value: "5 to 6 years"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 to 2 years"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with min 50% in PCB in 12th standard (40% for Reserved categories) | NEET UG Qualified"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET - Accepted"
+			},
+			{
+				label: "Top Universities",
+				value: "Kyrgyz State Medical Academy, Osh State University Medical Faculty, International School of Medicine (ISM), Jalal-Abad State University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 12 Lakhs to 18 Lakhs"
+			},
+			{
+				label: "Average Annual Salary",
+				value: "INR 20 Lakhs to 48 Lakhs"
+			},
+			{
+				label: "Travel Distance",
+				value: "2,200 kilometres"
+			}
+		]
+	},
+	{
+		slug: "tajikistan",
+		name: "Tajikistan",
+		courseTitle: "MBBS in Tajikistan",
+		flag: "/img/abroad/falgs/tajikistan.png",
+		image: "/images/abroad/tajikistan.jpg",
+		overview: "Tajikistan is a peaceful, welcoming Central Asian nation offering government-recognized MBBS education that emphasizes preventive medicine, diagnostic pathology, and clinical surgery. The state medical universities feature newly modernized infrastructure, international student departments, and affordable fee structures, making medical education accessible to middle-class Indian families.",
+		quickFacts: "Tajikistan is situated in Central Asia, bordered by Kyrgyzstan, Uzbekistan, Afghanistan, and China, with the capital city Dushanbe serving as its academic center. It provides a peaceful and disciplined study environment, hospitable citizens, very low crime rates, and direct air links with Delhi.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Tajikistan"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine)"
+			},
+			{
+				label: "Course Duration",
+				value: "5 to 6 years"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 to 2 years"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with at least 50% in Physics, Chemistry, Biology | NEET UG Qualified | English Language Proficiency"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET - Accepted"
+			},
+			{
+				label: "Top Universities",
+				value: "Avicenna Tajik State Medical University, Khatlon State Medical University, Tajik National University Medical Faculty"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 14 Lakhs to 20 Lakhs"
+			},
+			{
+				label: "Average Annual Salary",
+				value: "INR 22 Lakhs to 45 Lakhs"
+			},
+			{
+				label: "Travel Distance",
+				value: "2,300 kilometres"
+			}
+		]
+	},
+	{
+		slug: "philippines",
+		name: "Philippines",
+		courseTitle: "MBBS in Philippines",
+		flag: "/img/abroad/falgs/philippines.png",
+		image: "/images/abroad/philippines.jpg",
+		overview: "The Philippines is globally renowned for delivering American curriculum medical education (BS-MD program) with 100% English medium of instruction across all universities and hospitals. As the world’s third-largest English-speaking nation, Indian students face zero language barriers while communicating with local patients during hospital rotations. It boasts high FMGE/NEXT passing percentages and prepares students exceptionally well for USMLE and clinical practice in the USA, UK, and India.",
+		quickFacts: "The Philippines is an archipelagic island nation in Southeast Asia comprising over 7,000 islands, with major educational centers in Metro Manila, Davao, and Cebu. Its medical curriculum matches US standards, featuring hands-on clinical clerkships in 1,000+ bed hospitals dealing with tropical disease patterns identical to India.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Philippines"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine)"
+			},
+			{
+				label: "Course Duration",
+				value: "5.5 years"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 to 3 years"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with minimum 50% in Physics, Chemistry, Biology | NEET UG Qualified | English Language Proficiency"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET - Accepted"
+			},
+			{
+				label: "Top Universities",
+				value: "Davao Medical School Foundation (DMSF), University of Perpetual Help System DALTA, UV Gullas College of Medicine, Our Lady of Fatima University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 16 Lakhs to 28 Lakhs"
+			},
+			{
+				label: "Average Annual Salary",
+				value: "INR 28 Lakhs to 75 Lakhs"
+			},
+			{
+				label: "Travel Distance",
+				value: "4,800 kilometres"
+			}
+		]
+	},
+	{
+		slug: "canada",
+		name: "Canada",
+		courseTitle: "MBBS in Canada",
+		flag: "/img/abroad/falgs/canada.png",
+		image: "/images/abroad/canada.jpg",
+		overview: "Canada is one of the most popular places for students who want to get an international education with approximately 180,000 international students every year. A lot of the universities in Canada are recognized worldwide which means students from all over the world are flocking to Canada to get an education that will benefit them in the future. The largest international student populations are mainly in Toronto, Quebec, Ottawa, Vancouver, and Montreal.",
+		quickFacts: "Canada is a Federation of ten provinces (Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Nova Scotia, Ontario, Prince Edward Island, Quebec, and Saskatchewan) and three territories (Northwest Territories, Yukon, and Nunavut).",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Canada"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine)"
+			},
+			{
+				label: "Course Duration",
+				value: "3 to 4 years"
+			},
+			{
+				label: "Residency Duration",
+				value: "3 to 7 years"
+			},
+			{
+				label: "Academic Requirements",
+				value: "Bachelor’s in Biology or Science | NEET and MCAT | English Language Proficiency"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "MCAT - Average 500 | IELTS - 6.5 | NEET - Accepted"
+			},
+			{
+				label: "Top Universities",
+				value: "McGill University, University of Toronto, University of British Columbia"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 16 Lakhs to 61 Lakhs"
+			},
+			{
+				label: "Average Annual Salary",
+				value: "INR 38.17 Lakhs to 1.58 Crores"
+			},
+			{
+				label: "Travel Distance",
+				value: "11,600 kilometres"
+			}
+		]
+	}
+];
+export const abroadStudiesBySlug = abroadStudiesList.reduce((acc, item) => {
+	acc[item.slug] = item;
+	return acc;
+}, {});
+
+//# sourceMappingURL=data:application/json;base64,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QjtFQUN6RDtDQUNGO0FBQ0Y7QUFFQSxPQUFPLE1BQU0sc0JBQXNCLGtCQUFrQixRQUFRLEtBQUssU0FBUztDQUN6RSxJQUFJLEtBQUssUUFBUTtDQUNqQixPQUFPO0FBQ1QsR0FBRyxDQUFDLENBQUMiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiYWJyb2FkU3R1ZGllc0RhdGEuanMiXSwidmVyc2lvbiI6Mywic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IGFicm9hZFN0dWRpZXNMaXN0ID0gW1xuICB7XG4gICAgc2x1ZzogJ3J1c3NpYScsXG4gICAgbmFtZTogJ1J1c3NpYScsXG4gICAgY291cnNlVGl0bGU6ICdNQkJTIGluIFJ1c3NpYScsXG4gICAgZmxhZzogJy9pbWcvYWJyb2FkL2ZhbGdzL3J1c3NpYS5wbmcnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9hYnJvYWQvcnVzc2lhLmpwZycsXG4gICAgb3ZlcnZpZXc6XG4gICAgICAnUnVzc2lhIGlzIG9uZSBvZiB0aGUgbW9zdCBwb3B1bGFyIHBsYWNlcyBmb3Igc3R1ZGVudHMgd2hvIHdhbnQgdG8gZ2V0IGFuIGludGVybmF0aW9uYWwgbWVkaWNhbCBlZHVjYXRpb24gd2l0aCBhcHByb3hpbWF0ZWx5IDE4MCwwMDAgaW50ZXJuYXRpb25hbCBzdHVkZW50cyBldmVyeSB5ZWFyLiBSdXNzaWFuIGdvdmVybm1lbnQgbWVkaWNhbCB1bml2ZXJzaXRpZXMgYXJlIHJlY29nbml6ZWQgd29ybGR3aWRlIHdoaWNoIG1lYW5zIHN0dWRlbnRzIGZyb20gYWxsIG92ZXIgdGhlIHdvcmxkIGNob29zZSBSdXNzaWEgdG8gYnVpbGQgcHJlc3RpZ2lvdXMgbWVkaWNhbCBjYXJlZXJzLiBUb3AgdW5pdmVyc2l0aWVzIG9mZmVyIHN1YnNpZGl6ZWQgdHVpdGlvbiBmZWVzLCBzdGF0ZS1vZi10aGUtYXJ0IHNpbXVsYXRpb24gbGFib3JhdG9yaWVzLCBhbmQgZXh0ZW5zaXZlIGNsaW5pY2FsIGhvc3BpdGFsIGV4cG9zdXJlIGluIE1vc2NvdywgU2FpbnQgUGV0ZXJzYnVyZywgS2F6YW4sIE5vdm9zaWJpcnNrLCBhbmQgS3Vyc2suJyxcbiAgICBxdWlja0ZhY3RzOlxuICAgICAgJ1RoZSBSdXNzaWFuIEZlZGVyYXRpb24gc3BhbnMgRWFzdGVybiBFdXJvcGUgYW5kIE5vcnRoZXJuIEFzaWEgYWNyb3NzIGVsZXZlbiB0aW1lIHpvbmVzLiBSdXNzaWFuIGdvdmVybm1lbnQgbWVkaWNhbCB1bml2ZXJzaXRpZXMgbWFpbnRhaW4gYW4gb3B0aW1hbCAxOjEwIHN0dWRlbnQtdG8tZmFjdWx0eSByYXRpbywgc3Vic2lkaXplZCBzdGF0ZSBoZWFsdGhjYXJlIGZhY2lsaXRpZXMsIGNvbWZvcnRhYmxlIGNhbXB1cyBob3N0ZWxzIHdpdGggZGVkaWNhdGVkIEluZGlhbiBtZXNzIGZhY2lsaXRpZXMsIGFuZCBjb252ZW5pZW50IGRpcmVjdCBmbGlnaHRzIGNvbm5lY3RpbmcgbWFqb3IgSW5kaWFuIGNpdGllcy4nLFxuICAgIHBhcnRpY3VsYXJzOiBbXG4gICAgICB7IGxhYmVsOiAnQ291cnNlIE5hbWUnLCB2YWx1ZTogJ01CQlMgaW4gUnVzc2lhJyB9LFxuICAgICAgeyBsYWJlbDogJ0RlZ3JlZSBFcXVpdmFsZW50JywgdmFsdWU6ICdNRCAoRG9jdG9yIG9mIE1lZGljaW5lKScgfSxcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgRHVyYXRpb24nLCB2YWx1ZTogJzUuOCB0byA2IHllYXJzJyB9LFxuICAgICAgeyBsYWJlbDogJ1Jlc2lkZW5jeSBEdXJhdGlvbicsIHZhbHVlOiAnMSB0byAzIHllYXJzJyB9LFxuICAgICAge1xuICAgICAgICBsYWJlbDogJ0FjYWRlbWljIFJlcXVpcmVtZW50cycsXG4gICAgICAgIHZhbHVlOiAnMTArMiB3aXRoIG1pbiA1MCUgaW4gQmlvbG9neSwgQ2hlbWlzdHJ5ICYgUGh5c2ljcyB8IE5FRVQgVUcgUXVhbGlmaWVkIHwgRW5nbGlzaCBMYW5ndWFnZSBQcm9maWNpZW5jeScsXG4gICAgICB9LFxuICAgICAgeyBsYWJlbDogJ1JlY29nbml0aW9uJywgdmFsdWU6ICdOTUMgfCBXSE8nIH0sXG4gICAgICB7IGxhYmVsOiAnRW50cmFuY2UgVGVzdCBSZXF1aXJlZCcsIHZhbHVlOiAnTkVFVCAtIEFjY2VwdGVkIChObyBJRUxUUyBvciBUT0VGTCByZXF1aXJlZCknIH0sXG4gICAgICB7XG4gICAgICAgIGxhYmVsOiAnVG9wIFVuaXZlcnNpdGllcycsXG4gICAgICAgIHZhbHVlOiAnS2F6YW4gRmVkZXJhbCBVbml2ZXJzaXR5LCBCYXNoa2lyIFN0YXRlIE1lZGljYWwgVW5pdmVyc2l0eSwgQ3JpbWVhIEZlZGVyYWwgVW5pdmVyc2l0eSwgSS5NLiBTZWNoZW5vdiBGaXJzdCBNb3Njb3cgU3RhdGUgTWVkaWNhbCBVbml2ZXJzaXR5JyxcbiAgICAgIH0sXG4gICAgICB7IGxhYmVsOiAnQXZlcmFnZSBUdWl0aW9uIEZlZScsIHZhbHVlOiAnSU5SIDE4IExha2hzIHRvIDMyIExha2hzJyB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgQW5udWFsIFNhbGFyeScsIHZhbHVlOiAnSU5SIDI1IExha2hzIHRvIDY1IExha2hzJyB9LFxuICAgICAgeyBsYWJlbDogJ1RyYXZlbCBEaXN0YW5jZScsIHZhbHVlOiAnNCwzMDAga2lsb21ldHJlcycgfSxcbiAgICBdLFxuICB9LFxuICB7XG4gICAgc2x1ZzogJ2dlb3JnaWEnLFxuICAgIG5hbWU6ICdHZW9yZ2lhJyxcbiAgICBjb3Vyc2VUaXRsZTogJ01CQlMgaW4gR2VvcmdpYScsXG4gICAgZmxhZzogJy9pbWcvYWJyb2FkL2ZhbGdzL2dlb3JnaWEucG5nJyxcbiAgICBpbWFnZTogJy9pbWFnZXMvYWJyb2FkL2dlb3JnaWEuanBnJyxcbiAgICBvdmVydmlldzpcbiAgICAgICdHZW9yZ2lhIGhhcyBlbWVyZ2VkIGFzIGEgcHJlbWllciBFdXJvcGVhbiBtZWRpY2FsIGVkdWNhdGlvbiBodWIgZm9yIEluZGlhbiBzdHVkZW50cywgY29tYmluaW5nIHJpZ29yb3VzIEV1cm9wZWFuIGNsaW5pY2FsIGN1cnJpY3VsYSB3aXRoIHNhZmUsIG1vZGVybiBsaXZpbmcgc3RhbmRhcmRzLiBNZWRpY2FsIGFjYWRlbWllcyBpbiBHZW9yZ2lhIGZvbGxvdyB0aGUgRXVyb3BlYW4gQ3JlZGl0IFRyYW5zZmVyIFN5c3RlbSAoRUNUUykgYW5kIGFyZSBhbGlnbmVkIHdpdGggVVNNTEUgYW5kIFdGTUUgc3RhbmRhcmRzLiBXaXRoIGEgcGVhY2VmdWwgYXRtb3NwaGVyZSwgd2FybSBob3NwaXRhbGl0eSwgYW5kIDEwMCUgRW5nbGlzaC1tZWRpdW0gaW5zdHJ1Y3Rpb24sIEdlb3JnaWEgYXR0cmFjdHMgdGhvdXNhbmRzIG9mIGFtYml0aW91cyBtZWRpY2FsIHN0dWRlbnRzIGV2ZXJ5IHllYXIuJyxcbiAgICBxdWlja0ZhY3RzOlxuICAgICAgJ0dlb3JnaWEgaXMgc2l0dWF0ZWQgYXQgdGhlIGludGVyc2VjdGlvbiBvZiBFYXN0ZXJuIEV1cm9wZSBhbmQgV2VzdGVybiBBc2lhLCBib3JkZXJlZCBieSB0aGUgQmxhY2sgU2VhLiBSYW5rZWQgYW1vbmcgdGhlIHRvcCAxMCBzYWZlc3QgbmF0aW9ucyBpbiB0aGUgd29ybGQgZm9yIGludGVybmF0aW9uYWwgc2Nob2xhcnMsIHBvcHVsYXIgdW5pdmVyc2l0eSBodWJzIGxpa2UgVGJpbGlzaSBhbmQgQmF0dW1pIG9mZmVyIHZpYnJhbnQgSW5kaWFuIHN0dWRlbnQgYXNzb2NpYXRpb25zLCBJbmRpYW4gZGluaW5nIGZhY2lsaXRpZXMsIGFuZCBzZWFtbGVzcyB2aXNhIHByb2Nlc3NpbmcuJyxcbiAgICBwYXJ0aWN1bGFyczogW1xuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBOYW1lJywgdmFsdWU6ICdNQkJTIGluIEdlb3JnaWEnIH0sXG4gICAgICB7IGxhYmVsOiAnRGVncmVlIEVxdWl2YWxlbnQnLCB2YWx1ZTogJ01EIChEb2N0b3Igb2YgTWVkaWNpbmUpJyB9LFxuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBEdXJhdGlvbicsIHZhbHVlOiAnNiB5ZWFycycgfSxcbiAgICAgIHsgbGFiZWw6ICdSZXNpZGVuY3kgRHVyYXRpb24nLCB2YWx1ZTogJzEgdG8gMyB5ZWFycycgfSxcbiAgICAgIHtcbiAgICAgICAgbGFiZWw6ICdBY2FkZW1pYyBSZXF1aXJlbWVudHMnLFxuICAgICAgICB2YWx1ZTogJzEwKzIgd2l0aCBtaW4gNTAlIGluIFBoeXNpY3MsIENoZW1pc3RyeSwgQmlvbG9neSB8IE5FRVQgVUcgUXVhbGlmaWVkIHwgRW5nbGlzaCBMYW5ndWFnZSBQcm9maWNpZW5jeScsXG4gICAgICB9LFxuICAgICAgeyBsYWJlbDogJ1JlY29nbml0aW9uJywgdmFsdWU6ICdOTUMgfCBXSE8nIH0sXG4gICAgICB7IGxhYmVsOiAnRW50cmFuY2UgVGVzdCBSZXF1aXJlZCcsIHZhbHVlOiAnTkVFVCAtIEFjY2VwdGVkJyB9LFxuICAgICAge1xuICAgICAgICBsYWJlbDogJ1RvcCBVbml2ZXJzaXRpZXMnLFxuICAgICAgICB2YWx1ZTogJ1RiaWxpc2kgU3RhdGUgTWVkaWNhbCBVbml2ZXJzaXR5LCBCYXR1bWkgU2hvdGEgUnVzdGF2ZWxpIFN0YXRlIFVuaXZlcnNpdHksIE5ldyBWaXNpb24gVW5pdmVyc2l0eSwgRGF2aWQgVHZpbGRpYW5pIE1lZGljYWwgVW5pdmVyc2l0eScsXG4gICAgICB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgVHVpdGlvbiBGZWUnLCB2YWx1ZTogJ0lOUiAyMiBMYWtocyB0byAzOCBMYWtocycgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIEFubnVhbCBTYWxhcnknLCB2YWx1ZTogJ0lOUiAyOCBMYWtocyB0byA3MCBMYWtocycgfSxcbiAgICAgIHsgbGFiZWw6ICdUcmF2ZWwgRGlzdGFuY2UnLCB2YWx1ZTogJzMsODAwIGtpbG9tZXRyZXMnIH0sXG4gICAgXSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICd1emJla2lzdGFuJyxcbiAgICBuYW1lOiAnVXpiZWtpc3RhbicsXG4gICAgY291cnNlVGl0bGU6ICdNQkJTIGluIFV6YmVraXN0YW4nLFxuICAgIGZsYWc6ICcvaW1nL2Ficm9hZC9mYWxncy91emJla2lzdGFuLnBuZycsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2Ficm9hZC91emJla2lzdGFuLmpwZycsXG4gICAgb3ZlcnZpZXc6XG4gICAgICAnVXpiZWtpc3RhbiBoYXMgcmFwaWRseSBiZWNvbWUgb25lIG9mIHRoZSBtb3N0IHByZWZlcnJlZCBkZXN0aW5hdGlvbnMgZm9yIEluZGlhbiBtZWRpY2FsIGFzcGlyYW50cyBzZWVraW5nIGFuIE5NQy1jb21wbGlhbnQgNSsxIHllYXIgTUJCUyBwcm9ncmFtIHdpdGggdW5tYXRjaGVkIGFmZm9yZGFiaWxpdHkgYW5kIHByb3hpbWl0eSB0byBJbmRpYS4gTmF0aW9uYWwgbWVkaWNhbCB1bml2ZXJzaXRpZXMgaW4gVXpiZWtpc3RhbiBjb21iaW5lIGNlbnR1cmllcy1vbGQgYWNhZGVtaWMgdHJhZGl0aW9ucyB3aXRoIG1vZGVybiBtdWx0aS1zcGVjaWFsdHkgdGVhY2hpbmcgaG9zcGl0YWxzLCBkaWdpdGFsIGFuYXRvbXkgbGFicywgYW5kIGRlZGljYXRlZCBJbmRpYW4gbWVudG9ycyBwcm92aWRpbmcgRk1HRS9ORVhUIGd1aWRhbmNlLicsXG4gICAgcXVpY2tGYWN0czpcbiAgICAgICdVemJla2lzdGFuIGlzIGEgaGlzdG9yaWMgQ2VudHJhbCBBc2lhbiBuYXRpb24gZmFtb3VzIGZvciB0aGUgU2lsayBSb2FkLCBkaXZpZGVkIGludG8gMTIgcHJvdmluY2VzIGFuZCB0aGUgYXV0b25vbW91cyBSZXB1YmxpYyBvZiBLYXJha2FscGFrc3Rhbi4gV2l0aCBkaXJlY3QgMy1ob3VyIGZsaWdodHMgZnJvbSBEZWxoaSB0byBUYXNoa2VudCwgYWZmb3JkYWJsZSBmbGlnaHQgZmFyZXMsIGxvdyBsaXZpbmcgY29zdHMsIGFuZCBkZWRpY2F0ZWQgSW5kaWFuIGhvc3RlbCBtZXNzIHNldHVwcyBzZXJ2aW5nIGF1dGhlbnRpYyB2ZWdldGFyaWFuIGFuZCBub24tdmVnZXRhcmlhbiBmb29kLCBVemJla2lzdGFuIGZlZWxzIGxpa2UgYSBzZWNvbmQgaG9tZS4nLFxuICAgIHBhcnRpY3VsYXJzOiBbXG4gICAgICB7IGxhYmVsOiAnQ291cnNlIE5hbWUnLCB2YWx1ZTogJ01CQlMgaW4gVXpiZWtpc3RhbicgfSxcbiAgICAgIHsgbGFiZWw6ICdEZWdyZWUgRXF1aXZhbGVudCcsIHZhbHVlOiAnTUQgKERvY3RvciBvZiBNZWRpY2luZSknIH0sXG4gICAgICB7IGxhYmVsOiAnQ291cnNlIER1cmF0aW9uJywgdmFsdWU6ICc1IHRvIDYgeWVhcnMnIH0sXG4gICAgICB7IGxhYmVsOiAnUmVzaWRlbmN5IER1cmF0aW9uJywgdmFsdWU6ICcxIHRvIDIgeWVhcnMnIH0sXG4gICAgICB7XG4gICAgICAgIGxhYmVsOiAnQWNhZGVtaWMgUmVxdWlyZW1lbnRzJyxcbiAgICAgICAgdmFsdWU6ICcxMCsyIHdpdGggbWluIDUwJSBpbiBQQ0IgKDQwJSBmb3IgUmVzZXJ2ZWQgY2F0ZWdvcmllcykgfCBORUVUIFVHIFF1YWxpZmllZCB8IEVuZ2xpc2ggTGFuZ3VhZ2UgUHJvZmljaWVuY3knLFxuICAgICAgfSxcbiAgICAgIHsgbGFiZWw6ICdSZWNvZ25pdGlvbicsIHZhbHVlOiAnTk1DIHwgV0hPJyB9LFxuICAgICAgeyBsYWJlbDogJ0VudHJhbmNlIFRlc3QgUmVxdWlyZWQnLCB2YWx1ZTogJ05FRVQgLSBBY2NlcHRlZCcgfSxcbiAgICAgIHtcbiAgICAgICAgbGFiZWw6ICdUb3AgVW5pdmVyc2l0aWVzJyxcbiAgICAgICAgdmFsdWU6ICdUYXNoa2VudCBNZWRpY2FsIEFjYWRlbXksIFNhbWFya2FuZCBTdGF0ZSBNZWRpY2FsIFVuaXZlcnNpdHksIEJ1a2hhcmEgU3RhdGUgTWVkaWNhbCBJbnN0aXR1dGUsIEFuZGlqYW4gU3RhdGUgTWVkaWNhbCBJbnN0aXR1dGUnLFxuICAgICAgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIFR1aXRpb24gRmVlJywgdmFsdWU6ICdJTlIgMTQgTGFraHMgdG8gMjAgTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnQXZlcmFnZSBBbm51YWwgU2FsYXJ5JywgdmFsdWU6ICdJTlIgMjIgTGFraHMgdG8gNTAgTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnVHJhdmVsIERpc3RhbmNlJywgdmFsdWU6ICcyLDA1MCBraWxvbWV0cmVzJyB9LFxuICAgIF0sXG4gIH0sXG4gIHtcbiAgICBzbHVnOiAna2F6YWtoc3RhbicsXG4gICAgbmFtZTogJ0themFraHN0YW4nLFxuICAgIGNvdXJzZVRpdGxlOiAnTUJCUyBpbiBLYXpha2hzdGFuJyxcbiAgICBmbGFnOiAnL2ltZy9hYnJvYWQvZmFsZ3Mva2F6YWtoc3Rhbi5wbmcnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9hYnJvYWQva2F6YWtoc3Rhbi5qcGcnLFxuICAgIG92ZXJ2aWV3OlxuICAgICAgJ0themFraHN0YW4gc3RhbmRzIG91dCBhcyBhIGxlYWRpbmcgZGVzdGluYXRpb24gaW4gQ2VudHJhbCBBc2lhIG9mZmVyaW5nIGdvdmVybm1lbnQtYWNjcmVkaXRlZCA1LXllYXIgTUJCUyBwcm9ncmFtcyBkZXNpZ25lZCBzdHJpY3RseSBwZXIgbGF0ZXN0IE5NQyBndWlkZWxpbmVzLiBFcXVpcHBlZCB3aXRoIGN1dHRpbmctZWRnZSByb2JvdGljIHNpbXVsYXRpb24gY2VudGVycywgYWR2YW5jZWQgZGlhZ25vc3RpYyBsYWJzLCBhbmQgaW50ZXJuYXRpb25hbCBwYXJ0bmVyc2hpcHMgd2l0aCBFdXJvcGVhbiB1bml2ZXJzaXRpZXMsIEthemFraCBtZWRpY2FsIGFjYWRlbWllcyBlbnN1cmUgY29tcHJlaGVuc2l2ZSBjbGluaWNhbCBleHBvc3VyZSBpbiBoaWdoLXZvbHVtZSB0ZXJ0aWFyeSBjYXJlIGhvc3BpdGFscy4nLFxuICAgIHF1aWNrRmFjdHM6XG4gICAgICAnS2F6YWtoc3RhbiBpcyB0aGUgbGFyZ2VzdCBsYW5kbG9ja2VkIGNvdW50cnkgaW4gdGhlIHdvcmxkLCBzcGFubmluZyAxNCBhZG1pbmlzdHJhdGl2ZSByZWdpb25zIGFuZCBtb2Rlcm4gbWV0cm9wb2xpdGFuIGNlbnRlcnMgaW5jbHVkaW5nIEFsbWF0eSBhbmQgQXN0YW5hLiBUaGUgbmF0aW9uIGVuam95cyBlY29ub21pYyBzdGFiaWxpdHksIGEgaGlnaCBzdGFuZGFyZCBvZiBzdHVkZW50IHNhZmV0eSwgd2VsbC1lc3RhYmxpc2hlZCBpbnRlcm5hdGlvbmFsIHN0dWRlbnQgc3VwcG9ydCBjZWxscywgYW5kIEluZGlhbiBob3N0ZWxzIG9wZXJhdGluZyBkaXJlY3RseSBpbnNpZGUgdGhlIHVuaXZlcnNpdHkgY2FtcHVzZXMuJyxcbiAgICBwYXJ0aWN1bGFyczogW1xuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBOYW1lJywgdmFsdWU6ICdNQkJTIGluIEthemFraHN0YW4nIH0sXG4gICAgICB7IGxhYmVsOiAnRGVncmVlIEVxdWl2YWxlbnQnLCB2YWx1ZTogJ01EIChEb2N0b3Igb2YgTWVkaWNpbmUpJyB9LFxuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBEdXJhdGlvbicsIHZhbHVlOiAnNSB0byA2IHllYXJzJyB9LFxuICAgICAgeyBsYWJlbDogJ1Jlc2lkZW5jeSBEdXJhdGlvbicsIHZhbHVlOiAnMSB0byAzIHllYXJzJyB9LFxuICAgICAge1xuICAgICAgICBsYWJlbDogJ0FjYWRlbWljIFJlcXVpcmVtZW50cycsXG4gICAgICAgIHZhbHVlOiAnMTArMiB3aXRoIDUwJSBhZ2dyZWdhdGUgaW4gUGh5c2ljcywgQ2hlbWlzdHJ5LCBCaW9sb2d5IHwgTkVFVCBVRyBRdWFsaWZpZWQgfCBFbmdsaXNoIExhbmd1YWdlIFByb2ZpY2llbmN5JyxcbiAgICAgIH0sXG4gICAgICB7IGxhYmVsOiAnUmVjb2duaXRpb24nLCB2YWx1ZTogJ05NQyB8IFdITycgfSxcbiAgICAgIHsgbGFiZWw6ICdFbnRyYW5jZSBUZXN0IFJlcXVpcmVkJywgdmFsdWU6ICdORUVUIC0gQWNjZXB0ZWQnIH0sXG4gICAgICB7XG4gICAgICAgIGxhYmVsOiAnVG9wIFVuaXZlcnNpdGllcycsXG4gICAgICAgIHZhbHVlOiAnS2F6YWtoIE5hdGlvbmFsIE1lZGljYWwgVW5pdmVyc2l0eSwgU2VtZXkgU3RhdGUgTWVkaWNhbCBVbml2ZXJzaXR5LCBXZXN0IEthemFraHN0YW4gTWFyYXQgT3NwYW5vdiBNZWRpY2FsIFVuaXZlcnNpdHksIEFzdGFuYSBNZWRpY2FsIFVuaXZlcnNpdHknLFxuICAgICAgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIFR1aXRpb24gRmVlJywgdmFsdWU6ICdJTlIgMTUgTGFraHMgdG8gMjQgTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnQXZlcmFnZSBBbm51YWwgU2FsYXJ5JywgdmFsdWU6ICdJTlIgMjQgTGFraHMgdG8gNTUgTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnVHJhdmVsIERpc3RhbmNlJywgdmFsdWU6ICcyLDQwMCBraWxvbWV0cmVzJyB9LFxuICAgIF0sXG4gIH0sXG4gIHtcbiAgICBzbHVnOiAna3lyZ3l6c3RhbicsXG4gICAgbmFtZTogJ0t5cmd5enN0YW4nLFxuICAgIGNvdXJzZVRpdGxlOiAnTUJCUyBpbiBLeXJneXpzdGFuJyxcbiAgICBmbGFnOiAnL2ltZy9hYnJvYWQvZmFsZ3Mva3lyZ3l6c3Rhbi5wbmcnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9hYnJvYWQva3lyZ3l6c3Rhbi5qcGcnLFxuICAgIG92ZXJ2aWV3OlxuICAgICAgJ0t5cmd5enN0YW4gaGFzIGJlZW4gYSB0cnVzdGVkIHN0dWR5IGRlc3RpbmF0aW9uIGZvciBJbmRpYW4gbWVkaWNhbCBhc3BpcmFudHMgZm9yIG92ZXIgdGhyZWUgZGVjYWRlcy4gR292ZXJubWVudCBtZWRpY2FsIGluc3RpdHV0aW9ucyBpbiBLeXJneXpzdGFuIG9mZmVyIGVjb25vbWljYWwgNS15ZWFyIE1CQlMgY291cnNlcyB0YXVnaHQgY29tcGxldGVseSBpbiBFbmdsaXNoLCBjb21iaW5lZCB3aXRoIHJpZ29yb3VzIHByYWN0aWNhbCBiZWRzaWRlIHRyYWluaW5nIGluIG1ham9yIG11bmljaXBhbCBhbmQgcmVnaW9uYWwgaG9zcGl0YWxzLiBPdmVyIDE1LDAwMCBJbmRpYW4gZG9jdG9ycyBwcmFjdGljaW5nIHRvZGF5IGhhdmUgZ3JhZHVhdGVkIGZyb20gS3lyZ3l6IG1lZGljYWwgYWNhZGVtaWVzLicsXG4gICAgcXVpY2tGYWN0czpcbiAgICAgICdMb2NhdGVkIGluIHRoZSBoZWFydCBvZiBDZW50cmFsIEFzaWEgYW1pZHN0IHRoZSBwaWN0dXJlc3F1ZSBUaWFuIFNoYW4gbW91bnRhaW4gcmFuZ2UsIEt5cmd5enN0YW4gY29tcHJpc2VzIHNldmVuIHByb3ZpbmNlcyBhbmQgdHdvIGluZGVwZW5kZW50IGNpdGllcyAoQmlzaGtlayBhbmQgT3NoKS4gSXQgb2ZmZXJzIG1pbGQgd2VhdGhlciwgY29zdC1lZmZlY3RpdmUgbGl2aW5nLCBhY3RpdmUgSW5kaWFuIHN0dWRlbnQgYXNzb2NpYXRpb25zLCBjZWxlYnJhdGVkIEluZGlhbiBmZXN0aXZhbHMgb24gY2FtcHVzLCBhbmQgZGVkaWNhdGVkIEluZGlhbiBtZXNzIGNoZWZzLicsXG4gICAgcGFydGljdWxhcnM6IFtcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgTmFtZScsIHZhbHVlOiAnTUJCUyBpbiBLeXJneXpzdGFuJyB9LFxuICAgICAgeyBsYWJlbDogJ0RlZ3JlZSBFcXVpdmFsZW50JywgdmFsdWU6ICdNRCAoRG9jdG9yIG9mIE1lZGljaW5lKScgfSxcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgRHVyYXRpb24nLCB2YWx1ZTogJzUgdG8gNiB5ZWFycycgfSxcbiAgICAgIHsgbGFiZWw6ICdSZXNpZGVuY3kgRHVyYXRpb24nLCB2YWx1ZTogJzEgdG8gMiB5ZWFycycgfSxcbiAgICAgIHtcbiAgICAgICAgbGFiZWw6ICdBY2FkZW1pYyBSZXF1aXJlbWVudHMnLFxuICAgICAgICB2YWx1ZTogJzEwKzIgd2l0aCBtaW4gNTAlIGluIFBDQiBpbiAxMnRoIHN0YW5kYXJkICg0MCUgZm9yIFJlc2VydmVkIGNhdGVnb3JpZXMpIHwgTkVFVCBVRyBRdWFsaWZpZWQnLFxuICAgICAgfSxcbiAgICAgIHsgbGFiZWw6ICdSZWNvZ25pdGlvbicsIHZhbHVlOiAnTk1DIHwgV0hPJyB9LFxuICAgICAgeyBsYWJlbDogJ0VudHJhbmNlIFRlc3QgUmVxdWlyZWQnLCB2YWx1ZTogJ05FRVQgLSBBY2NlcHRlZCcgfSxcbiAgICAgIHtcbiAgICAgICAgbGFiZWw6ICdUb3AgVW5pdmVyc2l0aWVzJyxcbiAgICAgICAgdmFsdWU6ICdLeXJneXogU3RhdGUgTWVkaWNhbCBBY2FkZW15LCBPc2ggU3RhdGUgVW5pdmVyc2l0eSBNZWRpY2FsIEZhY3VsdHksIEludGVybmF0aW9uYWwgU2Nob29sIG9mIE1lZGljaW5lIChJU00pLCBKYWxhbC1BYmFkIFN0YXRlIFVuaXZlcnNpdHknLFxuICAgICAgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIFR1aXRpb24gRmVlJywgdmFsdWU6ICdJTlIgMTIgTGFraHMgdG8gMTggTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnQXZlcmFnZSBBbm51YWwgU2FsYXJ5JywgdmFsdWU6ICdJTlIgMjAgTGFraHMgdG8gNDggTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnVHJhdmVsIERpc3RhbmNlJywgdmFsdWU6ICcyLDIwMCBraWxvbWV0cmVzJyB9LFxuICAgIF0sXG4gIH0sXG4gIHtcbiAgICBzbHVnOiAndGFqaWtpc3RhbicsXG4gICAgbmFtZTogJ1RhamlraXN0YW4nLFxuICAgIGNvdXJzZVRpdGxlOiAnTUJCUyBpbiBUYWppa2lzdGFuJyxcbiAgICBmbGFnOiAnL2ltZy9hYnJvYWQvZmFsZ3MvdGFqaWtpc3Rhbi5wbmcnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9hYnJvYWQvdGFqaWtpc3Rhbi5qcGcnLFxuICAgIG92ZXJ2aWV3OlxuICAgICAgJ1RhamlraXN0YW4gaXMgYSBwZWFjZWZ1bCwgd2VsY29taW5nIENlbnRyYWwgQXNpYW4gbmF0aW9uIG9mZmVyaW5nIGdvdmVybm1lbnQtcmVjb2duaXplZCBNQkJTIGVkdWNhdGlvbiB0aGF0IGVtcGhhc2l6ZXMgcHJldmVudGl2ZSBtZWRpY2luZSwgZGlhZ25vc3RpYyBwYXRob2xvZ3ksIGFuZCBjbGluaWNhbCBzdXJnZXJ5LiBUaGUgc3RhdGUgbWVkaWNhbCB1bml2ZXJzaXRpZXMgZmVhdHVyZSBuZXdseSBtb2Rlcm5pemVkIGluZnJhc3RydWN0dXJlLCBpbnRlcm5hdGlvbmFsIHN0dWRlbnQgZGVwYXJ0bWVudHMsIGFuZCBhZmZvcmRhYmxlIGZlZSBzdHJ1Y3R1cmVzLCBtYWtpbmcgbWVkaWNhbCBlZHVjYXRpb24gYWNjZXNzaWJsZSB0byBtaWRkbGUtY2xhc3MgSW5kaWFuIGZhbWlsaWVzLicsXG4gICAgcXVpY2tGYWN0czpcbiAgICAgICdUYWppa2lzdGFuIGlzIHNpdHVhdGVkIGluIENlbnRyYWwgQXNpYSwgYm9yZGVyZWQgYnkgS3lyZ3l6c3RhbiwgVXpiZWtpc3RhbiwgQWZnaGFuaXN0YW4sIGFuZCBDaGluYSwgd2l0aCB0aGUgY2FwaXRhbCBjaXR5IER1c2hhbmJlIHNlcnZpbmcgYXMgaXRzIGFjYWRlbWljIGNlbnRlci4gSXQgcHJvdmlkZXMgYSBwZWFjZWZ1bCBhbmQgZGlzY2lwbGluZWQgc3R1ZHkgZW52aXJvbm1lbnQsIGhvc3BpdGFibGUgY2l0aXplbnMsIHZlcnkgbG93IGNyaW1lIHJhdGVzLCBhbmQgZGlyZWN0IGFpciBsaW5rcyB3aXRoIERlbGhpLicsXG4gICAgcGFydGljdWxhcnM6IFtcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgTmFtZScsIHZhbHVlOiAnTUJCUyBpbiBUYWppa2lzdGFuJyB9LFxuICAgICAgeyBsYWJlbDogJ0RlZ3JlZSBFcXVpdmFsZW50JywgdmFsdWU6ICdNRCAoRG9jdG9yIG9mIE1lZGljaW5lKScgfSxcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgRHVyYXRpb24nLCB2YWx1ZTogJzUgdG8gNiB5ZWFycycgfSxcbiAgICAgIHsgbGFiZWw6ICdSZXNpZGVuY3kgRHVyYXRpb24nLCB2YWx1ZTogJzEgdG8gMiB5ZWFycycgfSxcbiAgICAgIHtcbiAgICAgICAgbGFiZWw6ICdBY2FkZW1pYyBSZXF1aXJlbWVudHMnLFxuICAgICAgICB2YWx1ZTogJzEwKzIgd2l0aCBhdCBsZWFzdCA1MCUgaW4gUGh5c2ljcywgQ2hlbWlzdHJ5LCBCaW9sb2d5IHwgTkVFVCBVRyBRdWFsaWZpZWQgfCBFbmdsaXNoIExhbmd1YWdlIFByb2ZpY2llbmN5JyxcbiAgICAgIH0sXG4gICAgICB7IGxhYmVsOiAnUmVjb2duaXRpb24nLCB2YWx1ZTogJ05NQyB8IFdITycgfSxcbiAgICAgIHsgbGFiZWw6ICdFbnRyYW5jZSBUZXN0IFJlcXVpcmVkJywgdmFsdWU6ICdORUVUIC0gQWNjZXB0ZWQnIH0sXG4gICAgICB7XG4gICAgICAgIGxhYmVsOiAnVG9wIFVuaXZlcnNpdGllcycsXG4gICAgICAgIHZhbHVlOiAnQXZpY2VubmEgVGFqaWsgU3RhdGUgTWVkaWNhbCBVbml2ZXJzaXR5LCBLaGF0bG9uIFN0YXRlIE1lZGljYWwgVW5pdmVyc2l0eSwgVGFqaWsgTmF0aW9uYWwgVW5pdmVyc2l0eSBNZWRpY2FsIEZhY3VsdHknLFxuICAgICAgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIFR1aXRpb24gRmVlJywgdmFsdWU6ICdJTlIgMTQgTGFraHMgdG8gMjAgTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnQXZlcmFnZSBBbm51YWwgU2FsYXJ5JywgdmFsdWU6ICdJTlIgMjIgTGFraHMgdG8gNDUgTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnVHJhdmVsIERpc3RhbmNlJywgdmFsdWU6ICcyLDMwMCBraWxvbWV0cmVzJyB9LFxuICAgIF0sXG4gIH0sXG4gIHtcbiAgICBzbHVnOiAncGhpbGlwcGluZXMnLFxuICAgIG5hbWU6ICdQaGlsaXBwaW5lcycsXG4gICAgY291cnNlVGl0bGU6ICdNQkJTIGluIFBoaWxpcHBpbmVzJyxcbiAgICBmbGFnOiAnL2ltZy9hYnJvYWQvZmFsZ3MvcGhpbGlwcGluZXMucG5nJyxcbiAgICBpbWFnZTogJy9pbWFnZXMvYWJyb2FkL3BoaWxpcHBpbmVzLmpwZycsXG4gICAgb3ZlcnZpZXc6XG4gICAgICAnVGhlIFBoaWxpcHBpbmVzIGlzIGdsb2JhbGx5IHJlbm93bmVkIGZvciBkZWxpdmVyaW5nIEFtZXJpY2FuIGN1cnJpY3VsdW0gbWVkaWNhbCBlZHVjYXRpb24gKEJTLU1EIHByb2dyYW0pIHdpdGggMTAwJSBFbmdsaXNoIG1lZGl1bSBvZiBpbnN0cnVjdGlvbiBhY3Jvc3MgYWxsIHVuaXZlcnNpdGllcyBhbmQgaG9zcGl0YWxzLiBBcyB0aGUgd29ybGTigJlzIHRoaXJkLWxhcmdlc3QgRW5nbGlzaC1zcGVha2luZyBuYXRpb24sIEluZGlhbiBzdHVkZW50cyBmYWNlIHplcm8gbGFuZ3VhZ2UgYmFycmllcnMgd2hpbGUgY29tbXVuaWNhdGluZyB3aXRoIGxvY2FsIHBhdGllbnRzIGR1cmluZyBob3NwaXRhbCByb3RhdGlvbnMuIEl0IGJvYXN0cyBoaWdoIEZNR0UvTkVYVCBwYXNzaW5nIHBlcmNlbnRhZ2VzIGFuZCBwcmVwYXJlcyBzdHVkZW50cyBleGNlcHRpb25hbGx5IHdlbGwgZm9yIFVTTUxFIGFuZCBjbGluaWNhbCBwcmFjdGljZSBpbiB0aGUgVVNBLCBVSywgYW5kIEluZGlhLicsXG4gICAgcXVpY2tGYWN0czpcbiAgICAgICdUaGUgUGhpbGlwcGluZXMgaXMgYW4gYXJjaGlwZWxhZ2ljIGlzbGFuZCBuYXRpb24gaW4gU291dGhlYXN0IEFzaWEgY29tcHJpc2luZyBvdmVyIDcsMDAwIGlzbGFuZHMsIHdpdGggbWFqb3IgZWR1Y2F0aW9uYWwgY2VudGVycyBpbiBNZXRybyBNYW5pbGEsIERhdmFvLCBhbmQgQ2VidS4gSXRzIG1lZGljYWwgY3VycmljdWx1bSBtYXRjaGVzIFVTIHN0YW5kYXJkcywgZmVhdHVyaW5nIGhhbmRzLW9uIGNsaW5pY2FsIGNsZXJrc2hpcHMgaW4gMSwwMDArIGJlZCBob3NwaXRhbHMgZGVhbGluZyB3aXRoIHRyb3BpY2FsIGRpc2Vhc2UgcGF0dGVybnMgaWRlbnRpY2FsIHRvIEluZGlhLicsXG4gICAgcGFydGljdWxhcnM6IFtcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgTmFtZScsIHZhbHVlOiAnTUJCUyBpbiBQaGlsaXBwaW5lcycgfSxcbiAgICAgIHsgbGFiZWw6ICdEZWdyZWUgRXF1aXZhbGVudCcsIHZhbHVlOiAnTUQgKERvY3RvciBvZiBNZWRpY2luZSknIH0sXG4gICAgICB7IGxhYmVsOiAnQ291cnNlIER1cmF0aW9uJywgdmFsdWU6ICc1LjUgeWVhcnMnIH0sXG4gICAgICB7IGxhYmVsOiAnUmVzaWRlbmN5IER1cmF0aW9uJywgdmFsdWU6ICcxIHRvIDMgeWVhcnMnIH0sXG4gICAgICB7XG4gICAgICAgIGxhYmVsOiAnQWNhZGVtaWMgUmVxdWlyZW1lbnRzJyxcbiAgICAgICAgdmFsdWU6ICcxMCsyIHdpdGggbWluaW11bSA1MCUgaW4gUGh5c2ljcywgQ2hlbWlzdHJ5LCBCaW9sb2d5IHwgTkVFVCBVRyBRdWFsaWZpZWQgfCBFbmdsaXNoIExhbmd1YWdlIFByb2ZpY2llbmN5JyxcbiAgICAgIH0sXG4gICAgICB7IGxhYmVsOiAnUmVjb2duaXRpb24nLCB2YWx1ZTogJ05NQyB8IFdITycgfSxcbiAgICAgIHsgbGFiZWw6ICdFbnRyYW5jZSBUZXN0IFJlcXVpcmVkJywgdmFsdWU6ICdORUVUIC0gQWNjZXB0ZWQnIH0sXG4gICAgICB7XG4gICAgICAgIGxhYmVsOiAnVG9wIFVuaXZlcnNpdGllcycsXG4gICAgICAgIHZhbHVlOiAnRGF2YW8gTWVkaWNhbCBTY2hvb2wgRm91bmRhdGlvbiAoRE1TRiksIFVuaXZlcnNpdHkgb2YgUGVycGV0dWFsIEhlbHAgU3lzdGVtIERBTFRBLCBVViBHdWxsYXMgQ29sbGVnZSBvZiBNZWRpY2luZSwgT3VyIExhZHkgb2YgRmF0aW1hIFVuaXZlcnNpdHknLFxuICAgICAgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIFR1aXRpb24gRmVlJywgdmFsdWU6ICdJTlIgMTYgTGFraHMgdG8gMjggTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnQXZlcmFnZSBBbm51YWwgU2FsYXJ5JywgdmFsdWU6ICdJTlIgMjggTGFraHMgdG8gNzUgTGFraHMnIH0sXG4gICAgICB7IGxhYmVsOiAnVHJhdmVsIERpc3RhbmNlJywgdmFsdWU6ICc0LDgwMCBraWxvbWV0cmVzJyB9LFxuICAgIF0sXG4gIH0sXG4gIHtcbiAgICBzbHVnOiAnY2FuYWRhJyxcbiAgICBuYW1lOiAnQ2FuYWRhJyxcbiAgICBjb3Vyc2VUaXRsZTogJ01CQlMgaW4gQ2FuYWRhJyxcbiAgICBmbGFnOiAnL2ltZy9hYnJvYWQvZmFsZ3MvY2FuYWRhLnBuZycsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2Ficm9hZC9jYW5hZGEuanBnJyxcbiAgICBvdmVydmlldzpcbiAgICAgICdDYW5hZGEgaXMgb25lIG9mIHRoZSBtb3N0IHBvcHVsYXIgcGxhY2VzIGZvciBzdHVkZW50cyB3aG8gd2FudCB0byBnZXQgYW4gaW50ZXJuYXRpb25hbCBlZHVjYXRpb24gd2l0aCBhcHByb3hpbWF0ZWx5IDE4MCwwMDAgaW50ZXJuYXRpb25hbCBzdHVkZW50cyBldmVyeSB5ZWFyLiBBIGxvdCBvZiB0aGUgdW5pdmVyc2l0aWVzIGluIENhbmFkYSBhcmUgcmVjb2duaXplZCB3b3JsZHdpZGUgd2hpY2ggbWVhbnMgc3R1ZGVudHMgZnJvbSBhbGwgb3ZlciB0aGUgd29ybGQgYXJlIGZsb2NraW5nIHRvIENhbmFkYSB0byBnZXQgYW4gZWR1Y2F0aW9uIHRoYXQgd2lsbCBiZW5lZml0IHRoZW0gaW4gdGhlIGZ1dHVyZS4gVGhlIGxhcmdlc3QgaW50ZXJuYXRpb25hbCBzdHVkZW50IHBvcHVsYXRpb25zIGFyZSBtYWlubHkgaW4gVG9yb250bywgUXVlYmVjLCBPdHRhd2EsIFZhbmNvdXZlciwgYW5kIE1vbnRyZWFsLicsXG4gICAgcXVpY2tGYWN0czpcbiAgICAgICdDYW5hZGEgaXMgYSBGZWRlcmF0aW9uIG9mIHRlbiBwcm92aW5jZXMgKEFsYmVydGEsIEJyaXRpc2ggQ29sdW1iaWEsIE1hbml0b2JhLCBOZXcgQnJ1bnN3aWNrLCBOZXdmb3VuZGxhbmQgYW5kIExhYnJhZG9yLCBOb3ZhIFNjb3RpYSwgT250YXJpbywgUHJpbmNlIEVkd2FyZCBJc2xhbmQsIFF1ZWJlYywgYW5kIFNhc2thdGNoZXdhbikgYW5kIHRocmVlIHRlcnJpdG9yaWVzIChOb3J0aHdlc3QgVGVycml0b3JpZXMsIFl1a29uLCBhbmQgTnVuYXZ1dCkuJyxcbiAgICBwYXJ0aWN1bGFyczogW1xuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBOYW1lJywgdmFsdWU6ICdNQkJTIGluIENhbmFkYScgfSxcbiAgICAgIHsgbGFiZWw6ICdEZWdyZWUgRXF1aXZhbGVudCcsIHZhbHVlOiAnTUQgKERvY3RvciBvZiBNZWRpY2luZSknIH0sXG4gICAgICB7IGxhYmVsOiAnQ291cnNlIER1cmF0aW9uJywgdmFsdWU6ICczIHRvIDQgeWVhcnMnIH0sXG4gICAgICB7IGxhYmVsOiAnUmVzaWRlbmN5IER1cmF0aW9uJywgdmFsdWU6ICczIHRvIDcgeWVhcnMnIH0sXG4gICAgICB7XG4gICAgICAgIGxhYmVsOiAnQWNhZGVtaWMgUmVxdWlyZW1lbnRzJyxcbiAgICAgICAgdmFsdWU6ICdCYWNoZWxvcuKAmXMgaW4gQmlvbG9neSBvciBTY2llbmNlIHwgTkVFVCBhbmQgTUNBVCB8IEVuZ2xpc2ggTGFuZ3VhZ2UgUHJvZmljaWVuY3knLFxuICAgICAgfSxcbiAgICAgIHsgbGFiZWw6ICdSZWNvZ25pdGlvbicsIHZhbHVlOiAnTk1DIHwgV0hPJyB9LFxuICAgICAgeyBsYWJlbDogJ0VudHJhbmNlIFRlc3QgUmVxdWlyZWQnLCB2YWx1ZTogJ01DQVQgLSBBdmVyYWdlIDUwMCB8IElFTFRTIC0gNi41IHwgTkVFVCAtIEFjY2VwdGVkJyB9LFxuICAgICAge1xuICAgICAgICBsYWJlbDogJ1RvcCBVbml2ZXJzaXRpZXMnLFxuICAgICAgICB2YWx1ZTogJ01jR2lsbCBVbml2ZXJzaXR5LCBVbml2ZXJzaXR5IG9mIFRvcm9udG8sIFVuaXZlcnNpdHkgb2YgQnJpdGlzaCBDb2x1bWJpYScsXG4gICAgICB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgVHVpdGlvbiBGZWUnLCB2YWx1ZTogJ0lOUiAxNiBMYWtocyB0byA2MSBMYWtocycgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIEFubnVhbCBTYWxhcnknLCB2YWx1ZTogJ0lOUiAzOC4xNyBMYWtocyB0byAxLjU4IENyb3JlcycgfSxcbiAgICAgIHsgbGFiZWw6ICdUcmF2ZWwgRGlzdGFuY2UnLCB2YWx1ZTogJzExLDYwMCBraWxvbWV0cmVzJyB9LFxuICAgIF0sXG4gIH0sXG5dXG5cbmV4cG9ydCBjb25zdCBhYnJvYWRTdHVkaWVzQnlTbHVnID0gYWJyb2FkU3R1ZGllc0xpc3QucmVkdWNlKChhY2MsIGl0ZW0pID0+IHtcbiAgYWNjW2l0ZW0uc2x1Z10gPSBpdGVtXG4gIHJldHVybiBhY2Ncbn0sIHt9KVxuIl19

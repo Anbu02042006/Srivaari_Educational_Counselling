@@ -1,0 +1,757 @@
+import { default as __vite_glob_0_0 } from "/src/assets/Tamilnadu/ACS Medical College & Hospital.webp?import";import { default as __vite_glob_0_1 } from "/src/assets/Tamilnadu/Annapoorana Medical College & Hospital.webp?import";import { default as __vite_glob_0_2 } from "/src/assets/Tamilnadu/Bharat Medical College & Hospital.png?import";import { default as __vite_glob_0_3 } from "/src/assets/Tamilnadu/Chettinad Hospital & Research Institute.png?import";import { default as __vite_glob_0_4 } from "/src/assets/Tamilnadu/Dhanalakshmi Srinivasan Medical College & Hospital.webp?import";import { default as __vite_glob_0_5 } from "/src/assets/Tamilnadu/KMCH Institute of Health Sciences.jpg?import";import { default as __vite_glob_0_6 } from "/src/assets/Tamilnadu/Karpaga Vinayaga Institute of Medical Sciences.webp?import";import { default as __vite_glob_0_7 } from "/src/assets/Tamilnadu/MGM Healthcare Institute of Health Sciences.jpg?import";import { default as __vite_glob_0_8 } from "/src/assets/Tamilnadu/Meenakshi Medical College & Research Institute.webp?import";import { default as __vite_glob_0_9 } from "/src/assets/Tamilnadu/PSG Institute of Medical Sciences & Research.webp?import";import { default as __vite_glob_0_10 } from "/src/assets/Tamilnadu/SRM Medical College Hospital & Research Centre.webp?import";import { default as __vite_glob_0_11 } from "/src/assets/Tamilnadu/Shri Sathya Sai Medical College & Research Institute.webp?import";import { default as __vite_glob_0_12 } from "/src/assets/Tamilnadu/Sree Balaji Medical College & Hospital.webp?import";import { default as __vite_glob_0_13 } from "/src/assets/Tamilnadu/Sree Mookambika Institute of Medical Sciences(2).png?import";import { default as __vite_glob_0_14 } from "/src/assets/Tamilnadu/Sri Lalithambigai Medical College & Hospital.webp?import";import { default as __vite_glob_0_15 } from "/src/assets/Tamilnadu/Sri Ramachandra Medical College & Research Institute.jpg?import";import { default as __vite_glob_0_16 } from "/src/assets/Tamilnadu/Sri Ramachandra Medical College & Research Institute.png?import";import { default as __vite_glob_0_17 } from "/src/assets/Tamilnadu/Tagore Medical College & Hospital.png?import";import { default as __vite_glob_0_18 } from "/src/assets/Tamilnadu/Velammal Medical College & Hospital.png?import";import { default as __vite_glob_0_19 } from "/src/assets/Tamilnadu/Vinayaka Mission’s Kirupananda Variyar Medical College.png?import";import { default as __vite_glob_1_0 } from "/src/assets/Karnataka/BGS Global Institute of Medical Sciences.png?import";import { default as __vite_glob_1_1 } from "/src/assets/Karnataka/JSS Medical College.jpg?import";import { default as __vite_glob_1_2 } from "/src/assets/Karnataka/Jawaharlal Nehru Medical College.png?import";import { default as __vite_glob_1_3 } from "/src/assets/Karnataka/K.S. Hegde Medical Academy.png?import";import { default as __vite_glob_1_4 } from "/src/assets/Karnataka/Kasturba Medical College.webp?import";import { default as __vite_glob_1_5 } from "/src/assets/Karnataka/M.S. Ramaiah Medical College.jpg?import";import { default as __vite_glob_1_6 } from "/src/assets/Karnataka/RajaRajeswari Medical College & Hospital.png?import";import { default as __vite_glob_1_7 } from "/src/assets/Karnataka/St. John’s Medical College.webp?import";import { default as __vite_glob_1_8 } from "/src/assets/Karnataka/Vydehi Institute of Medical Sciences & Research Centre(1).png?import";import { default as __vite_glob_2_0 } from "/src/assets/Puducherry/Aarupadai Veedu Medical College.webp?import";import { default as __vite_glob_2_1 } from "/src/assets/Puducherry/BGS Global Institute of Medical Sciences.png?import";import { default as __vite_glob_2_2 } from "/src/assets/Puducherry/Mahatma Gandhi Medical College & Research Institute(1).webp?import";import { default as __vite_glob_2_3 } from "/src/assets/Puducherry/Pondicherry Institute of Medical Sciences.webp?import";import { default as __vite_glob_2_4 } from "/src/assets/Puducherry/Sri Lakshmi Narayana Institute of Medical Sciences.webp?import";import { default as __vite_glob_2_5 } from "/src/assets/Puducherry/Sri Manakula Vinayagar Medical College & Hospital.webp?import";import { default as __vite_glob_2_6 } from "/src/assets/Puducherry/Sri Venkateshwaraa Medical College Hospital & Research Centre.png?import";import { default as __vite_glob_2_7 } from "/src/assets/Puducherry/Vinayaka Missions Medical College.webp?import";import { default as __vite_glob_3_0 } from "/src/assets/Engineering/AMC Engineering College.jpg?import";import { default as __vite_glob_3_1 } from "/src/assets/Engineering/AMET University.png?import";import { default as __vite_glob_3_2 } from "/src/assets/Engineering/Acharya Institute of Technology.webp?import";import { default as __vite_glob_3_3 } from "/src/assets/Engineering/Adithya institute of technology.png?import";import { default as __vite_glob_3_4 } from "/src/assets/Engineering/Akash Institute of Engineering & Technology.png?import";import { default as __vite_glob_3_5 } from "/src/assets/Engineering/Alliance University.png?import";import { default as __vite_glob_3_6 } from "/src/assets/Engineering/Amrita Vishwa Vidyapeetham.png?import";import { default as __vite_glob_3_7 } from "/src/assets/Engineering/CARE College of Engineering.jpg?import";import { default as __vite_glob_3_8 } from "/src/assets/Engineering/CHRIST University.png?import";import { default as __vite_glob_3_9 } from "/src/assets/Engineering/Coimbatore Institute of Engineering and Technology.png?import";import { default as __vite_glob_3_10 } from "/src/assets/Engineering/Coimbatore Institute of Technology.png?import";import { default as __vite_glob_3_11 } from "/src/assets/Engineering/Dayananda Sagar University(1).png?import";import { default as __vite_glob_3_12 } from "/src/assets/Engineering/Dhanalakshmi Srinivasan Engineering College.png?import";import { default as __vite_glob_3_13 } from "/src/assets/Engineering/Dr. M.G.R. Educational and Research Institute.png?import";import { default as __vite_glob_3_14 } from "/src/assets/Engineering/Dr. N.G.P. Institute of Technology.png?import";import { default as __vite_glob_3_15 } from "/src/assets/Engineering/EASA College of Engineering and Technology.png?import";import { default as __vite_glob_3_16 } from "/src/assets/Engineering/East Point Group of Institutions.jpg?import";import { default as __vite_glob_3_17 } from "/src/assets/Engineering/Excel Engineering College.png?import";import { default as __vite_glob_3_18 } from "/src/assets/Engineering/Gnanamani College of Technology.png?import";import { default as __vite_glob_3_19 } from "/src/assets/Engineering/Hindusthan College of Engineering & Technology.png?import";import { default as __vite_glob_3_20 } from "/src/assets/Engineering/Imayam College of Engineering.png?import";import { default as __vite_glob_3_21 } from "/src/assets/Engineering/JCT College of Engineering and Technology.webp?import";import { default as __vite_glob_3_22 } from "/src/assets/Engineering/Jain University.jpg?import";import { default as __vite_glob_3_23 } from "/src/assets/Engineering/KGiSL Institute of Technology.jpg?import";import { default as __vite_glob_3_24 } from "/src/assets/Engineering/KPR Institute of Engineering and Technology.png?import";import { default as __vite_glob_3_25 } from "/src/assets/Engineering/Kalaignar Karunanidhi Institute of Technology.png?import";import { default as __vite_glob_3_26 } from "/src/assets/Engineering/Karpagam College of Engineering.png?import";import { default as __vite_glob_3_27 } from "/src/assets/Engineering/Kathir Engineering College.png?import";import { default as __vite_glob_3_28 } from "/src/assets/Engineering/Kumaraguru College of Technology(1).png?import";import { default as __vite_glob_3_29 } from "/src/assets/Engineering/Loyola College.png?import";import { default as __vite_glob_3_30 } from "/src/assets/Engineering/MAM College of Engineering.png?import";import { default as __vite_glob_3_31 } from "/src/assets/Engineering/Mahendra Engineering College.png?import";import { default as __vite_glob_3_32 } from "/src/assets/Engineering/Nehru Institute of Engineering and Technology.png?import";import { default as __vite_glob_3_33 } from "/src/assets/Engineering/Oxford Engineering College.webp?import";import { default as __vite_glob_3_34 } from "/src/assets/Engineering/PES University.png?import";import { default as __vite_glob_3_35 } from "/src/assets/Engineering/PPG Institute of Technology.jpg?import";import { default as __vite_glob_3_36 } from "/src/assets/Engineering/PSG College of Technology.png?import";import { default as __vite_glob_3_37 } from "/src/assets/Engineering/Paavai Institutions.png?import";import { default as __vite_glob_3_38 } from "/src/assets/Engineering/R P Sarathy Institute of Technology.png?import";import { default as __vite_glob_3_39 } from "/src/assets/Engineering/REVA University.webp?import";import { default as __vite_glob_3_40 } from "/src/assets/Engineering/RV University.png?import";import { default as __vite_glob_3_41 } from "/src/assets/Engineering/RVS College of Engineering and Technology.png?import";import { default as __vite_glob_3_42 } from "/src/assets/Engineering/Ramaiah Institute of Technology.png?import";import { default as __vite_glob_3_43 } from "/src/assets/Engineering/Rathinam Technical Campus.png?import";import { default as __vite_glob_3_44 } from "/src/assets/Engineering/SASTRA Deemed Uiversity.png?import";import { default as __vite_glob_3_45 } from "/src/assets/Engineering/SRM Institute of Science and Technology.png?import";import { default as __vite_glob_3_46 } from "/src/assets/Engineering/Sathyabama Institute of Science and Technology.png?import";import { default as __vite_glob_3_47 } from "/src/assets/Engineering/Saveetha Engineering College.png?import";import { default as __vite_glob_3_48 } from "/src/assets/Engineering/Selvam College of Technology.webp?import";import { default as __vite_glob_3_49 } from "/src/assets/Engineering/Sona College of Technology.webp?import";import { default as __vite_glob_3_50 } from "/src/assets/Engineering/Sree Sakthi Engineering College.webp?import";import { default as __vite_glob_3_51 } from "/src/assets/Engineering/Sri Balaji Chockalingam Engineering College.jpg?import";import { default as __vite_glob_3_52 } from "/src/assets/Engineering/Sri Krishna College of Engineering and Technology.jpg?import";import { default as __vite_glob_3_53 } from "/src/assets/Engineering/Study World College of Engineering.png?import";import { default as __vite_glob_3_54 } from "/src/assets/Engineering/VSB Engineering College.jpg?import";import { default as __vite_glob_3_55 } from "/src/assets/Engineering/Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology.png?import";import { default as __vite_glob_3_56 } from "/src/assets/Engineering/Vellore Institute of Technology.webp?import";import { default as __vite_glob_3_57 } from "/src/assets/Engineering/Vels Institute of Science, Technology & Advanced Studies.png?import";import { default as __vite_glob_3_58 } from "/src/assets/Engineering/Vinayaka Mission Engineering College.png?import";// Dynamically load all college image assets using Vite's glob import
+const tnAssetModules = /* #__PURE__ */ Object.assign({"../assets/Tamilnadu/ACS Medical College & Hospital.webp": __vite_glob_0_0,"../assets/Tamilnadu/Annapoorana Medical College & Hospital.webp": __vite_glob_0_1,"../assets/Tamilnadu/Bharat Medical College & Hospital.png": __vite_glob_0_2,"../assets/Tamilnadu/Chettinad Hospital & Research Institute.png": __vite_glob_0_3,"../assets/Tamilnadu/Dhanalakshmi Srinivasan Medical College & Hospital.webp": __vite_glob_0_4,"../assets/Tamilnadu/KMCH Institute of Health Sciences.jpg": __vite_glob_0_5,"../assets/Tamilnadu/Karpaga Vinayaga Institute of Medical Sciences.webp": __vite_glob_0_6,"../assets/Tamilnadu/MGM Healthcare Institute of Health Sciences.jpg": __vite_glob_0_7,"../assets/Tamilnadu/Meenakshi Medical College & Research Institute.webp": __vite_glob_0_8,"../assets/Tamilnadu/PSG Institute of Medical Sciences & Research.webp": __vite_glob_0_9,"../assets/Tamilnadu/SRM Medical College Hospital & Research Centre.webp": __vite_glob_0_10,"../assets/Tamilnadu/Shri Sathya Sai Medical College & Research Institute.webp": __vite_glob_0_11,"../assets/Tamilnadu/Sree Balaji Medical College & Hospital.webp": __vite_glob_0_12,"../assets/Tamilnadu/Sree Mookambika Institute of Medical Sciences(2).png": __vite_glob_0_13,"../assets/Tamilnadu/Sri Lalithambigai Medical College & Hospital.webp": __vite_glob_0_14,"../assets/Tamilnadu/Sri Ramachandra Medical College & Research Institute.jpg": __vite_glob_0_15,"../assets/Tamilnadu/Sri Ramachandra Medical College & Research Institute.png": __vite_glob_0_16,"../assets/Tamilnadu/Tagore Medical College & Hospital.png": __vite_glob_0_17,"../assets/Tamilnadu/Velammal Medical College & Hospital.png": __vite_glob_0_18,"../assets/Tamilnadu/Vinayaka Mission’s Kirupananda Variyar Medical College.png": __vite_glob_0_19
+
+
+});
+const kaAssetModules = /* #__PURE__ */ Object.assign({"../assets/Karnataka/BGS Global Institute of Medical Sciences.png": __vite_glob_1_0,"../assets/Karnataka/JSS Medical College.jpg": __vite_glob_1_1,"../assets/Karnataka/Jawaharlal Nehru Medical College.png": __vite_glob_1_2,"../assets/Karnataka/K.S. Hegde Medical Academy.png": __vite_glob_1_3,"../assets/Karnataka/Kasturba Medical College.webp": __vite_glob_1_4,"../assets/Karnataka/M.S. Ramaiah Medical College.jpg": __vite_glob_1_5,"../assets/Karnataka/RajaRajeswari Medical College & Hospital.png": __vite_glob_1_6,"../assets/Karnataka/St. John’s Medical College.webp": __vite_glob_1_7,"../assets/Karnataka/Vydehi Institute of Medical Sciences & Research Centre(1).png": __vite_glob_1_8
+
+
+});
+const pyAssetModules = /* #__PURE__ */ Object.assign({"../assets/Puducherry/Aarupadai Veedu Medical College.webp": __vite_glob_2_0,"../assets/Puducherry/BGS Global Institute of Medical Sciences.png": __vite_glob_2_1,"../assets/Puducherry/Mahatma Gandhi Medical College & Research Institute(1).webp": __vite_glob_2_2,"../assets/Puducherry/Pondicherry Institute of Medical Sciences.webp": __vite_glob_2_3,"../assets/Puducherry/Sri Lakshmi Narayana Institute of Medical Sciences.webp": __vite_glob_2_4,"../assets/Puducherry/Sri Manakula Vinayagar Medical College & Hospital.webp": __vite_glob_2_5,"../assets/Puducherry/Sri Venkateshwaraa Medical College Hospital & Research Centre.png": __vite_glob_2_6,"../assets/Puducherry/Vinayaka Missions Medical College.webp": __vite_glob_2_7
+
+
+});
+const engAssetModules = /* #__PURE__ */ Object.assign({"../assets/Engineering/AMC Engineering College.jpg": __vite_glob_3_0,"../assets/Engineering/AMET University.png": __vite_glob_3_1,"../assets/Engineering/Acharya Institute of Technology.webp": __vite_glob_3_2,"../assets/Engineering/Adithya institute of technology.png": __vite_glob_3_3,"../assets/Engineering/Akash Institute of Engineering & Technology.png": __vite_glob_3_4,"../assets/Engineering/Alliance University.png": __vite_glob_3_5,"../assets/Engineering/Amrita Vishwa Vidyapeetham.png": __vite_glob_3_6,"../assets/Engineering/CARE College of Engineering.jpg": __vite_glob_3_7,"../assets/Engineering/CHRIST University.png": __vite_glob_3_8,"../assets/Engineering/Coimbatore Institute of Engineering and Technology.png": __vite_glob_3_9,"../assets/Engineering/Coimbatore Institute of Technology.png": __vite_glob_3_10,"../assets/Engineering/Dayananda Sagar University(1).png": __vite_glob_3_11,"../assets/Engineering/Dhanalakshmi Srinivasan Engineering College.png": __vite_glob_3_12,"../assets/Engineering/Dr. M.G.R. Educational and Research Institute.png": __vite_glob_3_13,"../assets/Engineering/Dr. N.G.P. Institute of Technology.png": __vite_glob_3_14,"../assets/Engineering/EASA College of Engineering and Technology.png": __vite_glob_3_15,"../assets/Engineering/East Point Group of Institutions.jpg": __vite_glob_3_16,"../assets/Engineering/Excel Engineering College.png": __vite_glob_3_17,"../assets/Engineering/Gnanamani College of Technology.png": __vite_glob_3_18,"../assets/Engineering/Hindusthan College of Engineering & Technology.png": __vite_glob_3_19,"../assets/Engineering/Imayam College of Engineering.png": __vite_glob_3_20,"../assets/Engineering/JCT College of Engineering and Technology.webp": __vite_glob_3_21,"../assets/Engineering/Jain University.jpg": __vite_glob_3_22,"../assets/Engineering/KGiSL Institute of Technology.jpg": __vite_glob_3_23,"../assets/Engineering/KPR Institute of Engineering and Technology.png": __vite_glob_3_24,"../assets/Engineering/Kalaignar Karunanidhi Institute of Technology.png": __vite_glob_3_25,"../assets/Engineering/Karpagam College of Engineering.png": __vite_glob_3_26,"../assets/Engineering/Kathir Engineering College.png": __vite_glob_3_27,"../assets/Engineering/Kumaraguru College of Technology(1).png": __vite_glob_3_28,"../assets/Engineering/Loyola College.png": __vite_glob_3_29,"../assets/Engineering/MAM College of Engineering.png": __vite_glob_3_30,"../assets/Engineering/Mahendra Engineering College.png": __vite_glob_3_31,"../assets/Engineering/Nehru Institute of Engineering and Technology.png": __vite_glob_3_32,"../assets/Engineering/Oxford Engineering College.webp": __vite_glob_3_33,"../assets/Engineering/PES University.png": __vite_glob_3_34,"../assets/Engineering/PPG Institute of Technology.jpg": __vite_glob_3_35,"../assets/Engineering/PSG College of Technology.png": __vite_glob_3_36,"../assets/Engineering/Paavai Institutions.png": __vite_glob_3_37,"../assets/Engineering/R P Sarathy Institute of Technology.png": __vite_glob_3_38,"../assets/Engineering/REVA University.webp": __vite_glob_3_39,"../assets/Engineering/RV University.png": __vite_glob_3_40,"../assets/Engineering/RVS College of Engineering and Technology.png": __vite_glob_3_41,"../assets/Engineering/Ramaiah Institute of Technology.png": __vite_glob_3_42,"../assets/Engineering/Rathinam Technical Campus.png": __vite_glob_3_43,"../assets/Engineering/SASTRA Deemed Uiversity.png": __vite_glob_3_44,"../assets/Engineering/SRM Institute of Science and Technology.png": __vite_glob_3_45,"../assets/Engineering/Sathyabama Institute of Science and Technology.png": __vite_glob_3_46,"../assets/Engineering/Saveetha Engineering College.png": __vite_glob_3_47,"../assets/Engineering/Selvam College of Technology.webp": __vite_glob_3_48,"../assets/Engineering/Sona College of Technology.webp": __vite_glob_3_49,"../assets/Engineering/Sree Sakthi Engineering College.webp": __vite_glob_3_50,"../assets/Engineering/Sri Balaji Chockalingam Engineering College.jpg": __vite_glob_3_51,"../assets/Engineering/Sri Krishna College of Engineering and Technology.jpg": __vite_glob_3_52,"../assets/Engineering/Study World College of Engineering.png": __vite_glob_3_53,"../assets/Engineering/VSB Engineering College.jpg": __vite_glob_3_54,"../assets/Engineering/Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology.png": __vite_glob_3_55,"../assets/Engineering/Vellore Institute of Technology.webp": __vite_glob_3_56,"../assets/Engineering/Vels Institute of Science, Technology & Advanced Studies.png": __vite_glob_3_57,"../assets/Engineering/Vinayaka Mission Engineering College.png": __vite_glob_3_58
+
+
+});
+const commonFaqs = [
+	["How can I apply for admission?", "Begin with an advisory conversation with Sri Vaari Educational Counselling. We guide you through eligibility, documentation, counselling rounds, and seat allotment."],
+	["What are the eligibility criteria for admissions?", "Candidates must meet the educational prerequisites (10+2 with required subjects) and qualifying entrance exam criteria (such as NEET for Medical or TNEA/entrance rank for Engineering)."],
+	["Are scholarships or educational loan guidance provided?", "Yes, we assist with institutional scholarship applications and provide complete documentation support for nationalized bank educational loans."],
+	["Can we arrange campus visits before admission?", "Yes, we help arrange guided campus tours to evaluate infrastructure, academic laboratories, hostel facilities, and placement track records."]
+];
+// Known city mappings for local colleges
+const cityMap = {
+	// Tamil Nadu - Medical
+	"ACS Medical College & Hospital": "Chennai",
+	"Annapoorana Medical College & Hospital": "Salem",
+	"Bharat Medical College & Hospital": "Chennai",
+	"Chettinad Hospital & Research Institute": "Kelambakkam, Chennai",
+	"Dhanalakshmi Srinivasan Medical College & Hospital": "Perambalur",
+	"KMCH Institute of Health Sciences": "Coimbatore",
+	"Karpaga Vinayaga Institute of Medical Sciences": "Chengalpattu",
+	"MGM Healthcare Institute of Health Sciences": "Chennai",
+	"Meenakshi Medical College & Research Institute": "Kanchipuram",
+	"PSG Institute of Medical Sciences & Research": "Coimbatore",
+	"SRM Medical College Hospital & Research Centre": "Kattankulathur, Chennai",
+	"Shri Sathya Sai Medical College & Research Institute": "Ammapettai, Chengalpattu",
+	"Sree Balaji Medical College & Hospital": "Chromepet, Chennai",
+	"Sree Mookambika Institute of Medical Sciences": "Kulasekharam, Kanyakumari",
+	"Sri Lalithambigai Medical College & Hospital": "Maduravoyal, Chennai",
+	"Sri Ramachandra Medical College & Research Institute": "Porur, Chennai",
+	"Tagore Medical College & Hospital": "Rathinamangalam, Chennai",
+	"Velammal Medical College & Hospital": "Madurai",
+	"Vinayaka Mission’s Kirupananda Variyar Medical College": "Salem",
+	// Karnataka - Medical
+	"BGS Global Institute of Medical Sciences": "Bengaluru",
+	"JSS Medical College": "Mysuru",
+	"Jawaharlal Nehru Medical College": "Belagavi",
+	"K.S. Hegde Medical Academy": "Mangaluru",
+	"Kasturba Medical College": "Manipal / Mangaluru",
+	"M.S. Ramaiah Medical College": "Bengaluru",
+	"RajaRajeswari Medical College & Hospital": "Bengaluru",
+	"St. John’s Medical College": "Bengaluru",
+	"Vydehi Institute of Medical Sciences & Research Centre": "Bengaluru",
+	// Puducherry - Medical
+	"Aarupadai Veedu Medical College": "Puducherry",
+	"Mahatma Gandhi Medical College & Research Institute": "Pillaiyarkuppam, Puducherry",
+	"Pondicherry Institute of Medical Sciences": "Kalapet, Puducherry",
+	"Sri Lakshmi Narayana Institute of Medical Sciences": "Osudu, Puducherry",
+	"Sri Manakula Vinayagar Medical College & Hospital": "Madagadipet, Puducherry",
+	"Sri Venkateshwaraa Medical College Hospital & Research Centre": "Ariyur, Puducherry",
+	"Vinayaka Missions Medical College": "Karaikal, Puducherry",
+	// Engineering Colleges
+	"AMC Engineering College": "Bengaluru",
+	"AMET University": "Chennai",
+	"Acharya Institute of Technology": "Bengaluru",
+	"Adithya institute of technology": "Coimbatore",
+	"Akash Institute of Engineering & Technology": "Bengaluru",
+	"Alliance University": "Bengaluru",
+	"Amrita Vishwa Vidyapeetham": "Coimbatore",
+	"CARE College of Engineering": "Tiruchirappalli",
+	"CHRIST University": "Bengaluru",
+	"Coimbatore Institute of Engineering and Technology": "Coimbatore",
+	"Coimbatore Institute of Technology": "Coimbatore",
+	"Dayananda Sagar University": "Bengaluru",
+	"Dhanalakshmi Srinivasan Engineering College": "Perambalur",
+	"Dr. M.G.R. Educational and Research Institute": "Chennai",
+	"Dr. N.G.P. Institute of Technology": "Coimbatore",
+	"EASA College of Engineering and Technology": "Coimbatore",
+	"East Point Group of Institutions": "Bengaluru",
+	"Excel Engineering College": "Komarapalayam, Namakkal",
+	"Gnanamani College of Technology": "Namakkal",
+	"Hindusthan College of Engineering & Technology": "Coimbatore",
+	"Imayam College of Engineering": "Tiruchirappalli",
+	"JCT College of Engineering and Technology": "Coimbatore",
+	"Jain University": "Bengaluru",
+	"KGiSL Institute of Technology": "Coimbatore",
+	"KPR Institute of Engineering and Technology": "Coimbatore",
+	"Kalaignar Karunanidhi Institute of Technology": "Coimbatore",
+	"Karpagam College of Engineering": "Coimbatore",
+	"Kathir Engineering College": "Coimbatore",
+	"Kumaraguru College of Technology": "Coimbatore",
+	"Loyola College": "Chennai",
+	"MAM College of Engineering": "Tiruchirappalli",
+	"Mahendra Engineering College": "Namakkal",
+	"Nehru Institute of Engineering and Technology": "Coimbatore",
+	"Oxford Engineering College": "Tiruchirappalli",
+	"PES University": "Bengaluru",
+	"PPG Institute of Technology": "Coimbatore",
+	"PSG College of Technology": "Coimbatore",
+	"Paavai Institutions": "Namakkal",
+	"R P Sarathy Institute of Technology": "Salem",
+	"REVA University": "Bengaluru",
+	"RV University": "Bengaluru",
+	"RVS College of Engineering and Technology": "Coimbatore",
+	"Ramaiah Institute of Technology": "Bengaluru",
+	"Rathinam Technical Campus": "Coimbatore",
+	"SASTRA Deemed Uiversity": "Thanjavur",
+	"SRM Institute of Science and Technology": "Chennai",
+	"Sathyabama Institute of Science and Technology": "Chennai",
+	"Saveetha Engineering College": "Chennai",
+	"Selvam College of Technology": "Namakkal",
+	"Sona College of Technology": "Salem",
+	"Sree Sakthi Engineering College": "Coimbatore",
+	"Sri Balaji Chockalingam Engineering College": "Arni",
+	"Sri Krishna College of Engineering and Technology": "Coimbatore",
+	"Study World College of Engineering": "Coimbatore",
+	"VSB Engineering College": "Karur",
+	"Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology": "Chennai",
+	"Vellore Institute of Technology": "Vellore",
+	"Vels Institute of Science, Technology & Advanced Studies": "Chennai",
+	"Vinayaka Mission Engineering College": "Salem"
+};
+// Helper to extract clean college name from path
+function extractCollegeName(path) {
+	const filenameWithExt = path.split("/").pop() || "";
+	const nameWithoutExt = filenameWithExt.replace(/\.[^/.]+$/, "");
+	// Strip trailing (1), (2), etc.
+	return nameWithoutExt.replace(/\(\d+\)$/, "").trim();
+}
+// Helper to parse asset map into college list
+function parseAssetsToColleges(assetModules, regionName, stateName) {
+	const seenNames = new Set();
+	const list = [];
+	const isEng = regionName === "Engineering";
+	for (const [path, imageSrc] of Object.entries(assetModules)) {
+		const rawName = extractCollegeName(path);
+		if (!rawName || seenNames.has(rawName.toLowerCase())) continue;
+		seenNames.add(rawName.toLowerCase());
+		const id = `${regionName.toLowerCase()}-${rawName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+		const city = cityMap[rawName] || stateName;
+		list.push({
+			id,
+			name: rawName,
+			region: regionName,
+			state: stateName,
+			city,
+			country: "India",
+			category: isEng ? "Engineering" : "Medical",
+			type: isEng ? "Engineering & Technology Institute" : "Medical College & Hospital",
+			accreditation: isEng ? "AICTE Approved & NAAC / NBA Accredited" : "NMC & WHO Recognized",
+			categories: isEng ? [
+				"Undergraduate",
+				"Postgraduate",
+				"Engineering"
+			] : [
+				"Undergraduate",
+				"Postgraduate",
+				"Medical"
+			],
+			popularCourses: isEng ? [
+				"B.E. / B.Tech (CSE, AI & DS, ECE, Mech)",
+				"M.E. / M.Tech",
+				"MBA / MCA",
+				"Integrated B.Tech"
+			] : [
+				"MBBS",
+				"MD / MS Specializations",
+				"Allied Health Sciences",
+				"B.Sc Nursing"
+			],
+			description: isEng ? `Premier engineering and technology institution in ${city} equipped with modern laboratories, industry partnerships, and advanced campus infrastructure.` : `Premier medical institution in ${city}, ${stateName} equipped with advanced clinical infrastructure, multi-specialty teaching hospital, and experienced faculty.`,
+			overview: `${rawName} is a prestigious ${isEng ? "engineering and technical" : "medical education and healthcare"} institution, offering world-class learning spaces, research centers, and career-driven training.`,
+			facilities: isEng ? [
+				"Advanced Computing & AI Research Labs",
+				"Robotics, IoT & Innovation Centres",
+				"Central Digital & Technical Library",
+				"Air-Conditioned Smart Classrooms",
+				"Separate Boys & Girls Hostels with Mess",
+				"Industry Centre of Excellence & Placement Cell"
+			] : [
+				"Multi-Specialty Teaching Hospital",
+				"Modern Clinical Simulation Labs",
+				"Central Digital & Physical Library",
+				"Air-Conditioned Smart Lecture Halls",
+				"Separate Boys & Girls Hostels with Mess",
+				"24/7 Emergency & Critical Care Training"
+			],
+			admission: isEng ? `Admissions to B.E./B.Tech and PG engineering programs at ${rawName} are conducted through TNEA/CET counselling, State quota rounds, and Management/NRI quota guidance. Sri Vaari Educational Counselling provides complete support.` : `Admissions to MBBS and PG Medical programs at ${rawName} are conducted through NEET counselling, State quota rounds, and Management/NRI quota guidance. Sri Vaari Educational Counselling provides complete guidance.`,
+			eligibility: isEng ? "10+2 with Physics, Mathematics & Chemistry (min. 45% aggregate for General, 40% for Reserved categories) / State CET / JEE Score." : "10+2 with Physics, Chemistry, Biology & English (min. 50% aggregate for General, 40% for Reserved categories) + Valid NEET UG Score.",
+			placements: isEng ? [
+				"Dedicated Placement Cell with Top Tier-1 Tech MNCs & Core Companies",
+				"Paid Industry Internships, Hackathons & Capstone Projects",
+				"Global Research and Development Opportunities",
+				"Higher Studies & GATE / GRE Career Mentorship"
+			] : [
+				"Compulsory 1-Year Paid Rotatory Internship in Super-Specialty Hospital",
+				"USMLE, PLAB & PG NEET Preparation Workshops",
+				"Global Clinical Observership Opportunities",
+				"Hospital Placement & Career Guidance Cell"
+			],
+			image: imageSrc,
+			faqs: commonFaqs
+		});
+	}
+	return list;
+}
+// Build collections from assets
+export const tamilnaduColleges = parseAssetsToColleges(tnAssetModules, "Tamilnadu", "Tamil Nadu");
+export const karnatakaColleges = parseAssetsToColleges(kaAssetModules, "Karnataka", "Karnataka");
+export const puducherryColleges = parseAssetsToColleges(pyAssetModules, "Puducherry", "Puducherry");
+export const engineeringColleges = parseAssetsToColleges(engAssetModules, "Engineering", "Engineering");
+// Curated 7 Study Abroad Destinations with Country Flags & Comprehensive Details
+export const abroadColleges = [
+	{
+		id: "abroad-russia",
+		name: "Russia",
+		region: "Abroad",
+		country: "Russia",
+		category: "Medical",
+		city: "Moscow / Kazan / Saint Petersburg",
+		type: "Top Medical Destination",
+		accreditation: "NMC & WHO Recognized Universities",
+		popularCourses: [
+			"General Medicine (MBBS / MD)",
+			"Dentistry",
+			"Pediatrics"
+		],
+		description: "Premier Russian medical universities with globally accepted English-medium degrees and modern clinical hospital networks.",
+		image: "https://flagcdn.com/w320/ru.png",
+		skylineImage: "/images/abroad/russia.jpg",
+		overview: "Russia is one of the most popular places for students who want to get an international education with approximately 180,000 international students every year. A lot of the universities in Russia are recognized worldwide which means students from all over the world are flocking to Russia to get an education that will benefit them in the future. The largest international student populations are mainly in Moscow, Saint Petersburg, Kazan, Novosibirsk, and Kursk.",
+		quickFacts: "The Russian Federation spans Eastern Europe and Northern Asia across eleven time zones. Russian government medical universities maintain an optimal 1:10 student-to-faculty ratio, subsidized state healthcare facilities, comfortable campus hostels with dedicated Indian mess facilities, and convenient direct flights connecting major Indian cities.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Russia"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine / Physician)"
+			},
+			{
+				label: "Course Duration",
+				value: "5.8 to 6 years"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 year compulsory rotatory clinical internship"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with minimum 50% in PCB (40% for Reserved categories) & NEET UG clearance"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO | WFME | FAIMER | ECFMG"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET UG Qualified (No IELTS or TOEFL required)"
+			},
+			{
+				label: "Top Universities",
+				value: "Kazan Federal University, Bashkir State Medical University, Crimea Federal University, I.M. Sechenov First Moscow State Medical University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 18 Lakhs to 32 Lakhs (Entire 6-Year Course)"
+			},
+			{
+				label: "Average Annual Living Cost",
+				value: "INR 1.2 Lakhs to 1.8 Lakhs per year"
+			},
+			{
+				label: "Travel Distance",
+				value: "4,300 kilometres (~6 hours direct flight from Delhi)"
+			}
+		],
+		faqs: commonFaqs
+	},
+	{
+		id: "abroad-georgia",
+		name: "Georgia",
+		region: "Abroad",
+		country: "Georgia",
+		category: "Medical",
+		city: "Tbilisi / Batumi",
+		type: "European Standard Medical Education",
+		accreditation: "WFME, WHO & NMC Approved",
+		popularCourses: [
+			"Medical Doctor (MD / MBBS)",
+			"Dentistry",
+			"Pharmacy"
+		],
+		description: "High-quality European curriculum, safe environment, and 100% English-medium medical programs.",
+		image: "https://flagcdn.com/w320/ge.png",
+		skylineImage: "/images/abroad/georgia.jpg",
+		overview: "Georgia has emerged as a premier European medical education hub for Indian students, combining rigorous European clinical curricula with safe, modern living standards. Medical academies in Georgia follow the European Credit Transfer System (ECTS) and are aligned with USMLE and WFME standards. With a peaceful atmosphere, warm hospitality, and 100% English-medium instruction, Georgia attracts thousands of ambitious doctors every year.",
+		quickFacts: "Georgia is situated at the intersection of Eastern Europe and Western Asia, bordered by the Black Sea. Ranked among the top 10 safest nations in the world for international scholars, popular university hubs like Tbilisi and Batumi offer vibrant Indian student associations, Indian dining facilities, and seamless visa processing.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS / MD in Georgia"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Medical Doctor - equivalent to MBBS in India & Europe)"
+			},
+			{
+				label: "Course Duration",
+				value: "6 years (integrated clinical rotations included)"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 year rotatory hospital internship included in curriculum"
+			},
+			{
+				label: "Academic Requirements",
+				value: "Minimum 50% in Physics, Chemistry, Biology in 10+2 & NEET UG qualification"
+			},
+			{
+				label: "Recognition",
+				value: "WFME | WHO | NMC | FAIMER | ECFMG"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET UG Qualified (Direct admission without IELTS / TOEFL)"
+			},
+			{
+				label: "Top Universities",
+				value: "Tbilisi State Medical University, Batumi Shota Rustaveli State University, New Vision University, David Tvildiani Medical University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 22 Lakhs to 38 Lakhs (Total 6-Year Program)"
+			},
+			{
+				label: "Average Annual Living Cost",
+				value: "INR 1.8 Lakhs to 2.4 Lakhs per year"
+			},
+			{
+				label: "Travel Distance",
+				value: "3,800 kilometres (~5.5 hours flight duration)"
+			}
+		],
+		faqs: commonFaqs
+	},
+	{
+		id: "abroad-uzbekistan",
+		name: "Uzbekistan",
+		region: "Abroad",
+		country: "Uzbekistan",
+		category: "Medical",
+		city: "Tashkent / Samarkand / Bukhara",
+		type: "Government Medical Universities",
+		accreditation: "WHO & NMC Recognized",
+		popularCourses: [
+			"General Medicine (MBBS)",
+			"Dentistry",
+			"Pediatrics"
+		],
+		description: "Affordable tuition, advanced clinical simulation centers, direct flights, and dedicated Indian hostel & food facilities.",
+		image: "https://flagcdn.com/w320/uz.png",
+		skylineImage: "/images/abroad/uzbekistan.jpg",
+		overview: "Uzbekistan has rapidly become one of the most preferred destinations for Indian medical aspirants seeking an NMC-compliant 5+1 year MBBS program with unmatched affordability and proximity to India. National medical universities in Uzbekistan combine centuries-old academic traditions with modern multi-specialty teaching hospitals, digital anatomy labs, and dedicated Indian mentors providing FMGE/NEXT guidance.",
+		quickFacts: "Uzbekistan is a historic Central Asian nation famous for the Silk Road, divided into 12 provinces and the autonomous Republic of Karakalpakstan. With direct 3-hour flights from Delhi to Tashkent, affordable flight fares, low living costs, and dedicated Indian hostel mess setups serving authentic vegetarian and non-vegetarian food, Uzbekistan feels like a second home.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Uzbekistan"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine - Physician / MBBS Equivalent)"
+			},
+			{
+				label: "Course Duration",
+				value: "5 years academic & hospital training + 1 year internship"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 year clinical internship in affiliated state teaching hospitals"
+			},
+			{
+				label: "Academic Requirements",
+				value: "Minimum 50% in 10+2 (PCB) for General, 40% for Reserved categories + Valid NEET"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO | Ministry of Higher Education of Uzbekistan | FAIMER"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET UG Qualified (No entrance exams like IELTS / TOEFL)"
+			},
+			{
+				label: "Top Universities",
+				value: "Tashkent Medical Academy, Samarkand State Medical University, Bukhara State Medical Institute, Andijan State Medical Institute"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 14 Lakhs to 20 Lakhs (Complete 5-Year Tuition)"
+			},
+			{
+				label: "Average Annual Living Cost",
+				value: "INR 1.0 Lakhs to 1.5 Lakhs per year (including Indian hostel & food)"
+			},
+			{
+				label: "Travel Distance",
+				value: "2,050 kilometres (~3 hours direct flight from Delhi)"
+			}
+		],
+		faqs: commonFaqs
+	},
+	{
+		id: "abroad-kazakhstan",
+		name: "Kazakhstan",
+		region: "Abroad",
+		country: "Kazakhstan",
+		category: "Medical",
+		city: "Almaty / Astana / Shymkent",
+		type: "National Medical Universities",
+		accreditation: "NMC, WHO & Ministry of Health Approved",
+		popularCourses: [
+			"General Medicine (MBBS)",
+			"Pediatrics",
+			"Pharmacy"
+		],
+		description: "5-year MBBS programs with practical clinical training, low fees, and strong NEXT/FMGE passing track record.",
+		image: "https://flagcdn.com/w320/kz.png",
+		skylineImage: "/images/abroad/kazakhstan.jpg",
+		overview: "Kazakhstan stands out as a leading destination in Central Asia offering government-accredited 5-year MBBS programs designed strictly per latest NMC guidelines. Equipped with cutting-edge robotic simulation centers, advanced diagnostic labs, and international partnerships with European universities, Kazakh medical academies ensure comprehensive clinical exposure in high-volume tertiary care hospitals.",
+		quickFacts: "Kazakhstan is the largest landlocked country in the world, spanning 14 administrative regions and modern metropolitan centers including Almaty and Astana. The nation enjoys economic stability, a high standard of student safety, well-established international student support cells, and Indian hostels operating directly inside the university campuses.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Kazakhstan"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (General Medicine / Physician - MBBS Equivalent)"
+			},
+			{
+				label: "Course Duration",
+				value: "5 years + 1 year compulsory clinical internship"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 year supervised rotatory internship"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with 50% aggregate in Physics, Chemistry, Biology & valid NEET clearance"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO | WFME | FAIMER | UNESCO"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET UG Qualified (Direct admission through Sri Vaari guidance)"
+			},
+			{
+				label: "Top Universities",
+				value: "Kazakh National Medical University, Semey State Medical University, West Kazakhstan Marat Ospanov Medical University, Astana Medical University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 15 Lakhs to 24 Lakhs (Total 5-Year Program)"
+			},
+			{
+				label: "Average Annual Living Cost",
+				value: "INR 1.2 Lakhs to 1.8 Lakhs per year"
+			},
+			{
+				label: "Travel Distance",
+				value: "2,400 kilometres (~3.5 hours direct flight)"
+			}
+		],
+		faqs: commonFaqs
+	},
+	{
+		id: "abroad-kyrgyzstan",
+		name: "Kyrgyzstan",
+		region: "Abroad",
+		country: "Kyrgyzstan",
+		category: "Medical",
+		city: "Bishkek / Osh / Jalal-Abad",
+		type: "Government Medical Academies",
+		accreditation: "WHO, NMC & FAIMER Recognized",
+		popularCourses: [
+			"General Medicine (MBBS)",
+			"Pediatrics",
+			"Dentistry"
+		],
+		description: "Over 80 years of medical teaching history, economical fee structure, and vibrant community of Indian medical students.",
+		image: "https://flagcdn.com/w320/kg.png",
+		skylineImage: "/images/abroad/kyrgyzstan.jpg",
+		overview: "Kyrgyzstan has been a trusted study destination for Indian medical aspirants for over three decades. Government medical institutions in Kyrgyzstan offer economical 5-year MBBS courses taught completely in English, combined with rigorous practical bedside training in major municipal and regional hospitals. Over 15,000 Indian doctors practicing today have graduated from Kyrgyz medical academies.",
+		quickFacts: "Located in the heart of Central Asia amidst the picturesque Tian Shan mountain range, Kyrgyzstan comprises seven provinces and two independent cities (Bishkek and Osh). It offers mild weather, cost-effective living, active Indian student associations, celebrated Indian festivals on campus, and dedicated Indian mess chefs.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Kyrgyzstan"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Physician / MBBS Equivalent Degree)"
+			},
+			{
+				label: "Course Duration",
+				value: "5 years academic & clinical course + 1 year internship"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 year rotatory clinical internship in multi-specialty hospitals"
+			},
+			{
+				label: "Academic Requirements",
+				value: "Minimum 50% in PCB in 12th standard (40% for Reserved categories) & NEET UG pass"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO | FAIMER | IMED | Ministry of Health of Kyrgyzstan"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET UG Qualified (No language test requirement)"
+			},
+			{
+				label: "Top Universities",
+				value: "Kyrgyz State Medical Academy, Osh State University Medical Faculty, International School of Medicine (ISM), Jalal-Abad State University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 12 Lakhs to 18 Lakhs (Complete Course Package)"
+			},
+			{
+				label: "Average Annual Living Cost",
+				value: "INR 1.0 Lakhs to 1.4 Lakhs per year"
+			},
+			{
+				label: "Travel Distance",
+				value: "2,200 kilometres (~3.5 hours flight duration)"
+			}
+		],
+		faqs: commonFaqs
+	},
+	{
+		id: "abroad-tajikistan",
+		name: "Tajikistan",
+		region: "Abroad",
+		country: "Tajikistan",
+		category: "Medical",
+		city: "Dushanbe / Khujand",
+		type: "State Medical Universities",
+		accreditation: "WHO, NMC & UNESCO Recognized",
+		popularCourses: [
+			"General Medicine (MBBS)",
+			"Dentistry",
+			"Preventive Medicine"
+		],
+		description: "Rapidly emerging MBBS destination offering affordable living expenses, peaceful surroundings, and quality medical education.",
+		image: "https://flagcdn.com/w320/tj.png",
+		skylineImage: "/images/abroad/tajikistan.jpg",
+		overview: "Tajikistan is a peaceful, welcoming Central Asian nation offering government-recognized MBBS education that emphasizes preventive medicine, diagnostic pathology, and clinical surgery. The state medical universities feature newly modernized infrastructure, international student departments, and affordable fee structures, making medical education accessible to middle-class Indian families.",
+		quickFacts: "Tajikistan is situated in Central Asia, bordered by Kyrgyzstan, Uzbekistan, Afghanistan, and China, with the capital city Dushanbe serving as its academic center. It provides a peaceful and disciplined study environment, hospitable citizens, very low crime rates, and direct air links with Delhi.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "MBBS in Tajikistan"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "MD (Doctor of Medicine / MBBS Equivalent)"
+			},
+			{
+				label: "Course Duration",
+				value: "5 years + 1 year clinical rotatory internship"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 year clinical hospital internship"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with at least 50% in Physics, Chemistry, Biology + NEET qualified status"
+			},
+			{
+				label: "Recognition",
+				value: "WHO | NMC | UNESCO | Ministry of Education & Science of Tajikistan"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET UG Qualified"
+			},
+			{
+				label: "Top Universities",
+				value: "Avicenna Tajik State Medical University, Khatlon State Medical University, Tajik National University Medical Faculty"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 14 Lakhs to 20 Lakhs (Entire 5-Year Program)"
+			},
+			{
+				label: "Average Annual Living Cost",
+				value: "INR 1.0 Lakhs to 1.5 Lakhs per year"
+			},
+			{
+				label: "Travel Distance",
+				value: "2,300 kilometres (~3.5 hours direct flight)"
+			}
+		],
+		faqs: commonFaqs
+	},
+	{
+		id: "abroad-philippines",
+		name: "Philippines",
+		region: "Abroad",
+		country: "Philippines",
+		category: "Medical",
+		city: "Manila / Davao / Cebu",
+		type: "American Curriculum Medical Colleges",
+		accreditation: "WHO, NMC, ECFMG & USMLE Aligned",
+		popularCourses: ["Doctor of Medicine (MD / MBBS)", "BS Biology Pre-Med"],
+		description: "Top-tier English proficiency, American pattern medical education, and unmatched clinical disease exposure with high USMLE/FMGE success.",
+		image: "https://flagcdn.com/w320/ph.png",
+		skylineImage: "/images/abroad/philippines.jpg",
+		overview: "The Philippines is globally renowned for delivering American curriculum medical education (BS-MD program) with 100% English medium of instruction across all universities and hospitals. As the world's third-largest English-speaking nation, Indian students face zero language barriers while communicating with local patients during hospital rotations. It boasts high FMGE/NEXT passing percentages and prepares students exceptionally well for USMLE and clinical practice in the USA, UK, and India.",
+		quickFacts: "The Philippines is an archipelagic island nation in Southeast Asia comprising over 7,000 islands, with major educational centers in Metro Manila, Davao, and Cebu. Its medical curriculum matches US standards, featuring hands-on clinical clerkships in 1,000+ bed hospitals dealing with tropical disease patterns identical to India.",
+		particulars: [
+			{
+				label: "Course Name",
+				value: "BS-MD / MBBS in Philippines"
+			},
+			{
+				label: "Degree Equivalent",
+				value: "Doctor of Medicine (MD - Equivalent to MBBS in India & USA)"
+			},
+			{
+				label: "Course Duration",
+				value: "5.5 years (Pre-Med BS + 4-Year MD including 12 months clinical clerkship)"
+			},
+			{
+				label: "Residency Duration",
+				value: "1 year compulsory rotatory clinical clerkship"
+			},
+			{
+				label: "Academic Requirements",
+				value: "10+2 with minimum 50% in Physics, Chemistry, Biology + Qualified NEET score"
+			},
+			{
+				label: "Recognition",
+				value: "NMC | WHO | ECFMG | USMLE | FAIMER | WFME"
+			},
+			{
+				label: "Entrance Test Required",
+				value: "NEET UG Qualified (NMAT exam conducted during pre-med)"
+			},
+			{
+				label: "Top Universities",
+				value: "Davao Medical School Foundation (DMSF), University of Perpetual Help System DALTA, UV Gullas College of Medicine, Our Lady of Fatima University"
+			},
+			{
+				label: "Average Tuition Fee",
+				value: "INR 16 Lakhs to 28 Lakhs (Complete BS-MD Course)"
+			},
+			{
+				label: "Average Annual Living Cost",
+				value: "INR 1.5 Lakhs to 2.2 Lakhs per year (Indian hostels available)"
+			},
+			{
+				label: "Travel Distance",
+				value: "4,800 kilometres (~6 to 7 hours flight duration)"
+			}
+		],
+		faqs: commonFaqs
+	}
+];
+// All Medical Colleges combined
+export const medicalColleges = [
+	...tamilnaduColleges,
+	...puducherryColleges,
+	...karnatakaColleges,
+	...abroadColleges
+];
+// All colleges combined
+export const colleges = [...medicalColleges, ...engineeringColleges];
+export const collegesByRegion = {
+	Tamilnadu: tamilnaduColleges,
+	Puducherry: puducherryColleges,
+	Karnataka: karnatakaColleges,
+	Abroad: abroadColleges,
+	Engineering: engineeringColleges
+};
+// Medical sub-navigation tabs (Tamil Nadu, Puducherry, Karnataka, Abroad)
+export const medicalRegionTabs = [
+	{
+		key: "Tamilnadu",
+		label: "Tamil Nadu",
+		count: tamilnaduColleges.length,
+		description: "Top Medical & Healthcare Campuses in Tamil Nadu"
+	},
+	{
+		key: "Puducherry",
+		label: "Puducherry",
+		count: puducherryColleges.length,
+		description: "Premier Medical Institutions in Union Territory of Puducherry"
+	},
+	{
+		key: "Karnataka",
+		label: "Karnataka",
+		count: karnatakaColleges.length,
+		description: "Reputed Medical Universities & Colleges in Karnataka"
+	},
+	{
+		key: "Abroad",
+		label: "Abroad (MBBS)",
+		count: abroadColleges.length,
+		description: "NMC & WHO Recognized Medical Universities Worldwide"
+	}
+];
+// Primary stream/category navigation (Medical vs Engineering)
+export const streamTabs = [{
+	key: "medical",
+	label: "Medical Colleges",
+	count: medicalColleges.length,
+	description: "Leading Medical & Healthcare Colleges across TN, PY, KA & Abroad"
+}, {
+	key: "engineering",
+	label: "Engineering Colleges",
+	count: engineeringColleges.length,
+	description: "Premier Engineering & Technology Colleges & Universities"
+}];
+export const regionTabs = [...medicalRegionTabs, {
+	key: "Engineering",
+	label: "Engineering",
+	count: engineeringColleges.length,
+	description: "Premier Engineering & Technology Colleges & Universities"
+}];
+export const collegeFilterOptions = {
+	cities: [...new Set(colleges.map((c) => c.city))],
+	states: [
+		"Tamil Nadu",
+		"Puducherry",
+		"Karnataka",
+		"Engineering",
+		"Abroad"
+	],
+	types: [...new Set(colleges.map((c) => c.type))],
+	accreditations: [...new Set(colleges.map((c) => c.accreditation))],
+	categories: [...new Set(colleges.flatMap((c) => c.categories))]
+};
+
+//# sourceMappingURL=data:application/json;base64,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dGVudCI6WyIvLyBEeW5hbWljYWxseSBsb2FkIGFsbCBjb2xsZWdlIGltYWdlIGFzc2V0cyB1c2luZyBWaXRlJ3MgZ2xvYiBpbXBvcnRcbmNvbnN0IHRuQXNzZXRNb2R1bGVzID0gaW1wb3J0Lm1ldGEuZ2xvYignLi4vYXNzZXRzL1RhbWlsbmFkdS8qLntwbmcsanBnLGpwZWcsd2VicCxQTkcsSlBHLEpQRUcsV0VCUH0nLCB7XG4gIGVhZ2VyOiB0cnVlLFxuICBpbXBvcnQ6ICdkZWZhdWx0Jyxcbn0pXG5cbmNvbnN0IGthQXNzZXRNb2R1bGVzID0gaW1wb3J0Lm1ldGEuZ2xvYignLi4vYXNzZXRzL0thcm5hdGFrYS8qLntwbmcsanBnLGpwZWcsd2VicCxQTkcsSlBHLEpQRUcsV0VCUH0nLCB7XG4gIGVhZ2VyOiB0cnVlLFxuICBpbXBvcnQ6ICdkZWZhdWx0Jyxcbn0pXG5cbmNvbnN0IHB5QXNzZXRNb2R1bGVzID0gaW1wb3J0Lm1ldGEuZ2xvYignLi4vYXNzZXRzL1B1ZHVjaGVycnkvKi57cG5nLGpwZyxqcGVnLHdlYnAsUE5HLEpQRyxKUEVHLFdFQlB9Jywge1xuICBlYWdlcjogdHJ1ZSxcbiAgaW1wb3J0OiAnZGVmYXVsdCcsXG59KVxuXG5jb25zdCBlbmdBc3NldE1vZHVsZXMgPSBpbXBvcnQubWV0YS5nbG9iKCcuLi9hc3NldHMvRW5naW5lZXJpbmcvKi57cG5nLGpwZyxqcGVnLHdlYnAsUE5HLEpQRyxKUEVHLFdFQlB9Jywge1xuICBlYWdlcjogdHJ1ZSxcbiAgaW1wb3J0OiAnZGVmYXVsdCcsXG59KVxuXG5jb25zdCBjb21tb25GYXFzID0gW1xuICBbJ0hvdyBjYW4gSSBhcHBseSBmb3IgYWRtaXNzaW9uPycsICdCZWdpbiB3aXRoIGFuIGFkdmlzb3J5IGNvbnZlcnNhdGlvbiB3aXRoIFNyaSBWYWFyaSBFZHVjYXRpb25hbCBDb3Vuc2VsbGluZy4gV2UgZ3VpZGUgeW91IHRocm91Z2ggZWxpZ2liaWxpdHksIGRvY3VtZW50YXRpb24sIGNvdW5zZWxsaW5nIHJvdW5kcywgYW5kIHNlYXQgYWxsb3RtZW50LiddLFxuICBbJ1doYXQgYXJlIHRoZSBlbGlnaWJpbGl0eSBjcml0ZXJpYSBmb3IgYWRtaXNzaW9ucz8nLCAnQ2FuZGlkYXRlcyBtdXN0IG1lZXQgdGhlIGVkdWNhdGlvbmFsIHByZXJlcXVpc2l0ZXMgKDEwKzIgd2l0aCByZXF1aXJlZCBzdWJqZWN0cykgYW5kIHF1YWxpZnlpbmcgZW50cmFuY2UgZXhhbSBjcml0ZXJpYSAoc3VjaCBhcyBORUVUIGZvciBNZWRpY2FsIG9yIFRORUEvZW50cmFuY2UgcmFuayBmb3IgRW5naW5lZXJpbmcpLiddLFxuICBbJ0FyZSBzY2hvbGFyc2hpcHMgb3IgZWR1Y2F0aW9uYWwgbG9hbiBndWlkYW5jZSBwcm92aWRlZD8nLCAnWWVzLCB3ZSBhc3Npc3Qgd2l0aCBpbnN0aXR1dGlvbmFsIHNjaG9sYXJzaGlwIGFwcGxpY2F0aW9ucyBhbmQgcHJvdmlkZSBjb21wbGV0ZSBkb2N1bWVudGF0aW9uIHN1cHBvcnQgZm9yIG5hdGlvbmFsaXplZCBiYW5rIGVkdWNhdGlvbmFsIGxvYW5zLiddLFxuICBbJ0NhbiB3ZSBhcnJhbmdlIGNhbXB1cyB2aXNpdHMgYmVmb3JlIGFkbWlzc2lvbj8nLCAnWWVzLCB3ZSBoZWxwIGFycmFuZ2UgZ3VpZGVkIGNhbXB1cyB0b3VycyB0byBldmFsdWF0ZSBpbmZyYXN0cnVjdHVyZSwgYWNhZGVtaWMgbGFib3JhdG9yaWVzLCBob3N0ZWwgZmFjaWxpdGllcywgYW5kIHBsYWNlbWVudCB0cmFjayByZWNvcmRzLiddLFxuXVxuXG4vLyBLbm93biBjaXR5IG1hcHBpbmdzIGZvciBsb2NhbCBjb2xsZWdlc1xuY29uc3QgY2l0eU1hcCA9IHtcbiAgLy8gVGFtaWwgTmFkdSAtIE1lZGljYWxcbiAgJ0FDUyBNZWRpY2FsIENvbGxlZ2UgJiBIb3NwaXRhbCc6ICdDaGVubmFpJyxcbiAgJ0FubmFwb29yYW5hIE1lZGljYWwgQ29sbGVnZSAmIEhvc3BpdGFsJzogJ1NhbGVtJyxcbiAgJ0JoYXJhdCBNZWRpY2FsIENvbGxlZ2UgJiBIb3NwaXRhbCc6ICdDaGVubmFpJyxcbiAgJ0NoZXR0aW5hZCBIb3NwaXRhbCAmIFJlc2VhcmNoIEluc3RpdHV0ZSc6ICdLZWxhbWJha2thbSwgQ2hlbm5haScsXG4gICdEaGFuYWxha3NobWkgU3Jpbml2YXNhbiBNZWRpY2FsIENvbGxlZ2UgJiBIb3NwaXRhbCc6ICdQZXJhbWJhbHVyJyxcbiAgJ0tNQ0ggSW5zdGl0dXRlIG9mIEhlYWx0aCBTY2llbmNlcyc6ICdDb2ltYmF0b3JlJyxcbiAgJ0thcnBhZ2EgVmluYXlhZ2EgSW5zdGl0dXRlIG9mIE1lZGljYWwgU2NpZW5jZXMnOiAnQ2hlbmdhbHBhdHR1JyxcbiAgJ01HTSBIZWFsdGhjYXJlIEluc3RpdHV0ZSBvZiBIZWFsdGggU2NpZW5jZXMnOiAnQ2hlbm5haScsXG4gICdNZWVuYWtzaGkgTWVkaWNhbCBDb2xsZWdlICYgUmVzZWFyY2ggSW5zdGl0dXRlJzogJ0thbmNoaXB1cmFtJyxcbiAgJ1BTRyBJbnN0aXR1dGUgb2YgTWVkaWNhbCBTY2llbmNlcyAmIFJlc2VhcmNoJzogJ0NvaW1iYXRvcmUnLFxuICAnU1JNIE1lZGljYWwgQ29sbGVnZSBIb3NwaXRhbCAmIFJlc2VhcmNoIENlbnRyZSc6ICdLYXR0YW5rdWxhdGh1ciwgQ2hlbm5haScsXG4gICdTaHJpIFNhdGh5YSBTYWkgTWVkaWNhbCBDb2xsZWdlICYgUmVzZWFyY2ggSW5zdGl0dXRlJzogJ0FtbWFwZXR0YWksIENoZW5nYWxwYXR0dScsXG4gICdTcmVlIEJhbGFqaSBNZWRpY2FsIENvbGxlZ2UgJiBIb3NwaXRhbCc6ICdDaHJvbWVwZXQsIENoZW5uYWknLFxuICAnU3JlZSBNb29rYW1iaWthIEluc3RpdHV0ZSBvZiBNZWRpY2FsIFNjaWVuY2VzJzogJ0t1bGFzZWtoYXJhbSwgS2FueWFrdW1hcmknLFxuICAnU3JpIExhbGl0aGFtYmlnYWkgTWVkaWNhbCBDb2xsZWdlICYgSG9zcGl0YWwnOiAnTWFkdXJhdm95YWwsIENoZW5uYWknLFxuICAnU3JpIFJhbWFjaGFuZHJhIE1lZGljYWwgQ29sbGVnZSAmIFJlc2VhcmNoIEluc3RpdHV0ZSc6ICdQb3J1ciwgQ2hlbm5haScsXG4gICdUYWdvcmUgTWVkaWNhbCBDb2xsZWdlICYgSG9zcGl0YWwnOiAnUmF0aGluYW1hbmdhbGFtLCBDaGVubmFpJyxcbiAgJ1ZlbGFtbWFsIE1lZGljYWwgQ29sbGVnZSAmIEhvc3BpdGFsJzogJ01hZHVyYWknLFxuICAnVmluYXlha2EgTWlzc2lvbuKAmXMgS2lydXBhbmFuZGEgVmFyaXlhciBNZWRpY2FsIENvbGxlZ2UnOiAnU2FsZW0nLFxuXG4gIC8vIEthcm5hdGFrYSAtIE1lZGljYWxcbiAgJ0JHUyBHbG9iYWwgSW5zdGl0dXRlIG9mIE1lZGljYWwgU2NpZW5jZXMnOiAnQmVuZ2FsdXJ1JyxcbiAgJ0pTUyBNZWRpY2FsIENvbGxlZ2UnOiAnTXlzdXJ1JyxcbiAgJ0phd2FoYXJsYWwgTmVocnUgTWVkaWNhbCBDb2xsZWdlJzogJ0JlbGFnYXZpJyxcbiAgJ0suUy4gSGVnZGUgTWVkaWNhbCBBY2FkZW15JzogJ01hbmdhbHVydScsXG4gICdLYXN0dXJiYSBNZWRpY2FsIENvbGxlZ2UnOiAnTWFuaXBhbCAvIE1hbmdhbHVydScsXG4gICdNLlMuIFJhbWFpYWggTWVkaWNhbCBDb2xsZWdlJzogJ0JlbmdhbHVydScsXG4gICdSYWphUmFqZXN3YXJpIE1lZGljYWwgQ29sbGVnZSAmIEhvc3BpdGFsJzogJ0JlbmdhbHVydScsXG4gICdTdC4gSm9obuKAmXMgTWVkaWNhbCBDb2xsZWdlJzogJ0JlbmdhbHVydScsXG4gICdWeWRlaGkgSW5zdGl0dXRlIG9mIE1lZGljYWwgU2NpZW5jZXMgJiBSZXNlYXJjaCBDZW50cmUnOiAnQmVuZ2FsdXJ1JyxcblxuICAvLyBQdWR1Y2hlcnJ5IC0gTWVkaWNhbFxuICAnQWFydXBhZGFpIFZlZWR1IE1lZGljYWwgQ29sbGVnZSc6ICdQdWR1Y2hlcnJ5JyxcbiAgJ01haGF0bWEgR2FuZGhpIE1lZGljYWwgQ29sbGVnZSAmIFJlc2VhcmNoIEluc3RpdHV0ZSc6ICdQaWxsYWl5YXJrdXBwYW0sIFB1ZHVjaGVycnknLFxuICAnUG9uZGljaGVycnkgSW5zdGl0dXRlIG9mIE1lZGljYWwgU2NpZW5jZXMnOiAnS2FsYXBldCwgUHVkdWNoZXJyeScsXG4gICdTcmkgTGFrc2htaSBOYXJheWFuYSBJbnN0aXR1dGUgb2YgTWVkaWNhbCBTY2llbmNlcyc6ICdPc3VkdSwgUHVkdWNoZXJyeScsXG4gICdTcmkgTWFuYWt1bGEgVmluYXlhZ2FyIE1lZGljYWwgQ29sbGVnZSAmIEhvc3BpdGFsJzogJ01hZGFnYWRpcGV0LCBQdWR1Y2hlcnJ5JyxcbiAgJ1NyaSBWZW5rYXRlc2h3YXJhYSBNZWRpY2FsIENvbGxlZ2UgSG9zcGl0YWwgJiBSZXNlYXJjaCBDZW50cmUnOiAnQXJpeXVyLCBQdWR1Y2hlcnJ5JyxcbiAgJ1ZpbmF5YWthIE1pc3Npb25zIE1lZGljYWwgQ29sbGVnZSc6ICdLYXJhaWthbCwgUHVkdWNoZXJyeScsXG5cbiAgLy8gRW5naW5lZXJpbmcgQ29sbGVnZXNcbiAgJ0FNQyBFbmdpbmVlcmluZyBDb2xsZWdlJzogJ0JlbmdhbHVydScsXG4gICdBTUVUIFVuaXZlcnNpdHknOiAnQ2hlbm5haScsXG4gICdBY2hhcnlhIEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5JzogJ0JlbmdhbHVydScsXG4gICdBZGl0aHlhIGluc3RpdHV0ZSBvZiB0ZWNobm9sb2d5JzogJ0NvaW1iYXRvcmUnLFxuICAnQWthc2ggSW5zdGl0dXRlIG9mIEVuZ2luZWVyaW5nICYgVGVjaG5vbG9neSc6ICdCZW5nYWx1cnUnLFxuICAnQWxsaWFuY2UgVW5pdmVyc2l0eSc6ICdCZW5nYWx1cnUnLFxuICAnQW1yaXRhIFZpc2h3YSBWaWR5YXBlZXRoYW0nOiAnQ29pbWJhdG9yZScsXG4gICdDQVJFIENvbGxlZ2Ugb2YgRW5naW5lZXJpbmcnOiAnVGlydWNoaXJhcHBhbGxpJyxcbiAgJ0NIUklTVCBVbml2ZXJzaXR5JzogJ0JlbmdhbHVydScsXG4gICdDb2ltYmF0b3JlIEluc3RpdHV0ZSBvZiBFbmdpbmVlcmluZyBhbmQgVGVjaG5vbG9neSc6ICdDb2ltYmF0b3JlJyxcbiAgJ0NvaW1iYXRvcmUgSW5zdGl0dXRlIG9mIFRlY2hub2xvZ3knOiAnQ29pbWJhdG9yZScsXG4gICdEYXlhbmFuZGEgU2FnYXIgVW5pdmVyc2l0eSc6ICdCZW5nYWx1cnUnLFxuICAnRGhhbmFsYWtzaG1pIFNyaW5pdmFzYW4gRW5naW5lZXJpbmcgQ29sbGVnZSc6ICdQZXJhbWJhbHVyJyxcbiAgJ0RyLiBNLkcuUi4gRWR1Y2F0aW9uYWwgYW5kIFJlc2VhcmNoIEluc3RpdHV0ZSc6ICdDaGVubmFpJyxcbiAgJ0RyLiBOLkcuUC4gSW5zdGl0dXRlIG9mIFRlY2hub2xvZ3knOiAnQ29pbWJhdG9yZScsXG4gICdFQVNBIENvbGxlZ2Ugb2YgRW5naW5lZXJpbmcgYW5kIFRlY2hub2xvZ3knOiAnQ29pbWJhdG9yZScsXG4gICdFYXN0IFBvaW50IEdyb3VwIG9mIEluc3RpdHV0aW9ucyc6ICdCZW5nYWx1cnUnLFxuICAnRXhjZWwgRW5naW5lZXJpbmcgQ29sbGVnZSc6ICdLb21hcmFwYWxheWFtLCBOYW1ha2thbCcsXG4gICdHbmFuYW1hbmkgQ29sbGVnZSBvZiBUZWNobm9sb2d5JzogJ05hbWFra2FsJyxcbiAgJ0hpbmR1c3RoYW4gQ29sbGVnZSBvZiBFbmdpbmVlcmluZyAmIFRlY2hub2xvZ3knOiAnQ29pbWJhdG9yZScsXG4gICdJbWF5YW0gQ29sbGVnZSBvZiBFbmdpbmVlcmluZyc6ICdUaXJ1Y2hpcmFwcGFsbGknLFxuICAnSkNUIENvbGxlZ2Ugb2YgRW5naW5lZXJpbmcgYW5kIFRlY2hub2xvZ3knOiAnQ29pbWJhdG9yZScsXG4gICdKYWluIFVuaXZlcnNpdHknOiAnQmVuZ2FsdXJ1JyxcbiAgJ0tHaVNMIEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5JzogJ0NvaW1iYXRvcmUnLFxuICAnS1BSIEluc3RpdHV0ZSBvZiBFbmdpbmVlcmluZyBhbmQgVGVjaG5vbG9neSc6ICdDb2ltYmF0b3JlJyxcbiAgJ0thbGFpZ25hciBLYXJ1bmFuaWRoaSBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neSc6ICdDb2ltYmF0b3JlJyxcbiAgJ0thcnBhZ2FtIENvbGxlZ2Ugb2YgRW5naW5lZXJpbmcnOiAnQ29pbWJhdG9yZScsXG4gICdLYXRoaXIgRW5naW5lZXJpbmcgQ29sbGVnZSc6ICdDb2ltYmF0b3JlJyxcbiAgJ0t1bWFyYWd1cnUgQ29sbGVnZSBvZiBUZWNobm9sb2d5JzogJ0NvaW1iYXRvcmUnLFxuICAnTG95b2xhIENvbGxlZ2UnOiAnQ2hlbm5haScsXG4gICdNQU0gQ29sbGVnZSBvZiBFbmdpbmVlcmluZyc6ICdUaXJ1Y2hpcmFwcGFsbGknLFxuICAnTWFoZW5kcmEgRW5naW5lZXJpbmcgQ29sbGVnZSc6ICdOYW1ha2thbCcsXG4gICdOZWhydSBJbnN0aXR1dGUgb2YgRW5naW5lZXJpbmcgYW5kIFRlY2hub2xvZ3knOiAnQ29pbWJhdG9yZScsXG4gICdPeGZvcmQgRW5naW5lZXJpbmcgQ29sbGVnZSc6ICdUaXJ1Y2hpcmFwcGFsbGknLFxuICAnUEVTIFVuaXZlcnNpdHknOiAnQmVuZ2FsdXJ1JyxcbiAgJ1BQRyBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neSc6ICdDb2ltYmF0b3JlJyxcbiAgJ1BTRyBDb2xsZWdlIG9mIFRlY2hub2xvZ3knOiAnQ29pbWJhdG9yZScsXG4gICdQYWF2YWkgSW5zdGl0dXRpb25zJzogJ05hbWFra2FsJyxcbiAgJ1IgUCBTYXJhdGh5IEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5JzogJ1NhbGVtJyxcbiAgJ1JFVkEgVW5pdmVyc2l0eSc6ICdCZW5nYWx1cnUnLFxuICAnUlYgVW5pdmVyc2l0eSc6ICdCZW5nYWx1cnUnLFxuICAnUlZTIENvbGxlZ2Ugb2YgRW5naW5lZXJpbmcgYW5kIFRlY2hub2xvZ3knOiAnQ29pbWJhdG9yZScsXG4gICdSYW1haWFoIEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5JzogJ0JlbmdhbHVydScsXG4gICdSYXRoaW5hbSBUZWNobmljYWwgQ2FtcHVzJzogJ0NvaW1iYXRvcmUnLFxuICAnU0FTVFJBIERlZW1lZCBVaXZlcnNpdHknOiAnVGhhbmphdnVyJyxcbiAgJ1NSTSBJbnN0aXR1dGUgb2YgU2NpZW5jZSBhbmQgVGVjaG5vbG9neSc6ICdDaGVubmFpJyxcbiAgJ1NhdGh5YWJhbWEgSW5zdGl0dXRlIG9mIFNjaWVuY2UgYW5kIFRlY2hub2xvZ3knOiAnQ2hlbm5haScsXG4gICdTYXZlZXRoYSBFbmdpbmVlcmluZyBDb2xsZWdlJzogJ0NoZW5uYWknLFxuICAnU2VsdmFtIENvbGxlZ2Ugb2YgVGVjaG5vbG9neSc6ICdOYW1ha2thbCcsXG4gICdTb25hIENvbGxlZ2Ugb2YgVGVjaG5vbG9neSc6ICdTYWxlbScsXG4gICdTcmVlIFNha3RoaSBFbmdpbmVlcmluZyBDb2xsZWdlJzogJ0NvaW1iYXRvcmUnLFxuICAnU3JpIEJhbGFqaSBDaG9ja2FsaW5nYW0gRW5naW5lZXJpbmcgQ29sbGVnZSc6ICdBcm5pJyxcbiAgJ1NyaSBLcmlzaG5hIENvbGxlZ2Ugb2YgRW5naW5lZXJpbmcgYW5kIFRlY2hub2xvZ3knOiAnQ29pbWJhdG9yZScsXG4gICdTdHVkeSBXb3JsZCBDb2xsZWdlIG9mIEVuZ2luZWVyaW5nJzogJ0NvaW1iYXRvcmUnLFxuICAnVlNCIEVuZ2luZWVyaW5nIENvbGxlZ2UnOiAnS2FydXInLFxuICAnVmVsIFRlY2ggUmFuZ2FyYWphbiBEci5TYWd1bnRoYWxhIFImRCBJbnN0aXR1dGUgb2YgU2NpZW5jZSBhbmQgVGVjaG5vbG9neSc6ICdDaGVubmFpJyxcbiAgJ1ZlbGxvcmUgSW5zdGl0dXRlIG9mIFRlY2hub2xvZ3knOiAnVmVsbG9yZScsXG4gICdWZWxzIEluc3RpdHV0ZSBvZiBTY2llbmNlLCBUZWNobm9sb2d5ICYgQWR2YW5jZWQgU3R1ZGllcyc6ICdDaGVubmFpJyxcbiAgJ1ZpbmF5YWthIE1pc3Npb24gRW5naW5lZXJpbmcgQ29sbGVnZSc6ICdTYWxlbScsXG59XG5cbi8vIEhlbHBlciB0byBleHRyYWN0IGNsZWFuIGNvbGxlZ2UgbmFtZSBmcm9tIHBhdGhcbmZ1bmN0aW9uIGV4dHJhY3RDb2xsZWdlTmFtZShwYXRoKSB7XG4gIGNvbnN0IGZpbGVuYW1lV2l0aEV4dCA9IHBhdGguc3BsaXQoJy8nKS5wb3AoKSB8fCAnJ1xuICBjb25zdCBuYW1lV2l0aG91dEV4dCA9IGZpbGVuYW1lV2l0aEV4dC5yZXBsYWNlKC9cXC5bXi8uXSskLywgJycpXG4gIC8vIFN0cmlwIHRyYWlsaW5nICgxKSwgKDIpLCBldGMuXG4gIHJldHVybiBuYW1lV2l0aG91dEV4dC5yZXBsYWNlKC9cXChcXGQrXFwpJC8sICcnKS50cmltKClcbn1cblxuLy8gSGVscGVyIHRvIHBhcnNlIGFzc2V0IG1hcCBpbnRvIGNvbGxlZ2UgbGlzdFxuZnVuY3Rpb24gcGFyc2VBc3NldHNUb0NvbGxlZ2VzKGFzc2V0TW9kdWxlcywgcmVnaW9uTmFtZSwgc3RhdGVOYW1lKSB7XG4gIGNvbnN0IHNlZW5OYW1lcyA9IG5ldyBTZXQoKVxuICBjb25zdCBsaXN0ID0gW11cbiAgY29uc3QgaXNFbmcgPSByZWdpb25OYW1lID09PSAnRW5naW5lZXJpbmcnXG5cbiAgZm9yIChjb25zdCBbcGF0aCwgaW1hZ2VTcmNdIG9mIE9iamVjdC5lbnRyaWVzKGFzc2V0TW9kdWxlcykpIHtcbiAgICBjb25zdCByYXdOYW1lID0gZXh0cmFjdENvbGxlZ2VOYW1lKHBhdGgpXG4gICAgaWYgKCFyYXdOYW1lIHx8IHNlZW5OYW1lcy5oYXMocmF3TmFtZS50b0xvd2VyQ2FzZSgpKSkgY29udGludWVcbiAgICBzZWVuTmFtZXMuYWRkKHJhd05hbWUudG9Mb3dlckNhc2UoKSlcblxuICAgIGNvbnN0IGlkID0gYCR7cmVnaW9uTmFtZS50b0xvd2VyQ2FzZSgpfS0ke3Jhd05hbWUudG9Mb3dlckNhc2UoKS5yZXBsYWNlKC9bXmEtejAtOV0rL2csICctJykucmVwbGFjZSgvKF4tfC0kKS9nLCAnJyl9YFxuICAgIGNvbnN0IGNpdHkgPSBjaXR5TWFwW3Jhd05hbWVdIHx8IHN0YXRlTmFtZVxuXG4gICAgbGlzdC5wdXNoKHtcbiAgICAgIGlkLFxuICAgICAgbmFtZTogcmF3TmFtZSxcbiAgICAgIHJlZ2lvbjogcmVnaW9uTmFtZSxcbiAgICAgIHN0YXRlOiBzdGF0ZU5hbWUsXG4gICAgICBjaXR5LFxuICAgICAgY291bnRyeTogJ0luZGlhJyxcbiAgICAgIGNhdGVnb3J5OiBpc0VuZyA/ICdFbmdpbmVlcmluZycgOiAnTWVkaWNhbCcsXG4gICAgICB0eXBlOiBpc0VuZyA/ICdFbmdpbmVlcmluZyAmIFRlY2hub2xvZ3kgSW5zdGl0dXRlJyA6ICdNZWRpY2FsIENvbGxlZ2UgJiBIb3NwaXRhbCcsXG4gICAgICBhY2NyZWRpdGF0aW9uOiBpc0VuZyA/ICdBSUNURSBBcHByb3ZlZCAmIE5BQUMgLyBOQkEgQWNjcmVkaXRlZCcgOiAnTk1DICYgV0hPIFJlY29nbml6ZWQnLFxuICAgICAgY2F0ZWdvcmllczogaXNFbmcgPyBbJ1VuZGVyZ3JhZHVhdGUnLCAnUG9zdGdyYWR1YXRlJywgJ0VuZ2luZWVyaW5nJ10gOiBbJ1VuZGVyZ3JhZHVhdGUnLCAnUG9zdGdyYWR1YXRlJywgJ01lZGljYWwnXSxcbiAgICAgIHBvcHVsYXJDb3Vyc2VzOiBpc0VuZ1xuICAgICAgICA/IFsnQi5FLiAvIEIuVGVjaCAoQ1NFLCBBSSAmIERTLCBFQ0UsIE1lY2gpJywgJ00uRS4gLyBNLlRlY2gnLCAnTUJBIC8gTUNBJywgJ0ludGVncmF0ZWQgQi5UZWNoJ11cbiAgICAgICAgOiBbJ01CQlMnLCAnTUQgLyBNUyBTcGVjaWFsaXphdGlvbnMnLCAnQWxsaWVkIEhlYWx0aCBTY2llbmNlcycsICdCLlNjIE51cnNpbmcnXSxcbiAgICAgIGRlc2NyaXB0aW9uOiBpc0VuZ1xuICAgICAgICA/IGBQcmVtaWVyIGVuZ2luZWVyaW5nIGFuZCB0ZWNobm9sb2d5IGluc3RpdHV0aW9uIGluICR7Y2l0eX0gZXF1aXBwZWQgd2l0aCBtb2Rlcm4gbGFib3JhdG9yaWVzLCBpbmR1c3RyeSBwYXJ0bmVyc2hpcHMsIGFuZCBhZHZhbmNlZCBjYW1wdXMgaW5mcmFzdHJ1Y3R1cmUuYFxuICAgICAgICA6IGBQcmVtaWVyIG1lZGljYWwgaW5zdGl0dXRpb24gaW4gJHtjaXR5fSwgJHtzdGF0ZU5hbWV9IGVxdWlwcGVkIHdpdGggYWR2YW5jZWQgY2xpbmljYWwgaW5mcmFzdHJ1Y3R1cmUsIG11bHRpLXNwZWNpYWx0eSB0ZWFjaGluZyBob3NwaXRhbCwgYW5kIGV4cGVyaWVuY2VkIGZhY3VsdHkuYCxcbiAgICAgIG92ZXJ2aWV3OiBgJHtyYXdOYW1lfSBpcyBhIHByZXN0aWdpb3VzICR7aXNFbmcgPyAnZW5naW5lZXJpbmcgYW5kIHRlY2huaWNhbCcgOiAnbWVkaWNhbCBlZHVjYXRpb24gYW5kIGhlYWx0aGNhcmUnfSBpbnN0aXR1dGlvbiwgb2ZmZXJpbmcgd29ybGQtY2xhc3MgbGVhcm5pbmcgc3BhY2VzLCByZXNlYXJjaCBjZW50ZXJzLCBhbmQgY2FyZWVyLWRyaXZlbiB0cmFpbmluZy5gLFxuICAgICAgZmFjaWxpdGllczogaXNFbmdcbiAgICAgICAgPyBbXG4gICAgICAgICAgICAnQWR2YW5jZWQgQ29tcHV0aW5nICYgQUkgUmVzZWFyY2ggTGFicycsXG4gICAgICAgICAgICAnUm9ib3RpY3MsIElvVCAmIElubm92YXRpb24gQ2VudHJlcycsXG4gICAgICAgICAgICAnQ2VudHJhbCBEaWdpdGFsICYgVGVjaG5pY2FsIExpYnJhcnknLFxuICAgICAgICAgICAgJ0Fpci1Db25kaXRpb25lZCBTbWFydCBDbGFzc3Jvb21zJyxcbiAgICAgICAgICAgICdTZXBhcmF0ZSBCb3lzICYgR2lybHMgSG9zdGVscyB3aXRoIE1lc3MnLFxuICAgICAgICAgICAgJ0luZHVzdHJ5IENlbnRyZSBvZiBFeGNlbGxlbmNlICYgUGxhY2VtZW50IENlbGwnLFxuICAgICAgICAgIF1cbiAgICAgICAgOiBbXG4gICAgICAgICAgICAnTXVsdGktU3BlY2lhbHR5IFRlYWNoaW5nIEhvc3BpdGFsJyxcbiAgICAgICAgICAgICdNb2Rlcm4gQ2xpbmljYWwgU2ltdWxhdGlvbiBMYWJzJyxcbiAgICAgICAgICAgICdDZW50cmFsIERpZ2l0YWwgJiBQaHlzaWNhbCBMaWJyYXJ5JyxcbiAgICAgICAgICAgICdBaXItQ29uZGl0aW9uZWQgU21hcnQgTGVjdHVyZSBIYWxscycsXG4gICAgICAgICAgICAnU2VwYXJhdGUgQm95cyAmIEdpcmxzIEhvc3RlbHMgd2l0aCBNZXNzJyxcbiAgICAgICAgICAgICcyNC83IEVtZXJnZW5jeSAmIENyaXRpY2FsIENhcmUgVHJhaW5pbmcnLFxuICAgICAgICAgIF0sXG4gICAgICBhZG1pc3Npb246IGlzRW5nXG4gICAgICAgID8gYEFkbWlzc2lvbnMgdG8gQi5FLi9CLlRlY2ggYW5kIFBHIGVuZ2luZWVyaW5nIHByb2dyYW1zIGF0ICR7cmF3TmFtZX0gYXJlIGNvbmR1Y3RlZCB0aHJvdWdoIFRORUEvQ0VUIGNvdW5zZWxsaW5nLCBTdGF0ZSBxdW90YSByb3VuZHMsIGFuZCBNYW5hZ2VtZW50L05SSSBxdW90YSBndWlkYW5jZS4gU3JpIFZhYXJpIEVkdWNhdGlvbmFsIENvdW5zZWxsaW5nIHByb3ZpZGVzIGNvbXBsZXRlIHN1cHBvcnQuYFxuICAgICAgICA6IGBBZG1pc3Npb25zIHRvIE1CQlMgYW5kIFBHIE1lZGljYWwgcHJvZ3JhbXMgYXQgJHtyYXdOYW1lfSBhcmUgY29uZHVjdGVkIHRocm91Z2ggTkVFVCBjb3Vuc2VsbGluZywgU3RhdGUgcXVvdGEgcm91bmRzLCBhbmQgTWFuYWdlbWVudC9OUkkgcXVvdGEgZ3VpZGFuY2UuIFNyaSBWYWFyaSBFZHVjYXRpb25hbCBDb3Vuc2VsbGluZyBwcm92aWRlcyBjb21wbGV0ZSBndWlkYW5jZS5gLFxuICAgICAgZWxpZ2liaWxpdHk6IGlzRW5nXG4gICAgICAgID8gJzEwKzIgd2l0aCBQaHlzaWNzLCBNYXRoZW1hdGljcyAmIENoZW1pc3RyeSAobWluLiA0NSUgYWdncmVnYXRlIGZvciBHZW5lcmFsLCA0MCUgZm9yIFJlc2VydmVkIGNhdGVnb3JpZXMpIC8gU3RhdGUgQ0VUIC8gSkVFIFNjb3JlLidcbiAgICAgICAgOiAnMTArMiB3aXRoIFBoeXNpY3MsIENoZW1pc3RyeSwgQmlvbG9neSAmIEVuZ2xpc2ggKG1pbi4gNTAlIGFnZ3JlZ2F0ZSBmb3IgR2VuZXJhbCwgNDAlIGZvciBSZXNlcnZlZCBjYXRlZ29yaWVzKSArIFZhbGlkIE5FRVQgVUcgU2NvcmUuJyxcbiAgICAgIHBsYWNlbWVudHM6IGlzRW5nXG4gICAgICAgID8gW1xuICAgICAgICAgICAgJ0RlZGljYXRlZCBQbGFjZW1lbnQgQ2VsbCB3aXRoIFRvcCBUaWVyLTEgVGVjaCBNTkNzICYgQ29yZSBDb21wYW5pZXMnLFxuICAgICAgICAgICAgJ1BhaWQgSW5kdXN0cnkgSW50ZXJuc2hpcHMsIEhhY2thdGhvbnMgJiBDYXBzdG9uZSBQcm9qZWN0cycsXG4gICAgICAgICAgICAnR2xvYmFsIFJlc2VhcmNoIGFuZCBEZXZlbG9wbWVudCBPcHBvcnR1bml0aWVzJyxcbiAgICAgICAgICAgICdIaWdoZXIgU3R1ZGllcyAmIEdBVEUgLyBHUkUgQ2FyZWVyIE1lbnRvcnNoaXAnLFxuICAgICAgICAgIF1cbiAgICAgICAgOiBbXG4gICAgICAgICAgICAnQ29tcHVsc29yeSAxLVllYXIgUGFpZCBSb3RhdG9yeSBJbnRlcm5zaGlwIGluIFN1cGVyLVNwZWNpYWx0eSBIb3NwaXRhbCcsXG4gICAgICAgICAgICAnVVNNTEUsIFBMQUIgJiBQRyBORUVUIFByZXBhcmF0aW9uIFdvcmtzaG9wcycsXG4gICAgICAgICAgICAnR2xvYmFsIENsaW5pY2FsIE9ic2VydmVyc2hpcCBPcHBvcnR1bml0aWVzJyxcbiAgICAgICAgICAgICdIb3NwaXRhbCBQbGFjZW1lbnQgJiBDYXJlZXIgR3VpZGFuY2UgQ2VsbCcsXG4gICAgICAgICAgXSxcbiAgICAgIGltYWdlOiBpbWFnZVNyYyxcbiAgICAgIGZhcXM6IGNvbW1vbkZhcXMsXG4gICAgfSlcbiAgfVxuXG4gIHJldHVybiBsaXN0XG59XG5cbi8vIEJ1aWxkIGNvbGxlY3Rpb25zIGZyb20gYXNzZXRzXG5leHBvcnQgY29uc3QgdGFtaWxuYWR1Q29sbGVnZXMgPSBwYXJzZUFzc2V0c1RvQ29sbGVnZXModG5Bc3NldE1vZHVsZXMsICdUYW1pbG5hZHUnLCAnVGFtaWwgTmFkdScpXG5leHBvcnQgY29uc3Qga2FybmF0YWthQ29sbGVnZXMgPSBwYXJzZUFzc2V0c1RvQ29sbGVnZXMoa2FBc3NldE1vZHVsZXMsICdLYXJuYXRha2EnLCAnS2FybmF0YWthJylcbmV4cG9ydCBjb25zdCBwdWR1Y2hlcnJ5Q29sbGVnZXMgPSBwYXJzZUFzc2V0c1RvQ29sbGVnZXMocHlBc3NldE1vZHVsZXMsICdQdWR1Y2hlcnJ5JywgJ1B1ZHVjaGVycnknKVxuZXhwb3J0IGNvbnN0IGVuZ2luZWVyaW5nQ29sbGVnZXMgPSBwYXJzZUFzc2V0c1RvQ29sbGVnZXMoZW5nQXNzZXRNb2R1bGVzLCAnRW5naW5lZXJpbmcnLCAnRW5naW5lZXJpbmcnKVxuXG4vLyBDdXJhdGVkIDcgU3R1ZHkgQWJyb2FkIERlc3RpbmF0aW9ucyB3aXRoIENvdW50cnkgRmxhZ3MgJiBDb21wcmVoZW5zaXZlIERldGFpbHNcbmV4cG9ydCBjb25zdCBhYnJvYWRDb2xsZWdlcyA9IFtcbiAge1xuICAgIGlkOiAnYWJyb2FkLXJ1c3NpYScsXG4gICAgbmFtZTogJ1J1c3NpYScsXG4gICAgcmVnaW9uOiAnQWJyb2FkJyxcbiAgICBjb3VudHJ5OiAnUnVzc2lhJyxcbiAgICBjYXRlZ29yeTogJ01lZGljYWwnLFxuICAgIGNpdHk6ICdNb3Njb3cgLyBLYXphbiAvIFNhaW50IFBldGVyc2J1cmcnLFxuICAgIHR5cGU6ICdUb3AgTWVkaWNhbCBEZXN0aW5hdGlvbicsXG4gICAgYWNjcmVkaXRhdGlvbjogJ05NQyAmIFdITyBSZWNvZ25pemVkIFVuaXZlcnNpdGllcycsXG4gICAgcG9wdWxhckNvdXJzZXM6IFsnR2VuZXJhbCBNZWRpY2luZSAoTUJCUyAvIE1EKScsICdEZW50aXN0cnknLCAnUGVkaWF0cmljcyddLFxuICAgIGRlc2NyaXB0aW9uOiAnUHJlbWllciBSdXNzaWFuIG1lZGljYWwgdW5pdmVyc2l0aWVzIHdpdGggZ2xvYmFsbHkgYWNjZXB0ZWQgRW5nbGlzaC1tZWRpdW0gZGVncmVlcyBhbmQgbW9kZXJuIGNsaW5pY2FsIGhvc3BpdGFsIG5ldHdvcmtzLicsXG4gICAgaW1hZ2U6ICdodHRwczovL2ZsYWdjZG4uY29tL3czMjAvcnUucG5nJyxcbiAgICBza3lsaW5lSW1hZ2U6ICcvaW1hZ2VzL2Ficm9hZC9ydXNzaWEuanBnJyxcbiAgICBvdmVydmlldzogJ1J1c3NpYSBpcyBvbmUgb2YgdGhlIG1vc3QgcG9wdWxhciBwbGFjZXMgZm9yIHN0dWRlbnRzIHdobyB3YW50IHRvIGdldCBhbiBpbnRlcm5hdGlvbmFsIGVkdWNhdGlvbiB3aXRoIGFwcHJveGltYXRlbHkgMTgwLDAwMCBpbnRlcm5hdGlvbmFsIHN0dWRlbnRzIGV2ZXJ5IHllYXIuIEEgbG90IG9mIHRoZSB1bml2ZXJzaXRpZXMgaW4gUnVzc2lhIGFyZSByZWNvZ25pemVkIHdvcmxkd2lkZSB3aGljaCBtZWFucyBzdHVkZW50cyBmcm9tIGFsbCBvdmVyIHRoZSB3b3JsZCBhcmUgZmxvY2tpbmcgdG8gUnVzc2lhIHRvIGdldCBhbiBlZHVjYXRpb24gdGhhdCB3aWxsIGJlbmVmaXQgdGhlbSBpbiB0aGUgZnV0dXJlLiBUaGUgbGFyZ2VzdCBpbnRlcm5hdGlvbmFsIHN0dWRlbnQgcG9wdWxhdGlvbnMgYXJlIG1haW5seSBpbiBNb3Njb3csIFNhaW50IFBldGVyc2J1cmcsIEthemFuLCBOb3Zvc2liaXJzaywgYW5kIEt1cnNrLicsXG4gICAgcXVpY2tGYWN0czogJ1RoZSBSdXNzaWFuIEZlZGVyYXRpb24gc3BhbnMgRWFzdGVybiBFdXJvcGUgYW5kIE5vcnRoZXJuIEFzaWEgYWNyb3NzIGVsZXZlbiB0aW1lIHpvbmVzLiBSdXNzaWFuIGdvdmVybm1lbnQgbWVkaWNhbCB1bml2ZXJzaXRpZXMgbWFpbnRhaW4gYW4gb3B0aW1hbCAxOjEwIHN0dWRlbnQtdG8tZmFjdWx0eSByYXRpbywgc3Vic2lkaXplZCBzdGF0ZSBoZWFsdGhjYXJlIGZhY2lsaXRpZXMsIGNvbWZvcnRhYmxlIGNhbXB1cyBob3N0ZWxzIHdpdGggZGVkaWNhdGVkIEluZGlhbiBtZXNzIGZhY2lsaXRpZXMsIGFuZCBjb252ZW5pZW50IGRpcmVjdCBmbGlnaHRzIGNvbm5lY3RpbmcgbWFqb3IgSW5kaWFuIGNpdGllcy4nLFxuICAgIHBhcnRpY3VsYXJzOiBbXG4gICAgICB7IGxhYmVsOiAnQ291cnNlIE5hbWUnLCB2YWx1ZTogJ01CQlMgaW4gUnVzc2lhJyB9LFxuICAgICAgeyBsYWJlbDogJ0RlZ3JlZSBFcXVpdmFsZW50JywgdmFsdWU6ICdNRCAoRG9jdG9yIG9mIE1lZGljaW5lIC8gUGh5c2ljaWFuKScgfSxcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgRHVyYXRpb24nLCB2YWx1ZTogJzUuOCB0byA2IHllYXJzJyB9LFxuICAgICAgeyBsYWJlbDogJ1Jlc2lkZW5jeSBEdXJhdGlvbicsIHZhbHVlOiAnMSB5ZWFyIGNvbXB1bHNvcnkgcm90YXRvcnkgY2xpbmljYWwgaW50ZXJuc2hpcCcgfSxcbiAgICAgIHsgbGFiZWw6ICdBY2FkZW1pYyBSZXF1aXJlbWVudHMnLCB2YWx1ZTogJzEwKzIgd2l0aCBtaW5pbXVtIDUwJSBpbiBQQ0IgKDQwJSBmb3IgUmVzZXJ2ZWQgY2F0ZWdvcmllcykgJiBORUVUIFVHIGNsZWFyYW5jZScgfSxcbiAgICAgIHsgbGFiZWw6ICdSZWNvZ25pdGlvbicsIHZhbHVlOiAnTk1DIHwgV0hPIHwgV0ZNRSB8IEZBSU1FUiB8IEVDRk1HJyB9LFxuICAgICAgeyBsYWJlbDogJ0VudHJhbmNlIFRlc3QgUmVxdWlyZWQnLCB2YWx1ZTogJ05FRVQgVUcgUXVhbGlmaWVkIChObyBJRUxUUyBvciBUT0VGTCByZXF1aXJlZCknIH0sXG4gICAgICB7IGxhYmVsOiAnVG9wIFVuaXZlcnNpdGllcycsIHZhbHVlOiAnS2F6YW4gRmVkZXJhbCBVbml2ZXJzaXR5LCBCYXNoa2lyIFN0YXRlIE1lZGljYWwgVW5pdmVyc2l0eSwgQ3JpbWVhIEZlZGVyYWwgVW5pdmVyc2l0eSwgSS5NLiBTZWNoZW5vdiBGaXJzdCBNb3Njb3cgU3RhdGUgTWVkaWNhbCBVbml2ZXJzaXR5JyB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgVHVpdGlvbiBGZWUnLCB2YWx1ZTogJ0lOUiAxOCBMYWtocyB0byAzMiBMYWtocyAoRW50aXJlIDYtWWVhciBDb3Vyc2UpJyB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgQW5udWFsIExpdmluZyBDb3N0JywgdmFsdWU6ICdJTlIgMS4yIExha2hzIHRvIDEuOCBMYWtocyBwZXIgeWVhcicgfSxcbiAgICAgIHsgbGFiZWw6ICdUcmF2ZWwgRGlzdGFuY2UnLCB2YWx1ZTogJzQsMzAwIGtpbG9tZXRyZXMgKH42IGhvdXJzIGRpcmVjdCBmbGlnaHQgZnJvbSBEZWxoaSknIH0sXG4gICAgXSxcbiAgICBmYXFzOiBjb21tb25GYXFzLFxuICB9LFxuICB7XG4gICAgaWQ6ICdhYnJvYWQtZ2VvcmdpYScsXG4gICAgbmFtZTogJ0dlb3JnaWEnLFxuICAgIHJlZ2lvbjogJ0Ficm9hZCcsXG4gICAgY291bnRyeTogJ0dlb3JnaWEnLFxuICAgIGNhdGVnb3J5OiAnTWVkaWNhbCcsXG4gICAgY2l0eTogJ1RiaWxpc2kgLyBCYXR1bWknLFxuICAgIHR5cGU6ICdFdXJvcGVhbiBTdGFuZGFyZCBNZWRpY2FsIEVkdWNhdGlvbicsXG4gICAgYWNjcmVkaXRhdGlvbjogJ1dGTUUsIFdITyAmIE5NQyBBcHByb3ZlZCcsXG4gICAgcG9wdWxhckNvdXJzZXM6IFsnTWVkaWNhbCBEb2N0b3IgKE1EIC8gTUJCUyknLCAnRGVudGlzdHJ5JywgJ1BoYXJtYWN5J10sXG4gICAgZGVzY3JpcHRpb246ICdIaWdoLXF1YWxpdHkgRXVyb3BlYW4gY3VycmljdWx1bSwgc2FmZSBlbnZpcm9ubWVudCwgYW5kIDEwMCUgRW5nbGlzaC1tZWRpdW0gbWVkaWNhbCBwcm9ncmFtcy4nLFxuICAgIGltYWdlOiAnaHR0cHM6Ly9mbGFnY2RuLmNvbS93MzIwL2dlLnBuZycsXG4gICAgc2t5bGluZUltYWdlOiAnL2ltYWdlcy9hYnJvYWQvZ2VvcmdpYS5qcGcnLFxuICAgIG92ZXJ2aWV3OiAnR2VvcmdpYSBoYXMgZW1lcmdlZCBhcyBhIHByZW1pZXIgRXVyb3BlYW4gbWVkaWNhbCBlZHVjYXRpb24gaHViIGZvciBJbmRpYW4gc3R1ZGVudHMsIGNvbWJpbmluZyByaWdvcm91cyBFdXJvcGVhbiBjbGluaWNhbCBjdXJyaWN1bGEgd2l0aCBzYWZlLCBtb2Rlcm4gbGl2aW5nIHN0YW5kYXJkcy4gTWVkaWNhbCBhY2FkZW1pZXMgaW4gR2VvcmdpYSBmb2xsb3cgdGhlIEV1cm9wZWFuIENyZWRpdCBUcmFuc2ZlciBTeXN0ZW0gKEVDVFMpIGFuZCBhcmUgYWxpZ25lZCB3aXRoIFVTTUxFIGFuZCBXRk1FIHN0YW5kYXJkcy4gV2l0aCBhIHBlYWNlZnVsIGF0bW9zcGhlcmUsIHdhcm0gaG9zcGl0YWxpdHksIGFuZCAxMDAlIEVuZ2xpc2gtbWVkaXVtIGluc3RydWN0aW9uLCBHZW9yZ2lhIGF0dHJhY3RzIHRob3VzYW5kcyBvZiBhbWJpdGlvdXMgZG9jdG9ycyBldmVyeSB5ZWFyLicsXG4gICAgcXVpY2tGYWN0czogJ0dlb3JnaWEgaXMgc2l0dWF0ZWQgYXQgdGhlIGludGVyc2VjdGlvbiBvZiBFYXN0ZXJuIEV1cm9wZSBhbmQgV2VzdGVybiBBc2lhLCBib3JkZXJlZCBieSB0aGUgQmxhY2sgU2VhLiBSYW5rZWQgYW1vbmcgdGhlIHRvcCAxMCBzYWZlc3QgbmF0aW9ucyBpbiB0aGUgd29ybGQgZm9yIGludGVybmF0aW9uYWwgc2Nob2xhcnMsIHBvcHVsYXIgdW5pdmVyc2l0eSBodWJzIGxpa2UgVGJpbGlzaSBhbmQgQmF0dW1pIG9mZmVyIHZpYnJhbnQgSW5kaWFuIHN0dWRlbnQgYXNzb2NpYXRpb25zLCBJbmRpYW4gZGluaW5nIGZhY2lsaXRpZXMsIGFuZCBzZWFtbGVzcyB2aXNhIHByb2Nlc3NpbmcuJyxcbiAgICBwYXJ0aWN1bGFyczogW1xuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBOYW1lJywgdmFsdWU6ICdNQkJTIC8gTUQgaW4gR2VvcmdpYScgfSxcbiAgICAgIHsgbGFiZWw6ICdEZWdyZWUgRXF1aXZhbGVudCcsIHZhbHVlOiAnTUQgKE1lZGljYWwgRG9jdG9yIC0gZXF1aXZhbGVudCB0byBNQkJTIGluIEluZGlhICYgRXVyb3BlKScgfSxcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgRHVyYXRpb24nLCB2YWx1ZTogJzYgeWVhcnMgKGludGVncmF0ZWQgY2xpbmljYWwgcm90YXRpb25zIGluY2x1ZGVkKScgfSxcbiAgICAgIHsgbGFiZWw6ICdSZXNpZGVuY3kgRHVyYXRpb24nLCB2YWx1ZTogJzEgeWVhciByb3RhdG9yeSBob3NwaXRhbCBpbnRlcm5zaGlwIGluY2x1ZGVkIGluIGN1cnJpY3VsdW0nIH0sXG4gICAgICB7IGxhYmVsOiAnQWNhZGVtaWMgUmVxdWlyZW1lbnRzJywgdmFsdWU6ICdNaW5pbXVtIDUwJSBpbiBQaHlzaWNzLCBDaGVtaXN0cnksIEJpb2xvZ3kgaW4gMTArMiAmIE5FRVQgVUcgcXVhbGlmaWNhdGlvbicgfSxcbiAgICAgIHsgbGFiZWw6ICdSZWNvZ25pdGlvbicsIHZhbHVlOiAnV0ZNRSB8IFdITyB8IE5NQyB8IEZBSU1FUiB8IEVDRk1HJyB9LFxuICAgICAgeyBsYWJlbDogJ0VudHJhbmNlIFRlc3QgUmVxdWlyZWQnLCB2YWx1ZTogJ05FRVQgVUcgUXVhbGlmaWVkIChEaXJlY3QgYWRtaXNzaW9uIHdpdGhvdXQgSUVMVFMgLyBUT0VGTCknIH0sXG4gICAgICB7IGxhYmVsOiAnVG9wIFVuaXZlcnNpdGllcycsIHZhbHVlOiAnVGJpbGlzaSBTdGF0ZSBNZWRpY2FsIFVuaXZlcnNpdHksIEJhdHVtaSBTaG90YSBSdXN0YXZlbGkgU3RhdGUgVW5pdmVyc2l0eSwgTmV3IFZpc2lvbiBVbml2ZXJzaXR5LCBEYXZpZCBUdmlsZGlhbmkgTWVkaWNhbCBVbml2ZXJzaXR5JyB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgVHVpdGlvbiBGZWUnLCB2YWx1ZTogJ0lOUiAyMiBMYWtocyB0byAzOCBMYWtocyAoVG90YWwgNi1ZZWFyIFByb2dyYW0pJyB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgQW5udWFsIExpdmluZyBDb3N0JywgdmFsdWU6ICdJTlIgMS44IExha2hzIHRvIDIuNCBMYWtocyBwZXIgeWVhcicgfSxcbiAgICAgIHsgbGFiZWw6ICdUcmF2ZWwgRGlzdGFuY2UnLCB2YWx1ZTogJzMsODAwIGtpbG9tZXRyZXMgKH41LjUgaG91cnMgZmxpZ2h0IGR1cmF0aW9uKScgfSxcbiAgICBdLFxuICAgIGZhcXM6IGNvbW1vbkZhcXMsXG4gIH0sXG4gIHtcbiAgICBpZDogJ2Ficm9hZC11emJla2lzdGFuJyxcbiAgICBuYW1lOiAnVXpiZWtpc3RhbicsXG4gICAgcmVnaW9uOiAnQWJyb2FkJyxcbiAgICBjb3VudHJ5OiAnVXpiZWtpc3RhbicsXG4gICAgY2F0ZWdvcnk6ICdNZWRpY2FsJyxcbiAgICBjaXR5OiAnVGFzaGtlbnQgLyBTYW1hcmthbmQgLyBCdWtoYXJhJyxcbiAgICB0eXBlOiAnR292ZXJubWVudCBNZWRpY2FsIFVuaXZlcnNpdGllcycsXG4gICAgYWNjcmVkaXRhdGlvbjogJ1dITyAmIE5NQyBSZWNvZ25pemVkJyxcbiAgICBwb3B1bGFyQ291cnNlczogWydHZW5lcmFsIE1lZGljaW5lIChNQkJTKScsICdEZW50aXN0cnknLCAnUGVkaWF0cmljcyddLFxuICAgIGRlc2NyaXB0aW9uOiAnQWZmb3JkYWJsZSB0dWl0aW9uLCBhZHZhbmNlZCBjbGluaWNhbCBzaW11bGF0aW9uIGNlbnRlcnMsIGRpcmVjdCBmbGlnaHRzLCBhbmQgZGVkaWNhdGVkIEluZGlhbiBob3N0ZWwgJiBmb29kIGZhY2lsaXRpZXMuJyxcbiAgICBpbWFnZTogJ2h0dHBzOi8vZmxhZ2Nkbi5jb20vdzMyMC91ei5wbmcnLFxuICAgIHNreWxpbmVJbWFnZTogJy9pbWFnZXMvYWJyb2FkL3V6YmVraXN0YW4uanBnJyxcbiAgICBvdmVydmlldzogJ1V6YmVraXN0YW4gaGFzIHJhcGlkbHkgYmVjb21lIG9uZSBvZiB0aGUgbW9zdCBwcmVmZXJyZWQgZGVzdGluYXRpb25zIGZvciBJbmRpYW4gbWVkaWNhbCBhc3BpcmFudHMgc2Vla2luZyBhbiBOTUMtY29tcGxpYW50IDUrMSB5ZWFyIE1CQlMgcHJvZ3JhbSB3aXRoIHVubWF0Y2hlZCBhZmZvcmRhYmlsaXR5IGFuZCBwcm94aW1pdHkgdG8gSW5kaWEuIE5hdGlvbmFsIG1lZGljYWwgdW5pdmVyc2l0aWVzIGluIFV6YmVraXN0YW4gY29tYmluZSBjZW50dXJpZXMtb2xkIGFjYWRlbWljIHRyYWRpdGlvbnMgd2l0aCBtb2Rlcm4gbXVsdGktc3BlY2lhbHR5IHRlYWNoaW5nIGhvc3BpdGFscywgZGlnaXRhbCBhbmF0b215IGxhYnMsIGFuZCBkZWRpY2F0ZWQgSW5kaWFuIG1lbnRvcnMgcHJvdmlkaW5nIEZNR0UvTkVYVCBndWlkYW5jZS4nLFxuICAgIHF1aWNrRmFjdHM6ICdVemJla2lzdGFuIGlzIGEgaGlzdG9yaWMgQ2VudHJhbCBBc2lhbiBuYXRpb24gZmFtb3VzIGZvciB0aGUgU2lsayBSb2FkLCBkaXZpZGVkIGludG8gMTIgcHJvdmluY2VzIGFuZCB0aGUgYXV0b25vbW91cyBSZXB1YmxpYyBvZiBLYXJha2FscGFrc3Rhbi4gV2l0aCBkaXJlY3QgMy1ob3VyIGZsaWdodHMgZnJvbSBEZWxoaSB0byBUYXNoa2VudCwgYWZmb3JkYWJsZSBmbGlnaHQgZmFyZXMsIGxvdyBsaXZpbmcgY29zdHMsIGFuZCBkZWRpY2F0ZWQgSW5kaWFuIGhvc3RlbCBtZXNzIHNldHVwcyBzZXJ2aW5nIGF1dGhlbnRpYyB2ZWdldGFyaWFuIGFuZCBub24tdmVnZXRhcmlhbiBmb29kLCBVemJla2lzdGFuIGZlZWxzIGxpa2UgYSBzZWNvbmQgaG9tZS4nLFxuICAgIHBhcnRpY3VsYXJzOiBbXG4gICAgICB7IGxhYmVsOiAnQ291cnNlIE5hbWUnLCB2YWx1ZTogJ01CQlMgaW4gVXpiZWtpc3RhbicgfSxcbiAgICAgIHsgbGFiZWw6ICdEZWdyZWUgRXF1aXZhbGVudCcsIHZhbHVlOiAnTUQgKERvY3RvciBvZiBNZWRpY2luZSAtIFBoeXNpY2lhbiAvIE1CQlMgRXF1aXZhbGVudCknIH0sXG4gICAgICB7IGxhYmVsOiAnQ291cnNlIER1cmF0aW9uJywgdmFsdWU6ICc1IHllYXJzIGFjYWRlbWljICYgaG9zcGl0YWwgdHJhaW5pbmcgKyAxIHllYXIgaW50ZXJuc2hpcCcgfSxcbiAgICAgIHsgbGFiZWw6ICdSZXNpZGVuY3kgRHVyYXRpb24nLCB2YWx1ZTogJzEgeWVhciBjbGluaWNhbCBpbnRlcm5zaGlwIGluIGFmZmlsaWF0ZWQgc3RhdGUgdGVhY2hpbmcgaG9zcGl0YWxzJyB9LFxuICAgICAgeyBsYWJlbDogJ0FjYWRlbWljIFJlcXVpcmVtZW50cycsIHZhbHVlOiAnTWluaW11bSA1MCUgaW4gMTArMiAoUENCKSBmb3IgR2VuZXJhbCwgNDAlIGZvciBSZXNlcnZlZCBjYXRlZ29yaWVzICsgVmFsaWQgTkVFVCcgfSxcbiAgICAgIHsgbGFiZWw6ICdSZWNvZ25pdGlvbicsIHZhbHVlOiAnTk1DIHwgV0hPIHwgTWluaXN0cnkgb2YgSGlnaGVyIEVkdWNhdGlvbiBvZiBVemJla2lzdGFuIHwgRkFJTUVSJyB9LFxuICAgICAgeyBsYWJlbDogJ0VudHJhbmNlIFRlc3QgUmVxdWlyZWQnLCB2YWx1ZTogJ05FRVQgVUcgUXVhbGlmaWVkIChObyBlbnRyYW5jZSBleGFtcyBsaWtlIElFTFRTIC8gVE9FRkwpJyB9LFxuICAgICAgeyBsYWJlbDogJ1RvcCBVbml2ZXJzaXRpZXMnLCB2YWx1ZTogJ1Rhc2hrZW50IE1lZGljYWwgQWNhZGVteSwgU2FtYXJrYW5kIFN0YXRlIE1lZGljYWwgVW5pdmVyc2l0eSwgQnVraGFyYSBTdGF0ZSBNZWRpY2FsIEluc3RpdHV0ZSwgQW5kaWphbiBTdGF0ZSBNZWRpY2FsIEluc3RpdHV0ZScgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIFR1aXRpb24gRmVlJywgdmFsdWU6ICdJTlIgMTQgTGFraHMgdG8gMjAgTGFraHMgKENvbXBsZXRlIDUtWWVhciBUdWl0aW9uKScgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIEFubnVhbCBMaXZpbmcgQ29zdCcsIHZhbHVlOiAnSU5SIDEuMCBMYWtocyB0byAxLjUgTGFraHMgcGVyIHllYXIgKGluY2x1ZGluZyBJbmRpYW4gaG9zdGVsICYgZm9vZCknIH0sXG4gICAgICB7IGxhYmVsOiAnVHJhdmVsIERpc3RhbmNlJywgdmFsdWU6ICcyLDA1MCBraWxvbWV0cmVzICh+MyBob3VycyBkaXJlY3QgZmxpZ2h0IGZyb20gRGVsaGkpJyB9LFxuICAgIF0sXG4gICAgZmFxczogY29tbW9uRmFxcyxcbiAgfSxcbiAge1xuICAgIGlkOiAnYWJyb2FkLWthemFraHN0YW4nLFxuICAgIG5hbWU6ICdLYXpha2hzdGFuJyxcbiAgICByZWdpb246ICdBYnJvYWQnLFxuICAgIGNvdW50cnk6ICdLYXpha2hzdGFuJyxcbiAgICBjYXRlZ29yeTogJ01lZGljYWwnLFxuICAgIGNpdHk6ICdBbG1hdHkgLyBBc3RhbmEgLyBTaHlta2VudCcsXG4gICAgdHlwZTogJ05hdGlvbmFsIE1lZGljYWwgVW5pdmVyc2l0aWVzJyxcbiAgICBhY2NyZWRpdGF0aW9uOiAnTk1DLCBXSE8gJiBNaW5pc3RyeSBvZiBIZWFsdGggQXBwcm92ZWQnLFxuICAgIHBvcHVsYXJDb3Vyc2VzOiBbJ0dlbmVyYWwgTWVkaWNpbmUgKE1CQlMpJywgJ1BlZGlhdHJpY3MnLCAnUGhhcm1hY3knXSxcbiAgICBkZXNjcmlwdGlvbjogJzUteWVhciBNQkJTIHByb2dyYW1zIHdpdGggcHJhY3RpY2FsIGNsaW5pY2FsIHRyYWluaW5nLCBsb3cgZmVlcywgYW5kIHN0cm9uZyBORVhUL0ZNR0UgcGFzc2luZyB0cmFjayByZWNvcmQuJyxcbiAgICBpbWFnZTogJ2h0dHBzOi8vZmxhZ2Nkbi5jb20vdzMyMC9rei5wbmcnLFxuICAgIHNreWxpbmVJbWFnZTogJy9pbWFnZXMvYWJyb2FkL2themFraHN0YW4uanBnJyxcbiAgICBvdmVydmlldzogJ0themFraHN0YW4gc3RhbmRzIG91dCBhcyBhIGxlYWRpbmcgZGVzdGluYXRpb24gaW4gQ2VudHJhbCBBc2lhIG9mZmVyaW5nIGdvdmVybm1lbnQtYWNjcmVkaXRlZCA1LXllYXIgTUJCUyBwcm9ncmFtcyBkZXNpZ25lZCBzdHJpY3RseSBwZXIgbGF0ZXN0IE5NQyBndWlkZWxpbmVzLiBFcXVpcHBlZCB3aXRoIGN1dHRpbmctZWRnZSByb2JvdGljIHNpbXVsYXRpb24gY2VudGVycywgYWR2YW5jZWQgZGlhZ25vc3RpYyBsYWJzLCBhbmQgaW50ZXJuYXRpb25hbCBwYXJ0bmVyc2hpcHMgd2l0aCBFdXJvcGVhbiB1bml2ZXJzaXRpZXMsIEthemFraCBtZWRpY2FsIGFjYWRlbWllcyBlbnN1cmUgY29tcHJlaGVuc2l2ZSBjbGluaWNhbCBleHBvc3VyZSBpbiBoaWdoLXZvbHVtZSB0ZXJ0aWFyeSBjYXJlIGhvc3BpdGFscy4nLFxuICAgIHF1aWNrRmFjdHM6ICdLYXpha2hzdGFuIGlzIHRoZSBsYXJnZXN0IGxhbmRsb2NrZWQgY291bnRyeSBpbiB0aGUgd29ybGQsIHNwYW5uaW5nIDE0IGFkbWluaXN0cmF0aXZlIHJlZ2lvbnMgYW5kIG1vZGVybiBtZXRyb3BvbGl0YW4gY2VudGVycyBpbmNsdWRpbmcgQWxtYXR5IGFuZCBBc3RhbmEuIFRoZSBuYXRpb24gZW5qb3lzIGVjb25vbWljIHN0YWJpbGl0eSwgYSBoaWdoIHN0YW5kYXJkIG9mIHN0dWRlbnQgc2FmZXR5LCB3ZWxsLWVzdGFibGlzaGVkIGludGVybmF0aW9uYWwgc3R1ZGVudCBzdXBwb3J0IGNlbGxzLCBhbmQgSW5kaWFuIGhvc3RlbHMgb3BlcmF0aW5nIGRpcmVjdGx5IGluc2lkZSB0aGUgdW5pdmVyc2l0eSBjYW1wdXNlcy4nLFxuICAgIHBhcnRpY3VsYXJzOiBbXG4gICAgICB7IGxhYmVsOiAnQ291cnNlIE5hbWUnLCB2YWx1ZTogJ01CQlMgaW4gS2F6YWtoc3RhbicgfSxcbiAgICAgIHsgbGFiZWw6ICdEZWdyZWUgRXF1aXZhbGVudCcsIHZhbHVlOiAnTUQgKEdlbmVyYWwgTWVkaWNpbmUgLyBQaHlzaWNpYW4gLSBNQkJTIEVxdWl2YWxlbnQpJyB9LFxuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBEdXJhdGlvbicsIHZhbHVlOiAnNSB5ZWFycyArIDEgeWVhciBjb21wdWxzb3J5IGNsaW5pY2FsIGludGVybnNoaXAnIH0sXG4gICAgICB7IGxhYmVsOiAnUmVzaWRlbmN5IER1cmF0aW9uJywgdmFsdWU6ICcxIHllYXIgc3VwZXJ2aXNlZCByb3RhdG9yeSBpbnRlcm5zaGlwJyB9LFxuICAgICAgeyBsYWJlbDogJ0FjYWRlbWljIFJlcXVpcmVtZW50cycsIHZhbHVlOiAnMTArMiB3aXRoIDUwJSBhZ2dyZWdhdGUgaW4gUGh5c2ljcywgQ2hlbWlzdHJ5LCBCaW9sb2d5ICYgdmFsaWQgTkVFVCBjbGVhcmFuY2UnIH0sXG4gICAgICB7IGxhYmVsOiAnUmVjb2duaXRpb24nLCB2YWx1ZTogJ05NQyB8IFdITyB8IFdGTUUgfCBGQUlNRVIgfCBVTkVTQ08nIH0sXG4gICAgICB7IGxhYmVsOiAnRW50cmFuY2UgVGVzdCBSZXF1aXJlZCcsIHZhbHVlOiAnTkVFVCBVRyBRdWFsaWZpZWQgKERpcmVjdCBhZG1pc3Npb24gdGhyb3VnaCBTcmkgVmFhcmkgZ3VpZGFuY2UpJyB9LFxuICAgICAgeyBsYWJlbDogJ1RvcCBVbml2ZXJzaXRpZXMnLCB2YWx1ZTogJ0themFraCBOYXRpb25hbCBNZWRpY2FsIFVuaXZlcnNpdHksIFNlbWV5IFN0YXRlIE1lZGljYWwgVW5pdmVyc2l0eSwgV2VzdCBLYXpha2hzdGFuIE1hcmF0IE9zcGFub3YgTWVkaWNhbCBVbml2ZXJzaXR5LCBBc3RhbmEgTWVkaWNhbCBVbml2ZXJzaXR5JyB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgVHVpdGlvbiBGZWUnLCB2YWx1ZTogJ0lOUiAxNSBMYWtocyB0byAyNCBMYWtocyAoVG90YWwgNS1ZZWFyIFByb2dyYW0pJyB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgQW5udWFsIExpdmluZyBDb3N0JywgdmFsdWU6ICdJTlIgMS4yIExha2hzIHRvIDEuOCBMYWtocyBwZXIgeWVhcicgfSxcbiAgICAgIHsgbGFiZWw6ICdUcmF2ZWwgRGlzdGFuY2UnLCB2YWx1ZTogJzIsNDAwIGtpbG9tZXRyZXMgKH4zLjUgaG91cnMgZGlyZWN0IGZsaWdodCknIH0sXG4gICAgXSxcbiAgICBmYXFzOiBjb21tb25GYXFzLFxuICB9LFxuICB7XG4gICAgaWQ6ICdhYnJvYWQta3lyZ3l6c3RhbicsXG4gICAgbmFtZTogJ0t5cmd5enN0YW4nLFxuICAgIHJlZ2lvbjogJ0Ficm9hZCcsXG4gICAgY291bnRyeTogJ0t5cmd5enN0YW4nLFxuICAgIGNhdGVnb3J5OiAnTWVkaWNhbCcsXG4gICAgY2l0eTogJ0Jpc2hrZWsgLyBPc2ggLyBKYWxhbC1BYmFkJyxcbiAgICB0eXBlOiAnR292ZXJubWVudCBNZWRpY2FsIEFjYWRlbWllcycsXG4gICAgYWNjcmVkaXRhdGlvbjogJ1dITywgTk1DICYgRkFJTUVSIFJlY29nbml6ZWQnLFxuICAgIHBvcHVsYXJDb3Vyc2VzOiBbJ0dlbmVyYWwgTWVkaWNpbmUgKE1CQlMpJywgJ1BlZGlhdHJpY3MnLCAnRGVudGlzdHJ5J10sXG4gICAgZGVzY3JpcHRpb246ICdPdmVyIDgwIHllYXJzIG9mIG1lZGljYWwgdGVhY2hpbmcgaGlzdG9yeSwgZWNvbm9taWNhbCBmZWUgc3RydWN0dXJlLCBhbmQgdmlicmFudCBjb21tdW5pdHkgb2YgSW5kaWFuIG1lZGljYWwgc3R1ZGVudHMuJyxcbiAgICBpbWFnZTogJ2h0dHBzOi8vZmxhZ2Nkbi5jb20vdzMyMC9rZy5wbmcnLFxuICAgIHNreWxpbmVJbWFnZTogJy9pbWFnZXMvYWJyb2FkL2t5cmd5enN0YW4uanBnJyxcbiAgICBvdmVydmlldzogJ0t5cmd5enN0YW4gaGFzIGJlZW4gYSB0cnVzdGVkIHN0dWR5IGRlc3RpbmF0aW9uIGZvciBJbmRpYW4gbWVkaWNhbCBhc3BpcmFudHMgZm9yIG92ZXIgdGhyZWUgZGVjYWRlcy4gR292ZXJubWVudCBtZWRpY2FsIGluc3RpdHV0aW9ucyBpbiBLeXJneXpzdGFuIG9mZmVyIGVjb25vbWljYWwgNS15ZWFyIE1CQlMgY291cnNlcyB0YXVnaHQgY29tcGxldGVseSBpbiBFbmdsaXNoLCBjb21iaW5lZCB3aXRoIHJpZ29yb3VzIHByYWN0aWNhbCBiZWRzaWRlIHRyYWluaW5nIGluIG1ham9yIG11bmljaXBhbCBhbmQgcmVnaW9uYWwgaG9zcGl0YWxzLiBPdmVyIDE1LDAwMCBJbmRpYW4gZG9jdG9ycyBwcmFjdGljaW5nIHRvZGF5IGhhdmUgZ3JhZHVhdGVkIGZyb20gS3lyZ3l6IG1lZGljYWwgYWNhZGVtaWVzLicsXG4gICAgcXVpY2tGYWN0czogJ0xvY2F0ZWQgaW4gdGhlIGhlYXJ0IG9mIENlbnRyYWwgQXNpYSBhbWlkc3QgdGhlIHBpY3R1cmVzcXVlIFRpYW4gU2hhbiBtb3VudGFpbiByYW5nZSwgS3lyZ3l6c3RhbiBjb21wcmlzZXMgc2V2ZW4gcHJvdmluY2VzIGFuZCB0d28gaW5kZXBlbmRlbnQgY2l0aWVzIChCaXNoa2VrIGFuZCBPc2gpLiBJdCBvZmZlcnMgbWlsZCB3ZWF0aGVyLCBjb3N0LWVmZmVjdGl2ZSBsaXZpbmcsIGFjdGl2ZSBJbmRpYW4gc3R1ZGVudCBhc3NvY2lhdGlvbnMsIGNlbGVicmF0ZWQgSW5kaWFuIGZlc3RpdmFscyBvbiBjYW1wdXMsIGFuZCBkZWRpY2F0ZWQgSW5kaWFuIG1lc3MgY2hlZnMuJyxcbiAgICBwYXJ0aWN1bGFyczogW1xuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBOYW1lJywgdmFsdWU6ICdNQkJTIGluIEt5cmd5enN0YW4nIH0sXG4gICAgICB7IGxhYmVsOiAnRGVncmVlIEVxdWl2YWxlbnQnLCB2YWx1ZTogJ01EIChQaHlzaWNpYW4gLyBNQkJTIEVxdWl2YWxlbnQgRGVncmVlKScgfSxcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgRHVyYXRpb24nLCB2YWx1ZTogJzUgeWVhcnMgYWNhZGVtaWMgJiBjbGluaWNhbCBjb3Vyc2UgKyAxIHllYXIgaW50ZXJuc2hpcCcgfSxcbiAgICAgIHsgbGFiZWw6ICdSZXNpZGVuY3kgRHVyYXRpb24nLCB2YWx1ZTogJzEgeWVhciByb3RhdG9yeSBjbGluaWNhbCBpbnRlcm5zaGlwIGluIG11bHRpLXNwZWNpYWx0eSBob3NwaXRhbHMnIH0sXG4gICAgICB7IGxhYmVsOiAnQWNhZGVtaWMgUmVxdWlyZW1lbnRzJywgdmFsdWU6ICdNaW5pbXVtIDUwJSBpbiBQQ0IgaW4gMTJ0aCBzdGFuZGFyZCAoNDAlIGZvciBSZXNlcnZlZCBjYXRlZ29yaWVzKSAmIE5FRVQgVUcgcGFzcycgfSxcbiAgICAgIHsgbGFiZWw6ICdSZWNvZ25pdGlvbicsIHZhbHVlOiAnTk1DIHwgV0hPIHwgRkFJTUVSIHwgSU1FRCB8IE1pbmlzdHJ5IG9mIEhlYWx0aCBvZiBLeXJneXpzdGFuJyB9LFxuICAgICAgeyBsYWJlbDogJ0VudHJhbmNlIFRlc3QgUmVxdWlyZWQnLCB2YWx1ZTogJ05FRVQgVUcgUXVhbGlmaWVkIChObyBsYW5ndWFnZSB0ZXN0IHJlcXVpcmVtZW50KScgfSxcbiAgICAgIHsgbGFiZWw6ICdUb3AgVW5pdmVyc2l0aWVzJywgdmFsdWU6ICdLeXJneXogU3RhdGUgTWVkaWNhbCBBY2FkZW15LCBPc2ggU3RhdGUgVW5pdmVyc2l0eSBNZWRpY2FsIEZhY3VsdHksIEludGVybmF0aW9uYWwgU2Nob29sIG9mIE1lZGljaW5lIChJU00pLCBKYWxhbC1BYmFkIFN0YXRlIFVuaXZlcnNpdHknIH0sXG4gICAgICB7IGxhYmVsOiAnQXZlcmFnZSBUdWl0aW9uIEZlZScsIHZhbHVlOiAnSU5SIDEyIExha2hzIHRvIDE4IExha2hzIChDb21wbGV0ZSBDb3Vyc2UgUGFja2FnZSknIH0sXG4gICAgICB7IGxhYmVsOiAnQXZlcmFnZSBBbm51YWwgTGl2aW5nIENvc3QnLCB2YWx1ZTogJ0lOUiAxLjAgTGFraHMgdG8gMS40IExha2hzIHBlciB5ZWFyJyB9LFxuICAgICAgeyBsYWJlbDogJ1RyYXZlbCBEaXN0YW5jZScsIHZhbHVlOiAnMiwyMDAga2lsb21ldHJlcyAofjMuNSBob3VycyBmbGlnaHQgZHVyYXRpb24pJyB9LFxuICAgIF0sXG4gICAgZmFxczogY29tbW9uRmFxcyxcbiAgfSxcbiAge1xuICAgIGlkOiAnYWJyb2FkLXRhamlraXN0YW4nLFxuICAgIG5hbWU6ICdUYWppa2lzdGFuJyxcbiAgICByZWdpb246ICdBYnJvYWQnLFxuICAgIGNvdW50cnk6ICdUYWppa2lzdGFuJyxcbiAgICBjYXRlZ29yeTogJ01lZGljYWwnLFxuICAgIGNpdHk6ICdEdXNoYW5iZSAvIEtodWphbmQnLFxuICAgIHR5cGU6ICdTdGF0ZSBNZWRpY2FsIFVuaXZlcnNpdGllcycsXG4gICAgYWNjcmVkaXRhdGlvbjogJ1dITywgTk1DICYgVU5FU0NPIFJlY29nbml6ZWQnLFxuICAgIHBvcHVsYXJDb3Vyc2VzOiBbJ0dlbmVyYWwgTWVkaWNpbmUgKE1CQlMpJywgJ0RlbnRpc3RyeScsICdQcmV2ZW50aXZlIE1lZGljaW5lJ10sXG4gICAgZGVzY3JpcHRpb246ICdSYXBpZGx5IGVtZXJnaW5nIE1CQlMgZGVzdGluYXRpb24gb2ZmZXJpbmcgYWZmb3JkYWJsZSBsaXZpbmcgZXhwZW5zZXMsIHBlYWNlZnVsIHN1cnJvdW5kaW5ncywgYW5kIHF1YWxpdHkgbWVkaWNhbCBlZHVjYXRpb24uJyxcbiAgICBpbWFnZTogJ2h0dHBzOi8vZmxhZ2Nkbi5jb20vdzMyMC90ai5wbmcnLFxuICAgIHNreWxpbmVJbWFnZTogJy9pbWFnZXMvYWJyb2FkL3RhamlraXN0YW4uanBnJyxcbiAgICBvdmVydmlldzogJ1RhamlraXN0YW4gaXMgYSBwZWFjZWZ1bCwgd2VsY29taW5nIENlbnRyYWwgQXNpYW4gbmF0aW9uIG9mZmVyaW5nIGdvdmVybm1lbnQtcmVjb2duaXplZCBNQkJTIGVkdWNhdGlvbiB0aGF0IGVtcGhhc2l6ZXMgcHJldmVudGl2ZSBtZWRpY2luZSwgZGlhZ25vc3RpYyBwYXRob2xvZ3ksIGFuZCBjbGluaWNhbCBzdXJnZXJ5LiBUaGUgc3RhdGUgbWVkaWNhbCB1bml2ZXJzaXRpZXMgZmVhdHVyZSBuZXdseSBtb2Rlcm5pemVkIGluZnJhc3RydWN0dXJlLCBpbnRlcm5hdGlvbmFsIHN0dWRlbnQgZGVwYXJ0bWVudHMsIGFuZCBhZmZvcmRhYmxlIGZlZSBzdHJ1Y3R1cmVzLCBtYWtpbmcgbWVkaWNhbCBlZHVjYXRpb24gYWNjZXNzaWJsZSB0byBtaWRkbGUtY2xhc3MgSW5kaWFuIGZhbWlsaWVzLicsXG4gICAgcXVpY2tGYWN0czogJ1RhamlraXN0YW4gaXMgc2l0dWF0ZWQgaW4gQ2VudHJhbCBBc2lhLCBib3JkZXJlZCBieSBLeXJneXpzdGFuLCBVemJla2lzdGFuLCBBZmdoYW5pc3RhbiwgYW5kIENoaW5hLCB3aXRoIHRoZSBjYXBpdGFsIGNpdHkgRHVzaGFuYmUgc2VydmluZyBhcyBpdHMgYWNhZGVtaWMgY2VudGVyLiBJdCBwcm92aWRlcyBhIHBlYWNlZnVsIGFuZCBkaXNjaXBsaW5lZCBzdHVkeSBlbnZpcm9ubWVudCwgaG9zcGl0YWJsZSBjaXRpemVucywgdmVyeSBsb3cgY3JpbWUgcmF0ZXMsIGFuZCBkaXJlY3QgYWlyIGxpbmtzIHdpdGggRGVsaGkuJyxcbiAgICBwYXJ0aWN1bGFyczogW1xuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBOYW1lJywgdmFsdWU6ICdNQkJTIGluIFRhamlraXN0YW4nIH0sXG4gICAgICB7IGxhYmVsOiAnRGVncmVlIEVxdWl2YWxlbnQnLCB2YWx1ZTogJ01EIChEb2N0b3Igb2YgTWVkaWNpbmUgLyBNQkJTIEVxdWl2YWxlbnQpJyB9LFxuICAgICAgeyBsYWJlbDogJ0NvdXJzZSBEdXJhdGlvbicsIHZhbHVlOiAnNSB5ZWFycyArIDEgeWVhciBjbGluaWNhbCByb3RhdG9yeSBpbnRlcm5zaGlwJyB9LFxuICAgICAgeyBsYWJlbDogJ1Jlc2lkZW5jeSBEdXJhdGlvbicsIHZhbHVlOiAnMSB5ZWFyIGNsaW5pY2FsIGhvc3BpdGFsIGludGVybnNoaXAnIH0sXG4gICAgICB7IGxhYmVsOiAnQWNhZGVtaWMgUmVxdWlyZW1lbnRzJywgdmFsdWU6ICcxMCsyIHdpdGggYXQgbGVhc3QgNTAlIGluIFBoeXNpY3MsIENoZW1pc3RyeSwgQmlvbG9neSArIE5FRVQgcXVhbGlmaWVkIHN0YXR1cycgfSxcbiAgICAgIHsgbGFiZWw6ICdSZWNvZ25pdGlvbicsIHZhbHVlOiAnV0hPIHwgTk1DIHwgVU5FU0NPIHwgTWluaXN0cnkgb2YgRWR1Y2F0aW9uICYgU2NpZW5jZSBvZiBUYWppa2lzdGFuJyB9LFxuICAgICAgeyBsYWJlbDogJ0VudHJhbmNlIFRlc3QgUmVxdWlyZWQnLCB2YWx1ZTogJ05FRVQgVUcgUXVhbGlmaWVkJyB9LFxuICAgICAgeyBsYWJlbDogJ1RvcCBVbml2ZXJzaXRpZXMnLCB2YWx1ZTogJ0F2aWNlbm5hIFRhamlrIFN0YXRlIE1lZGljYWwgVW5pdmVyc2l0eSwgS2hhdGxvbiBTdGF0ZSBNZWRpY2FsIFVuaXZlcnNpdHksIFRhamlrIE5hdGlvbmFsIFVuaXZlcnNpdHkgTWVkaWNhbCBGYWN1bHR5JyB9LFxuICAgICAgeyBsYWJlbDogJ0F2ZXJhZ2UgVHVpdGlvbiBGZWUnLCB2YWx1ZTogJ0lOUiAxNCBMYWtocyB0byAyMCBMYWtocyAoRW50aXJlIDUtWWVhciBQcm9ncmFtKScgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIEFubnVhbCBMaXZpbmcgQ29zdCcsIHZhbHVlOiAnSU5SIDEuMCBMYWtocyB0byAxLjUgTGFraHMgcGVyIHllYXInIH0sXG4gICAgICB7IGxhYmVsOiAnVHJhdmVsIERpc3RhbmNlJywgdmFsdWU6ICcyLDMwMCBraWxvbWV0cmVzICh+My41IGhvdXJzIGRpcmVjdCBmbGlnaHQpJyB9LFxuICAgIF0sXG4gICAgZmFxczogY29tbW9uRmFxcyxcbiAgfSxcbiAge1xuICAgIGlkOiAnYWJyb2FkLXBoaWxpcHBpbmVzJyxcbiAgICBuYW1lOiAnUGhpbGlwcGluZXMnLFxuICAgIHJlZ2lvbjogJ0Ficm9hZCcsXG4gICAgY291bnRyeTogJ1BoaWxpcHBpbmVzJyxcbiAgICBjYXRlZ29yeTogJ01lZGljYWwnLFxuICAgIGNpdHk6ICdNYW5pbGEgLyBEYXZhbyAvIENlYnUnLFxuICAgIHR5cGU6ICdBbWVyaWNhbiBDdXJyaWN1bHVtIE1lZGljYWwgQ29sbGVnZXMnLFxuICAgIGFjY3JlZGl0YXRpb246ICdXSE8sIE5NQywgRUNGTUcgJiBVU01MRSBBbGlnbmVkJyxcbiAgICBwb3B1bGFyQ291cnNlczogWydEb2N0b3Igb2YgTWVkaWNpbmUgKE1EIC8gTUJCUyknLCAnQlMgQmlvbG9neSBQcmUtTWVkJ10sXG4gICAgZGVzY3JpcHRpb246ICdUb3AtdGllciBFbmdsaXNoIHByb2ZpY2llbmN5LCBBbWVyaWNhbiBwYXR0ZXJuIG1lZGljYWwgZWR1Y2F0aW9uLCBhbmQgdW5tYXRjaGVkIGNsaW5pY2FsIGRpc2Vhc2UgZXhwb3N1cmUgd2l0aCBoaWdoIFVTTUxFL0ZNR0Ugc3VjY2Vzcy4nLFxuICAgIGltYWdlOiAnaHR0cHM6Ly9mbGFnY2RuLmNvbS93MzIwL3BoLnBuZycsXG4gICAgc2t5bGluZUltYWdlOiAnL2ltYWdlcy9hYnJvYWQvcGhpbGlwcGluZXMuanBnJyxcbiAgICBvdmVydmlldzogJ1RoZSBQaGlsaXBwaW5lcyBpcyBnbG9iYWxseSByZW5vd25lZCBmb3IgZGVsaXZlcmluZyBBbWVyaWNhbiBjdXJyaWN1bHVtIG1lZGljYWwgZWR1Y2F0aW9uIChCUy1NRCBwcm9ncmFtKSB3aXRoIDEwMCUgRW5nbGlzaCBtZWRpdW0gb2YgaW5zdHJ1Y3Rpb24gYWNyb3NzIGFsbCB1bml2ZXJzaXRpZXMgYW5kIGhvc3BpdGFscy4gQXMgdGhlIHdvcmxkXFwncyB0aGlyZC1sYXJnZXN0IEVuZ2xpc2gtc3BlYWtpbmcgbmF0aW9uLCBJbmRpYW4gc3R1ZGVudHMgZmFjZSB6ZXJvIGxhbmd1YWdlIGJhcnJpZXJzIHdoaWxlIGNvbW11bmljYXRpbmcgd2l0aCBsb2NhbCBwYXRpZW50cyBkdXJpbmcgaG9zcGl0YWwgcm90YXRpb25zLiBJdCBib2FzdHMgaGlnaCBGTUdFL05FWFQgcGFzc2luZyBwZXJjZW50YWdlcyBhbmQgcHJlcGFyZXMgc3R1ZGVudHMgZXhjZXB0aW9uYWxseSB3ZWxsIGZvciBVU01MRSBhbmQgY2xpbmljYWwgcHJhY3RpY2UgaW4gdGhlIFVTQSwgVUssIGFuZCBJbmRpYS4nLFxuICAgIHF1aWNrRmFjdHM6ICdUaGUgUGhpbGlwcGluZXMgaXMgYW4gYXJjaGlwZWxhZ2ljIGlzbGFuZCBuYXRpb24gaW4gU291dGhlYXN0IEFzaWEgY29tcHJpc2luZyBvdmVyIDcsMDAwIGlzbGFuZHMsIHdpdGggbWFqb3IgZWR1Y2F0aW9uYWwgY2VudGVycyBpbiBNZXRybyBNYW5pbGEsIERhdmFvLCBhbmQgQ2VidS4gSXRzIG1lZGljYWwgY3VycmljdWx1bSBtYXRjaGVzIFVTIHN0YW5kYXJkcywgZmVhdHVyaW5nIGhhbmRzLW9uIGNsaW5pY2FsIGNsZXJrc2hpcHMgaW4gMSwwMDArIGJlZCBob3NwaXRhbHMgZGVhbGluZyB3aXRoIHRyb3BpY2FsIGRpc2Vhc2UgcGF0dGVybnMgaWRlbnRpY2FsIHRvIEluZGlhLicsXG4gICAgcGFydGljdWxhcnM6IFtcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgTmFtZScsIHZhbHVlOiAnQlMtTUQgLyBNQkJTIGluIFBoaWxpcHBpbmVzJyB9LFxuICAgICAgeyBsYWJlbDogJ0RlZ3JlZSBFcXVpdmFsZW50JywgdmFsdWU6ICdEb2N0b3Igb2YgTWVkaWNpbmUgKE1EIC0gRXF1aXZhbGVudCB0byBNQkJTIGluIEluZGlhICYgVVNBKScgfSxcbiAgICAgIHsgbGFiZWw6ICdDb3Vyc2UgRHVyYXRpb24nLCB2YWx1ZTogJzUuNSB5ZWFycyAoUHJlLU1lZCBCUyArIDQtWWVhciBNRCBpbmNsdWRpbmcgMTIgbW9udGhzIGNsaW5pY2FsIGNsZXJrc2hpcCknIH0sXG4gICAgICB7IGxhYmVsOiAnUmVzaWRlbmN5IER1cmF0aW9uJywgdmFsdWU6ICcxIHllYXIgY29tcHVsc29yeSByb3RhdG9yeSBjbGluaWNhbCBjbGVya3NoaXAnIH0sXG4gICAgICB7IGxhYmVsOiAnQWNhZGVtaWMgUmVxdWlyZW1lbnRzJywgdmFsdWU6ICcxMCsyIHdpdGggbWluaW11bSA1MCUgaW4gUGh5c2ljcywgQ2hlbWlzdHJ5LCBCaW9sb2d5ICsgUXVhbGlmaWVkIE5FRVQgc2NvcmUnIH0sXG4gICAgICB7IGxhYmVsOiAnUmVjb2duaXRpb24nLCB2YWx1ZTogJ05NQyB8IFdITyB8IEVDRk1HIHwgVVNNTEUgfCBGQUlNRVIgfCBXRk1FJyB9LFxuICAgICAgeyBsYWJlbDogJ0VudHJhbmNlIFRlc3QgUmVxdWlyZWQnLCB2YWx1ZTogJ05FRVQgVUcgUXVhbGlmaWVkIChOTUFUIGV4YW0gY29uZHVjdGVkIGR1cmluZyBwcmUtbWVkKScgfSxcbiAgICAgIHsgbGFiZWw6ICdUb3AgVW5pdmVyc2l0aWVzJywgdmFsdWU6ICdEYXZhbyBNZWRpY2FsIFNjaG9vbCBGb3VuZGF0aW9uIChETVNGKSwgVW5pdmVyc2l0eSBvZiBQZXJwZXR1YWwgSGVscCBTeXN0ZW0gREFMVEEsIFVWIEd1bGxhcyBDb2xsZWdlIG9mIE1lZGljaW5lLCBPdXIgTGFkeSBvZiBGYXRpbWEgVW5pdmVyc2l0eScgfSxcbiAgICAgIHsgbGFiZWw6ICdBdmVyYWdlIFR1aXRpb24gRmVlJywgdmFsdWU6ICdJTlIgMTYgTGFraHMgdG8gMjggTGFraHMgKENvbXBsZXRlIEJTLU1EIENvdXJzZSknIH0sXG4gICAgICB7IGxhYmVsOiAnQXZlcmFnZSBBbm51YWwgTGl2aW5nIENvc3QnLCB2YWx1ZTogJ0lOUiAxLjUgTGFraHMgdG8gMi4yIExha2hzIHBlciB5ZWFyIChJbmRpYW4gaG9zdGVscyBhdmFpbGFibGUpJyB9LFxuICAgICAgeyBsYWJlbDogJ1RyYXZlbCBEaXN0YW5jZScsIHZhbHVlOiAnNCw4MDAga2lsb21ldHJlcyAofjYgdG8gNyBob3VycyBmbGlnaHQgZHVyYXRpb24pJyB9LFxuICAgIF0sXG4gICAgZmFxczogY29tbW9uRmFxcyxcbiAgfSxcbl1cblxuLy8gQWxsIE1lZGljYWwgQ29sbGVnZXMgY29tYmluZWRcbmV4cG9ydCBjb25zdCBtZWRpY2FsQ29sbGVnZXMgPSBbXG4gIC4uLnRhbWlsbmFkdUNvbGxlZ2VzLFxuICAuLi5wdWR1Y2hlcnJ5Q29sbGVnZXMsXG4gIC4uLmthcm5hdGFrYUNvbGxlZ2VzLFxuICAuLi5hYnJvYWRDb2xsZWdlcyxcbl1cblxuLy8gQWxsIGNvbGxlZ2VzIGNvbWJpbmVkXG5leHBvcnQgY29uc3QgY29sbGVnZXMgPSBbXG4gIC4uLm1lZGljYWxDb2xsZWdlcyxcbiAgLi4uZW5naW5lZXJpbmdDb2xsZWdlcyxcbl1cblxuZXhwb3J0IGNvbnN0IGNvbGxlZ2VzQnlSZWdpb24gPSB7XG4gIFRhbWlsbmFkdTogdGFtaWxuYWR1Q29sbGVnZXMsXG4gIFB1ZHVjaGVycnk6IHB1ZHVjaGVycnlDb2xsZWdlcyxcbiAgS2FybmF0YWthOiBrYXJuYXRha2FDb2xsZWdlcyxcbiAgQWJyb2FkOiBhYnJvYWRDb2xsZWdlcyxcbiAgRW5naW5lZXJpbmc6IGVuZ2luZWVyaW5nQ29sbGVnZXMsXG59XG5cbi8vIE1lZGljYWwgc3ViLW5hdmlnYXRpb24gdGFicyAoVGFtaWwgTmFkdSwgUHVkdWNoZXJyeSwgS2FybmF0YWthLCBBYnJvYWQpXG5leHBvcnQgY29uc3QgbWVkaWNhbFJlZ2lvblRhYnMgPSBbXG4gIHsga2V5OiAnVGFtaWxuYWR1JywgbGFiZWw6ICdUYW1pbCBOYWR1JywgY291bnQ6IHRhbWlsbmFkdUNvbGxlZ2VzLmxlbmd0aCwgZGVzY3JpcHRpb246ICdUb3AgTWVkaWNhbCAmIEhlYWx0aGNhcmUgQ2FtcHVzZXMgaW4gVGFtaWwgTmFkdScgfSxcbiAgeyBrZXk6ICdQdWR1Y2hlcnJ5JywgbGFiZWw6ICdQdWR1Y2hlcnJ5JywgY291bnQ6IHB1ZHVjaGVycnlDb2xsZWdlcy5sZW5ndGgsIGRlc2NyaXB0aW9uOiAnUHJlbWllciBNZWRpY2FsIEluc3RpdHV0aW9ucyBpbiBVbmlvbiBUZXJyaXRvcnkgb2YgUHVkdWNoZXJyeScgfSxcbiAgeyBrZXk6ICdLYXJuYXRha2EnLCBsYWJlbDogJ0thcm5hdGFrYScsIGNvdW50OiBrYXJuYXRha2FDb2xsZWdlcy5sZW5ndGgsIGRlc2NyaXB0aW9uOiAnUmVwdXRlZCBNZWRpY2FsIFVuaXZlcnNpdGllcyAmIENvbGxlZ2VzIGluIEthcm5hdGFrYScgfSxcbiAgeyBrZXk6ICdBYnJvYWQnLCBsYWJlbDogJ0Ficm9hZCAoTUJCUyknLCBjb3VudDogYWJyb2FkQ29sbGVnZXMubGVuZ3RoLCBkZXNjcmlwdGlvbjogJ05NQyAmIFdITyBSZWNvZ25pemVkIE1lZGljYWwgVW5pdmVyc2l0aWVzIFdvcmxkd2lkZScgfSxcbl1cblxuLy8gUHJpbWFyeSBzdHJlYW0vY2F0ZWdvcnkgbmF2aWdhdGlvbiAoTWVkaWNhbCB2cyBFbmdpbmVlcmluZylcbmV4cG9ydCBjb25zdCBzdHJlYW1UYWJzID0gW1xuICB7IGtleTogJ21lZGljYWwnLCBsYWJlbDogJ01lZGljYWwgQ29sbGVnZXMnLCBjb3VudDogbWVkaWNhbENvbGxlZ2VzLmxlbmd0aCwgZGVzY3JpcHRpb246ICdMZWFkaW5nIE1lZGljYWwgJiBIZWFsdGhjYXJlIENvbGxlZ2VzIGFjcm9zcyBUTiwgUFksIEtBICYgQWJyb2FkJyB9LFxuICB7IGtleTogJ2VuZ2luZWVyaW5nJywgbGFiZWw6ICdFbmdpbmVlcmluZyBDb2xsZWdlcycsIGNvdW50OiBlbmdpbmVlcmluZ0NvbGxlZ2VzLmxlbmd0aCwgZGVzY3JpcHRpb246ICdQcmVtaWVyIEVuZ2luZWVyaW5nICYgVGVjaG5vbG9neSBDb2xsZWdlcyAmIFVuaXZlcnNpdGllcycgfSxcbl1cblxuZXhwb3J0IGNvbnN0IHJlZ2lvblRhYnMgPSBbXG4gIC4uLm1lZGljYWxSZWdpb25UYWJzLFxuICB7IGtleTogJ0VuZ2luZWVyaW5nJywgbGFiZWw6ICdFbmdpbmVlcmluZycsIGNvdW50OiBlbmdpbmVlcmluZ0NvbGxlZ2VzLmxlbmd0aCwgZGVzY3JpcHRpb246ICdQcmVtaWVyIEVuZ2luZWVyaW5nICYgVGVjaG5vbG9neSBDb2xsZWdlcyAmIFVuaXZlcnNpdGllcycgfSxcbl1cblxuZXhwb3J0IGNvbnN0IGNvbGxlZ2VGaWx0ZXJPcHRpb25zID0ge1xuICBjaXRpZXM6IFsuLi5uZXcgU2V0KGNvbGxlZ2VzLm1hcCgoYykgPT4gYy5jaXR5KSldLFxuICBzdGF0ZXM6IFsnVGFtaWwgTmFkdScsICdQdWR1Y2hlcnJ5JywgJ0thcm5hdGFrYScsICdFbmdpbmVlcmluZycsICdBYnJvYWQnXSxcbiAgdHlwZXM6IFsuLi5uZXcgU2V0KGNvbGxlZ2VzLm1hcCgoYykgPT4gYy50eXBlKSldLFxuICBhY2NyZWRpdGF0aW9uczogWy4uLm5ldyBTZXQoY29sbGVnZXMubWFwKChjKSA9PiBjLmFjY3JlZGl0YXRpb24pKV0sXG4gIGNhdGVnb3JpZXM6IFsuLi5uZXcgU2V0KGNvbGxlZ2VzLmZsYXRNYXAoKGMpID0+IGMuY2F0ZWdvcmllcykpXSxcbn1cbiJdfQ==

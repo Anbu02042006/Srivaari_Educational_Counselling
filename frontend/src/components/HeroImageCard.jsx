@@ -1,18 +1,8 @@
 import { useState, useEffect } from 'react'
-import { createPortal } from 'react-dom'
-import { Menu, X, Home, Compass, Image, Info, PhoneCall, Building } from 'lucide-react'
-import { Link, NavLink } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
 import { scrollToContact } from '../utils/scrollToContact'
-import Logo from './Logo'
-
-const navLinks = [
-  { to: '/', label: 'Home', icon: Home, end: true },
-  { to: '/colleges', label: 'Colleges', icon: Building },
-  { to: '/services', label: 'Services', icon: Compass },
-  { to: '/gallery', label: 'Gallery', icon: Image },
-  { to: '/about', label: 'About Us', icon: Info },
-  { to: '/', label: 'Contact', icon: PhoneCall, isContact: true },
-]
+import MobileDrawer from './MobileDrawer'
+import SriVaariEmblem from './SriVaariEmblem'
 
 function HeroImageCard({ onContactClick, onEnquire }) {
   const [isNavOpen, setIsNavOpen] = useState(false)
@@ -78,12 +68,12 @@ function HeroImageCard({ onContactClick, onEnquire }) {
 
   return (
     <div className="hero-image-card">
-      {/* SVG ClipPaths: Mobile and Extended Desktop */}
+      {/* SVG ClipPaths: Circular Fitted Notches for Mobile and Desktop */}
       <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
         <defs>
-          {/* Mobile ClipPath (Proportionally calibrated for all mobile screens from 320px to 480px) */}
+          {/* Mobile ClipPath (Clean organic corners with bottom-right Contact Us notch) */}
           <clipPath id="hero-organic-clip-mobile" clipPathUnits="objectBoundingBox">
-            <path d="M 0.22,0
+            <path d="M 0.08,0
                      L 0.90,0
                      C 0.96,0 1,0.04 1,0.10
                      L 1,0.835
@@ -94,18 +84,14 @@ function HeroImageCard({ onContactClick, onEnquire }) {
                      C 0.65,0.982 0.63,1 0.59,1
                      L 0.10,1
                      C 0.04,1 0,0.96 0,0.90
-                     L 0,0.20
-                     C 0,0.165 0.03,0.155 0.07,0.155
-                     L 0.15,0.155
-                     C 0.19,0.155 0.205,0.115 0.205,0.075
-                     L 0.205,0.045
-                     C 0.205,0.01 0.21,0 0.22,0
+                     L 0,0.08
+                     C 0,0.03 0.03,0 0.08,0
                      Z" />
           </clipPath>
 
-          {/* Desktop ClipPath (Expanded image area tightly hugging Contact Us button) */}
+          {/* Desktop ClipPath (Clean organic corners with bottom-right Contact Us notch) */}
           <clipPath id="hero-organic-clip-desktop" clipPathUnits="objectBoundingBox">
-            <path d="M 0.16,0
+            <path d="M 0.08,0
                      L 0.92,0
                      C 0.97,0 1,0.03 1,0.08
                      L 1,0.885
@@ -116,24 +102,16 @@ function HeroImageCard({ onContactClick, onEnquire }) {
                      C 0.72,0.99 0.70,1 0.66,1
                      L 0.08,1
                      C 0.03,1 0,0.97 0,0.92
-                     L 0,0.15
-                     C 0,0.12 0.02,0.105 0.05,0.105
-                     L 0.12,0.105
-                     C 0.15,0.105 0.16,0.08 0.16,0.05
-                     L 0.16,0.03
-                     C 0.16,0.01 0.16,0 0.16,0
+                     L 0,0.08
+                     C 0,0.03 0.03,0 0.08,0
                      Z" />
           </clipPath>
         </defs>
       </svg>
 
-      {/* Top-Left Notch (Logo) */}
+      {/* Top-Left Notch (Enlarged Circular Emblem Seal with Center Logo) */}
       <div className="hero-image-card__notch hero-image-card__notch--tl">
-        <img
-          src="/logo.png"
-          alt="Sri Vaari Logo"
-          className="hero-image-card__logo"
-        />
+        <SriVaariEmblem className="hero-image-card__logo--emblem" />
       </div>
 
       {/* Top-Right Hamburger Menu Button (Inside Hero Card - Mobile Only) */}
@@ -177,75 +155,8 @@ function HeroImageCard({ onContactClick, onEnquire }) {
         </div>
       </div>
 
-      {/* Dedicated Mobile Navigation Slide-Over Card / Modal rendered via Portal to document.body */}
-      {typeof document !== 'undefined' && createPortal(
-        <>
-          {isNavOpen && (
-            <div
-              className="mobile-drawer-backdrop"
-              onClick={() => setIsNavOpen(false)}
-              aria-hidden="true"
-            />
-          )}
-
-          <div
-            className={`mobile-drawer ${isNavOpen ? 'mobile-drawer--open' : ''}`}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Mobile navigation menu"
-          >
-            <div className="mobile-drawer__content">
-              <div className="mobile-drawer__header">
-                <Logo onNavigate={() => setIsNavOpen(false)} />
-                <button
-                  type="button"
-                  className="mobile-drawer__close-btn"
-                  onClick={() => setIsNavOpen(false)}
-                  aria-label="Close menu"
-                >
-                  <X size={18} aria-hidden="true" />
-                </button>
-              </div>
-
-              <nav className="mobile-drawer__nav" aria-label="Mobile menu links">
-                {navLinks.map(({ to, label, end, icon: Icon, isContact }) => (
-                  <NavLink
-                    key={label}
-                    to={to}
-                    end={end}
-                    onClick={(e) => {
-                      setIsNavOpen(false)
-                      if (isContact) {
-                        scrollToContact(e)
-                      }
-                    }}
-                    className={({ isActive }) =>
-                      `mobile-drawer__link ${isActive && !isContact ? 'mobile-drawer__link--active' : ''}`.trim()
-                    }
-                  >
-                    <Icon size={18} aria-hidden="true" style={{ marginRight: '10px', color: 'var(--color-primary-500)' }} />
-                    <span>{label}</span>
-                  </NavLink>
-                ))}
-              </nav>
-
-              <div className="mobile-drawer__footer">
-                <button
-                  type="button"
-                  className="button button--primary mobile-drawer__cta"
-                  onClick={handleEnquireClick}
-                >
-                  <span>Enquire Now</span>
-                </button>
-                <p className="mobile-drawer__helpline">
-                  Helpline: <strong>+91 94432 77764</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-        </>,
-        document.body
-      )}
+      {/* Dedicated Mobile Navigation Slide-Over Drawer with newly implemented nav buttons */}
+      <MobileDrawer isOpen={isNavOpen} onClose={() => setIsNavOpen(false)} />
     </div>
   )
 }

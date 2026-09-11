@@ -1,8 +1,6 @@
 import {
-  ArrowRight,
   Award,
   BookOpen,
-  Building2,
   CheckCircle2,
   Clock3,
   GraduationCap,
@@ -11,16 +9,14 @@ import {
   MapPin,
   Phone,
   ShieldCheck,
-  Sparkles,
-  UserCheck,
   Users,
 } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import BenefitSlider from '../components/BenefitSlider'
 import HeroImageCard from '../components/HeroImageCard'
 import EnquiryForm from '../components/EnquiryForm'
-import EnquiryModal from '../components/EnquiryModal'
+import { useEnquiry } from '../context/EnquiryContext'
 import GallerySection from '../components/GallerySection'
 import SectionHeading from '../components/SectionHeading'
 import StatCounter from '../components/StatCounter'
@@ -37,174 +33,163 @@ const statsData = [
 ]
 
 function HomePage() {
-  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false)
+  const { openEnquiry } = useEnquiry()
   const location = useLocation()
 
   useEffect(() => {
-    // If navigated from another page via scrollToContact
+    const doScrollToContact = () => {
+      const el = document.getElementById('contact') || document.getElementById('enquire')
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+
     try {
       const shouldScroll = sessionStorage.getItem('scroll_to_contact')
-      if (shouldScroll) {
+      if (shouldScroll || window.location.hash === '#contact' || window.location.hash === '#enquire') {
         sessionStorage.removeItem('scroll_to_contact')
-        const el = document.getElementById('contact') || document.getElementById('enquire')
-        if (el) {
-          setTimeout(() => {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-          }, 150)
-        }
+        setTimeout(doScrollToContact, 80)
+        setTimeout(doScrollToContact, 350)
       }
     } catch {
       // ignore
     }
 
-    // Clear any hash if present so page refreshes stay at the top
-    if (window.location.hash) {
+    if (window.location.hash && window.location.hash !== '#contact' && window.location.hash !== '#enquire') {
       window.history.replaceState(null, '', window.location.pathname)
     }
   }, [location])
 
   return (
     <main className="home-page">
-      {/* 1. TOP HERO SECTION (Split on Desktop, Compact on Mobile) */}
-      <section className="home-hero-split">
-        <div className="container home-hero-split__grid">
-          {/* Left: Hero Image Card */}
-          <div className="home-hero-split__media">
-            <HeroImageCard onEnquire={() => setIsEnquiryOpen(true)} />
-          </div>
-
-          {/* Right: Desktop Hero Content (Only shown on Desktop view) */}
-          <div className="home-hero-split__content desktop-only-hero">
-            <span className="eyebrow home-hero-split__eyebrow">
-              <Sparkles size={16} aria-hidden="true" className="home-hero-split__eyebrow-icon" />
-              PERSONAL, CARING EDUCATION COUNSELLING
-            </span>
-
-            <h1 className="home-hero-split__title">
-              Find Your Ideal College. <br />
-              <span className="home-hero-split__title-accent">
-                Step Confidently Into{' '}
-                <span className="home-hero-split__highlight">
-                  Tomorrow
-                  <svg
-                    className="home-hero-split__underline-svg"
-                    viewBox="0 0 240 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M3 14C50 4 150 2 237 12C180 18 80 18 20 16"
-                      stroke="currentColor"
-                      strokeWidth="3.5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
-              </span>
-            </h1>
-
-            <p className="home-hero-split__lead">
-              At Sri Vaari, we help students discover the right colleges and career paths that match their interests and ambitions. From expert guidance to end-to-end admission support, we are with you at every step of your academic journey.
-            </p>
-
-            {/* Core Value Highlights (Clean Compact Text Content) */}
-            <div className="home-hero-split__highlights">
-              <div className="home-hero-split__highlight-item">
-                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
-                <span><strong>Top Medical & Engineering Colleges:</strong> Guidance for premier NMC & AICTE recognized institutions across Tamil Nadu, Puducherry, Karnataka & Abroad.</span>
+      {/* 1. MERGED HERO & WHY CHOOSE SECTION (Unified Card on Desktop & Mobile) */}
+      <section className="home-hero-merged-section" aria-label="Welcome and Why Choose Sri Vaari Educational Groups">
+        <div className="home-hero-merged-container">
+          <div className="home-hero-merged-card">
+            {/* Part 1: Top Welcome Split (Left: Hero Image Card, Right: Welcome Text) */}
+            <div className="home-hero-split__grid">
+              {/* Left: Hero Image Card */}
+              <div className="home-hero-split__media">
+                <HeroImageCard onEnquire={() => openEnquiry()} />
               </div>
-              <div className="home-hero-split__highlight-item">
-                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
-                <span><strong>Cut-off & Rank Mapping:</strong> Accurate marks-to-rank evaluation with category-wise seat matrix and cutoff analysis.</span>
-              </div>
-              <div className="home-hero-split__highlight-item">
-                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
-                <span><strong>Management & NRI Quota Support:</strong> Transparent fee structures and verified seat reservation guidance.</span>
-              </div>
-              <div className="home-hero-split__highlight-item">
-                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
-                <span><strong>End-to-End Admission Support:</strong> Dedicated 1-on-1 parent & student counselling from choice filling to campus reporting.</span>
-              </div>
-              <div className="home-hero-split__highlight-item">
-                <CheckCircle2 size={17} className="home-hero-split__highlight-icon" aria-hidden="true" />
-                <span><strong>Scholarship & Educational Aid:</strong> Assistance with institutional fee concessions and education loan documentation.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* 2. ABOUT SRI VAARI SECTION */}
-      <section className="hero">
-        <div className="container hero__grid">
-          <div className="hero__content">
-            <span className="eyebrow hero__eyebrow">
-              <Sparkles size={14} aria-hidden="true" />
-              About Sri Vaari
-            </span>
+              {/* Hero Content (Right on Desktop, Downside on Mobile) */}
+              <div className="home-hero-split__content">
+                <h1 className="home-hero-split__title-clean">
+                  WELCOME TO SRI VAARI EDUCATIONAL GROUPS
+                </h1>
 
-            <h2 className="hero__title">
-              Guiding Students Towards <br className="hero__title-br" />
-              <span>Better Futures</span>
-            </h2>
+                <div className="hero__check-paragraphs">
+                  <p className="hero__check-para-text">
+                    With over 27 years of experience, Sri Vaari Educational Groups has been a trusted guide for students aspiring to achieve academic excellence. Since our inception in 1997, we have proudly assisted more than 10,000 students in securing admissions to their dream colleges and top universities across the nation and abroad.
+                  </p>
 
-            <p className="hero__lead">
-              Confused about courses, cut-offs, or college options? We sit down with you and your parents to help you choose the right academic path with complete clarity and trusted advice.
-            </p>
+                  <p className="hero__check-para-text">
+                    Our success is built on the foundation of an experienced and dedicated team passionate about transforming student aspirations into tangible achievements. By offering personalized career counselling, comprehensive aptitude assessments, and individual career roadmaps, we have established ourselves as a beacon of guidance for students seeking a brighter future.
+                  </p>
 
-            <div className="hero__features">
-              <div className="hero__feature-item">
-                <CheckCircle2 size={16} className="hero__feature-icon" aria-hidden="true" />
-                <span><strong>Personalized Academic Roadmap:</strong> Tailored college shortlists matching your rank, budget, and career ambitions.</span>
-              </div>
-              <div className="hero__feature-item">
-                <CheckCircle2 size={16} className="hero__feature-icon" aria-hidden="true" />
-                <span><strong>Verified Seat Matrix & Fee Clarity:</strong> Transparent cut-off analysis, scholarship assistance, and genuine guidance.</span>
-              </div>
-              <div className="hero__feature-item">
-                <CheckCircle2 size={16} className="hero__feature-icon" aria-hidden="true" />
-                <span><strong>Direct Choice Filling Guidance:</strong> Step-by-step assistance through state & national counselling rounds.</span>
+                  <p className="hero__check-para-text">
+                    From identifying the ideal career pathway in Medical, Engineering, Allied Health Sciences, or Management to navigating entrance cut-offs, state quota counselling, and transparent institutional admissions, our advisors provide end-to-end guidance tailored to each student's goals.
+                  </p>
+
+                  <p className="hero__check-para-text">
+                    Join the thousands of successful doctors, engineers, and professionals who have trusted Sri Vaari Educational Groups to turn their ambitions into reality. Let us guide you on your journey toward enduring academic and career success.
+                  </p>
+                </div>
+
+                <div className="hero__note">
+                  <CheckCircle2 size={16} aria-hidden="true" />
+                  <span>Your initial counselling consultation is completely free of charge.</span>
+                </div>
               </div>
             </div>
 
-            <div className="hero__actions">
-              <Link className="button button--primary hero__btn-primary" to="/colleges">
-                <span>Explore Colleges</span>
-              </Link>
-              <Link
-                className="button button--secondary hero__btn-secondary"
-                to="/about"
-              >
-                <span>About Us</span>
-              </Link>
-            </div>
+            {/* Part 2: Why Choose Us (Left: Text & 4 Pillars, Right: Visual Image) */}
+            <div className="why-choose-banner__card-body">
+              {/* Left Side: Text & Features */}
+              <div className="why-choose-banner__text">
+                <h2 className="why-choose-banner__title">
+                  WHY CHOOSE SRI VAARI EDUCATIONAL GROUPS?
+                </h2>
 
-            <div className="hero__note">
-              <CheckCircle2 size={16} aria-hidden="true" />
-              <span>Your initial counselling consultation is completely free of charge.</span>
-            </div>
-          </div>
+                <p className="why-choose-banner__desc">
+                  Choosing Sri Vaari Educational Groups means partnering with dedicated educational advisors committed to your future. With over <strong>27 years of expertise</strong> and direct relationships with premier institutions, we transform confusing cut-offs and stressful admission procedures into a clear, confident path to your dream college.
+                </p>
 
-          <div className="hero__visual">
-            <div className="hero__image-wrapper">
-              <img
-                src="/images/indian-admissions-guidance.jpg"
-                alt="Indian students and counsellor discussing academic roadmap"
-                loading="eager"
-              />
-            </div>
-            <div className="hero__badge">
-              <div className="hero__badge-icon">
-                <GraduationCap size={22} aria-hidden="true" />
+                {/* 4 Core Pillars */}
+                <div className="why-choose-banner__grid">
+                  <div className="why-choose-banner__feature">
+                    <div className="why-choose-banner__feature-icon">
+                      <Users size={18} aria-hidden="true" />
+                    </div>
+                    <div className="why-choose-banner__feature-content">
+                      <h3 className="why-choose-banner__feature-title">Personalized 1-on-1 Mentorship</h3>
+                      <p className="why-choose-banner__feature-desc">
+                        Tailored course &amp; college shortlisting matching your 12th/UG cut-offs, aptitude, and budget.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="why-choose-banner__feature">
+                    <div className="why-choose-banner__feature-icon">
+                      <Award size={18} aria-hidden="true" />
+                    </div>
+                    <div className="why-choose-banner__feature-content">
+                      <h3 className="why-choose-banner__feature-title">100+ Verified Top Institutions</h3>
+                      <p className="why-choose-banner__feature-desc">
+                        Direct tie-ups with leading NAAC A++ &amp; NBA accredited Engineering, Medical &amp; Management colleges.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="why-choose-banner__feature">
+                    <div className="why-choose-banner__feature-icon">
+                      <CheckCircle2 size={18} aria-hidden="true" />
+                    </div>
+                    <div className="why-choose-banner__feature-content">
+                      <h3 className="why-choose-banner__feature-title">End-to-End Admission Support</h3>
+                      <p className="why-choose-banner__feature-desc">
+                        Complete guidance on TNEA/NEET counselling, application paperwork, quota seats, and enrollment.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="why-choose-banner__feature">
+                    <div className="why-choose-banner__feature-icon">
+                      <ShieldCheck size={18} aria-hidden="true" />
+                    </div>
+                    <div className="why-choose-banner__feature-content">
+                      <h3 className="why-choose-banner__feature-title">100% Ethical &amp; Transparent</h3>
+                      <p className="why-choose-banner__feature-desc">
+                        Zero hidden fees, transparent fee structures, and dedicated scholarship &amp; education loan support.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="hero__badge-text">
-                <strong>10,000+ Students</strong>
-                <span>Guided into top institutions</span>
+
+              {/* Right Side: Visual Image with Badges */}
+              <div className="why-choose-banner__visual hero__visual">
+                <div className="hero__image-wrapper">
+                  <img
+                    src="/images/indian-admissions-guidance.jpg"
+                    alt="Indian students and counsellor discussing academic roadmap"
+                    loading="eager"
+                  />
+                </div>
+
+                <div className="hero__badge">
+                  <div className="hero__badge-icon">
+                    <GraduationCap size={22} aria-hidden="true" />
+                  </div>
+                  <div className="hero__badge-text">
+                    <strong>27+ Years &amp; 10,000+ Students</strong>
+                    <span>Securing admissions across the nation</span>
+                  </div>
+                </div>
+                <div className="hero__accent" aria-hidden="true" />
               </div>
             </div>
-            <div className="hero__accent" aria-hidden="true" />
           </div>
         </div>
       </section>
@@ -224,11 +209,12 @@ function HomePage() {
         </div>
       </section>
 
-      {/* 4. OUR SERVICES / WHY CHOOSE US (Slideshow) */}
+
+      {/* 4b. BENEFITS & CORE STRENGTHS SLIDER */}
       <section className="home-section home-section--tint">
-        <div className="container">
+        <div className="container home-benefit-container">
           <SectionHeading
-            eyebrow="Why Choose Sri Vaari"
+            eyebrow="Key Advantages"
             title="Guidance Built with Care & Integrity."
             description="We don't believe in one-size-fits-all advice. We tailor every recommendation to your individual strengths, career ambitions, and family budget."
           />
@@ -238,7 +224,9 @@ function HomePage() {
       </section>
 
       {/* 5. PHOTO GALLERY (Layered PhotoStack Section) */}
-      <GallerySection showViewAll={true} />
+      <div id="gallery">
+        <GallerySection />
+      </div>
 
       {/* 6. STUDENT TESTIMONIALS */}
       <section className="home-section home-section--tint">
@@ -337,12 +325,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* GLOBAL ENQUIRY MODAL (For Header/Hero CTAs) */}
-      <EnquiryModal
-        isOpen={isEnquiryOpen}
-        onClose={() => setIsEnquiryOpen(false)}
-      />
     </main>
   )
 }

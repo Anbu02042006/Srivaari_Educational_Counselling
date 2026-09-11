@@ -1,6 +1,4 @@
-import { ArrowRight } from 'lucide-react'
 import { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import LightboxModal from './LightboxModal'
 
 const galleryImages = [
@@ -243,14 +241,6 @@ function GallerySection({ className = '', showViewAll = false, showHeading = tru
             />
           ))}
         </div>
-
-        {showViewAll && (
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-            <Link to="/gallery" className="button button--primary">
-              <span>View Full Gallery</span>
-            </Link>
-          </div>
-        )}
       </div>
 
       {/* Lightbox Dialog */}

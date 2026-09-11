@@ -1,108 +1,39 @@
-import { useRef, useState } from 'react'
 import {
+  Award,
+  BookOpen,
   CheckCircle2,
-  Compass,
   GraduationCap,
   HeartHandshake,
-  Lightbulb,
   ShieldCheck,
-  Target,
   Users,
 } from 'lucide-react'
-import SectionHeading from '../components/SectionHeading'
-import ServiceCard from '../components/ServiceCard'
 import StatCounter from '../components/StatCounter'
 
-const values = [
-  {
-    icon: Compass,
-    title: 'Clarity Over Jargon',
-    text: 'We explain cut-offs, seat matrices, and college fees in simple language that students and parents easily understand.',
-  },
-  {
-    icon: HeartHandshake,
-    title: 'People Before Profits',
-    text: 'Every student’s career is guided with the same care and responsibility we would give to our own family.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Unfiltered Honesty',
-    text: 'If a course or college does not match your career goals or budget, we tell you openly and show you better options.',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Step-by-Step Handholding',
-    text: 'We stay right beside you through counselling dates, document verification, and final campus admission.',
-  },
-]
-
 const stats = [
-  { value: '10K+', label: 'Happy Students Guided', icon: GraduationCap },
-  { value: '100+', label: 'Verified Partner Campuses', icon: Target },
-  { value: '8+', label: 'Academic Streams', icon: Compass },
-  { value: '98%', label: 'Parent Satisfaction Rate', icon: HeartHandshake },
-]
-
-const journey = [
-  {
-    year: '2021',
-    title: 'Sri Vaari is Born',
-    text: 'Started with a passionate group of mentors in Tamil Nadu to protect students from misleading admission brokers.',
-  },
-  {
-    year: '2023',
-    title: 'Expanding Healthcare & Tech',
-    text: 'Broadened trusted counselling networks across Engineering, Medical, Allied Health, and Creative design institutions.',
-  },
-  {
-    year: 'Today',
-    title: '10,000+ Dreams Nurtured',
-    text: 'Proud to have helped thousands of students from across Tamil Nadu and South India enter top accredited colleges.',
-  },
+  { value: '500+', label: 'Courses & Programs', icon: BookOpen },
+  { value: '100+', label: 'Partner Institutions', icon: Award },
+  { value: '10K+', label: 'Students Guided', icon: Users },
+  { value: '95%', label: 'Student Satisfaction', icon: HeartHandshake },
 ]
 
 function AboutPage() {
-  const [mobileValueIndex, setMobileValueIndex] = useState(0)
-  const valuesViewportRef = useRef(null)
-
-  const handleValueScroll = () => {
-    if (!valuesViewportRef.current) return
-    const { scrollLeft, offsetWidth } = valuesViewportRef.current
-    if (offsetWidth > 0) {
-      const newIndex = Math.round(scrollLeft / offsetWidth)
-      if (newIndex !== mobileValueIndex && newIndex >= 0 && newIndex < values.length) {
-        setMobileValueIndex(newIndex)
-      }
-    }
-  }
-
-  const scrollToValueIndex = (index) => {
-    if (valuesViewportRef.current) {
-      const width = valuesViewportRef.current.offsetWidth
-      valuesViewportRef.current.scrollTo({
-        left: index * width,
-        behavior: 'smooth',
-      })
-    }
-    setMobileValueIndex(index)
-  }
 
   return (
     <main className="about-page">
-      {/* 1. HERO */}
+      {/* 1. HERO HEADER */}
       <header className="page-hero about-hero">
         <div className="container about-hero__container">
           <div className="about-hero__eyebrow">
             <span className="about-hero__eyebrow-line" aria-hidden="true" />
-            <span>ABOUT SRI VAARI</span>
+            <span>DISCOVER YOUR TALENT</span>
           </div>
 
           <h1 className="page-hero__title about-hero__title">
-            Education Guidance With <span className="text-highlight">Genuine Care & Empathy.</span>
+            Discover Your Path With <span className="text-highlight">Expert Educational Counselling:</span>
           </h1>
 
           <p className="page-hero__lead about-hero__lead">
-            Empower students and parents with honest college recommendations, verified placement data, transparent fees, and compassionate lifelong academic mentorship.
+            Get one-on-one guidance to choose the right course, college, and country. Let’s turn your academic dreams into a clear, achievable plan.
           </p>
 
           <div className="about-hero__features">
@@ -110,7 +41,7 @@ function AboutPage() {
               <div className="about-hero__feature-icon">
                 <GraduationCap size={16} aria-hidden="true" />
               </div>
-              <span className="about-hero__feature-text">Verified<br />Information</span>
+              <span className="about-hero__feature-text">10,000+<br />Students Guided</span>
             </div>
 
             <div className="about-hero__feature-divider" aria-hidden="true" />
@@ -119,7 +50,7 @@ function AboutPage() {
               <div className="about-hero__feature-icon">
                 <ShieldCheck size={16} aria-hidden="true" />
               </div>
-              <span className="about-hero__feature-text">Honest<br />Guidance</span>
+              <span className="about-hero__feature-text">100+ Partner<br />Institutions</span>
             </div>
 
             <div className="about-hero__feature-divider" aria-hidden="true" />
@@ -128,211 +59,184 @@ function AboutPage() {
               <div className="about-hero__feature-icon">
                 <Users size={16} aria-hidden="true" />
               </div>
-              <span className="about-hero__feature-text">Student-First<br />Approach</span>
+              <span className="about-hero__feature-text">1-on-1 Dedicated<br />Mentorship</span>
             </div>
           </div>
         </div>
       </header>
 
-      {/* 2. OUR STORY (Editorial Split) */}
-      <section className="home-section">
-        <div className="container about-story-grid">
-          <div className="about-story-media">
-            <img
-              src="/images/indian-counselling-story.jpg"
-              alt="Indian education counsellor guiding student and parent with honesty"
-              loading="lazy"
-            />
-            <div className="about-story-badge">
-              <GraduationCap size={22} className="about-story-badge__icon" aria-hidden="true" />
-              <div>
-                <strong>Student-Centric Since 2021</strong>
-                <span>Empowering confident decisions</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="about-story-content">
-            <SectionHeading
-              eyebrow="Why We Started"
-              title="No High Pressure. No Fake Rankings. Just Honest Help."
-              description="We have seen how stressful and confusing college admissions can be for families. We built Sri Vaari to be the trusted mentor parents and students can turn to with open hearts."
-            />
-
-            <p className="about-story-text">
-              We sit down with you, understand your academic marks and financial comfort, and guide you through real college environments, branch scopes, and career realities with complete transparency.
-            </p>
-
-            <div className="about-story-points">
-              <div className="about-story-point">
-                <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Honest insights on actual campus placements, faculty strength, and lab facilities.</span>
-              </div>
-              <div className="about-story-point">
-                <CheckCircle2 size={18} aria-hidden="true" />
-                <span>Zero sales bias — we recommend only what is genuinely best for your future.</span>
-              </div>
-              <div className="about-story-point">
-                <CheckCircle2 size={18} aria-hidden="true" />
-                <span>End-to-end handholding from cut-off calculation to final college admission.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. MISSION & VISION (Dual Bento Cards) */}
-      <section className="home-section home-section--tint">
+      {/* 2. OUR COUNSELLING SERVICES (Showcase Split Card) */}
+      <section className="about-services-showcase" aria-label="Our Counselling Services">
         <div className="container">
-          <SectionHeading
-            eyebrow="Our Promise"
-            title="Our Guiding Principles."
-            description="The core commitments that inspire our counselling team every single day."
-            align="center"
-          />
-
-          <div className="mission-vision-grid">
-            <div className="mission-card-primary">
-              <span className="eyebrow mission-card__eyebrow">Our Mission</span>
-              <h2 className="mission-card__heading">
-                Make quality higher education accessible, transparent, and stress-free for every family.
-              </h2>
-              <p className="mission-card__desc">
-                We guide students towards accredited colleges and high-growth careers through dedicated, patient 1-on-1 mentorship.
-              </p>
-            </div>
-
-            <div className="vision-card-surface">
-              <span className="eyebrow vision-card__eyebrow">Our Vision</span>
-              <h2 className="vision-card__heading">
-                A world where every student finds a rewarding career path with dignity and clarity.
-              </h2>
-              <p className="vision-card__desc">
-                Building an ecosystem where no learner is misled or left behind due to a lack of genuine academic guidance.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. CORE VALUES (Desktop Grid | Mobile Slider) */}
-      <section className="home-section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="What Guides Us"
-            title="Values That Shape Every Conversation."
-            description="The four cornerstones of how we counsel, communicate, and support every family."
-          />
-
-          {/* Desktop Grid (Hidden on Mobile) - 4 Cards in Single Row */}
-          <div className="values-grid values-grid--desktop">
-            {values.map((val, index) => (
-              <ServiceCard
-                key={val.title}
-                title={val.title}
-                description={val.text}
-                icon={val.icon}
-                number={`0${index + 1}`}
-                actionLabel="Learn more"
-                to="/services"
+          <div className="about-services-banner">
+            {/* Left: Illustration */}
+            <div className="about-services-banner__visual">
+              <img
+                src="/images/career-direction-signpost.png"
+                alt="Career directions signpost pointing towards Arts, Health, Science, Technology, Business, and Engineering"
+                className="about-services-banner__img"
+                loading="eager"
               />
-            ))}
-          </div>
+            </div>
 
-          {/* Mobile Only: Smooth Hardware-Accelerated Swipe Slider */}
-          <div
-            className="benefit-slider benefit-slider--mobile"
-            role="region"
-            aria-label="Core values carousel"
-          >
-            <div
-              ref={valuesViewportRef}
-              className="benefit-slider__viewport"
-              onScroll={handleValueScroll}
-            >
-              <div className="benefit-slider__track">
-                {values.map((val, index) => (
-                  <div key={val.title} className="benefit-slider__slide">
-                    <ServiceCard
-                      title={val.title}
-                      description={val.text}
-                      icon={val.icon}
-                      number={`0${index + 1}`}
-                      actionLabel="Learn more"
-                      to="/services"
-                    />
+            {/* Right: Content */}
+            <div className="about-services-banner__content">
+              <h2 className="about-services-banner__title">Our Counselling Services</h2>
+              <p className="about-services-banner__lead">
+                Confused about what to study or where to start? Our certified counsellors help you understand your interests, strengths, and the best-fit academic options.
+              </p>
+
+              <ul className="about-services-banner__list">
+                <li className="about-services-banner__item">
+                  <div className="about-services-banner__item-icon">
+                    <CheckCircle2 size={20} aria-hidden="true" />
                   </div>
-                ))}
-              </div>
-            </div>
+                  <div className="about-services-banner__item-body">
+                    <strong>Career & Course Selection from 8th to 12th</strong>
+                    <p>We work with 100+ global institutions. Based on your academic profile and preferences, we match you with programs that suit your career ambitions.</p>
+                  </div>
+                </li>
 
-            {/* Mobile Centered Pagination Indicator Dots */}
-            <div className="benefit-slider__controls">
-              <div className="benefit-slider__dots" role="tablist" aria-label="Core values slides">
-                {values.map((val, index) => (
-                  <button
-                    key={val.title}
-                    type="button"
-                    role="tab"
-                    aria-selected={mobileValueIndex === index}
-                    aria-label={`Go to value ${index + 1} (${val.title})`}
-                    className={`benefit-slider__dot ${mobileValueIndex === index ? 'is-active' : ''}`}
-                    onClick={() => scrollToValueIndex(index)}
-                  />
-                ))}
-              </div>
+                <li className="about-services-banner__item">
+                  <div className="about-services-banner__item-icon">
+                    <CheckCircle2 size={20} aria-hidden="true" />
+                  </div>
+                  <div className="about-services-banner__item-body">
+                    <strong>Country & University Guidance</strong>
+                    <p>Explore top universities in countries like the USA, UK, Canada, Australia, Germany, and leading Indian universities. Get personalized advice on selecting the right course and destination.</p>
+                  </div>
+                </li>
+
+                <li className="about-services-banner__item">
+                  <div className="about-services-banner__item-icon">
+                    <CheckCircle2 size={20} aria-hidden="true" />
+                  </div>
+                  <div className="about-services-banner__item-body">
+                    <strong>Application Strategy</strong>
+                    <p>From writing compelling Statements of Purpose (SOPs) to organizing documents and meeting deadlines — we ensure your applications are strong and complete.</p>
+                  </div>
+                </li>
+
+                <li className="about-services-banner__item">
+                  <div className="about-services-banner__item-icon">
+                    <CheckCircle2 size={20} aria-hidden="true" />
+                  </div>
+                  <div className="about-services-banner__item-body">
+                    <strong>Scholarship & Advice</strong>
+                    <p>Don't let finances hold you back. Learn about scholarships, assistantships, and funding opportunities available for students.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. IMPACT / STATS */}
-      <section className="home-section home-section--tint">
+      {/* 3. DUAL COLUMNS: WHY CHOOSE US & WHAT WE PROVIDE */}
+      <section className="about-dual-columns-section" aria-label="Why Choose Us and What We Provide">
         <div className="container">
-          <SectionHeading
-            eyebrow="A Growing Impact"
-            title="Small Conversations, Meaningful Direction."
-            description="Milestones achieved together with students and education partners across the country."
-            align="center"
-          />
+          <div className="about-dual-grid">
+            {/* Column 1: Why You Have To Choose Us */}
+            <div className="about-dual-card">
+              <h3 className="about-dual-card__title">Why You Have To Choose Us</h3>
+              <ul className="about-checklist">
+                <li className="about-checklist__item">
+                  <span className="about-checklist__bullet" aria-hidden="true">•</span>
+                  <span><strong>5000+ Students</strong> Counselled Successfully</span>
+                </li>
+                <li className="about-checklist__item">
+                  <span className="about-checklist__bullet" aria-hidden="true">•</span>
+                  <span><strong>100+ Partner Institutions</strong> Worldwide</span>
+                </li>
+                <li className="about-checklist__item">
+                  <span className="about-checklist__bullet" aria-hidden="true">•</span>
+                  <span><strong>98% Application Success Rate</strong></span>
+                </li>
+                <li className="about-checklist__item">
+                  <span className="about-checklist__bullet" aria-hidden="true">•</span>
+                  <span><strong>1-on-1 Dedicated Counselling Sessions</strong></span>
+                </li>
+                <li className="about-checklist__item">
+                  <span className="about-checklist__bullet" aria-hidden="true">•</span>
+                  <span><strong>Free Initial Consultation</strong></span>
+                </li>
+              </ul>
+            </div>
 
-          <div className="about-stats-grid">
-            {stats.map((stat) => (
-              <StatCounter
-                key={stat.label}
-                value={stat.value}
-                label={stat.label}
-                icon={stat.icon}
-                className="stat-card--about"
-              />
-            ))}
+            {/* Column 2: What We Provide */}
+            <div className="about-dual-card">
+              <h3 className="about-dual-card__title">What We Provide</h3>
+              <ul className="about-checklist">
+                <li className="about-checklist__item">
+                  <span className="about-checklist__bullet" aria-hidden="true">•</span>
+                  <span><strong>One to One counselling session</strong></span>
+                </li>
+                <li className="about-checklist__item">
+                  <span className="about-checklist__bullet" aria-hidden="true">•</span>
+                  <span><strong>Group Counselling session</strong> in schools, institutes and tuition center</span>
+                </li>
+                <li className="about-checklist__item">
+                  <span className="about-checklist__bullet" aria-hidden="true">•</span>
+                  <span><strong>Expert talk</strong> (Personalised Education Counselling Tailored to Your Goals)</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 6. OUR JOURNEY TIMELINE */}
-      <section className="home-section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Our Journey"
-            title="Built One Helpful Step at a Time."
-            description="A quick look at how Sri Vaari has evolved to serve students better each year."
-            align="center"
-          />
-
-          <ol className="process-list">
-            {journey.map((step) => (
-              <li key={step.year} className="process-list__item">
-                <span className="process-list__number">{step.year}</span>
-                <div className="process-list__body">
-                  <h3 className="process-list__title">{step.title}</h3>
-                  <p className="process-list__text">{step.text}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+      {/* 4. KEY STATISTICS RIBBON */}
+      <section className="stats-section" aria-label="Key statistics">
+        <div className="container stats-grid">
+          {stats.map(({ value, label, icon: Icon }) => (
+            <StatCounter
+              key={label}
+              value={value}
+              label={label}
+              icon={Icon}
+              className="stat-card--ribbon"
+            />
+          ))}
         </div>
       </section>
+
+      {/* 5. PROCESS: OUR COUNSELLING SERVICES */}
+      <section className="about-process-section" aria-label="Our Counselling Process">
+        <div className="container">
+          <h2 className="about-process-section__title">OUR COUNSELLING SERVICES</h2>
+
+          <div className="about-process-grid">
+            <div className="about-process-card">
+              <h3 className="about-process-card__title">Tell Us About You</h3>
+              <p className="about-process-card__desc">
+                Simply fill out our quick online form or contact us directly to get started on your journey. Fill out our quick online form or give us a call.
+              </p>
+            </div>
+
+            <div className="about-process-card">
+              <h3 className="about-process-card__title">Free Counselling Session</h3>
+              <p className="about-process-card__desc">
+                Connect with our expert counsellors online or in person to explore your goals and interests.
+              </p>
+            </div>
+
+            <div className="about-process-card">
+              <h3 className="about-process-card__title">Personalized Guidance</h3>
+              <p className="about-process-card__desc">
+                Receive a tailored plan with the best courses, countries, and universities suited for you. Get a plan for courses.
+              </p>
+            </div>
+
+            <div className="about-process-card">
+              <h3 className="about-process-card__title">Application Support</h3>
+              <p className="about-process-card__desc">
+                We guide you through the entire application process, from start to finish, with full support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
   )
 }

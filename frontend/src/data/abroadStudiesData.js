@@ -1,0 +1,252 @@
+export const abroadStudiesList = [
+  {
+    slug: 'russia',
+    name: 'Russia',
+    category: 'Top Destinations',
+    courseTitle: 'MBBS in Russia',
+    bannerTitle: 'TOP MEDICAL UNIVERSITIES IN RUSSIA (MBBS / MD)',
+    flag: '/img/abroad/falgs/russia.png',
+    image: '/images/abroad/russia.jpg',
+    bannerImage: '/images/abroad/russia.jpg',
+    region: 'Europe & CIS',
+    landmark: "Red Square & Saint Basil's Cathedral, Moscow",
+    overview:
+      'Russia is one of the most popular places for students who want to get an international medical education with approximately 180,000 international students every year. Russian government medical universities are recognized worldwide which means students from all over the world choose Russia to build prestigious medical careers. Top universities offer subsidized tuition fees, state-of-the-art simulation laboratories, and extensive clinical hospital exposure in Moscow, Saint Petersburg, Kazan, Novosibirsk, and Kursk.',
+    quickFacts:
+      'The Russian Federation spans Eastern Europe and Northern Asia across eleven time zones. Russian government medical universities maintain an optimal 1:10 student-to-faculty ratio, subsidized state healthcare facilities, comfortable campus hostels with dedicated Indian mess facilities, and convenient direct flights connecting major Indian cities.',
+    particulars: [
+      { label: 'Course Name', value: 'MBBS in Russia' },
+      { label: 'Degree Equivalent', value: 'MD (Doctor of Medicine)' },
+      { label: 'Course Duration', value: '5.8 to 6 years' },
+      { label: 'Residency Duration', value: '1 to 3 years' },
+      {
+        label: 'Academic Requirements',
+        value: '10+2 with min 50% in Biology, Chemistry & Physics | NEET UG Qualified | English Language Proficiency',
+      },
+      { label: 'Recognition', value: 'NMC | WHO' },
+      { label: 'Entrance Test Required', value: 'NEET - Accepted (No IELTS or TOEFL required)' },
+      {
+        label: 'Top Universities',
+        value: 'Kazan Federal University, Bashkir State Medical University, Crimea Federal University, I.M. Sechenov First Moscow State Medical University',
+      },
+      { label: 'Average Tuition Fee', value: 'INR 18 Lakhs to 32 Lakhs' },
+      { label: 'Average Annual Salary', value: 'INR 25 Lakhs to 65 Lakhs' },
+      { label: 'Travel Distance', value: '4,300 kilometres' },
+    ],
+  },
+  {
+    slug: 'georgia',
+    name: 'Georgia',
+    category: 'Top Destinations',
+    courseTitle: 'MBBS in Georgia',
+    bannerTitle: 'TOP MEDICAL UNIVERSITIES IN GEORGIA (MBBS / MD)',
+    flag: '/img/abroad/falgs/georgia.png',
+    image: '/images/abroad/georgia.jpg',
+    bannerImage: '/images/abroad/georgia.jpg',
+    region: 'Europe',
+    landmark: 'Narikala Fortress & Old Town, Tbilisi',
+    overview:
+      'Georgia has emerged as a premier European medical education hub for Indian students, combining rigorous European clinical curricula with safe, modern living standards. Medical academies in Georgia follow the European Credit Transfer System (ECTS) and are aligned with USMLE and WFME standards. With a peaceful atmosphere, warm hospitality, and 100% English-medium instruction, Georgia attracts thousands of ambitious medical students every year.',
+    quickFacts:
+      'Georgia is situated at the intersection of Eastern Europe and Western Asia, bordered by the Black Sea. Ranked among the top 10 safest nations in the world for international scholars, popular university hubs like Tbilisi and Batumi offer vibrant Indian student associations, Indian dining facilities, and seamless visa processing.',
+    particulars: [
+      { label: 'Course Name', value: 'MBBS in Georgia' },
+      { label: 'Degree Equivalent', value: 'MD (Doctor of Medicine)' },
+      { label: 'Course Duration', value: '6 years' },
+      { label: 'Residency Duration', value: '1 to 3 years' },
+      {
+        label: 'Academic Requirements',
+        value: '10+2 with min 50% in Physics, Chemistry, Biology | NEET UG Qualified | English Language Proficiency',
+      },
+      { label: 'Recognition', value: 'NMC | WHO' },
+      { label: 'Entrance Test Required', value: 'NEET - Accepted' },
+      {
+        label: 'Top Universities',
+        value: 'Tbilisi State Medical University, Batumi Shota Rustaveli State University, New Vision University, David Tvildiani Medical University',
+      },
+      { label: 'Average Tuition Fee', value: 'INR 22 Lakhs to 38 Lakhs' },
+      { label: 'Average Annual Salary', value: 'INR 28 Lakhs to 70 Lakhs' },
+      { label: 'Travel Distance', value: '3,800 kilometres' },
+    ],
+  },
+  {
+    slug: 'uzbekistan',
+    name: 'Uzbekistan',
+    category: 'Top Destinations',
+    courseTitle: 'MBBS in Uzbekistan',
+    bannerTitle: 'TOP MEDICAL UNIVERSITIES IN UZBEKISTAN (MBBS / MD)',
+    flag: '/img/abroad/falgs/uzbekistan.png',
+    image: '/images/abroad/uzbekistan.jpg',
+    bannerImage: '/images/abroad/uzbekistan.jpg',
+    region: 'Central Asia',
+    landmark: 'Registan Square & Turquoise Domes, Samarkand',
+    overview:
+      'Uzbekistan has rapidly become one of the most preferred destinations for Indian medical aspirants seeking an NMC-compliant 5+1 year MBBS program with unmatched affordability and proximity to India. National medical universities in Uzbekistan combine centuries-old academic traditions with modern multi-specialty teaching hospitals, digital anatomy labs, and dedicated Indian mentors providing FMGE/NEXT guidance.',
+    quickFacts:
+      'Uzbekistan is a historic Central Asian nation famous for the Silk Road, divided into 12 provinces and the autonomous Republic of Karakalpakstan. With direct 3-hour flights from Delhi to Tashkent, affordable flight fares, low living costs, and dedicated Indian hostel mess setups serving authentic vegetarian and non-vegetarian food, Uzbekistan feels like a second home.',
+    particulars: [
+      { label: 'Course Name', value: 'MBBS in Uzbekistan' },
+      { label: 'Degree Equivalent', value: 'MD (Doctor of Medicine)' },
+      { label: 'Course Duration', value: '5 to 6 years' },
+      { label: 'Residency Duration', value: '1 to 2 years' },
+      {
+        label: 'Academic Requirements',
+        value: '10+2 with min 50% in PCB (40% for Reserved categories) | NEET UG Qualified | English Language Proficiency',
+      },
+      { label: 'Recognition', value: 'NMC | WHO' },
+      { label: 'Entrance Test Required', value: 'NEET - Accepted' },
+      {
+        label: 'Top Universities',
+        value: 'Tashkent Medical Academy, Samarkand State Medical University, Bukhara State Medical Institute, Andijan State Medical Institute',
+      },
+      { label: 'Average Tuition Fee', value: 'INR 14 Lakhs to 20 Lakhs' },
+      { label: 'Average Annual Salary', value: 'INR 22 Lakhs to 50 Lakhs' },
+      { label: 'Travel Distance', value: '2,050 kilometres' },
+    ],
+  },
+  {
+    slug: 'kazakhstan',
+    name: 'Kazakhstan',
+    category: 'Top Destinations',
+    courseTitle: 'MBBS in Kazakhstan',
+    bannerTitle: 'TOP MEDICAL UNIVERSITIES IN KAZAKHSTAN (MBBS / MD)',
+    flag: '/img/abroad/falgs/kazakhstan.png',
+    image: '/images/abroad/kazakhstan.jpg',
+    bannerImage: '/images/abroad/kazakhstan.jpg',
+    region: 'Central Asia',
+    landmark: 'Bayterek Monument & Astana Skyline',
+    overview:
+      'Kazakhstan stands out as a leading destination in Central Asia offering government-accredited 5-year MBBS programs designed strictly per latest NMC guidelines. Equipped with cutting-edge robotic simulation centers, advanced diagnostic labs, and international partnerships with European universities, Kazakh medical academies ensure comprehensive clinical exposure in high-volume tertiary care hospitals.',
+    quickFacts:
+      'Kazakhstan is the largest landlocked country in the world, spanning 14 administrative regions and modern metropolitan centers including Almaty and Astana. The nation enjoys economic stability, a high standard of student safety, well-established international student support cells, and Indian hostels operating directly inside the university campuses.',
+    particulars: [
+      { label: 'Course Name', value: 'MBBS in Kazakhstan' },
+      { label: 'Degree Equivalent', value: 'MD (Doctor of Medicine)' },
+      { label: 'Course Duration', value: '5 to 6 years' },
+      { label: 'Residency Duration', value: '1 to 3 years' },
+      {
+        label: 'Academic Requirements',
+        value: '10+2 with 50% aggregate in Physics, Chemistry, Biology | NEET UG Qualified | English Language Proficiency',
+      },
+      { label: 'Recognition', value: 'NMC | WHO' },
+      { label: 'Entrance Test Required', value: 'NEET - Accepted' },
+      {
+        label: 'Top Universities',
+        value: 'Kazakh National Medical University, Semey State Medical University, West Kazakhstan Marat Ospanov Medical University, Astana Medical University',
+      },
+      { label: 'Average Tuition Fee', value: 'INR 15 Lakhs to 24 Lakhs' },
+      { label: 'Average Annual Salary', value: 'INR 24 Lakhs to 55 Lakhs' },
+      { label: 'Travel Distance', value: '2,400 kilometres' },
+    ],
+  },
+  {
+    slug: 'kyrgyzstan',
+    name: 'Kyrgyzstan',
+    category: 'Popular Medical Hubs',
+    courseTitle: 'MBBS in Kyrgyzstan',
+    bannerTitle: 'TOP MEDICAL UNIVERSITIES IN KYRGYZSTAN (MBBS / MD)',
+    flag: '/img/abroad/falgs/kyrgyzstan.png',
+    image: '/images/abroad/kyrgyzstan.jpg',
+    bannerImage: '/images/abroad/kyrgyzstan.jpg',
+    region: 'Central Asia',
+    landmark: 'Ala-Archa & Tian Shan Mountains, Bishkek',
+    overview:
+      'Kyrgyzstan has been a trusted study destination for Indian medical aspirants for over three decades. Government medical institutions in Kyrgyzstan offer economical 5-year MBBS courses taught completely in English, combined with rigorous practical bedside training in major municipal and regional hospitals. Over 15,000 Indian doctors practicing today have graduated from Kyrgyz medical academies.',
+    quickFacts:
+      'Located in the heart of Central Asia amidst the picturesque Tian Shan mountain range, Kyrgyzstan comprises seven provinces and two independent cities (Bishkek and Osh). It offers mild weather, cost-effective living, active Indian student associations, celebrated Indian festivals on campus, and dedicated Indian mess chefs.',
+    particulars: [
+      { label: 'Course Name', value: 'MBBS in Kyrgyzstan' },
+      { label: 'Degree Equivalent', value: 'MD (Doctor of Medicine)' },
+      { label: 'Course Duration', value: '5 to 6 years' },
+      { label: 'Residency Duration', value: '1 to 2 years' },
+      {
+        label: 'Academic Requirements',
+        value: '10+2 with min 50% in PCB in 12th standard (40% for Reserved categories) | NEET UG Qualified',
+      },
+      { label: 'Recognition', value: 'NMC | WHO' },
+      { label: 'Entrance Test Required', value: 'NEET - Accepted' },
+      {
+        label: 'Top Universities',
+        value: 'Kyrgyz State Medical Academy, Osh State University Medical Faculty, International School of Medicine (ISM), Jalal-Abad State University',
+      },
+      { label: 'Average Tuition Fee', value: 'INR 12 Lakhs to 18 Lakhs' },
+      { label: 'Average Annual Salary', value: 'INR 20 Lakhs to 48 Lakhs' },
+      { label: 'Travel Distance', value: '2,200 kilometres' },
+    ],
+  },
+  {
+    slug: 'tajikistan',
+    name: 'Tajikistan',
+    category: 'Popular Medical Hubs',
+    courseTitle: 'MBBS in Tajikistan',
+    bannerTitle: 'TOP MEDICAL UNIVERSITIES IN TAJIKISTAN (MBBS / MD)',
+    flag: '/img/abroad/falgs/tajikistan.png',
+    image: '/images/abroad/tajikistan.jpg',
+    bannerImage: '/images/abroad/tajikistan.jpg',
+    region: 'Central Asia',
+    landmark: 'Ismail Somoni Monument & Rudaki Park, Dushanbe',
+    overview:
+      'Tajikistan is a peaceful, welcoming Central Asian nation offering government-recognized MBBS education that emphasizes preventive medicine, diagnostic pathology, and clinical surgery. The state medical universities feature newly modernized infrastructure, international student departments, and affordable fee structures, making medical education accessible to middle-class Indian families.',
+    quickFacts:
+      'Tajikistan is situated in Central Asia, bordered by Kyrgyzstan, Uzbekistan, Afghanistan, and China, with the capital city Dushanbe serving as its academic center. It provides a peaceful and disciplined study environment, hospitable citizens, very low crime rates, and direct air links with Delhi.',
+    particulars: [
+      { label: 'Course Name', value: 'MBBS in Tajikistan' },
+      { label: 'Degree Equivalent', value: 'MD (Doctor of Medicine)' },
+      { label: 'Course Duration', value: '5 to 6 years' },
+      { label: 'Residency Duration', value: '1 to 2 years' },
+      {
+        label: 'Academic Requirements',
+        value: '10+2 with at least 50% in Physics, Chemistry, Biology | NEET UG Qualified | English Language Proficiency',
+      },
+      { label: 'Recognition', value: 'NMC | WHO' },
+      { label: 'Entrance Test Required', value: 'NEET - Accepted' },
+      {
+        label: 'Top Universities',
+        value: 'Avicenna Tajik State Medical University, Khatlon State Medical University, Tajik National University Medical Faculty',
+      },
+      { label: 'Average Tuition Fee', value: 'INR 14 Lakhs to 20 Lakhs' },
+      { label: 'Average Annual Salary', value: 'INR 22 Lakhs to 45 Lakhs' },
+      { label: 'Travel Distance', value: '2,300 kilometres' },
+    ],
+  },
+  {
+    slug: 'philippines',
+    name: 'Philippines',
+    category: 'Popular Medical Hubs',
+    courseTitle: 'MBBS in Philippines',
+    bannerTitle: 'TOP MEDICAL UNIVERSITIES IN PHILIPPINES (MBBS / MD)',
+    flag: '/img/abroad/falgs/philippines.png',
+    image: '/images/abroad/philippines.jpg',
+    bannerImage: '/images/abroad/philippines.jpg',
+    region: 'Southeast Asia',
+    landmark: 'Historic University Campus & Manila Skyline',
+    overview:
+      'The Philippines is globally renowned for delivering American curriculum medical education (BS-MD program) with 100% English medium of instruction across all universities and hospitals. As the world’s third-largest English-speaking nation, Indian students face zero language barriers while communicating with local patients during hospital rotations. It boasts high FMGE/NEXT passing percentages and prepares students exceptionally well for USMLE and clinical practice in the USA, UK, and India.',
+    quickFacts:
+      'The Philippines is an archipelagic island nation in Southeast Asia comprising over 7,000 islands, with major educational centers in Metro Manila, Davao, and Cebu. Its medical curriculum matches US standards, featuring hands-on clinical clerkships in 1,000+ bed hospitals dealing with tropical disease patterns identical to India.',
+    particulars: [
+      { label: 'Course Name', value: 'MBBS in Philippines' },
+      { label: 'Degree Equivalent', value: 'MD (Doctor of Medicine)' },
+      { label: 'Course Duration', value: '5.5 years' },
+      { label: 'Residency Duration', value: '1 to 3 years' },
+      {
+        label: 'Academic Requirements',
+        value: '10+2 with minimum 50% in Physics, Chemistry, Biology | NEET UG Qualified | English Language Proficiency',
+      },
+      { label: 'Recognition', value: 'NMC | WHO' },
+      { label: 'Entrance Test Required', value: 'NEET - Accepted' },
+      {
+        label: 'Top Universities',
+        value: 'Davao Medical School Foundation (DMSF), University of Perpetual Help System DALTA, UV Gullas College of Medicine, Our Lady of Fatima University',
+      },
+      { label: 'Average Tuition Fee', value: 'INR 16 Lakhs to 28 Lakhs' },
+      { label: 'Average Annual Salary', value: 'INR 28 Lakhs to 75 Lakhs' },
+      { label: 'Travel Distance', value: '4,800 kilometres' },
+    ],
+  },
+]
+
+export const abroadStudiesBySlug = abroadStudiesList.reduce((acc, item) => {
+  acc[item.slug] = item
+  return acc
+}, {})

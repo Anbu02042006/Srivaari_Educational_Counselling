@@ -49,7 +49,7 @@ function BenefitSlider({ className = '' }) {
             <Link
               key={item.title}
               className="card-link"
-              to="/services"
+              to="/about"
               aria-label={`Learn more: ${item.title}`}
             >
               <article className={`service-card ${gradClass} service-card--compact`}>
@@ -92,7 +92,7 @@ function BenefitSlider({ className = '' }) {
                 <div key={item.title} className="benefit-slider__slide">
                   <Link
                     className="card-link"
-                    to="/services"
+                    to="/about"
                     aria-label={`Learn more: ${item.title}`}
                   >
                     <article className={`service-card ${gradClass} service-card--compact`}>

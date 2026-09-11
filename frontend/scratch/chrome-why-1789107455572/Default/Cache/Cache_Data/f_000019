@@ -1,0 +1,449 @@
+export const domesticStudiesList = [
+	{
+		slug: "mbbs",
+		name: "MBBS",
+		bannerTitle: "MBBS (BACHELOR OF MEDICINE AND BACHELOR OF SURGERY)",
+		title: "MBBS (Bachelor of Medicine and Bachelor of Surgery)",
+		image: "/images/domestic/mbbs.jpg",
+		category: "Medical & AYUSH",
+		description: "MBBS (Bachelor of Medicine and Bachelor of Surgery) is the flagship 5.5-year undergraduate medical degree in India that confers the title of Doctor. Regulated by the National Medical Commission (NMC), the curriculum includes 4.5 years of intensive preclinical, paraclinical, and clinical coursework followed by 1 year of compulsory rotating medical internship. Students undergo hands-on clinical rotations across general medicine, general surgery, obstetrics & gynaecology, paediatrics, and community health. Completing MBBS qualifies graduates to practice modern medicine, register with State Medical Councils or NMC, and pursue postgraduate specialisations (MD, MS, DNB) or super-speciality medical careers.",
+		particulars: {
+			courseName: "Medicine & Surgery (MBBS)",
+			fullForm: "Bachelor of Medicine and Bachelor of Surgery (MBBS)",
+			duration: "5.5 years (4.5 years academic + 1 year compulsory rotatory internship)",
+			level: "Undergraduate Medical Degree",
+			eligibility: "10+2 with Physics, Chemistry, Biology/Biotechnology & English (Min 50% aggregate)",
+			entranceExams: "NEET-UG (National Eligibility cum Entrance Test)",
+			medium: "English",
+			courseFees: "INR 4 Lakhs to INR 25 Lakhs per year (Government / Private / Deemed Universities)",
+			salaryPackage: "₹7,00,000 to ₹18,00,000 per annum depending on hospital, role, and experience",
+			jobs: "General Physician, Medical Officer, Resident Surgeon, Clinical Researcher, Hospital Administrator"
+		}
+	},
+	{
+		slug: "bds",
+		name: "DENTAL (BDS)",
+		bannerTitle: "BDS (BACHELOR OF DENTAL SURGERY)",
+		title: "BDS (Bachelor of Dental Surgery)",
+		image: "/images/domestic/bds.jpg",
+		category: "Medical & AYUSH",
+		description: "BDS (Bachelor of Dental Surgery) is a 5-years undergraduate program and the only approved professional dental course in India. Students become doctors after the BDS course. It is a compulsory course for students aspiring to work as dentists at government or private hospitals. BDS mainly focuses on training and introducing students to the dental sciences and surgeries. The 5-year program involves 4 years of classroom education and 1 year of compulsory rotating internship. The degree is regulated by the Dental Council of India (DCI). The various BDS subjects taught in the program include Dental Histology, Oral Pathology, Oral Surgery, etc. It is necessary for the students to register themselves in the Dental Council of India which regulates the BDS course so that they become eligible to practice their profession after the completion of their degree.",
+		particulars: {
+			courseName: "Dental (BDS)",
+			fullForm: "Bachelor of Dental Surgery (BDS)",
+			duration: "5 years (4 years + 1 year of compulsory paid internship)",
+			level: "Undergraduate",
+			eligibility: "10+2 with Physics, Chemistry, and Biology",
+			entranceExams: "NEET, State-level exams, Private University exams",
+			medium: "English",
+			courseFees: "INR 1 lakh to INR 10 lakh",
+			salaryPackage: "₹5,00,000 to ₹12,00,000 per annum, depending on specialization, experience, and location",
+			jobs: "Dentist, Orthodontist, Oral Surgeon, Periodontist, Consultant in Private and Government Hospitals"
+		}
+	},
+	{
+		slug: "bams",
+		name: "AYURVEDA (BAMS)",
+		bannerTitle: "BAMS (BACHELOR OF AYURVEDIC MEDICINE AND SURGERY)",
+		title: "BAMS (Bachelor of Ayurvedic Medicine and Surgery)",
+		image: "/images/domestic/bams.jpg",
+		category: "Medical & AYUSH",
+		description: "BAMS (Bachelor of Ayurvedic Medicine and Surgery) is a premier 5.5-year undergraduate program blending timeless Vedic medical science with modern anatomy, diagnostics, and pharmacology. Governed by the National Commission for Indian System of Medicine (NCISM) under the Ministry of AYUSH, the program consists of 4.5 years of academic study and 1 year of compulsory rotatory clinical internship. Students master Panchakarma therapy, herbology (Dravyaguna), surgical principles (Shalya Tantra), and internal medicine (Kayachikitsa). Graduates earn registration as Ayurvedic Medical Practitioners and are widely recruited in wellness centres, government dispensaries, and pharmaceutical research.",
+		particulars: {
+			courseName: "Ayurvedic Medicine & Surgery (BAMS)",
+			fullForm: "Bachelor of Ayurvedic Medicine and Surgery (BAMS)",
+			duration: "5.5 years (4.5 years academic + 1 year rotatory internship)",
+			level: "Undergraduate Medical Degree",
+			eligibility: "10+2 with Physics, Chemistry, and Biology (Min 50% aggregate, Sanskrit optional/beneficial)",
+			entranceExams: "NEET-UG followed by AACCC Central / State AYUSH Counselling",
+			medium: "English / Hindi / Regional Languages",
+			courseFees: "INR 1.5 Lakhs to INR 6.5 Lakhs per year",
+			salaryPackage: "₹4,50,000 to ₹10,00,000 per annum",
+			jobs: "Ayurvedic Doctor, Panchakarma Consultant, AYUSH Medical Officer, Wellness Director, Clinical Researcher"
+		}
+	},
+	{
+		slug: "bsms",
+		name: "SIDDHA (BSMS)",
+		bannerTitle: "BSMS (BACHELOR OF SIDDHA MEDICINE AND SURGERY)",
+		title: "BSMS (Bachelor of Siddha Medicine and Surgery)",
+		image: "/images/domestic/bsms.jpg",
+		category: "Medical & AYUSH",
+		description: "BSMS (Bachelor of Siddha Medicine and Surgery) is an ancient, holistic medical education system native to South India that focuses on restoring equilibrium among the three vital humours (Vali, Azhal, and Iyyam). Governed by the National Commission for Indian System of Medicine (NCISM), this 5.5-year undergraduate course spans 4.5 years of didactic study and 1 year of mandatory rotatory clinical internship. Students receive specialized instruction in Gunapadam (Siddha pharmacology), Varmam therapy (vital point science), Kayakarpam (rejuvenation), and pathology. Registered Siddha physicians serve in government hospitals, research councils (CCRS), and private healthcare institutions.",
+		particulars: {
+			courseName: "Siddha Medicine (BSMS)",
+			fullForm: "Bachelor of Siddha Medicine and Surgery (BSMS)",
+			duration: "5.5 years (4.5 years academic + 1 year rotatory internship)",
+			level: "Undergraduate Medical Degree",
+			eligibility: "10+2 with Physics, Chemistry, Biology (Tamil proficiency required or taught as subject)",
+			entranceExams: "NEET-UG & State AYUSH Medical Counselling",
+			medium: "English / Tamil",
+			courseFees: "INR 1 Lakh to INR 5 Lakhs per annum",
+			salaryPackage: "₹4,00,000 to ₹9,00,000 per annum",
+			jobs: "Siddha Physician, Varmam Specialist, Research Scientist (CCRS), Government Medical Officer"
+		}
+	},
+	{
+		slug: "bums",
+		name: "UNANI (BUMS)",
+		bannerTitle: "BUMS (BACHELOR OF UNANI MEDICINE AND SURGERY)",
+		title: "BUMS (Bachelor of Unani Medicine and Surgery)",
+		image: "/images/domestic/bums.jpg",
+		category: "Medical & AYUSH",
+		description: "BUMS (Bachelor of Unani Medicine and Surgery), also known as Kamil-e-Tibb-wa-Jarahat, is a 5.5-year professional medical degree based on the Greco-Arabic medical doctrine established by Hippocrates and Ibn Sina (Avicenna). Regulated by NCISM under the Ministry of AYUSH, the degree includes 4.5 years of coursework and 1 year of compulsory hospital internship. Key therapies taught include Ilaj-bit-Tadbeer (regimental therapies like cupping and leeching), Ilaj-bil-Ghiza (dietotherapy), and Ilaj-bid-Dawa (pharmacotherapy). Registered Hakeems and Unani physicians enjoy significant demand in public health dispensaries and global herbal wellness clinics.",
+		particulars: {
+			courseName: "Unani Medicine (BUMS)",
+			fullForm: "Bachelor of Unani Medicine and Surgery (BUMS)",
+			duration: "5.5 years (4.5 years study + 1 year hospital internship)",
+			level: "Undergraduate Medical Degree",
+			eligibility: "10+2 with PCB (Urdu/Arabic/Persian language qualification in 10th or 12th standard)",
+			entranceExams: "NEET-UG & Central/State AYUSH Counselling",
+			medium: "English / Urdu",
+			courseFees: "INR 1 Lakh to INR 5.5 Lakhs per annum",
+			salaryPackage: "₹4,00,000 to ₹8,50,000 per annum",
+			jobs: "Unani Medical Officer, Regimental Therapy Consultant, Hakeem, Formulation Chemist, Public Health Officer"
+		}
+	},
+	{
+		slug: "bhms",
+		name: "HOMEOPATHY (BHMS)",
+		bannerTitle: "BHMS (BACHELOR OF HOMEOPATHIC MEDICINE AND SURGERY)",
+		title: "BHMS (Bachelor of Homeopathic Medicine and Surgery)",
+		image: "/images/domestic/bhms.jpg",
+		category: "Medical & AYUSH",
+		description: "BHMS (Bachelor of Homeopathic Medicine and Surgery) is a 5.5-year medical degree rooted in the holistic principle of \"Similia Similibus Curentur\" (like cures like). The program is monitored by the National Commission for Homoeopathy (NCH) and entails 4.5 years of comprehensive medical science education paired with 1 year of hands-on rotating clinical internship. The syllabus encompasses human anatomy, pathology, forensic medicine, organon of medicine, and homoeopathic materia medica. Graduating doctors receive government licensing to prescribe individualized natural remedies and manage acute and chronic ailments in hospitals, clinics, and research institutions.",
+		particulars: {
+			courseName: "Homeopathy (BHMS)",
+			fullForm: "Bachelor of Homeopathic Medicine and Surgery (BHMS)",
+			duration: "5.5 years (4.5 years course + 1 year rotating internship)",
+			level: "Undergraduate Medical Degree",
+			eligibility: "10+2 with Physics, Chemistry, Biology & English (Min 50% marks)",
+			entranceExams: "NEET-UG & Central/State AYUSH Counselling",
+			medium: "English",
+			courseFees: "INR 1.2 Lakhs to INR 6 Lakhs per year",
+			salaryPackage: "₹4,00,000 to ₹9,00,000 per annum",
+			jobs: "Homeopathic Physician, Medical Officer, Chronic Disease Consultant, Pharmacovigilance Officer"
+		}
+	},
+	{
+		slug: "bvsc",
+		name: "VETERINARY SCIENCE (BVSC)",
+		bannerTitle: "BVSC & AH (BACHELOR OF VETERINARY SCIENCE & ANIMAL HUSBANDRY)",
+		title: "B.V.Sc & A.H. (Bachelor of Veterinary Science & Animal Husbandry)",
+		image: "/images/domestic/bvsc.jpg",
+		category: "Medical & AYUSH",
+		description: "B.V.Sc & A.H. (Bachelor of Veterinary Science and Animal Husbandry) is a 5.5-year professional degree regulated by the Veterinary Council of India (VCI). The program includes 4.5 years of intensive clinical and surgical education coupled with a 1-year compulsory internship comprising clinical practice, livestock farm training, and veterinary ambulatory work. Students gain extensive proficiency in animal physiology, surgical intervention, veterinary radiology, herd epidemiology, and zoological medicine. Graduates enjoy rewarding careers as veterinary surgeons, livestock development officers, wildlife conservationists, and pharmaceutical specialists.",
+		particulars: {
+			courseName: "Veterinary Science (B.V.Sc & A.H.)",
+			fullForm: "Bachelor of Veterinary Science & Animal Husbandry",
+			duration: "5.5 years (4.5 years academic + 1 year clinical internship)",
+			level: "Undergraduate Professional Degree",
+			eligibility: "10+2 with Physics, Chemistry, Biology & English (Minimum 50% marks)",
+			entranceExams: "NEET-UG (15% All India VCI Quota) & State Veterinary Entrance Exams",
+			medium: "English",
+			courseFees: "INR 80,000 to INR 5 Lakhs per year",
+			salaryPackage: "₹5,00,000 to ₹12,00,000 per annum",
+			jobs: "Veterinary Surgeon, Animal Husbandry Officer, Companion Animal Vet, Zoo Veterinary Officer, Dairy Farm Advisor"
+		}
+	},
+	{
+		slug: "bnys",
+		name: "YOGA & NATUROPATHY (BNYS)",
+		bannerTitle: "BNYS (BACHELOR OF NATUROPATHY AND YOGIC SCIENCES)",
+		title: "BNYS (Bachelor of Naturopathy and Yogic Sciences)",
+		image: "/images/domestic/bnys.jpg",
+		category: "Healthcare & Technical",
+		description: "BNYS (Bachelor of Naturopathy and Yogic Sciences) is a prestigious 5.5-year medical degree combining evidence-based non-invasive therapies with yogic postures, hydrotherapy, mud therapy, nutrition, and lifestyle medicine. Monitored under the Ministry of AYUSH, students spend 4.5 years studying human anatomy, biochemistry, clinical diagnostics, and natural therapeutic modalities, culminating in 1 year of compulsory rotating hospital internship. Graduates are titled Naturopathy Doctors and are licensed to operate lifestyle rehabilitation clinics, corporate wellness sanctuaries, and clinical wellness hospitals globally.",
+		particulars: {
+			courseName: "Yoga & Naturopathy (BNYS)",
+			fullForm: "Bachelor of Naturopathy and Yogic Sciences (BNYS)",
+			duration: "5.5 years (4.5 years study + 1 year compulsory internship)",
+			level: "Undergraduate Medical Degree",
+			eligibility: "10+2 with Physics, Chemistry, and Biology (Min 50% aggregate)",
+			entranceExams: "State Medical Counselling / NEET-UG merit (depending on state regulations)",
+			medium: "English",
+			courseFees: "INR 1 Lakh to INR 4 Lakhs per annum",
+			salaryPackage: "₹3,50,000 to ₹8,00,000 per annum",
+			jobs: "Naturopathy Physician, Yogic Medicine Consultant, Hospital Wellness Director, Lifestyle Disease Specialist"
+		}
+	},
+	{
+		slug: "bpt",
+		name: "PHYSIOTHERAPY (BPT)",
+		bannerTitle: "BPT (BACHELOR OF PHYSIOTHERAPY)",
+		title: "BPT (Bachelor of Physiotherapy)",
+		image: "/images/domestic/bpt.jpg",
+		category: "Healthcare & Technical",
+		description: "BPT (Bachelor of Physiotherapy) is a 4.5-year healthcare degree recognized by the National Commission for Allied and Healthcare Professions (NCAHP). Comprising 4 years of classroom and clinical instruction plus 6 months of mandatory rotatory hospital internship, the course trains students in biomechanics, electrotherapy, exercise physiology, orthopedic rehabilitation, neurological mobility, and sports science. Physiotherapists play an indispensable role in patient recovery, intensive care unit mobilizations, athletic conditioning, and post-surgical rehabilitation across multispeciality hospitals and elite sporting federations.",
+		particulars: {
+			courseName: "Physiotherapy (BPT)",
+			fullForm: "Bachelor of Physiotherapy (BPT)",
+			duration: "4.5 years (4 years academic + 6 months compulsory clinical internship)",
+			level: "Undergraduate Healthcare Degree",
+			eligibility: "10+2 with Physics, Chemistry, and Biology (Min 50% aggregate)",
+			entranceExams: "State CETs, University Entrance Tests, or Merit-based Counselling",
+			medium: "English",
+			courseFees: "INR 80,000 to INR 3.5 Lakhs per year",
+			salaryPackage: "₹3,50,000 to ₹8,50,000 per annum",
+			jobs: "Physiotherapist, Sports Rehabilitation Specialist, Orthopedic Consultant, Neuro-Physical Therapist, ICU Mobility Lead"
+		}
+	},
+	{
+		slug: "pharmacy",
+		name: "PHARMACY",
+		bannerTitle: "B.PHARM (BACHELOR OF PHARMACY)",
+		title: "B.Pharm (Bachelor of Pharmacy)",
+		image: "/images/domestic/pharmacy.jpg",
+		category: "Healthcare & Technical",
+		description: "B.Pharm (Bachelor of Pharmacy) is a comprehensive 4-year (8-semester) professional degree regulated by the Pharmacy Council of India (PCI). The curriculum covers the entire pharmaceutical value chain, including medicinal chemistry, pharmaceutics, pharmacology, pharmacognosy, clinical drug trials, and pharmaceutical analysis. Students acquire practical laboratory expertise in drug formulation, synthetic medicine design, and quality assurance. Graduates are officially registered as Registered Pharmacists and hold lucrative career pathways across multinational pharmaceutical corporations, regulatory bodies, and healthcare chains.",
+		particulars: {
+			courseName: "Pharmacy (B.Pharm)",
+			fullForm: "Bachelor of Pharmacy (B.Pharm)",
+			duration: "4 years (8 semesters)",
+			level: "Undergraduate Professional Degree",
+			eligibility: "10+2 with Physics, Chemistry, and Mathematics/Biology (Min 50% marks)",
+			entranceExams: "State Engineering & Pharmacy CETs, University Entrance Exams, GPAT (PG)",
+			medium: "English",
+			courseFees: "INR 70,000 to INR 2.5 Lakhs per annum",
+			salaryPackage: "₹3,50,000 to ₹7,50,000 per annum",
+			jobs: "Registered Pharmacist, Drug Inspector, Quality Control Scientist, Formulations Specialist, Clinical Research Associate"
+		}
+	},
+	{
+		slug: "allied-health-science",
+		name: "ALLIED HEALTH SCIENCE",
+		bannerTitle: "B.SC ALLIED HEALTH SCIENCES",
+		title: "B.Sc Allied Health Sciences (Cardiac, Dialysis, Radiology, MLT, OT & Anaesthesia)",
+		image: "/images/domestic/allied-health-science.jpg",
+		category: "Healthcare & Technical",
+		description: "B.Sc in Allied Health Sciences comprises specialized 3 to 4-year undergraduate programs regulated under the National Commission for Allied and Healthcare Professions (NCAHP). Offerings span critical disciplines such as Cardiac Technology, Medical Laboratory Technology (MLT), Radiology & Imaging, Dialysis Technology, Respiratory Therapy, and Operation Theatre & Anaesthesia Technology. Allied health professionals work directly alongside surgeons and critical care specialists, operating vital life-support systems, precision diagnostic instruments, and invasive monitoring equipment in tertiary care hospitals.",
+		particulars: {
+			courseName: "Allied Health Sciences",
+			fullForm: "Bachelor of Science in Allied Health Sciences (B.Sc AHS)",
+			duration: "3 to 4 years (3 years academic + 1 year compulsory clinical internship)",
+			level: "Undergraduate Clinical Science Degree",
+			eligibility: "10+2 with Physics, Chemistry, Biology / Life Sciences (Min 50% marks)",
+			entranceExams: "Institutional Entrance Examinations / State Medical University Counselling",
+			medium: "English",
+			courseFees: "INR 60,000 to INR 2.5 Lakhs per year",
+			salaryPackage: "₹3,00,000 to ₹7,00,000 per annum",
+			jobs: "Radiology Technologist, Cardiac Perfusionist, Dialysis Specialist, Medical Lab Technologist, OT & Anaesthesia Officer"
+		}
+	},
+	{
+		slug: "engineering",
+		name: "ENGINEERING",
+		bannerTitle: "B.E. / B.TECH (BACHELOR OF ENGINEERING & TECHNOLOGY)",
+		title: "B.E. / B.Tech (Engineering & Technology)",
+		image: "/images/domestic/engineering.jpg",
+		category: "Healthcare & Technical",
+		description: "B.E. / B.Tech is an intensive 4-year (8-semester) technical degree approved by the All India Council for Technical Education (AICTE). Covering premier branches like Computer Science & Engineering (AI, ML, Cybersecurity), Electronics & Communication, Mechanical, Robotics, Civil, and Electrical Engineering, the program synthesizes foundational mathematics and engineering sciences with industry capstones. Graduates drive modern innovation in software architecture, cloud platforms, autonomous systems, smart manufacturing, and global R&D labs with attractive campus placement records.",
+		particulars: {
+			courseName: "Engineering (B.E. / B.Tech)",
+			fullForm: "Bachelor of Engineering / Bachelor of Technology",
+			duration: "4 years (8 semesters)",
+			level: "Undergraduate Technical Degree",
+			eligibility: "10+2 with Physics, Mathematics, and Chemistry/CS/IT (Min 45-50% marks)",
+			entranceExams: "JEE Main, JEE Advanced, TNEA, KCET, COMEDK, State CETs",
+			medium: "English",
+			courseFees: "INR 60,000 to INR 3.5 Lakhs per year (Govt / Autonomous / Deemed)",
+			salaryPackage: "₹4,50,000 to ₹18,00,000+ per annum depending on branch and campus placements",
+			jobs: "Software Engineer, Cloud Solutions Architect, Robotics Engineer, Data Scientist, Systems Design Specialist"
+		}
+	},
+	{
+		slug: "architecture",
+		name: "ARCHITECTURE",
+		bannerTitle: "B.ARCH (BACHELOR OF ARCHITECTURE)",
+		title: "B.Arch (Bachelor of Architecture)",
+		image: "/images/domestic/architecture.jpg",
+		category: "Healthcare & Technical",
+		description: "B.Arch (Bachelor of Architecture) is a 5-year (10-semester) professional degree strictly regulated by the Council of Architecture (COA). The curriculum merges artistic spatial design, structural engineering, sustainable materials, computer-aided drafting (BIM), building acoustics, and urban climatology. Students spend substantial time in architectural design studios, site surveying, and complete 6 months to 1 year of practical architectural apprenticeship under licensed architects. Completion grants official registration with the COA to practice as a licensed Architect in India and globally.",
+		particulars: {
+			courseName: "Architecture (B.Arch)",
+			fullForm: "Bachelor of Architecture (B.Arch)",
+			duration: "5 years (10 semesters including mandatory professional practical training)",
+			level: "Undergraduate Professional Degree",
+			eligibility: "10+2 with Physics, Chemistry, and Mathematics (Min 50%) or 10+3 Diploma with Maths",
+			entranceExams: "NATA (National Aptitude Test in Architecture) or JEE Main (Paper 2)",
+			medium: "English",
+			courseFees: "INR 1 Lakh to INR 3.5 Lakhs per year",
+			salaryPackage: "₹4,00,000 to ₹10,00,000 per annum",
+			jobs: "Licensed Architect, Urban Designer, Landscape Architect, BIM Consultant, Sustainable Design Specialist"
+		}
+	},
+	{
+		slug: "marine",
+		name: "MARINE",
+		bannerTitle: "MARINE ENGINEERING & NAUTICAL SCIENCE",
+		title: "Marine Engineering (B.E. Marine) & B.Sc Nautical Science",
+		image: "/images/domestic/marine.jpg",
+		category: "Healthcare & Technical",
+		description: "Marine Engineering and Nautical Science are specialized maritime degrees governed by the Directorate General of Shipping (DGS), Ministry of Ports, Shipping and Waterways. The program blends naval architecture, marine propulsion, high-voltage electrical machinery, celestial navigation, cargo handling, and international maritime law (STCW). Cadets undergo strict paramilitary regimentation, shipboard simulator training, and fire-fighting certifications followed by required sea time. Graduating officers join international merchant shipping fleets with tax-free compensation and accelerated global leadership ranks.",
+		particulars: {
+			courseName: "Marine Engineering & Nautical Studies",
+			fullForm: "B.E. Marine Engineering / B.Sc Nautical Science",
+			duration: "3 to 4 years + Mandatory Pre-Sea Simulator & Onboard Cadetship",
+			level: "Undergraduate Maritime Degree",
+			eligibility: "10+2 with PCM (Min 60% aggregate) and 50% in English, strict DGS medical & 6/6 vision standards",
+			entranceExams: "IMU-CET (Indian Maritime University Common Entrance Test)",
+			medium: "English",
+			courseFees: "INR 2.5 Lakhs to INR 5 Lakhs per year (including uniform, boarding & lodging)",
+			salaryPackage: "₹6,00,000 to ₹22,00,000 per annum (tax-free foreign currency during sea-time)",
+			jobs: "Marine Engineer Officer, Deck Cadet, Navigation Officer, Chief Engineer, Port Operations Manager"
+		}
+	},
+	{
+		slug: "agriculture",
+		name: "AGRICULTURE",
+		bannerTitle: "B.SC (HONS) AGRICULTURE & HORTICULTURE",
+		title: "B.Sc (Hons) Agriculture / Horticulture",
+		image: "/images/domestic/agriculture.jpg",
+		category: "Sciences & Entrance",
+		description: "B.Sc (Hons) Agriculture is a comprehensive 4-year undergraduate program accredited by the Indian Council of Agricultural Research (ICAR). The syllabus encompasses agronomy, soil science, plant genetics, agricultural biotechnology, precision irrigation, crop protection, and agricultural economics. A key feature of the final year is the Rural Agricultural Work Experience (RAWE) and Agro-Industrial Attachment (AIA), where students work alongside farming communities and agri-business enterprises. Graduates step directly into banking (AFO), agribusiness, food corporations, and government research departments.",
+		particulars: {
+			courseName: "Agriculture (B.Sc Hons)",
+			fullForm: "Bachelor of Science (Honours) in Agriculture",
+			duration: "4 years (8 semesters including RAWE & hands-on industrial internship)",
+			level: "Undergraduate Agricultural Science Degree",
+			eligibility: "10+2 with Physics, Chemistry, Biology / Mathematics / Agriculture (Min 50% aggregate)",
+			entranceExams: "CUET-ICAR UG & State Agricultural University CETs (e.g. TNAU, KCET Agri)",
+			medium: "English",
+			courseFees: "INR 50,000 to INR 2.5 Lakhs per year",
+			salaryPackage: "₹3,50,000 to ₹8,50,000 per annum",
+			jobs: "Agricultural Field Officer (IBPS AFO), Agronomist, Seed Production Specialist, Agri-Business Manager, Food Safety Inspector"
+		}
+	},
+	{
+		slug: "arts-science",
+		name: "ARTS & SCIENCE",
+		bannerTitle: "ARTS, SCIENCE & COMMERCE (B.A., B.SC, B.COM, BBA, BCA)",
+		title: "Arts & Science (B.A., B.Sc, B.Com, BBA, BCA)",
+		image: "/images/domestic/arts-science.jpg",
+		category: "Sciences & Entrance",
+		description: "Arts & Science undergraduate programs provide comprehensive foundation degrees in Humanities, Pure Sciences, Commerce, Management, and Computing under the National Education Policy (NEP 2020) framework. Offerings include B.Com (Professional Accounting, FinTech), BBA, BCA, B.Sc (Data Science, Biotechnology, Physics, Mathematics), and B.A. (English, Economics, Psychology). These programs emphasize analytical thinking, multidisciplinary minors, project internships, and digital literacy, preparing students for competitive examinations (UPSC, Banking), corporate placements, and prestigious master’s degrees.",
+		particulars: {
+			courseName: "Arts & Science Programs",
+			fullForm: "Bachelor of Arts / Science / Commerce / Business Administration / Computer Applications",
+			duration: "3 years (or 4 years for NEP Honours with Research)",
+			level: "Undergraduate Degree",
+			eligibility: "10+2 from a recognized board in relevant stream (Commerce / Science / Arts)",
+			entranceExams: "CUET-UG, University Entrance Tests, or Merit-based Counselling",
+			medium: "English",
+			courseFees: "INR 30,000 to INR 1.5 Lakhs per year",
+			salaryPackage: "₹3,00,000 to ₹7,00,000 per annum",
+			jobs: "Business Analyst, Software Developer, Financial Consultant, HR Specialist, Content Strategist, Civil Services Aspirant"
+		}
+	},
+	{
+		slug: "integrated-courses",
+		name: "INTEGRATED COURSES",
+		bannerTitle: "5-YEAR INTEGRATED DUAL DEGREE PROGRAMS",
+		title: "Integrated Courses (Integrated M.Tech, M.Sc, MBA, Dual Degrees)",
+		image: "/images/domestic/integrated-courses.jpg",
+		category: "Sciences & Entrance",
+		description: "Integrated Courses are streamlined 5-year dual-degree programs that combine an undergraduate degree seamlessly with a master’s qualification without the requirement of writing a separate post-graduate entrance test. Prominent formats include Integrated M.Tech in Software Engineering / Data Science, Integrated M.Sc in Biotechnology / Physics, and Integrated MBA (BBA+MBA). Regulated by UGC and AICTE, these programs offer continuous research exposure, early semester industry projects, and save one full academic year for ambitious students targeting high-level corporate and research roles.",
+		particulars: {
+			courseName: "Integrated Dual Degree",
+			fullForm: "5-Year Integrated Master’s Program (B.Tech+M.Tech / B.Sc+M.Sc / Integrated MBA)",
+			duration: "5 years (10 semesters)",
+			level: "Integrated Postgraduate Degree",
+			eligibility: "10+2 with PCM / relevant discipline (Min 55-60% marks)",
+			entranceExams: "JEE Main, CUET-UG, or University Integrated Entrance Tests (VITEEE, BITSAT, etc.)",
+			medium: "English",
+			courseFees: "INR 1 Lakh to INR 3 Lakhs per year",
+			salaryPackage: "₹5,00,000 to ₹15,00,000 per annum",
+			jobs: "R&D Technologist, Systems Architect, Quantitative Analyst, Product Strategist, Research Fellow"
+		}
+	},
+	{
+		slug: "law",
+		name: "LAW",
+		bannerTitle: "INTEGRATED LAW (B.A. LL.B / B.B.A. LL.B / B.COM LL.B)",
+		title: "Integrated Law (B.A. LL.B / B.B.A. LL.B / 3-Year LL.B)",
+		image: "/images/domestic/law.jpg",
+		category: "Sciences & Entrance",
+		description: "Integrated Law (B.A. LL.B / B.B.A. LL.B / B.Com LL.B) is a rigorous 5-year professional program recognized and monitored by the Bar Council of India (BCI). The curriculum combines foundational arts, business administration, or commerce coursework with exhaustive legal training in constitutional law, criminal jurisprudence, corporate governance, intellectual property, cyber law, and international arbitration. Students actively participate in national moot court competitions, legal aid clinics, and mandatory judicial internships. Graduates are entitled to appear for the All India Bar Examination (AIBE) to practice as licensed advocates.",
+		particulars: {
+			courseName: "Law (Integrated LL.B)",
+			fullForm: "Bachelor of Arts & Bachelor of Legislative Law (B.A. LL.B / B.B.A. LL.B)",
+			duration: "5 years (10 semesters with mandatory moot courts & chamber internships)",
+			level: "Integrated Professional Law Degree",
+			eligibility: "10+2 in any stream from recognized board (Min 45% for General, 40% for SC/ST)",
+			entranceExams: "CLAT (Common Law Admission Test), AILET, SLAT, LSAT India, State Law CETs",
+			medium: "English",
+			courseFees: "INR 1.2 Lakhs to INR 3.8 Lakhs per annum",
+			salaryPackage: "₹4,50,000 to ₹14,00,000 per annum",
+			jobs: "Corporate Legal Counsel, High Court / Supreme Court Advocate, Judicial Magistrate, Legal Compliance Officer"
+		}
+	},
+	{
+		slug: "neet",
+		name: "NEET",
+		bannerTitle: "NEET-UG (MEDICAL ENTRANCE COUNSELLING & COACHING)",
+		title: "NEET (National Eligibility cum Entrance Test) Guidance & Admissions",
+		image: "/images/domestic/neet.jpg",
+		category: "Sciences & Entrance",
+		description: "The National Eligibility cum Entrance Test (NEET-UG) is India’s sole and mandatory entrance gateway conducted by the National Testing Agency (NTA) for admission into MBBS, BDS, BAMS, BSMS, BUMS, BHMS, and B.V.Sc programs across all government, private, and deemed medical colleges. Sri Vaari provides expert mentorship encompassing cut-off predictions, institutional profiling, All India Quota (MCC) counselling, State Quota seat allocation strategies, and category reservation optimization. We guide students and parents through every critical documentation stage to secure the best medical seat within their score and budget.",
+		particulars: {
+			courseName: "NEET-UG Medical Guidance",
+			fullForm: "National Eligibility cum Entrance Test (Undergraduate)",
+			duration: "Intensive 1-Year / 2-Year Target Batch Guidance & Seat Counselling Strategy",
+			level: "National Medical Entrance Examination",
+			eligibility: "10+2 Appearing / Passed with Physics, Chemistry, Biology/Biotech & English (Age min 17 years)",
+			entranceExams: "NTA NEET-UG (Standardized Single National Examination)",
+			medium: "English, Tamil, Hindi, and 10 regional Indian languages",
+			courseFees: "Admissions Advisory & Cut-Off Mapping Support",
+			salaryPackage: "Gateway to prestigious government medical colleges and high-return private institutes",
+			jobs: "Future Doctors, Surgeons, Super-Specialists, Medical Researchers, Public Health Leaders"
+		}
+	},
+	{
+		slug: "jee",
+		name: "JEE",
+		bannerTitle: "JEE MAIN & JEE ADVANCED (ENGINEERING ENTRANCE ADMISSIONS)",
+		title: "JEE (Joint Entrance Examination) Guidance & Seat Matrix Counselling",
+		image: "/images/domestic/jee.jpg",
+		category: "Sciences & Entrance",
+		description: "The Joint Entrance Examination (JEE), comprising JEE Main and JEE Advanced, is India’s premier national engineering examination for entry into the Indian Institutes of Technology (IITs), National Institutes of Technology (NITs), IIITs, and premier government-funded technical institutions (GFTIs). Sri Vaari delivers dedicated guidance on score mapping, percentile analysis, JoSAA (Joint Seat Allocation Authority) counselling, CSAB special rounds, and state engineering counselling (TNEA/KEA). Our advisors assist students in pinpointing high-placement branches and securing top-tier engineering seats.",
+		particulars: {
+			courseName: "JEE Engineering Guidance",
+			fullForm: "Joint Entrance Examination (JEE Main & JEE Advanced)",
+			duration: "1-Year / 2-Year Target Preparation Advisory & JoSAA/CSAB Choice-Filling Guidance",
+			level: "National Technical Entrance Examination",
+			eligibility: "10+2 with Physics, Mathematics, and Chemistry/CS (75% in 12th board for IIT/NIT/IIIT)",
+			entranceExams: "NTA JEE Main (Sessions 1 & 2) & IIT JEE Advanced",
+			medium: "English, Hindi, and 11 regional languages",
+			courseFees: "Strategic Choice-Filling & College Selection Advisory",
+			salaryPackage: "Tier-1 Engineering placement packages ranging from ₹8,00,000 to ₹40,00,000+ per annum",
+			jobs: "Future IIT/NIT Engineers, High-Tech Innovators, Software Architects, Quant Analysts"
+		}
+	},
+	{
+		slug: "aptitude-test",
+		name: "APTITUDE TEST",
+		bannerTitle: "CAREER APTITUDE & PSYCHOMETRIC PROFILING ASSESSMENT",
+		title: "Aptitude Test & Scientific Career Assessment",
+		image: "/images/domestic/aptitude-test.jpg",
+		category: "Sciences & Entrance",
+		description: "The Sri Vaari Scientific Aptitude & Psychometric Assessment is an individualized diagnostic evaluation designed to accurately map a student’s natural cognitive strengths, logical reasoning, numerical aptitude, spatial visualization, and personality orientation to appropriate professional degrees. Administered under certified career counselors and educational psychologists, this 2 to 3-hour assessment eliminates confusion between medicine, engineering, management, and civil services, providing students and parents with a clear, unbiased roadmap for undergraduate stream selection.",
+		particulars: {
+			courseName: "Aptitude & Career Assessment",
+			fullForm: "Differential Aptitude & Psychometric Career Profiling Battery",
+			duration: "Diagnostic Assessment (2 to 3 hours) + 1-on-1 Comprehensive Counselling Debrief",
+			level: "Pre-College Stream & Degree Selection Assessment",
+			eligibility: "Students of Class 10, 11, 12, or Undergraduate Seekers seeking course clarity",
+			entranceExams: "Standardized Psychometric & Differential Aptitude Test (DAT)",
+			medium: "English / Tamil",
+			courseFees: "Complimentary with Sri Vaari Full-Course Admissions Mentorship",
+			salaryPackage: "Maximum clarity leading to high-growth, high-satisfaction career paths",
+			jobs: "Empowered identification of best-fit careers in Healthcare, Tech, Corporate Law, Design, or Civil Services"
+		}
+	}
+];
+export const domesticStudiesBySlug = domesticStudiesList.reduce((acc, item) => {
+	acc[item.slug] = item;
+	return acc;
+}, {});
+
+//# sourceMappingURL=data:application/json;base64,eyJtYXBwaW5ncyI6IkFBQUEsT0FBTyxNQUFNLHNCQUFzQjtDQUNqQztFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7Q0FDQTtFQUNFLE1BQU07RUFDTixNQUFNO0VBQ04sYUFBYTtFQUNiLE9BQU87RUFDUCxPQUFPO0VBQ1AsVUFBVTtFQUNWLGFBQ0U7RUFDRixhQUFhO0dBQ1gsWUFBWTtHQUNaLFVBQVU7R0FDVixVQUFVO0dBQ1YsT0FBTztHQUNQLGFBQWE7R0FDYixlQUFlO0dBQ2YsUUFBUTtHQUNSLFlBQVk7R0FDWixlQUFlO0dBQ2YsTUFBTTtFQUNSO0NBQ0Y7QUFDRjtBQUVBLE9BQU8sTUFBTSx3QkFBd0Isb0JBQW9CLFFBQVEsS0FBSyxTQUFTO0NBQzdFLElBQUksS0FBSyxRQUFRO0NBQ2pCLE9BQU87QUFDVCxHQUFHLENBQUMsQ0FBQyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyJkb21lc3RpY1N0dWRpZXNEYXRhLmpzIl0sInZlcnNpb24iOjMsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBkb21lc3RpY1N0dWRpZXNMaXN0ID0gW1xuICB7XG4gICAgc2x1ZzogJ21iYnMnLFxuICAgIG5hbWU6ICdNQkJTJyxcbiAgICBiYW5uZXJUaXRsZTogJ01CQlMgKEJBQ0hFTE9SIE9GIE1FRElDSU5FIEFORCBCQUNIRUxPUiBPRiBTVVJHRVJZKScsXG4gICAgdGl0bGU6ICdNQkJTIChCYWNoZWxvciBvZiBNZWRpY2luZSBhbmQgQmFjaGVsb3Igb2YgU3VyZ2VyeSknLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9tYmJzLmpwZycsXG4gICAgY2F0ZWdvcnk6ICdNZWRpY2FsICYgQVlVU0gnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ01CQlMgKEJhY2hlbG9yIG9mIE1lZGljaW5lIGFuZCBCYWNoZWxvciBvZiBTdXJnZXJ5KSBpcyB0aGUgZmxhZ3NoaXAgNS41LXllYXIgdW5kZXJncmFkdWF0ZSBtZWRpY2FsIGRlZ3JlZSBpbiBJbmRpYSB0aGF0IGNvbmZlcnMgdGhlIHRpdGxlIG9mIERvY3Rvci4gUmVndWxhdGVkIGJ5IHRoZSBOYXRpb25hbCBNZWRpY2FsIENvbW1pc3Npb24gKE5NQyksIHRoZSBjdXJyaWN1bHVtIGluY2x1ZGVzIDQuNSB5ZWFycyBvZiBpbnRlbnNpdmUgcHJlY2xpbmljYWwsIHBhcmFjbGluaWNhbCwgYW5kIGNsaW5pY2FsIGNvdXJzZXdvcmsgZm9sbG93ZWQgYnkgMSB5ZWFyIG9mIGNvbXB1bHNvcnkgcm90YXRpbmcgbWVkaWNhbCBpbnRlcm5zaGlwLiBTdHVkZW50cyB1bmRlcmdvIGhhbmRzLW9uIGNsaW5pY2FsIHJvdGF0aW9ucyBhY3Jvc3MgZ2VuZXJhbCBtZWRpY2luZSwgZ2VuZXJhbCBzdXJnZXJ5LCBvYnN0ZXRyaWNzICYgZ3luYWVjb2xvZ3ksIHBhZWRpYXRyaWNzLCBhbmQgY29tbXVuaXR5IGhlYWx0aC4gQ29tcGxldGluZyBNQkJTIHF1YWxpZmllcyBncmFkdWF0ZXMgdG8gcHJhY3RpY2UgbW9kZXJuIG1lZGljaW5lLCByZWdpc3RlciB3aXRoIFN0YXRlIE1lZGljYWwgQ291bmNpbHMgb3IgTk1DLCBhbmQgcHVyc3VlIHBvc3RncmFkdWF0ZSBzcGVjaWFsaXNhdGlvbnMgKE1ELCBNUywgRE5CKSBvciBzdXBlci1zcGVjaWFsaXR5IG1lZGljYWwgY2FyZWVycy4nLFxuICAgIHBhcnRpY3VsYXJzOiB7XG4gICAgICBjb3Vyc2VOYW1lOiAnTWVkaWNpbmUgJiBTdXJnZXJ5IChNQkJTKScsXG4gICAgICBmdWxsRm9ybTogJ0JhY2hlbG9yIG9mIE1lZGljaW5lIGFuZCBCYWNoZWxvciBvZiBTdXJnZXJ5IChNQkJTKScsXG4gICAgICBkdXJhdGlvbjogJzUuNSB5ZWFycyAoNC41IHllYXJzIGFjYWRlbWljICsgMSB5ZWFyIGNvbXB1bHNvcnkgcm90YXRvcnkgaW50ZXJuc2hpcCknLFxuICAgICAgbGV2ZWw6ICdVbmRlcmdyYWR1YXRlIE1lZGljYWwgRGVncmVlJyxcbiAgICAgIGVsaWdpYmlsaXR5OiAnMTArMiB3aXRoIFBoeXNpY3MsIENoZW1pc3RyeSwgQmlvbG9neS9CaW90ZWNobm9sb2d5ICYgRW5nbGlzaCAoTWluIDUwJSBhZ2dyZWdhdGUpJyxcbiAgICAgIGVudHJhbmNlRXhhbXM6ICdORUVULVVHIChOYXRpb25hbCBFbGlnaWJpbGl0eSBjdW0gRW50cmFuY2UgVGVzdCknLFxuICAgICAgbWVkaXVtOiAnRW5nbGlzaCcsXG4gICAgICBjb3Vyc2VGZWVzOiAnSU5SIDQgTGFraHMgdG8gSU5SIDI1IExha2hzIHBlciB5ZWFyIChHb3Zlcm5tZW50IC8gUHJpdmF0ZSAvIERlZW1lZCBVbml2ZXJzaXRpZXMpJyxcbiAgICAgIHNhbGFyeVBhY2thZ2U6ICfigrk3LDAwLDAwMCB0byDigrkxOCwwMCwwMDAgcGVyIGFubnVtIGRlcGVuZGluZyBvbiBob3NwaXRhbCwgcm9sZSwgYW5kIGV4cGVyaWVuY2UnLFxuICAgICAgam9iczogJ0dlbmVyYWwgUGh5c2ljaWFuLCBNZWRpY2FsIE9mZmljZXIsIFJlc2lkZW50IFN1cmdlb24sIENsaW5pY2FsIFJlc2VhcmNoZXIsIEhvc3BpdGFsIEFkbWluaXN0cmF0b3InLFxuICAgIH0sXG4gIH0sXG4gIHtcbiAgICBzbHVnOiAnYmRzJyxcbiAgICBuYW1lOiAnREVOVEFMIChCRFMpJyxcbiAgICBiYW5uZXJUaXRsZTogJ0JEUyAoQkFDSEVMT1IgT0YgREVOVEFMIFNVUkdFUlkpJyxcbiAgICB0aXRsZTogJ0JEUyAoQmFjaGVsb3Igb2YgRGVudGFsIFN1cmdlcnkpJyxcbiAgICBpbWFnZTogJy9pbWFnZXMvZG9tZXN0aWMvYmRzLmpwZycsXG4gICAgY2F0ZWdvcnk6ICdNZWRpY2FsICYgQVlVU0gnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ0JEUyAoQmFjaGVsb3Igb2YgRGVudGFsIFN1cmdlcnkpIGlzIGEgNS15ZWFycyB1bmRlcmdyYWR1YXRlIHByb2dyYW0gYW5kIHRoZSBvbmx5IGFwcHJvdmVkIHByb2Zlc3Npb25hbCBkZW50YWwgY291cnNlIGluIEluZGlhLiBTdHVkZW50cyBiZWNvbWUgZG9jdG9ycyBhZnRlciB0aGUgQkRTIGNvdXJzZS4gSXQgaXMgYSBjb21wdWxzb3J5IGNvdXJzZSBmb3Igc3R1ZGVudHMgYXNwaXJpbmcgdG8gd29yayBhcyBkZW50aXN0cyBhdCBnb3Zlcm5tZW50IG9yIHByaXZhdGUgaG9zcGl0YWxzLiBCRFMgbWFpbmx5IGZvY3VzZXMgb24gdHJhaW5pbmcgYW5kIGludHJvZHVjaW5nIHN0dWRlbnRzIHRvIHRoZSBkZW50YWwgc2NpZW5jZXMgYW5kIHN1cmdlcmllcy4gVGhlIDUteWVhciBwcm9ncmFtIGludm9sdmVzIDQgeWVhcnMgb2YgY2xhc3Nyb29tIGVkdWNhdGlvbiBhbmQgMSB5ZWFyIG9mIGNvbXB1bHNvcnkgcm90YXRpbmcgaW50ZXJuc2hpcC4gVGhlIGRlZ3JlZSBpcyByZWd1bGF0ZWQgYnkgdGhlIERlbnRhbCBDb3VuY2lsIG9mIEluZGlhIChEQ0kpLiBUaGUgdmFyaW91cyBCRFMgc3ViamVjdHMgdGF1Z2h0IGluIHRoZSBwcm9ncmFtIGluY2x1ZGUgRGVudGFsIEhpc3RvbG9neSwgT3JhbCBQYXRob2xvZ3ksIE9yYWwgU3VyZ2VyeSwgZXRjLiBJdCBpcyBuZWNlc3NhcnkgZm9yIHRoZSBzdHVkZW50cyB0byByZWdpc3RlciB0aGVtc2VsdmVzIGluIHRoZSBEZW50YWwgQ291bmNpbCBvZiBJbmRpYSB3aGljaCByZWd1bGF0ZXMgdGhlIEJEUyBjb3Vyc2Ugc28gdGhhdCB0aGV5IGJlY29tZSBlbGlnaWJsZSB0byBwcmFjdGljZSB0aGVpciBwcm9mZXNzaW9uIGFmdGVyIHRoZSBjb21wbGV0aW9uIG9mIHRoZWlyIGRlZ3JlZS4nLFxuICAgIHBhcnRpY3VsYXJzOiB7XG4gICAgICBjb3Vyc2VOYW1lOiAnRGVudGFsIChCRFMpJyxcbiAgICAgIGZ1bGxGb3JtOiAnQmFjaGVsb3Igb2YgRGVudGFsIFN1cmdlcnkgKEJEUyknLFxuICAgICAgZHVyYXRpb246ICc1IHllYXJzICg0IHllYXJzICsgMSB5ZWFyIG9mIGNvbXB1bHNvcnkgcGFpZCBpbnRlcm5zaGlwKScsXG4gICAgICBsZXZlbDogJ1VuZGVyZ3JhZHVhdGUnLFxuICAgICAgZWxpZ2liaWxpdHk6ICcxMCsyIHdpdGggUGh5c2ljcywgQ2hlbWlzdHJ5LCBhbmQgQmlvbG9neScsXG4gICAgICBlbnRyYW5jZUV4YW1zOiAnTkVFVCwgU3RhdGUtbGV2ZWwgZXhhbXMsIFByaXZhdGUgVW5pdmVyc2l0eSBleGFtcycsXG4gICAgICBtZWRpdW06ICdFbmdsaXNoJyxcbiAgICAgIGNvdXJzZUZlZXM6ICdJTlIgMSBsYWtoIHRvIElOUiAxMCBsYWtoJyxcbiAgICAgIHNhbGFyeVBhY2thZ2U6ICfigrk1LDAwLDAwMCB0byDigrkxMiwwMCwwMDAgcGVyIGFubnVtLCBkZXBlbmRpbmcgb24gc3BlY2lhbGl6YXRpb24sIGV4cGVyaWVuY2UsIGFuZCBsb2NhdGlvbicsXG4gICAgICBqb2JzOiAnRGVudGlzdCwgT3J0aG9kb250aXN0LCBPcmFsIFN1cmdlb24sIFBlcmlvZG9udGlzdCwgQ29uc3VsdGFudCBpbiBQcml2YXRlIGFuZCBHb3Zlcm5tZW50IEhvc3BpdGFscycsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdiYW1zJyxcbiAgICBuYW1lOiAnQVlVUlZFREEgKEJBTVMpJyxcbiAgICBiYW5uZXJUaXRsZTogJ0JBTVMgKEJBQ0hFTE9SIE9GIEFZVVJWRURJQyBNRURJQ0lORSBBTkQgU1VSR0VSWSknLFxuICAgIHRpdGxlOiAnQkFNUyAoQmFjaGVsb3Igb2YgQXl1cnZlZGljIE1lZGljaW5lIGFuZCBTdXJnZXJ5KScsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2RvbWVzdGljL2JhbXMuanBnJyxcbiAgICBjYXRlZ29yeTogJ01lZGljYWwgJiBBWVVTSCcsXG4gICAgZGVzY3JpcHRpb246XG4gICAgICAnQkFNUyAoQmFjaGVsb3Igb2YgQXl1cnZlZGljIE1lZGljaW5lIGFuZCBTdXJnZXJ5KSBpcyBhIHByZW1pZXIgNS41LXllYXIgdW5kZXJncmFkdWF0ZSBwcm9ncmFtIGJsZW5kaW5nIHRpbWVsZXNzIFZlZGljIG1lZGljYWwgc2NpZW5jZSB3aXRoIG1vZGVybiBhbmF0b215LCBkaWFnbm9zdGljcywgYW5kIHBoYXJtYWNvbG9neS4gR292ZXJuZWQgYnkgdGhlIE5hdGlvbmFsIENvbW1pc3Npb24gZm9yIEluZGlhbiBTeXN0ZW0gb2YgTWVkaWNpbmUgKE5DSVNNKSB1bmRlciB0aGUgTWluaXN0cnkgb2YgQVlVU0gsIHRoZSBwcm9ncmFtIGNvbnNpc3RzIG9mIDQuNSB5ZWFycyBvZiBhY2FkZW1pYyBzdHVkeSBhbmQgMSB5ZWFyIG9mIGNvbXB1bHNvcnkgcm90YXRvcnkgY2xpbmljYWwgaW50ZXJuc2hpcC4gU3R1ZGVudHMgbWFzdGVyIFBhbmNoYWthcm1hIHRoZXJhcHksIGhlcmJvbG9neSAoRHJhdnlhZ3VuYSksIHN1cmdpY2FsIHByaW5jaXBsZXMgKFNoYWx5YSBUYW50cmEpLCBhbmQgaW50ZXJuYWwgbWVkaWNpbmUgKEtheWFjaGlraXRzYSkuIEdyYWR1YXRlcyBlYXJuIHJlZ2lzdHJhdGlvbiBhcyBBeXVydmVkaWMgTWVkaWNhbCBQcmFjdGl0aW9uZXJzIGFuZCBhcmUgd2lkZWx5IHJlY3J1aXRlZCBpbiB3ZWxsbmVzcyBjZW50cmVzLCBnb3Zlcm5tZW50IGRpc3BlbnNhcmllcywgYW5kIHBoYXJtYWNldXRpY2FsIHJlc2VhcmNoLicsXG4gICAgcGFydGljdWxhcnM6IHtcbiAgICAgIGNvdXJzZU5hbWU6ICdBeXVydmVkaWMgTWVkaWNpbmUgJiBTdXJnZXJ5IChCQU1TKScsXG4gICAgICBmdWxsRm9ybTogJ0JhY2hlbG9yIG9mIEF5dXJ2ZWRpYyBNZWRpY2luZSBhbmQgU3VyZ2VyeSAoQkFNUyknLFxuICAgICAgZHVyYXRpb246ICc1LjUgeWVhcnMgKDQuNSB5ZWFycyBhY2FkZW1pYyArIDEgeWVhciByb3RhdG9yeSBpbnRlcm5zaGlwKScsXG4gICAgICBsZXZlbDogJ1VuZGVyZ3JhZHVhdGUgTWVkaWNhbCBEZWdyZWUnLFxuICAgICAgZWxpZ2liaWxpdHk6ICcxMCsyIHdpdGggUGh5c2ljcywgQ2hlbWlzdHJ5LCBhbmQgQmlvbG9neSAoTWluIDUwJSBhZ2dyZWdhdGUsIFNhbnNrcml0IG9wdGlvbmFsL2JlbmVmaWNpYWwpJyxcbiAgICAgIGVudHJhbmNlRXhhbXM6ICdORUVULVVHIGZvbGxvd2VkIGJ5IEFBQ0NDIENlbnRyYWwgLyBTdGF0ZSBBWVVTSCBDb3Vuc2VsbGluZycsXG4gICAgICBtZWRpdW06ICdFbmdsaXNoIC8gSGluZGkgLyBSZWdpb25hbCBMYW5ndWFnZXMnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiAxLjUgTGFraHMgdG8gSU5SIDYuNSBMYWtocyBwZXIgeWVhcicsXG4gICAgICBzYWxhcnlQYWNrYWdlOiAn4oK5NCw1MCwwMDAgdG8g4oK5MTAsMDAsMDAwIHBlciBhbm51bScsXG4gICAgICBqb2JzOiAnQXl1cnZlZGljIERvY3RvciwgUGFuY2hha2FybWEgQ29uc3VsdGFudCwgQVlVU0ggTWVkaWNhbCBPZmZpY2VyLCBXZWxsbmVzcyBEaXJlY3RvciwgQ2xpbmljYWwgUmVzZWFyY2hlcicsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdic21zJyxcbiAgICBuYW1lOiAnU0lEREhBIChCU01TKScsXG4gICAgYmFubmVyVGl0bGU6ICdCU01TIChCQUNIRUxPUiBPRiBTSURESEEgTUVESUNJTkUgQU5EIFNVUkdFUlkpJyxcbiAgICB0aXRsZTogJ0JTTVMgKEJhY2hlbG9yIG9mIFNpZGRoYSBNZWRpY2luZSBhbmQgU3VyZ2VyeSknLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9ic21zLmpwZycsXG4gICAgY2F0ZWdvcnk6ICdNZWRpY2FsICYgQVlVU0gnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ0JTTVMgKEJhY2hlbG9yIG9mIFNpZGRoYSBNZWRpY2luZSBhbmQgU3VyZ2VyeSkgaXMgYW4gYW5jaWVudCwgaG9saXN0aWMgbWVkaWNhbCBlZHVjYXRpb24gc3lzdGVtIG5hdGl2ZSB0byBTb3V0aCBJbmRpYSB0aGF0IGZvY3VzZXMgb24gcmVzdG9yaW5nIGVxdWlsaWJyaXVtIGFtb25nIHRoZSB0aHJlZSB2aXRhbCBodW1vdXJzIChWYWxpLCBBemhhbCwgYW5kIEl5eWFtKS4gR292ZXJuZWQgYnkgdGhlIE5hdGlvbmFsIENvbW1pc3Npb24gZm9yIEluZGlhbiBTeXN0ZW0gb2YgTWVkaWNpbmUgKE5DSVNNKSwgdGhpcyA1LjUteWVhciB1bmRlcmdyYWR1YXRlIGNvdXJzZSBzcGFucyA0LjUgeWVhcnMgb2YgZGlkYWN0aWMgc3R1ZHkgYW5kIDEgeWVhciBvZiBtYW5kYXRvcnkgcm90YXRvcnkgY2xpbmljYWwgaW50ZXJuc2hpcC4gU3R1ZGVudHMgcmVjZWl2ZSBzcGVjaWFsaXplZCBpbnN0cnVjdGlvbiBpbiBHdW5hcGFkYW0gKFNpZGRoYSBwaGFybWFjb2xvZ3kpLCBWYXJtYW0gdGhlcmFweSAodml0YWwgcG9pbnQgc2NpZW5jZSksIEtheWFrYXJwYW0gKHJlanV2ZW5hdGlvbiksIGFuZCBwYXRob2xvZ3kuIFJlZ2lzdGVyZWQgU2lkZGhhIHBoeXNpY2lhbnMgc2VydmUgaW4gZ292ZXJubWVudCBob3NwaXRhbHMsIHJlc2VhcmNoIGNvdW5jaWxzIChDQ1JTKSwgYW5kIHByaXZhdGUgaGVhbHRoY2FyZSBpbnN0aXR1dGlvbnMuJyxcbiAgICBwYXJ0aWN1bGFyczoge1xuICAgICAgY291cnNlTmFtZTogJ1NpZGRoYSBNZWRpY2luZSAoQlNNUyknLFxuICAgICAgZnVsbEZvcm06ICdCYWNoZWxvciBvZiBTaWRkaGEgTWVkaWNpbmUgYW5kIFN1cmdlcnkgKEJTTVMpJyxcbiAgICAgIGR1cmF0aW9uOiAnNS41IHllYXJzICg0LjUgeWVhcnMgYWNhZGVtaWMgKyAxIHllYXIgcm90YXRvcnkgaW50ZXJuc2hpcCknLFxuICAgICAgbGV2ZWw6ICdVbmRlcmdyYWR1YXRlIE1lZGljYWwgRGVncmVlJyxcbiAgICAgIGVsaWdpYmlsaXR5OiAnMTArMiB3aXRoIFBoeXNpY3MsIENoZW1pc3RyeSwgQmlvbG9neSAoVGFtaWwgcHJvZmljaWVuY3kgcmVxdWlyZWQgb3IgdGF1Z2h0IGFzIHN1YmplY3QpJyxcbiAgICAgIGVudHJhbmNlRXhhbXM6ICdORUVULVVHICYgU3RhdGUgQVlVU0ggTWVkaWNhbCBDb3Vuc2VsbGluZycsXG4gICAgICBtZWRpdW06ICdFbmdsaXNoIC8gVGFtaWwnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiAxIExha2ggdG8gSU5SIDUgTGFraHMgcGVyIGFubnVtJyxcbiAgICAgIHNhbGFyeVBhY2thZ2U6ICfigrk0LDAwLDAwMCB0byDigrk5LDAwLDAwMCBwZXIgYW5udW0nLFxuICAgICAgam9iczogJ1NpZGRoYSBQaHlzaWNpYW4sIFZhcm1hbSBTcGVjaWFsaXN0LCBSZXNlYXJjaCBTY2llbnRpc3QgKENDUlMpLCBHb3Zlcm5tZW50IE1lZGljYWwgT2ZmaWNlcicsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdidW1zJyxcbiAgICBuYW1lOiAnVU5BTkkgKEJVTVMpJyxcbiAgICBiYW5uZXJUaXRsZTogJ0JVTVMgKEJBQ0hFTE9SIE9GIFVOQU5JIE1FRElDSU5FIEFORCBTVVJHRVJZKScsXG4gICAgdGl0bGU6ICdCVU1TIChCYWNoZWxvciBvZiBVbmFuaSBNZWRpY2luZSBhbmQgU3VyZ2VyeSknLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9idW1zLmpwZycsXG4gICAgY2F0ZWdvcnk6ICdNZWRpY2FsICYgQVlVU0gnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ0JVTVMgKEJhY2hlbG9yIG9mIFVuYW5pIE1lZGljaW5lIGFuZCBTdXJnZXJ5KSwgYWxzbyBrbm93biBhcyBLYW1pbC1lLVRpYmItd2EtSmFyYWhhdCwgaXMgYSA1LjUteWVhciBwcm9mZXNzaW9uYWwgbWVkaWNhbCBkZWdyZWUgYmFzZWQgb24gdGhlIEdyZWNvLUFyYWJpYyBtZWRpY2FsIGRvY3RyaW5lIGVzdGFibGlzaGVkIGJ5IEhpcHBvY3JhdGVzIGFuZCBJYm4gU2luYSAoQXZpY2VubmEpLiBSZWd1bGF0ZWQgYnkgTkNJU00gdW5kZXIgdGhlIE1pbmlzdHJ5IG9mIEFZVVNILCB0aGUgZGVncmVlIGluY2x1ZGVzIDQuNSB5ZWFycyBvZiBjb3Vyc2V3b3JrIGFuZCAxIHllYXIgb2YgY29tcHVsc29yeSBob3NwaXRhbCBpbnRlcm5zaGlwLiBLZXkgdGhlcmFwaWVzIHRhdWdodCBpbmNsdWRlIElsYWotYml0LVRhZGJlZXIgKHJlZ2ltZW50YWwgdGhlcmFwaWVzIGxpa2UgY3VwcGluZyBhbmQgbGVlY2hpbmcpLCBJbGFqLWJpbC1HaGl6YSAoZGlldG90aGVyYXB5KSwgYW5kIElsYWotYmlkLURhd2EgKHBoYXJtYWNvdGhlcmFweSkuIFJlZ2lzdGVyZWQgSGFrZWVtcyBhbmQgVW5hbmkgcGh5c2ljaWFucyBlbmpveSBzaWduaWZpY2FudCBkZW1hbmQgaW4gcHVibGljIGhlYWx0aCBkaXNwZW5zYXJpZXMgYW5kIGdsb2JhbCBoZXJiYWwgd2VsbG5lc3MgY2xpbmljcy4nLFxuICAgIHBhcnRpY3VsYXJzOiB7XG4gICAgICBjb3Vyc2VOYW1lOiAnVW5hbmkgTWVkaWNpbmUgKEJVTVMpJyxcbiAgICAgIGZ1bGxGb3JtOiAnQmFjaGVsb3Igb2YgVW5hbmkgTWVkaWNpbmUgYW5kIFN1cmdlcnkgKEJVTVMpJyxcbiAgICAgIGR1cmF0aW9uOiAnNS41IHllYXJzICg0LjUgeWVhcnMgc3R1ZHkgKyAxIHllYXIgaG9zcGl0YWwgaW50ZXJuc2hpcCknLFxuICAgICAgbGV2ZWw6ICdVbmRlcmdyYWR1YXRlIE1lZGljYWwgRGVncmVlJyxcbiAgICAgIGVsaWdpYmlsaXR5OiAnMTArMiB3aXRoIFBDQiAoVXJkdS9BcmFiaWMvUGVyc2lhbiBsYW5ndWFnZSBxdWFsaWZpY2F0aW9uIGluIDEwdGggb3IgMTJ0aCBzdGFuZGFyZCknLFxuICAgICAgZW50cmFuY2VFeGFtczogJ05FRVQtVUcgJiBDZW50cmFsL1N0YXRlIEFZVVNIIENvdW5zZWxsaW5nJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2ggLyBVcmR1JyxcbiAgICAgIGNvdXJzZUZlZXM6ICdJTlIgMSBMYWtoIHRvIElOUiA1LjUgTGFraHMgcGVyIGFubnVtJyxcbiAgICAgIHNhbGFyeVBhY2thZ2U6ICfigrk0LDAwLDAwMCB0byDigrk4LDUwLDAwMCBwZXIgYW5udW0nLFxuICAgICAgam9iczogJ1VuYW5pIE1lZGljYWwgT2ZmaWNlciwgUmVnaW1lbnRhbCBUaGVyYXB5IENvbnN1bHRhbnQsIEhha2VlbSwgRm9ybXVsYXRpb24gQ2hlbWlzdCwgUHVibGljIEhlYWx0aCBPZmZpY2VyJyxcbiAgICB9LFxuICB9LFxuICB7XG4gICAgc2x1ZzogJ2JobXMnLFxuICAgIG5hbWU6ICdIT01FT1BBVEhZIChCSE1TKScsXG4gICAgYmFubmVyVGl0bGU6ICdCSE1TIChCQUNIRUxPUiBPRiBIT01FT1BBVEhJQyBNRURJQ0lORSBBTkQgU1VSR0VSWSknLFxuICAgIHRpdGxlOiAnQkhNUyAoQmFjaGVsb3Igb2YgSG9tZW9wYXRoaWMgTWVkaWNpbmUgYW5kIFN1cmdlcnkpJyxcbiAgICBpbWFnZTogJy9pbWFnZXMvZG9tZXN0aWMvYmhtcy5qcGcnLFxuICAgIGNhdGVnb3J5OiAnTWVkaWNhbCAmIEFZVVNIJyxcbiAgICBkZXNjcmlwdGlvbjpcbiAgICAgICdCSE1TIChCYWNoZWxvciBvZiBIb21lb3BhdGhpYyBNZWRpY2luZSBhbmQgU3VyZ2VyeSkgaXMgYSA1LjUteWVhciBtZWRpY2FsIGRlZ3JlZSByb290ZWQgaW4gdGhlIGhvbGlzdGljIHByaW5jaXBsZSBvZiBcIlNpbWlsaWEgU2ltaWxpYnVzIEN1cmVudHVyXCIgKGxpa2UgY3VyZXMgbGlrZSkuIFRoZSBwcm9ncmFtIGlzIG1vbml0b3JlZCBieSB0aGUgTmF0aW9uYWwgQ29tbWlzc2lvbiBmb3IgSG9tb2VvcGF0aHkgKE5DSCkgYW5kIGVudGFpbHMgNC41IHllYXJzIG9mIGNvbXByZWhlbnNpdmUgbWVkaWNhbCBzY2llbmNlIGVkdWNhdGlvbiBwYWlyZWQgd2l0aCAxIHllYXIgb2YgaGFuZHMtb24gcm90YXRpbmcgY2xpbmljYWwgaW50ZXJuc2hpcC4gVGhlIHN5bGxhYnVzIGVuY29tcGFzc2VzIGh1bWFuIGFuYXRvbXksIHBhdGhvbG9neSwgZm9yZW5zaWMgbWVkaWNpbmUsIG9yZ2Fub24gb2YgbWVkaWNpbmUsIGFuZCBob21vZW9wYXRoaWMgbWF0ZXJpYSBtZWRpY2EuIEdyYWR1YXRpbmcgZG9jdG9ycyByZWNlaXZlIGdvdmVybm1lbnQgbGljZW5zaW5nIHRvIHByZXNjcmliZSBpbmRpdmlkdWFsaXplZCBuYXR1cmFsIHJlbWVkaWVzIGFuZCBtYW5hZ2UgYWN1dGUgYW5kIGNocm9uaWMgYWlsbWVudHMgaW4gaG9zcGl0YWxzLCBjbGluaWNzLCBhbmQgcmVzZWFyY2ggaW5zdGl0dXRpb25zLicsXG4gICAgcGFydGljdWxhcnM6IHtcbiAgICAgIGNvdXJzZU5hbWU6ICdIb21lb3BhdGh5IChCSE1TKScsXG4gICAgICBmdWxsRm9ybTogJ0JhY2hlbG9yIG9mIEhvbWVvcGF0aGljIE1lZGljaW5lIGFuZCBTdXJnZXJ5IChCSE1TKScsXG4gICAgICBkdXJhdGlvbjogJzUuNSB5ZWFycyAoNC41IHllYXJzIGNvdXJzZSArIDEgeWVhciByb3RhdGluZyBpbnRlcm5zaGlwKScsXG4gICAgICBsZXZlbDogJ1VuZGVyZ3JhZHVhdGUgTWVkaWNhbCBEZWdyZWUnLFxuICAgICAgZWxpZ2liaWxpdHk6ICcxMCsyIHdpdGggUGh5c2ljcywgQ2hlbWlzdHJ5LCBCaW9sb2d5ICYgRW5nbGlzaCAoTWluIDUwJSBtYXJrcyknLFxuICAgICAgZW50cmFuY2VFeGFtczogJ05FRVQtVUcgJiBDZW50cmFsL1N0YXRlIEFZVVNIIENvdW5zZWxsaW5nJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2gnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiAxLjIgTGFraHMgdG8gSU5SIDYgTGFraHMgcGVyIHllYXInLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ+KCuTQsMDAsMDAwIHRvIOKCuTksMDAsMDAwIHBlciBhbm51bScsXG4gICAgICBqb2JzOiAnSG9tZW9wYXRoaWMgUGh5c2ljaWFuLCBNZWRpY2FsIE9mZmljZXIsIENocm9uaWMgRGlzZWFzZSBDb25zdWx0YW50LCBQaGFybWFjb3ZpZ2lsYW5jZSBPZmZpY2VyJyxcbiAgICB9LFxuICB9LFxuICB7XG4gICAgc2x1ZzogJ2J2c2MnLFxuICAgIG5hbWU6ICdWRVRFUklOQVJZIFNDSUVOQ0UgKEJWU0MpJyxcbiAgICBiYW5uZXJUaXRsZTogJ0JWU0MgJiBBSCAoQkFDSEVMT1IgT0YgVkVURVJJTkFSWSBTQ0lFTkNFICYgQU5JTUFMIEhVU0JBTkRSWSknLFxuICAgIHRpdGxlOiAnQi5WLlNjICYgQS5ILiAoQmFjaGVsb3Igb2YgVmV0ZXJpbmFyeSBTY2llbmNlICYgQW5pbWFsIEh1c2JhbmRyeSknLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9idnNjLmpwZycsXG4gICAgY2F0ZWdvcnk6ICdNZWRpY2FsICYgQVlVU0gnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ0IuVi5TYyAmIEEuSC4gKEJhY2hlbG9yIG9mIFZldGVyaW5hcnkgU2NpZW5jZSBhbmQgQW5pbWFsIEh1c2JhbmRyeSkgaXMgYSA1LjUteWVhciBwcm9mZXNzaW9uYWwgZGVncmVlIHJlZ3VsYXRlZCBieSB0aGUgVmV0ZXJpbmFyeSBDb3VuY2lsIG9mIEluZGlhIChWQ0kpLiBUaGUgcHJvZ3JhbSBpbmNsdWRlcyA0LjUgeWVhcnMgb2YgaW50ZW5zaXZlIGNsaW5pY2FsIGFuZCBzdXJnaWNhbCBlZHVjYXRpb24gY291cGxlZCB3aXRoIGEgMS15ZWFyIGNvbXB1bHNvcnkgaW50ZXJuc2hpcCBjb21wcmlzaW5nIGNsaW5pY2FsIHByYWN0aWNlLCBsaXZlc3RvY2sgZmFybSB0cmFpbmluZywgYW5kIHZldGVyaW5hcnkgYW1idWxhdG9yeSB3b3JrLiBTdHVkZW50cyBnYWluIGV4dGVuc2l2ZSBwcm9maWNpZW5jeSBpbiBhbmltYWwgcGh5c2lvbG9neSwgc3VyZ2ljYWwgaW50ZXJ2ZW50aW9uLCB2ZXRlcmluYXJ5IHJhZGlvbG9neSwgaGVyZCBlcGlkZW1pb2xvZ3ksIGFuZCB6b29sb2dpY2FsIG1lZGljaW5lLiBHcmFkdWF0ZXMgZW5qb3kgcmV3YXJkaW5nIGNhcmVlcnMgYXMgdmV0ZXJpbmFyeSBzdXJnZW9ucywgbGl2ZXN0b2NrIGRldmVsb3BtZW50IG9mZmljZXJzLCB3aWxkbGlmZSBjb25zZXJ2YXRpb25pc3RzLCBhbmQgcGhhcm1hY2V1dGljYWwgc3BlY2lhbGlzdHMuJyxcbiAgICBwYXJ0aWN1bGFyczoge1xuICAgICAgY291cnNlTmFtZTogJ1ZldGVyaW5hcnkgU2NpZW5jZSAoQi5WLlNjICYgQS5ILiknLFxuICAgICAgZnVsbEZvcm06ICdCYWNoZWxvciBvZiBWZXRlcmluYXJ5IFNjaWVuY2UgJiBBbmltYWwgSHVzYmFuZHJ5JyxcbiAgICAgIGR1cmF0aW9uOiAnNS41IHllYXJzICg0LjUgeWVhcnMgYWNhZGVtaWMgKyAxIHllYXIgY2xpbmljYWwgaW50ZXJuc2hpcCknLFxuICAgICAgbGV2ZWw6ICdVbmRlcmdyYWR1YXRlIFByb2Zlc3Npb25hbCBEZWdyZWUnLFxuICAgICAgZWxpZ2liaWxpdHk6ICcxMCsyIHdpdGggUGh5c2ljcywgQ2hlbWlzdHJ5LCBCaW9sb2d5ICYgRW5nbGlzaCAoTWluaW11bSA1MCUgbWFya3MpJyxcbiAgICAgIGVudHJhbmNlRXhhbXM6ICdORUVULVVHICgxNSUgQWxsIEluZGlhIFZDSSBRdW90YSkgJiBTdGF0ZSBWZXRlcmluYXJ5IEVudHJhbmNlIEV4YW1zJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2gnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiA4MCwwMDAgdG8gSU5SIDUgTGFraHMgcGVyIHllYXInLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ+KCuTUsMDAsMDAwIHRvIOKCuTEyLDAwLDAwMCBwZXIgYW5udW0nLFxuICAgICAgam9iczogJ1ZldGVyaW5hcnkgU3VyZ2VvbiwgQW5pbWFsIEh1c2JhbmRyeSBPZmZpY2VyLCBDb21wYW5pb24gQW5pbWFsIFZldCwgWm9vIFZldGVyaW5hcnkgT2ZmaWNlciwgRGFpcnkgRmFybSBBZHZpc29yJyxcbiAgICB9LFxuICB9LFxuICB7XG4gICAgc2x1ZzogJ2JueXMnLFxuICAgIG5hbWU6ICdZT0dBICYgTkFUVVJPUEFUSFkgKEJOWVMpJyxcbiAgICBiYW5uZXJUaXRsZTogJ0JOWVMgKEJBQ0hFTE9SIE9GIE5BVFVST1BBVEhZIEFORCBZT0dJQyBTQ0lFTkNFUyknLFxuICAgIHRpdGxlOiAnQk5ZUyAoQmFjaGVsb3Igb2YgTmF0dXJvcGF0aHkgYW5kIFlvZ2ljIFNjaWVuY2VzKScsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2RvbWVzdGljL2JueXMuanBnJyxcbiAgICBjYXRlZ29yeTogJ0hlYWx0aGNhcmUgJiBUZWNobmljYWwnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ0JOWVMgKEJhY2hlbG9yIG9mIE5hdHVyb3BhdGh5IGFuZCBZb2dpYyBTY2llbmNlcykgaXMgYSBwcmVzdGlnaW91cyA1LjUteWVhciBtZWRpY2FsIGRlZ3JlZSBjb21iaW5pbmcgZXZpZGVuY2UtYmFzZWQgbm9uLWludmFzaXZlIHRoZXJhcGllcyB3aXRoIHlvZ2ljIHBvc3R1cmVzLCBoeWRyb3RoZXJhcHksIG11ZCB0aGVyYXB5LCBudXRyaXRpb24sIGFuZCBsaWZlc3R5bGUgbWVkaWNpbmUuIE1vbml0b3JlZCB1bmRlciB0aGUgTWluaXN0cnkgb2YgQVlVU0gsIHN0dWRlbnRzIHNwZW5kIDQuNSB5ZWFycyBzdHVkeWluZyBodW1hbiBhbmF0b215LCBiaW9jaGVtaXN0cnksIGNsaW5pY2FsIGRpYWdub3N0aWNzLCBhbmQgbmF0dXJhbCB0aGVyYXBldXRpYyBtb2RhbGl0aWVzLCBjdWxtaW5hdGluZyBpbiAxIHllYXIgb2YgY29tcHVsc29yeSByb3RhdGluZyBob3NwaXRhbCBpbnRlcm5zaGlwLiBHcmFkdWF0ZXMgYXJlIHRpdGxlZCBOYXR1cm9wYXRoeSBEb2N0b3JzIGFuZCBhcmUgbGljZW5zZWQgdG8gb3BlcmF0ZSBsaWZlc3R5bGUgcmVoYWJpbGl0YXRpb24gY2xpbmljcywgY29ycG9yYXRlIHdlbGxuZXNzIHNhbmN0dWFyaWVzLCBhbmQgY2xpbmljYWwgd2VsbG5lc3MgaG9zcGl0YWxzIGdsb2JhbGx5LicsXG4gICAgcGFydGljdWxhcnM6IHtcbiAgICAgIGNvdXJzZU5hbWU6ICdZb2dhICYgTmF0dXJvcGF0aHkgKEJOWVMpJyxcbiAgICAgIGZ1bGxGb3JtOiAnQmFjaGVsb3Igb2YgTmF0dXJvcGF0aHkgYW5kIFlvZ2ljIFNjaWVuY2VzIChCTllTKScsXG4gICAgICBkdXJhdGlvbjogJzUuNSB5ZWFycyAoNC41IHllYXJzIHN0dWR5ICsgMSB5ZWFyIGNvbXB1bHNvcnkgaW50ZXJuc2hpcCknLFxuICAgICAgbGV2ZWw6ICdVbmRlcmdyYWR1YXRlIE1lZGljYWwgRGVncmVlJyxcbiAgICAgIGVsaWdpYmlsaXR5OiAnMTArMiB3aXRoIFBoeXNpY3MsIENoZW1pc3RyeSwgYW5kIEJpb2xvZ3kgKE1pbiA1MCUgYWdncmVnYXRlKScsXG4gICAgICBlbnRyYW5jZUV4YW1zOiAnU3RhdGUgTWVkaWNhbCBDb3Vuc2VsbGluZyAvIE5FRVQtVUcgbWVyaXQgKGRlcGVuZGluZyBvbiBzdGF0ZSByZWd1bGF0aW9ucyknLFxuICAgICAgbWVkaXVtOiAnRW5nbGlzaCcsXG4gICAgICBjb3Vyc2VGZWVzOiAnSU5SIDEgTGFraCB0byBJTlIgNCBMYWtocyBwZXIgYW5udW0nLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ+KCuTMsNTAsMDAwIHRvIOKCuTgsMDAsMDAwIHBlciBhbm51bScsXG4gICAgICBqb2JzOiAnTmF0dXJvcGF0aHkgUGh5c2ljaWFuLCBZb2dpYyBNZWRpY2luZSBDb25zdWx0YW50LCBIb3NwaXRhbCBXZWxsbmVzcyBEaXJlY3RvciwgTGlmZXN0eWxlIERpc2Vhc2UgU3BlY2lhbGlzdCcsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdicHQnLFxuICAgIG5hbWU6ICdQSFlTSU9USEVSQVBZIChCUFQpJyxcbiAgICBiYW5uZXJUaXRsZTogJ0JQVCAoQkFDSEVMT1IgT0YgUEhZU0lPVEhFUkFQWSknLFxuICAgIHRpdGxlOiAnQlBUIChCYWNoZWxvciBvZiBQaHlzaW90aGVyYXB5KScsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2RvbWVzdGljL2JwdC5qcGcnLFxuICAgIGNhdGVnb3J5OiAnSGVhbHRoY2FyZSAmIFRlY2huaWNhbCcsXG4gICAgZGVzY3JpcHRpb246XG4gICAgICAnQlBUIChCYWNoZWxvciBvZiBQaHlzaW90aGVyYXB5KSBpcyBhIDQuNS15ZWFyIGhlYWx0aGNhcmUgZGVncmVlIHJlY29nbml6ZWQgYnkgdGhlIE5hdGlvbmFsIENvbW1pc3Npb24gZm9yIEFsbGllZCBhbmQgSGVhbHRoY2FyZSBQcm9mZXNzaW9ucyAoTkNBSFApLiBDb21wcmlzaW5nIDQgeWVhcnMgb2YgY2xhc3Nyb29tIGFuZCBjbGluaWNhbCBpbnN0cnVjdGlvbiBwbHVzIDYgbW9udGhzIG9mIG1hbmRhdG9yeSByb3RhdG9yeSBob3NwaXRhbCBpbnRlcm5zaGlwLCB0aGUgY291cnNlIHRyYWlucyBzdHVkZW50cyBpbiBiaW9tZWNoYW5pY3MsIGVsZWN0cm90aGVyYXB5LCBleGVyY2lzZSBwaHlzaW9sb2d5LCBvcnRob3BlZGljIHJlaGFiaWxpdGF0aW9uLCBuZXVyb2xvZ2ljYWwgbW9iaWxpdHksIGFuZCBzcG9ydHMgc2NpZW5jZS4gUGh5c2lvdGhlcmFwaXN0cyBwbGF5IGFuIGluZGlzcGVuc2FibGUgcm9sZSBpbiBwYXRpZW50IHJlY292ZXJ5LCBpbnRlbnNpdmUgY2FyZSB1bml0IG1vYmlsaXphdGlvbnMsIGF0aGxldGljIGNvbmRpdGlvbmluZywgYW5kIHBvc3Qtc3VyZ2ljYWwgcmVoYWJpbGl0YXRpb24gYWNyb3NzIG11bHRpc3BlY2lhbGl0eSBob3NwaXRhbHMgYW5kIGVsaXRlIHNwb3J0aW5nIGZlZGVyYXRpb25zLicsXG4gICAgcGFydGljdWxhcnM6IHtcbiAgICAgIGNvdXJzZU5hbWU6ICdQaHlzaW90aGVyYXB5IChCUFQpJyxcbiAgICAgIGZ1bGxGb3JtOiAnQmFjaGVsb3Igb2YgUGh5c2lvdGhlcmFweSAoQlBUKScsXG4gICAgICBkdXJhdGlvbjogJzQuNSB5ZWFycyAoNCB5ZWFycyBhY2FkZW1pYyArIDYgbW9udGhzIGNvbXB1bHNvcnkgY2xpbmljYWwgaW50ZXJuc2hpcCknLFxuICAgICAgbGV2ZWw6ICdVbmRlcmdyYWR1YXRlIEhlYWx0aGNhcmUgRGVncmVlJyxcbiAgICAgIGVsaWdpYmlsaXR5OiAnMTArMiB3aXRoIFBoeXNpY3MsIENoZW1pc3RyeSwgYW5kIEJpb2xvZ3kgKE1pbiA1MCUgYWdncmVnYXRlKScsXG4gICAgICBlbnRyYW5jZUV4YW1zOiAnU3RhdGUgQ0VUcywgVW5pdmVyc2l0eSBFbnRyYW5jZSBUZXN0cywgb3IgTWVyaXQtYmFzZWQgQ291bnNlbGxpbmcnLFxuICAgICAgbWVkaXVtOiAnRW5nbGlzaCcsXG4gICAgICBjb3Vyc2VGZWVzOiAnSU5SIDgwLDAwMCB0byBJTlIgMy41IExha2hzIHBlciB5ZWFyJyxcbiAgICAgIHNhbGFyeVBhY2thZ2U6ICfigrkzLDUwLDAwMCB0byDigrk4LDUwLDAwMCBwZXIgYW5udW0nLFxuICAgICAgam9iczogJ1BoeXNpb3RoZXJhcGlzdCwgU3BvcnRzIFJlaGFiaWxpdGF0aW9uIFNwZWNpYWxpc3QsIE9ydGhvcGVkaWMgQ29uc3VsdGFudCwgTmV1cm8tUGh5c2ljYWwgVGhlcmFwaXN0LCBJQ1UgTW9iaWxpdHkgTGVhZCcsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdwaGFybWFjeScsXG4gICAgbmFtZTogJ1BIQVJNQUNZJyxcbiAgICBiYW5uZXJUaXRsZTogJ0IuUEhBUk0gKEJBQ0hFTE9SIE9GIFBIQVJNQUNZKScsXG4gICAgdGl0bGU6ICdCLlBoYXJtIChCYWNoZWxvciBvZiBQaGFybWFjeSknLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9waGFybWFjeS5qcGcnLFxuICAgIGNhdGVnb3J5OiAnSGVhbHRoY2FyZSAmIFRlY2huaWNhbCcsXG4gICAgZGVzY3JpcHRpb246XG4gICAgICAnQi5QaGFybSAoQmFjaGVsb3Igb2YgUGhhcm1hY3kpIGlzIGEgY29tcHJlaGVuc2l2ZSA0LXllYXIgKDgtc2VtZXN0ZXIpIHByb2Zlc3Npb25hbCBkZWdyZWUgcmVndWxhdGVkIGJ5IHRoZSBQaGFybWFjeSBDb3VuY2lsIG9mIEluZGlhIChQQ0kpLiBUaGUgY3VycmljdWx1bSBjb3ZlcnMgdGhlIGVudGlyZSBwaGFybWFjZXV0aWNhbCB2YWx1ZSBjaGFpbiwgaW5jbHVkaW5nIG1lZGljaW5hbCBjaGVtaXN0cnksIHBoYXJtYWNldXRpY3MsIHBoYXJtYWNvbG9neSwgcGhhcm1hY29nbm9zeSwgY2xpbmljYWwgZHJ1ZyB0cmlhbHMsIGFuZCBwaGFybWFjZXV0aWNhbCBhbmFseXNpcy4gU3R1ZGVudHMgYWNxdWlyZSBwcmFjdGljYWwgbGFib3JhdG9yeSBleHBlcnRpc2UgaW4gZHJ1ZyBmb3JtdWxhdGlvbiwgc3ludGhldGljIG1lZGljaW5lIGRlc2lnbiwgYW5kIHF1YWxpdHkgYXNzdXJhbmNlLiBHcmFkdWF0ZXMgYXJlIG9mZmljaWFsbHkgcmVnaXN0ZXJlZCBhcyBSZWdpc3RlcmVkIFBoYXJtYWNpc3RzIGFuZCBob2xkIGx1Y3JhdGl2ZSBjYXJlZXIgcGF0aHdheXMgYWNyb3NzIG11bHRpbmF0aW9uYWwgcGhhcm1hY2V1dGljYWwgY29ycG9yYXRpb25zLCByZWd1bGF0b3J5IGJvZGllcywgYW5kIGhlYWx0aGNhcmUgY2hhaW5zLicsXG4gICAgcGFydGljdWxhcnM6IHtcbiAgICAgIGNvdXJzZU5hbWU6ICdQaGFybWFjeSAoQi5QaGFybSknLFxuICAgICAgZnVsbEZvcm06ICdCYWNoZWxvciBvZiBQaGFybWFjeSAoQi5QaGFybSknLFxuICAgICAgZHVyYXRpb246ICc0IHllYXJzICg4IHNlbWVzdGVycyknLFxuICAgICAgbGV2ZWw6ICdVbmRlcmdyYWR1YXRlIFByb2Zlc3Npb25hbCBEZWdyZWUnLFxuICAgICAgZWxpZ2liaWxpdHk6ICcxMCsyIHdpdGggUGh5c2ljcywgQ2hlbWlzdHJ5LCBhbmQgTWF0aGVtYXRpY3MvQmlvbG9neSAoTWluIDUwJSBtYXJrcyknLFxuICAgICAgZW50cmFuY2VFeGFtczogJ1N0YXRlIEVuZ2luZWVyaW5nICYgUGhhcm1hY3kgQ0VUcywgVW5pdmVyc2l0eSBFbnRyYW5jZSBFeGFtcywgR1BBVCAoUEcpJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2gnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiA3MCwwMDAgdG8gSU5SIDIuNSBMYWtocyBwZXIgYW5udW0nLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ+KCuTMsNTAsMDAwIHRvIOKCuTcsNTAsMDAwIHBlciBhbm51bScsXG4gICAgICBqb2JzOiAnUmVnaXN0ZXJlZCBQaGFybWFjaXN0LCBEcnVnIEluc3BlY3RvciwgUXVhbGl0eSBDb250cm9sIFNjaWVudGlzdCwgRm9ybXVsYXRpb25zIFNwZWNpYWxpc3QsIENsaW5pY2FsIFJlc2VhcmNoIEFzc29jaWF0ZScsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdhbGxpZWQtaGVhbHRoLXNjaWVuY2UnLFxuICAgIG5hbWU6ICdBTExJRUQgSEVBTFRIIFNDSUVOQ0UnLFxuICAgIGJhbm5lclRpdGxlOiAnQi5TQyBBTExJRUQgSEVBTFRIIFNDSUVOQ0VTJyxcbiAgICB0aXRsZTogJ0IuU2MgQWxsaWVkIEhlYWx0aCBTY2llbmNlcyAoQ2FyZGlhYywgRGlhbHlzaXMsIFJhZGlvbG9neSwgTUxULCBPVCAmIEFuYWVzdGhlc2lhKScsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2RvbWVzdGljL2FsbGllZC1oZWFsdGgtc2NpZW5jZS5qcGcnLFxuICAgIGNhdGVnb3J5OiAnSGVhbHRoY2FyZSAmIFRlY2huaWNhbCcsXG4gICAgZGVzY3JpcHRpb246XG4gICAgICAnQi5TYyBpbiBBbGxpZWQgSGVhbHRoIFNjaWVuY2VzIGNvbXByaXNlcyBzcGVjaWFsaXplZCAzIHRvIDQteWVhciB1bmRlcmdyYWR1YXRlIHByb2dyYW1zIHJlZ3VsYXRlZCB1bmRlciB0aGUgTmF0aW9uYWwgQ29tbWlzc2lvbiBmb3IgQWxsaWVkIGFuZCBIZWFsdGhjYXJlIFByb2Zlc3Npb25zIChOQ0FIUCkuIE9mZmVyaW5ncyBzcGFuIGNyaXRpY2FsIGRpc2NpcGxpbmVzIHN1Y2ggYXMgQ2FyZGlhYyBUZWNobm9sb2d5LCBNZWRpY2FsIExhYm9yYXRvcnkgVGVjaG5vbG9neSAoTUxUKSwgUmFkaW9sb2d5ICYgSW1hZ2luZywgRGlhbHlzaXMgVGVjaG5vbG9neSwgUmVzcGlyYXRvcnkgVGhlcmFweSwgYW5kIE9wZXJhdGlvbiBUaGVhdHJlICYgQW5hZXN0aGVzaWEgVGVjaG5vbG9neS4gQWxsaWVkIGhlYWx0aCBwcm9mZXNzaW9uYWxzIHdvcmsgZGlyZWN0bHkgYWxvbmdzaWRlIHN1cmdlb25zIGFuZCBjcml0aWNhbCBjYXJlIHNwZWNpYWxpc3RzLCBvcGVyYXRpbmcgdml0YWwgbGlmZS1zdXBwb3J0IHN5c3RlbXMsIHByZWNpc2lvbiBkaWFnbm9zdGljIGluc3RydW1lbnRzLCBhbmQgaW52YXNpdmUgbW9uaXRvcmluZyBlcXVpcG1lbnQgaW4gdGVydGlhcnkgY2FyZSBob3NwaXRhbHMuJyxcbiAgICBwYXJ0aWN1bGFyczoge1xuICAgICAgY291cnNlTmFtZTogJ0FsbGllZCBIZWFsdGggU2NpZW5jZXMnLFxuICAgICAgZnVsbEZvcm06ICdCYWNoZWxvciBvZiBTY2llbmNlIGluIEFsbGllZCBIZWFsdGggU2NpZW5jZXMgKEIuU2MgQUhTKScsXG4gICAgICBkdXJhdGlvbjogJzMgdG8gNCB5ZWFycyAoMyB5ZWFycyBhY2FkZW1pYyArIDEgeWVhciBjb21wdWxzb3J5IGNsaW5pY2FsIGludGVybnNoaXApJyxcbiAgICAgIGxldmVsOiAnVW5kZXJncmFkdWF0ZSBDbGluaWNhbCBTY2llbmNlIERlZ3JlZScsXG4gICAgICBlbGlnaWJpbGl0eTogJzEwKzIgd2l0aCBQaHlzaWNzLCBDaGVtaXN0cnksIEJpb2xvZ3kgLyBMaWZlIFNjaWVuY2VzIChNaW4gNTAlIG1hcmtzKScsXG4gICAgICBlbnRyYW5jZUV4YW1zOiAnSW5zdGl0dXRpb25hbCBFbnRyYW5jZSBFeGFtaW5hdGlvbnMgLyBTdGF0ZSBNZWRpY2FsIFVuaXZlcnNpdHkgQ291bnNlbGxpbmcnLFxuICAgICAgbWVkaXVtOiAnRW5nbGlzaCcsXG4gICAgICBjb3Vyc2VGZWVzOiAnSU5SIDYwLDAwMCB0byBJTlIgMi41IExha2hzIHBlciB5ZWFyJyxcbiAgICAgIHNhbGFyeVBhY2thZ2U6ICfigrkzLDAwLDAwMCB0byDigrk3LDAwLDAwMCBwZXIgYW5udW0nLFxuICAgICAgam9iczogJ1JhZGlvbG9neSBUZWNobm9sb2dpc3QsIENhcmRpYWMgUGVyZnVzaW9uaXN0LCBEaWFseXNpcyBTcGVjaWFsaXN0LCBNZWRpY2FsIExhYiBUZWNobm9sb2dpc3QsIE9UICYgQW5hZXN0aGVzaWEgT2ZmaWNlcicsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdlbmdpbmVlcmluZycsXG4gICAgbmFtZTogJ0VOR0lORUVSSU5HJyxcbiAgICBiYW5uZXJUaXRsZTogJ0IuRS4gLyBCLlRFQ0ggKEJBQ0hFTE9SIE9GIEVOR0lORUVSSU5HICYgVEVDSE5PTE9HWSknLFxuICAgIHRpdGxlOiAnQi5FLiAvIEIuVGVjaCAoRW5naW5lZXJpbmcgJiBUZWNobm9sb2d5KScsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2RvbWVzdGljL2VuZ2luZWVyaW5nLmpwZycsXG4gICAgY2F0ZWdvcnk6ICdIZWFsdGhjYXJlICYgVGVjaG5pY2FsJyxcbiAgICBkZXNjcmlwdGlvbjpcbiAgICAgICdCLkUuIC8gQi5UZWNoIGlzIGFuIGludGVuc2l2ZSA0LXllYXIgKDgtc2VtZXN0ZXIpIHRlY2huaWNhbCBkZWdyZWUgYXBwcm92ZWQgYnkgdGhlIEFsbCBJbmRpYSBDb3VuY2lsIGZvciBUZWNobmljYWwgRWR1Y2F0aW9uIChBSUNURSkuIENvdmVyaW5nIHByZW1pZXIgYnJhbmNoZXMgbGlrZSBDb21wdXRlciBTY2llbmNlICYgRW5naW5lZXJpbmcgKEFJLCBNTCwgQ3liZXJzZWN1cml0eSksIEVsZWN0cm9uaWNzICYgQ29tbXVuaWNhdGlvbiwgTWVjaGFuaWNhbCwgUm9ib3RpY3MsIENpdmlsLCBhbmQgRWxlY3RyaWNhbCBFbmdpbmVlcmluZywgdGhlIHByb2dyYW0gc3ludGhlc2l6ZXMgZm91bmRhdGlvbmFsIG1hdGhlbWF0aWNzIGFuZCBlbmdpbmVlcmluZyBzY2llbmNlcyB3aXRoIGluZHVzdHJ5IGNhcHN0b25lcy4gR3JhZHVhdGVzIGRyaXZlIG1vZGVybiBpbm5vdmF0aW9uIGluIHNvZnR3YXJlIGFyY2hpdGVjdHVyZSwgY2xvdWQgcGxhdGZvcm1zLCBhdXRvbm9tb3VzIHN5c3RlbXMsIHNtYXJ0IG1hbnVmYWN0dXJpbmcsIGFuZCBnbG9iYWwgUiZEIGxhYnMgd2l0aCBhdHRyYWN0aXZlIGNhbXB1cyBwbGFjZW1lbnQgcmVjb3Jkcy4nLFxuICAgIHBhcnRpY3VsYXJzOiB7XG4gICAgICBjb3Vyc2VOYW1lOiAnRW5naW5lZXJpbmcgKEIuRS4gLyBCLlRlY2gpJyxcbiAgICAgIGZ1bGxGb3JtOiAnQmFjaGVsb3Igb2YgRW5naW5lZXJpbmcgLyBCYWNoZWxvciBvZiBUZWNobm9sb2d5JyxcbiAgICAgIGR1cmF0aW9uOiAnNCB5ZWFycyAoOCBzZW1lc3RlcnMpJyxcbiAgICAgIGxldmVsOiAnVW5kZXJncmFkdWF0ZSBUZWNobmljYWwgRGVncmVlJyxcbiAgICAgIGVsaWdpYmlsaXR5OiAnMTArMiB3aXRoIFBoeXNpY3MsIE1hdGhlbWF0aWNzLCBhbmQgQ2hlbWlzdHJ5L0NTL0lUIChNaW4gNDUtNTAlIG1hcmtzKScsXG4gICAgICBlbnRyYW5jZUV4YW1zOiAnSkVFIE1haW4sIEpFRSBBZHZhbmNlZCwgVE5FQSwgS0NFVCwgQ09NRURLLCBTdGF0ZSBDRVRzJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2gnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiA2MCwwMDAgdG8gSU5SIDMuNSBMYWtocyBwZXIgeWVhciAoR292dCAvIEF1dG9ub21vdXMgLyBEZWVtZWQpJyxcbiAgICAgIHNhbGFyeVBhY2thZ2U6ICfigrk0LDUwLDAwMCB0byDigrkxOCwwMCwwMDArIHBlciBhbm51bSBkZXBlbmRpbmcgb24gYnJhbmNoIGFuZCBjYW1wdXMgcGxhY2VtZW50cycsXG4gICAgICBqb2JzOiAnU29mdHdhcmUgRW5naW5lZXIsIENsb3VkIFNvbHV0aW9ucyBBcmNoaXRlY3QsIFJvYm90aWNzIEVuZ2luZWVyLCBEYXRhIFNjaWVudGlzdCwgU3lzdGVtcyBEZXNpZ24gU3BlY2lhbGlzdCcsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdhcmNoaXRlY3R1cmUnLFxuICAgIG5hbWU6ICdBUkNISVRFQ1RVUkUnLFxuICAgIGJhbm5lclRpdGxlOiAnQi5BUkNIIChCQUNIRUxPUiBPRiBBUkNISVRFQ1RVUkUpJyxcbiAgICB0aXRsZTogJ0IuQXJjaCAoQmFjaGVsb3Igb2YgQXJjaGl0ZWN0dXJlKScsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2RvbWVzdGljL2FyY2hpdGVjdHVyZS5qcGcnLFxuICAgIGNhdGVnb3J5OiAnSGVhbHRoY2FyZSAmIFRlY2huaWNhbCcsXG4gICAgZGVzY3JpcHRpb246XG4gICAgICAnQi5BcmNoIChCYWNoZWxvciBvZiBBcmNoaXRlY3R1cmUpIGlzIGEgNS15ZWFyICgxMC1zZW1lc3RlcikgcHJvZmVzc2lvbmFsIGRlZ3JlZSBzdHJpY3RseSByZWd1bGF0ZWQgYnkgdGhlIENvdW5jaWwgb2YgQXJjaGl0ZWN0dXJlIChDT0EpLiBUaGUgY3VycmljdWx1bSBtZXJnZXMgYXJ0aXN0aWMgc3BhdGlhbCBkZXNpZ24sIHN0cnVjdHVyYWwgZW5naW5lZXJpbmcsIHN1c3RhaW5hYmxlIG1hdGVyaWFscywgY29tcHV0ZXItYWlkZWQgZHJhZnRpbmcgKEJJTSksIGJ1aWxkaW5nIGFjb3VzdGljcywgYW5kIHVyYmFuIGNsaW1hdG9sb2d5LiBTdHVkZW50cyBzcGVuZCBzdWJzdGFudGlhbCB0aW1lIGluIGFyY2hpdGVjdHVyYWwgZGVzaWduIHN0dWRpb3MsIHNpdGUgc3VydmV5aW5nLCBhbmQgY29tcGxldGUgNiBtb250aHMgdG8gMSB5ZWFyIG9mIHByYWN0aWNhbCBhcmNoaXRlY3R1cmFsIGFwcHJlbnRpY2VzaGlwIHVuZGVyIGxpY2Vuc2VkIGFyY2hpdGVjdHMuIENvbXBsZXRpb24gZ3JhbnRzIG9mZmljaWFsIHJlZ2lzdHJhdGlvbiB3aXRoIHRoZSBDT0EgdG8gcHJhY3RpY2UgYXMgYSBsaWNlbnNlZCBBcmNoaXRlY3QgaW4gSW5kaWEgYW5kIGdsb2JhbGx5LicsXG4gICAgcGFydGljdWxhcnM6IHtcbiAgICAgIGNvdXJzZU5hbWU6ICdBcmNoaXRlY3R1cmUgKEIuQXJjaCknLFxuICAgICAgZnVsbEZvcm06ICdCYWNoZWxvciBvZiBBcmNoaXRlY3R1cmUgKEIuQXJjaCknLFxuICAgICAgZHVyYXRpb246ICc1IHllYXJzICgxMCBzZW1lc3RlcnMgaW5jbHVkaW5nIG1hbmRhdG9yeSBwcm9mZXNzaW9uYWwgcHJhY3RpY2FsIHRyYWluaW5nKScsXG4gICAgICBsZXZlbDogJ1VuZGVyZ3JhZHVhdGUgUHJvZmVzc2lvbmFsIERlZ3JlZScsXG4gICAgICBlbGlnaWJpbGl0eTogJzEwKzIgd2l0aCBQaHlzaWNzLCBDaGVtaXN0cnksIGFuZCBNYXRoZW1hdGljcyAoTWluIDUwJSkgb3IgMTArMyBEaXBsb21hIHdpdGggTWF0aHMnLFxuICAgICAgZW50cmFuY2VFeGFtczogJ05BVEEgKE5hdGlvbmFsIEFwdGl0dWRlIFRlc3QgaW4gQXJjaGl0ZWN0dXJlKSBvciBKRUUgTWFpbiAoUGFwZXIgMiknLFxuICAgICAgbWVkaXVtOiAnRW5nbGlzaCcsXG4gICAgICBjb3Vyc2VGZWVzOiAnSU5SIDEgTGFraCB0byBJTlIgMy41IExha2hzIHBlciB5ZWFyJyxcbiAgICAgIHNhbGFyeVBhY2thZ2U6ICfigrk0LDAwLDAwMCB0byDigrkxMCwwMCwwMDAgcGVyIGFubnVtJyxcbiAgICAgIGpvYnM6ICdMaWNlbnNlZCBBcmNoaXRlY3QsIFVyYmFuIERlc2lnbmVyLCBMYW5kc2NhcGUgQXJjaGl0ZWN0LCBCSU0gQ29uc3VsdGFudCwgU3VzdGFpbmFibGUgRGVzaWduIFNwZWNpYWxpc3QnLFxuICAgIH0sXG4gIH0sXG4gIHtcbiAgICBzbHVnOiAnbWFyaW5lJyxcbiAgICBuYW1lOiAnTUFSSU5FJyxcbiAgICBiYW5uZXJUaXRsZTogJ01BUklORSBFTkdJTkVFUklORyAmIE5BVVRJQ0FMIFNDSUVOQ0UnLFxuICAgIHRpdGxlOiAnTWFyaW5lIEVuZ2luZWVyaW5nIChCLkUuIE1hcmluZSkgJiBCLlNjIE5hdXRpY2FsIFNjaWVuY2UnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9tYXJpbmUuanBnJyxcbiAgICBjYXRlZ29yeTogJ0hlYWx0aGNhcmUgJiBUZWNobmljYWwnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ01hcmluZSBFbmdpbmVlcmluZyBhbmQgTmF1dGljYWwgU2NpZW5jZSBhcmUgc3BlY2lhbGl6ZWQgbWFyaXRpbWUgZGVncmVlcyBnb3Zlcm5lZCBieSB0aGUgRGlyZWN0b3JhdGUgR2VuZXJhbCBvZiBTaGlwcGluZyAoREdTKSwgTWluaXN0cnkgb2YgUG9ydHMsIFNoaXBwaW5nIGFuZCBXYXRlcndheXMuIFRoZSBwcm9ncmFtIGJsZW5kcyBuYXZhbCBhcmNoaXRlY3R1cmUsIG1hcmluZSBwcm9wdWxzaW9uLCBoaWdoLXZvbHRhZ2UgZWxlY3RyaWNhbCBtYWNoaW5lcnksIGNlbGVzdGlhbCBuYXZpZ2F0aW9uLCBjYXJnbyBoYW5kbGluZywgYW5kIGludGVybmF0aW9uYWwgbWFyaXRpbWUgbGF3IChTVENXKS4gQ2FkZXRzIHVuZGVyZ28gc3RyaWN0IHBhcmFtaWxpdGFyeSByZWdpbWVudGF0aW9uLCBzaGlwYm9hcmQgc2ltdWxhdG9yIHRyYWluaW5nLCBhbmQgZmlyZS1maWdodGluZyBjZXJ0aWZpY2F0aW9ucyBmb2xsb3dlZCBieSByZXF1aXJlZCBzZWEgdGltZS4gR3JhZHVhdGluZyBvZmZpY2VycyBqb2luIGludGVybmF0aW9uYWwgbWVyY2hhbnQgc2hpcHBpbmcgZmxlZXRzIHdpdGggdGF4LWZyZWUgY29tcGVuc2F0aW9uIGFuZCBhY2NlbGVyYXRlZCBnbG9iYWwgbGVhZGVyc2hpcCByYW5rcy4nLFxuICAgIHBhcnRpY3VsYXJzOiB7XG4gICAgICBjb3Vyc2VOYW1lOiAnTWFyaW5lIEVuZ2luZWVyaW5nICYgTmF1dGljYWwgU3R1ZGllcycsXG4gICAgICBmdWxsRm9ybTogJ0IuRS4gTWFyaW5lIEVuZ2luZWVyaW5nIC8gQi5TYyBOYXV0aWNhbCBTY2llbmNlJyxcbiAgICAgIGR1cmF0aW9uOiAnMyB0byA0IHllYXJzICsgTWFuZGF0b3J5IFByZS1TZWEgU2ltdWxhdG9yICYgT25ib2FyZCBDYWRldHNoaXAnLFxuICAgICAgbGV2ZWw6ICdVbmRlcmdyYWR1YXRlIE1hcml0aW1lIERlZ3JlZScsXG4gICAgICBlbGlnaWJpbGl0eTogJzEwKzIgd2l0aCBQQ00gKE1pbiA2MCUgYWdncmVnYXRlKSBhbmQgNTAlIGluIEVuZ2xpc2gsIHN0cmljdCBER1MgbWVkaWNhbCAmIDYvNiB2aXNpb24gc3RhbmRhcmRzJyxcbiAgICAgIGVudHJhbmNlRXhhbXM6ICdJTVUtQ0VUIChJbmRpYW4gTWFyaXRpbWUgVW5pdmVyc2l0eSBDb21tb24gRW50cmFuY2UgVGVzdCknLFxuICAgICAgbWVkaXVtOiAnRW5nbGlzaCcsXG4gICAgICBjb3Vyc2VGZWVzOiAnSU5SIDIuNSBMYWtocyB0byBJTlIgNSBMYWtocyBwZXIgeWVhciAoaW5jbHVkaW5nIHVuaWZvcm0sIGJvYXJkaW5nICYgbG9kZ2luZyknLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ+KCuTYsMDAsMDAwIHRvIOKCuTIyLDAwLDAwMCBwZXIgYW5udW0gKHRheC1mcmVlIGZvcmVpZ24gY3VycmVuY3kgZHVyaW5nIHNlYS10aW1lKScsXG4gICAgICBqb2JzOiAnTWFyaW5lIEVuZ2luZWVyIE9mZmljZXIsIERlY2sgQ2FkZXQsIE5hdmlnYXRpb24gT2ZmaWNlciwgQ2hpZWYgRW5naW5lZXIsIFBvcnQgT3BlcmF0aW9ucyBNYW5hZ2VyJyxcbiAgICB9LFxuICB9LFxuICB7XG4gICAgc2x1ZzogJ2FncmljdWx0dXJlJyxcbiAgICBuYW1lOiAnQUdSSUNVTFRVUkUnLFxuICAgIGJhbm5lclRpdGxlOiAnQi5TQyAoSE9OUykgQUdSSUNVTFRVUkUgJiBIT1JUSUNVTFRVUkUnLFxuICAgIHRpdGxlOiAnQi5TYyAoSG9ucykgQWdyaWN1bHR1cmUgLyBIb3J0aWN1bHR1cmUnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9hZ3JpY3VsdHVyZS5qcGcnLFxuICAgIGNhdGVnb3J5OiAnU2NpZW5jZXMgJiBFbnRyYW5jZScsXG4gICAgZGVzY3JpcHRpb246XG4gICAgICAnQi5TYyAoSG9ucykgQWdyaWN1bHR1cmUgaXMgYSBjb21wcmVoZW5zaXZlIDQteWVhciB1bmRlcmdyYWR1YXRlIHByb2dyYW0gYWNjcmVkaXRlZCBieSB0aGUgSW5kaWFuIENvdW5jaWwgb2YgQWdyaWN1bHR1cmFsIFJlc2VhcmNoIChJQ0FSKS4gVGhlIHN5bGxhYnVzIGVuY29tcGFzc2VzIGFncm9ub215LCBzb2lsIHNjaWVuY2UsIHBsYW50IGdlbmV0aWNzLCBhZ3JpY3VsdHVyYWwgYmlvdGVjaG5vbG9neSwgcHJlY2lzaW9uIGlycmlnYXRpb24sIGNyb3AgcHJvdGVjdGlvbiwgYW5kIGFncmljdWx0dXJhbCBlY29ub21pY3MuIEEga2V5IGZlYXR1cmUgb2YgdGhlIGZpbmFsIHllYXIgaXMgdGhlIFJ1cmFsIEFncmljdWx0dXJhbCBXb3JrIEV4cGVyaWVuY2UgKFJBV0UpIGFuZCBBZ3JvLUluZHVzdHJpYWwgQXR0YWNobWVudCAoQUlBKSwgd2hlcmUgc3R1ZGVudHMgd29yayBhbG9uZ3NpZGUgZmFybWluZyBjb21tdW5pdGllcyBhbmQgYWdyaS1idXNpbmVzcyBlbnRlcnByaXNlcy4gR3JhZHVhdGVzIHN0ZXAgZGlyZWN0bHkgaW50byBiYW5raW5nIChBRk8pLCBhZ3JpYnVzaW5lc3MsIGZvb2QgY29ycG9yYXRpb25zLCBhbmQgZ292ZXJubWVudCByZXNlYXJjaCBkZXBhcnRtZW50cy4nLFxuICAgIHBhcnRpY3VsYXJzOiB7XG4gICAgICBjb3Vyc2VOYW1lOiAnQWdyaWN1bHR1cmUgKEIuU2MgSG9ucyknLFxuICAgICAgZnVsbEZvcm06ICdCYWNoZWxvciBvZiBTY2llbmNlIChIb25vdXJzKSBpbiBBZ3JpY3VsdHVyZScsXG4gICAgICBkdXJhdGlvbjogJzQgeWVhcnMgKDggc2VtZXN0ZXJzIGluY2x1ZGluZyBSQVdFICYgaGFuZHMtb24gaW5kdXN0cmlhbCBpbnRlcm5zaGlwKScsXG4gICAgICBsZXZlbDogJ1VuZGVyZ3JhZHVhdGUgQWdyaWN1bHR1cmFsIFNjaWVuY2UgRGVncmVlJyxcbiAgICAgIGVsaWdpYmlsaXR5OiAnMTArMiB3aXRoIFBoeXNpY3MsIENoZW1pc3RyeSwgQmlvbG9neSAvIE1hdGhlbWF0aWNzIC8gQWdyaWN1bHR1cmUgKE1pbiA1MCUgYWdncmVnYXRlKScsXG4gICAgICBlbnRyYW5jZUV4YW1zOiAnQ1VFVC1JQ0FSIFVHICYgU3RhdGUgQWdyaWN1bHR1cmFsIFVuaXZlcnNpdHkgQ0VUcyAoZS5nLiBUTkFVLCBLQ0VUIEFncmkpJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2gnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiA1MCwwMDAgdG8gSU5SIDIuNSBMYWtocyBwZXIgeWVhcicsXG4gICAgICBzYWxhcnlQYWNrYWdlOiAn4oK5Myw1MCwwMDAgdG8g4oK5OCw1MCwwMDAgcGVyIGFubnVtJyxcbiAgICAgIGpvYnM6ICdBZ3JpY3VsdHVyYWwgRmllbGQgT2ZmaWNlciAoSUJQUyBBRk8pLCBBZ3Jvbm9taXN0LCBTZWVkIFByb2R1Y3Rpb24gU3BlY2lhbGlzdCwgQWdyaS1CdXNpbmVzcyBNYW5hZ2VyLCBGb29kIFNhZmV0eSBJbnNwZWN0b3InLFxuICAgIH0sXG4gIH0sXG4gIHtcbiAgICBzbHVnOiAnYXJ0cy1zY2llbmNlJyxcbiAgICBuYW1lOiAnQVJUUyAmIFNDSUVOQ0UnLFxuICAgIGJhbm5lclRpdGxlOiAnQVJUUywgU0NJRU5DRSAmIENPTU1FUkNFIChCLkEuLCBCLlNDLCBCLkNPTSwgQkJBLCBCQ0EpJyxcbiAgICB0aXRsZTogJ0FydHMgJiBTY2llbmNlIChCLkEuLCBCLlNjLCBCLkNvbSwgQkJBLCBCQ0EpJyxcbiAgICBpbWFnZTogJy9pbWFnZXMvZG9tZXN0aWMvYXJ0cy1zY2llbmNlLmpwZycsXG4gICAgY2F0ZWdvcnk6ICdTY2llbmNlcyAmIEVudHJhbmNlJyxcbiAgICBkZXNjcmlwdGlvbjpcbiAgICAgICdBcnRzICYgU2NpZW5jZSB1bmRlcmdyYWR1YXRlIHByb2dyYW1zIHByb3ZpZGUgY29tcHJlaGVuc2l2ZSBmb3VuZGF0aW9uIGRlZ3JlZXMgaW4gSHVtYW5pdGllcywgUHVyZSBTY2llbmNlcywgQ29tbWVyY2UsIE1hbmFnZW1lbnQsIGFuZCBDb21wdXRpbmcgdW5kZXIgdGhlIE5hdGlvbmFsIEVkdWNhdGlvbiBQb2xpY3kgKE5FUCAyMDIwKSBmcmFtZXdvcmsuIE9mZmVyaW5ncyBpbmNsdWRlIEIuQ29tIChQcm9mZXNzaW9uYWwgQWNjb3VudGluZywgRmluVGVjaCksIEJCQSwgQkNBLCBCLlNjIChEYXRhIFNjaWVuY2UsIEJpb3RlY2hub2xvZ3ksIFBoeXNpY3MsIE1hdGhlbWF0aWNzKSwgYW5kIEIuQS4gKEVuZ2xpc2gsIEVjb25vbWljcywgUHN5Y2hvbG9neSkuIFRoZXNlIHByb2dyYW1zIGVtcGhhc2l6ZSBhbmFseXRpY2FsIHRoaW5raW5nLCBtdWx0aWRpc2NpcGxpbmFyeSBtaW5vcnMsIHByb2plY3QgaW50ZXJuc2hpcHMsIGFuZCBkaWdpdGFsIGxpdGVyYWN5LCBwcmVwYXJpbmcgc3R1ZGVudHMgZm9yIGNvbXBldGl0aXZlIGV4YW1pbmF0aW9ucyAoVVBTQywgQmFua2luZyksIGNvcnBvcmF0ZSBwbGFjZW1lbnRzLCBhbmQgcHJlc3RpZ2lvdXMgbWFzdGVy4oCZcyBkZWdyZWVzLicsXG4gICAgcGFydGljdWxhcnM6IHtcbiAgICAgIGNvdXJzZU5hbWU6ICdBcnRzICYgU2NpZW5jZSBQcm9ncmFtcycsXG4gICAgICBmdWxsRm9ybTogJ0JhY2hlbG9yIG9mIEFydHMgLyBTY2llbmNlIC8gQ29tbWVyY2UgLyBCdXNpbmVzcyBBZG1pbmlzdHJhdGlvbiAvIENvbXB1dGVyIEFwcGxpY2F0aW9ucycsXG4gICAgICBkdXJhdGlvbjogJzMgeWVhcnMgKG9yIDQgeWVhcnMgZm9yIE5FUCBIb25vdXJzIHdpdGggUmVzZWFyY2gpJyxcbiAgICAgIGxldmVsOiAnVW5kZXJncmFkdWF0ZSBEZWdyZWUnLFxuICAgICAgZWxpZ2liaWxpdHk6ICcxMCsyIGZyb20gYSByZWNvZ25pemVkIGJvYXJkIGluIHJlbGV2YW50IHN0cmVhbSAoQ29tbWVyY2UgLyBTY2llbmNlIC8gQXJ0cyknLFxuICAgICAgZW50cmFuY2VFeGFtczogJ0NVRVQtVUcsIFVuaXZlcnNpdHkgRW50cmFuY2UgVGVzdHMsIG9yIE1lcml0LWJhc2VkIENvdW5zZWxsaW5nJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2gnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiAzMCwwMDAgdG8gSU5SIDEuNSBMYWtocyBwZXIgeWVhcicsXG4gICAgICBzYWxhcnlQYWNrYWdlOiAn4oK5MywwMCwwMDAgdG8g4oK5NywwMCwwMDAgcGVyIGFubnVtJyxcbiAgICAgIGpvYnM6ICdCdXNpbmVzcyBBbmFseXN0LCBTb2Z0d2FyZSBEZXZlbG9wZXIsIEZpbmFuY2lhbCBDb25zdWx0YW50LCBIUiBTcGVjaWFsaXN0LCBDb250ZW50IFN0cmF0ZWdpc3QsIENpdmlsIFNlcnZpY2VzIEFzcGlyYW50JyxcbiAgICB9LFxuICB9LFxuICB7XG4gICAgc2x1ZzogJ2ludGVncmF0ZWQtY291cnNlcycsXG4gICAgbmFtZTogJ0lOVEVHUkFURUQgQ09VUlNFUycsXG4gICAgYmFubmVyVGl0bGU6ICc1LVlFQVIgSU5URUdSQVRFRCBEVUFMIERFR1JFRSBQUk9HUkFNUycsXG4gICAgdGl0bGU6ICdJbnRlZ3JhdGVkIENvdXJzZXMgKEludGVncmF0ZWQgTS5UZWNoLCBNLlNjLCBNQkEsIER1YWwgRGVncmVlcyknLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9pbnRlZ3JhdGVkLWNvdXJzZXMuanBnJyxcbiAgICBjYXRlZ29yeTogJ1NjaWVuY2VzICYgRW50cmFuY2UnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ0ludGVncmF0ZWQgQ291cnNlcyBhcmUgc3RyZWFtbGluZWQgNS15ZWFyIGR1YWwtZGVncmVlIHByb2dyYW1zIHRoYXQgY29tYmluZSBhbiB1bmRlcmdyYWR1YXRlIGRlZ3JlZSBzZWFtbGVzc2x5IHdpdGggYSBtYXN0ZXLigJlzIHF1YWxpZmljYXRpb24gd2l0aG91dCB0aGUgcmVxdWlyZW1lbnQgb2Ygd3JpdGluZyBhIHNlcGFyYXRlIHBvc3QtZ3JhZHVhdGUgZW50cmFuY2UgdGVzdC4gUHJvbWluZW50IGZvcm1hdHMgaW5jbHVkZSBJbnRlZ3JhdGVkIE0uVGVjaCBpbiBTb2Z0d2FyZSBFbmdpbmVlcmluZyAvIERhdGEgU2NpZW5jZSwgSW50ZWdyYXRlZCBNLlNjIGluIEJpb3RlY2hub2xvZ3kgLyBQaHlzaWNzLCBhbmQgSW50ZWdyYXRlZCBNQkEgKEJCQStNQkEpLiBSZWd1bGF0ZWQgYnkgVUdDIGFuZCBBSUNURSwgdGhlc2UgcHJvZ3JhbXMgb2ZmZXIgY29udGludW91cyByZXNlYXJjaCBleHBvc3VyZSwgZWFybHkgc2VtZXN0ZXIgaW5kdXN0cnkgcHJvamVjdHMsIGFuZCBzYXZlIG9uZSBmdWxsIGFjYWRlbWljIHllYXIgZm9yIGFtYml0aW91cyBzdHVkZW50cyB0YXJnZXRpbmcgaGlnaC1sZXZlbCBjb3Jwb3JhdGUgYW5kIHJlc2VhcmNoIHJvbGVzLicsXG4gICAgcGFydGljdWxhcnM6IHtcbiAgICAgIGNvdXJzZU5hbWU6ICdJbnRlZ3JhdGVkIER1YWwgRGVncmVlJyxcbiAgICAgIGZ1bGxGb3JtOiAnNS1ZZWFyIEludGVncmF0ZWQgTWFzdGVy4oCZcyBQcm9ncmFtIChCLlRlY2grTS5UZWNoIC8gQi5TYytNLlNjIC8gSW50ZWdyYXRlZCBNQkEpJyxcbiAgICAgIGR1cmF0aW9uOiAnNSB5ZWFycyAoMTAgc2VtZXN0ZXJzKScsXG4gICAgICBsZXZlbDogJ0ludGVncmF0ZWQgUG9zdGdyYWR1YXRlIERlZ3JlZScsXG4gICAgICBlbGlnaWJpbGl0eTogJzEwKzIgd2l0aCBQQ00gLyByZWxldmFudCBkaXNjaXBsaW5lIChNaW4gNTUtNjAlIG1hcmtzKScsXG4gICAgICBlbnRyYW5jZUV4YW1zOiAnSkVFIE1haW4sIENVRVQtVUcsIG9yIFVuaXZlcnNpdHkgSW50ZWdyYXRlZCBFbnRyYW5jZSBUZXN0cyAoVklURUVFLCBCSVRTQVQsIGV0Yy4pJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2gnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiAxIExha2ggdG8gSU5SIDMgTGFraHMgcGVyIHllYXInLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ+KCuTUsMDAsMDAwIHRvIOKCuTE1LDAwLDAwMCBwZXIgYW5udW0nLFxuICAgICAgam9iczogJ1ImRCBUZWNobm9sb2dpc3QsIFN5c3RlbXMgQXJjaGl0ZWN0LCBRdWFudGl0YXRpdmUgQW5hbHlzdCwgUHJvZHVjdCBTdHJhdGVnaXN0LCBSZXNlYXJjaCBGZWxsb3cnLFxuICAgIH0sXG4gIH0sXG4gIHtcbiAgICBzbHVnOiAnbGF3JyxcbiAgICBuYW1lOiAnTEFXJyxcbiAgICBiYW5uZXJUaXRsZTogJ0lOVEVHUkFURUQgTEFXIChCLkEuIExMLkIgLyBCLkIuQS4gTEwuQiAvIEIuQ09NIExMLkIpJyxcbiAgICB0aXRsZTogJ0ludGVncmF0ZWQgTGF3IChCLkEuIExMLkIgLyBCLkIuQS4gTEwuQiAvIDMtWWVhciBMTC5CKScsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2RvbWVzdGljL2xhdy5qcGcnLFxuICAgIGNhdGVnb3J5OiAnU2NpZW5jZXMgJiBFbnRyYW5jZScsXG4gICAgZGVzY3JpcHRpb246XG4gICAgICAnSW50ZWdyYXRlZCBMYXcgKEIuQS4gTEwuQiAvIEIuQi5BLiBMTC5CIC8gQi5Db20gTEwuQikgaXMgYSByaWdvcm91cyA1LXllYXIgcHJvZmVzc2lvbmFsIHByb2dyYW0gcmVjb2duaXplZCBhbmQgbW9uaXRvcmVkIGJ5IHRoZSBCYXIgQ291bmNpbCBvZiBJbmRpYSAoQkNJKS4gVGhlIGN1cnJpY3VsdW0gY29tYmluZXMgZm91bmRhdGlvbmFsIGFydHMsIGJ1c2luZXNzIGFkbWluaXN0cmF0aW9uLCBvciBjb21tZXJjZSBjb3Vyc2V3b3JrIHdpdGggZXhoYXVzdGl2ZSBsZWdhbCB0cmFpbmluZyBpbiBjb25zdGl0dXRpb25hbCBsYXcsIGNyaW1pbmFsIGp1cmlzcHJ1ZGVuY2UsIGNvcnBvcmF0ZSBnb3Zlcm5hbmNlLCBpbnRlbGxlY3R1YWwgcHJvcGVydHksIGN5YmVyIGxhdywgYW5kIGludGVybmF0aW9uYWwgYXJiaXRyYXRpb24uIFN0dWRlbnRzIGFjdGl2ZWx5IHBhcnRpY2lwYXRlIGluIG5hdGlvbmFsIG1vb3QgY291cnQgY29tcGV0aXRpb25zLCBsZWdhbCBhaWQgY2xpbmljcywgYW5kIG1hbmRhdG9yeSBqdWRpY2lhbCBpbnRlcm5zaGlwcy4gR3JhZHVhdGVzIGFyZSBlbnRpdGxlZCB0byBhcHBlYXIgZm9yIHRoZSBBbGwgSW5kaWEgQmFyIEV4YW1pbmF0aW9uIChBSUJFKSB0byBwcmFjdGljZSBhcyBsaWNlbnNlZCBhZHZvY2F0ZXMuJyxcbiAgICBwYXJ0aWN1bGFyczoge1xuICAgICAgY291cnNlTmFtZTogJ0xhdyAoSW50ZWdyYXRlZCBMTC5CKScsXG4gICAgICBmdWxsRm9ybTogJ0JhY2hlbG9yIG9mIEFydHMgJiBCYWNoZWxvciBvZiBMZWdpc2xhdGl2ZSBMYXcgKEIuQS4gTEwuQiAvIEIuQi5BLiBMTC5CKScsXG4gICAgICBkdXJhdGlvbjogJzUgeWVhcnMgKDEwIHNlbWVzdGVycyB3aXRoIG1hbmRhdG9yeSBtb290IGNvdXJ0cyAmIGNoYW1iZXIgaW50ZXJuc2hpcHMpJyxcbiAgICAgIGxldmVsOiAnSW50ZWdyYXRlZCBQcm9mZXNzaW9uYWwgTGF3IERlZ3JlZScsXG4gICAgICBlbGlnaWJpbGl0eTogJzEwKzIgaW4gYW55IHN0cmVhbSBmcm9tIHJlY29nbml6ZWQgYm9hcmQgKE1pbiA0NSUgZm9yIEdlbmVyYWwsIDQwJSBmb3IgU0MvU1QpJyxcbiAgICAgIGVudHJhbmNlRXhhbXM6ICdDTEFUIChDb21tb24gTGF3IEFkbWlzc2lvbiBUZXN0KSwgQUlMRVQsIFNMQVQsIExTQVQgSW5kaWEsIFN0YXRlIExhdyBDRVRzJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2gnLFxuICAgICAgY291cnNlRmVlczogJ0lOUiAxLjIgTGFraHMgdG8gSU5SIDMuOCBMYWtocyBwZXIgYW5udW0nLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ+KCuTQsNTAsMDAwIHRvIOKCuTE0LDAwLDAwMCBwZXIgYW5udW0nLFxuICAgICAgam9iczogJ0NvcnBvcmF0ZSBMZWdhbCBDb3Vuc2VsLCBIaWdoIENvdXJ0IC8gU3VwcmVtZSBDb3VydCBBZHZvY2F0ZSwgSnVkaWNpYWwgTWFnaXN0cmF0ZSwgTGVnYWwgQ29tcGxpYW5jZSBPZmZpY2VyJyxcbiAgICB9LFxuICB9LFxuICB7XG4gICAgc2x1ZzogJ25lZXQnLFxuICAgIG5hbWU6ICdORUVUJyxcbiAgICBiYW5uZXJUaXRsZTogJ05FRVQtVUcgKE1FRElDQUwgRU5UUkFOQ0UgQ09VTlNFTExJTkcgJiBDT0FDSElORyknLFxuICAgIHRpdGxlOiAnTkVFVCAoTmF0aW9uYWwgRWxpZ2liaWxpdHkgY3VtIEVudHJhbmNlIFRlc3QpIEd1aWRhbmNlICYgQWRtaXNzaW9ucycsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2RvbWVzdGljL25lZXQuanBnJyxcbiAgICBjYXRlZ29yeTogJ1NjaWVuY2VzICYgRW50cmFuY2UnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ1RoZSBOYXRpb25hbCBFbGlnaWJpbGl0eSBjdW0gRW50cmFuY2UgVGVzdCAoTkVFVC1VRykgaXMgSW5kaWHigJlzIHNvbGUgYW5kIG1hbmRhdG9yeSBlbnRyYW5jZSBnYXRld2F5IGNvbmR1Y3RlZCBieSB0aGUgTmF0aW9uYWwgVGVzdGluZyBBZ2VuY3kgKE5UQSkgZm9yIGFkbWlzc2lvbiBpbnRvIE1CQlMsIEJEUywgQkFNUywgQlNNUywgQlVNUywgQkhNUywgYW5kIEIuVi5TYyBwcm9ncmFtcyBhY3Jvc3MgYWxsIGdvdmVybm1lbnQsIHByaXZhdGUsIGFuZCBkZWVtZWQgbWVkaWNhbCBjb2xsZWdlcy4gU3JpIFZhYXJpIHByb3ZpZGVzIGV4cGVydCBtZW50b3JzaGlwIGVuY29tcGFzc2luZyBjdXQtb2ZmIHByZWRpY3Rpb25zLCBpbnN0aXR1dGlvbmFsIHByb2ZpbGluZywgQWxsIEluZGlhIFF1b3RhIChNQ0MpIGNvdW5zZWxsaW5nLCBTdGF0ZSBRdW90YSBzZWF0IGFsbG9jYXRpb24gc3RyYXRlZ2llcywgYW5kIGNhdGVnb3J5IHJlc2VydmF0aW9uIG9wdGltaXphdGlvbi4gV2UgZ3VpZGUgc3R1ZGVudHMgYW5kIHBhcmVudHMgdGhyb3VnaCBldmVyeSBjcml0aWNhbCBkb2N1bWVudGF0aW9uIHN0YWdlIHRvIHNlY3VyZSB0aGUgYmVzdCBtZWRpY2FsIHNlYXQgd2l0aGluIHRoZWlyIHNjb3JlIGFuZCBidWRnZXQuJyxcbiAgICBwYXJ0aWN1bGFyczoge1xuICAgICAgY291cnNlTmFtZTogJ05FRVQtVUcgTWVkaWNhbCBHdWlkYW5jZScsXG4gICAgICBmdWxsRm9ybTogJ05hdGlvbmFsIEVsaWdpYmlsaXR5IGN1bSBFbnRyYW5jZSBUZXN0IChVbmRlcmdyYWR1YXRlKScsXG4gICAgICBkdXJhdGlvbjogJ0ludGVuc2l2ZSAxLVllYXIgLyAyLVllYXIgVGFyZ2V0IEJhdGNoIEd1aWRhbmNlICYgU2VhdCBDb3Vuc2VsbGluZyBTdHJhdGVneScsXG4gICAgICBsZXZlbDogJ05hdGlvbmFsIE1lZGljYWwgRW50cmFuY2UgRXhhbWluYXRpb24nLFxuICAgICAgZWxpZ2liaWxpdHk6ICcxMCsyIEFwcGVhcmluZyAvIFBhc3NlZCB3aXRoIFBoeXNpY3MsIENoZW1pc3RyeSwgQmlvbG9neS9CaW90ZWNoICYgRW5nbGlzaCAoQWdlIG1pbiAxNyB5ZWFycyknLFxuICAgICAgZW50cmFuY2VFeGFtczogJ05UQSBORUVULVVHIChTdGFuZGFyZGl6ZWQgU2luZ2xlIE5hdGlvbmFsIEV4YW1pbmF0aW9uKScsXG4gICAgICBtZWRpdW06ICdFbmdsaXNoLCBUYW1pbCwgSGluZGksIGFuZCAxMCByZWdpb25hbCBJbmRpYW4gbGFuZ3VhZ2VzJyxcbiAgICAgIGNvdXJzZUZlZXM6ICdBZG1pc3Npb25zIEFkdmlzb3J5ICYgQ3V0LU9mZiBNYXBwaW5nIFN1cHBvcnQnLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ0dhdGV3YXkgdG8gcHJlc3RpZ2lvdXMgZ292ZXJubWVudCBtZWRpY2FsIGNvbGxlZ2VzIGFuZCBoaWdoLXJldHVybiBwcml2YXRlIGluc3RpdHV0ZXMnLFxuICAgICAgam9iczogJ0Z1dHVyZSBEb2N0b3JzLCBTdXJnZW9ucywgU3VwZXItU3BlY2lhbGlzdHMsIE1lZGljYWwgUmVzZWFyY2hlcnMsIFB1YmxpYyBIZWFsdGggTGVhZGVycycsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdqZWUnLFxuICAgIG5hbWU6ICdKRUUnLFxuICAgIGJhbm5lclRpdGxlOiAnSkVFIE1BSU4gJiBKRUUgQURWQU5DRUQgKEVOR0lORUVSSU5HIEVOVFJBTkNFIEFETUlTU0lPTlMpJyxcbiAgICB0aXRsZTogJ0pFRSAoSm9pbnQgRW50cmFuY2UgRXhhbWluYXRpb24pIEd1aWRhbmNlICYgU2VhdCBNYXRyaXggQ291bnNlbGxpbmcnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9qZWUuanBnJyxcbiAgICBjYXRlZ29yeTogJ1NjaWVuY2VzICYgRW50cmFuY2UnLFxuICAgIGRlc2NyaXB0aW9uOlxuICAgICAgJ1RoZSBKb2ludCBFbnRyYW5jZSBFeGFtaW5hdGlvbiAoSkVFKSwgY29tcHJpc2luZyBKRUUgTWFpbiBhbmQgSkVFIEFkdmFuY2VkLCBpcyBJbmRpYeKAmXMgcHJlbWllciBuYXRpb25hbCBlbmdpbmVlcmluZyBleGFtaW5hdGlvbiBmb3IgZW50cnkgaW50byB0aGUgSW5kaWFuIEluc3RpdHV0ZXMgb2YgVGVjaG5vbG9neSAoSUlUcyksIE5hdGlvbmFsIEluc3RpdHV0ZXMgb2YgVGVjaG5vbG9neSAoTklUcyksIElJSVRzLCBhbmQgcHJlbWllciBnb3Zlcm5tZW50LWZ1bmRlZCB0ZWNobmljYWwgaW5zdGl0dXRpb25zIChHRlRJcykuIFNyaSBWYWFyaSBkZWxpdmVycyBkZWRpY2F0ZWQgZ3VpZGFuY2Ugb24gc2NvcmUgbWFwcGluZywgcGVyY2VudGlsZSBhbmFseXNpcywgSm9TQUEgKEpvaW50IFNlYXQgQWxsb2NhdGlvbiBBdXRob3JpdHkpIGNvdW5zZWxsaW5nLCBDU0FCIHNwZWNpYWwgcm91bmRzLCBhbmQgc3RhdGUgZW5naW5lZXJpbmcgY291bnNlbGxpbmcgKFRORUEvS0VBKS4gT3VyIGFkdmlzb3JzIGFzc2lzdCBzdHVkZW50cyBpbiBwaW5wb2ludGluZyBoaWdoLXBsYWNlbWVudCBicmFuY2hlcyBhbmQgc2VjdXJpbmcgdG9wLXRpZXIgZW5naW5lZXJpbmcgc2VhdHMuJyxcbiAgICBwYXJ0aWN1bGFyczoge1xuICAgICAgY291cnNlTmFtZTogJ0pFRSBFbmdpbmVlcmluZyBHdWlkYW5jZScsXG4gICAgICBmdWxsRm9ybTogJ0pvaW50IEVudHJhbmNlIEV4YW1pbmF0aW9uIChKRUUgTWFpbiAmIEpFRSBBZHZhbmNlZCknLFxuICAgICAgZHVyYXRpb246ICcxLVllYXIgLyAyLVllYXIgVGFyZ2V0IFByZXBhcmF0aW9uIEFkdmlzb3J5ICYgSm9TQUEvQ1NBQiBDaG9pY2UtRmlsbGluZyBHdWlkYW5jZScsXG4gICAgICBsZXZlbDogJ05hdGlvbmFsIFRlY2huaWNhbCBFbnRyYW5jZSBFeGFtaW5hdGlvbicsXG4gICAgICBlbGlnaWJpbGl0eTogJzEwKzIgd2l0aCBQaHlzaWNzLCBNYXRoZW1hdGljcywgYW5kIENoZW1pc3RyeS9DUyAoNzUlIGluIDEydGggYm9hcmQgZm9yIElJVC9OSVQvSUlJVCknLFxuICAgICAgZW50cmFuY2VFeGFtczogJ05UQSBKRUUgTWFpbiAoU2Vzc2lvbnMgMSAmIDIpICYgSUlUIEpFRSBBZHZhbmNlZCcsXG4gICAgICBtZWRpdW06ICdFbmdsaXNoLCBIaW5kaSwgYW5kIDExIHJlZ2lvbmFsIGxhbmd1YWdlcycsXG4gICAgICBjb3Vyc2VGZWVzOiAnU3RyYXRlZ2ljIENob2ljZS1GaWxsaW5nICYgQ29sbGVnZSBTZWxlY3Rpb24gQWR2aXNvcnknLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ1RpZXItMSBFbmdpbmVlcmluZyBwbGFjZW1lbnQgcGFja2FnZXMgcmFuZ2luZyBmcm9tIOKCuTgsMDAsMDAwIHRvIOKCuTQwLDAwLDAwMCsgcGVyIGFubnVtJyxcbiAgICAgIGpvYnM6ICdGdXR1cmUgSUlUL05JVCBFbmdpbmVlcnMsIEhpZ2gtVGVjaCBJbm5vdmF0b3JzLCBTb2Z0d2FyZSBBcmNoaXRlY3RzLCBRdWFudCBBbmFseXN0cycsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIHNsdWc6ICdhcHRpdHVkZS10ZXN0JyxcbiAgICBuYW1lOiAnQVBUSVRVREUgVEVTVCcsXG4gICAgYmFubmVyVGl0bGU6ICdDQVJFRVIgQVBUSVRVREUgJiBQU1lDSE9NRVRSSUMgUFJPRklMSU5HIEFTU0VTU01FTlQnLFxuICAgIHRpdGxlOiAnQXB0aXR1ZGUgVGVzdCAmIFNjaWVudGlmaWMgQ2FyZWVyIEFzc2Vzc21lbnQnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9kb21lc3RpYy9hcHRpdHVkZS10ZXN0LmpwZycsXG4gICAgY2F0ZWdvcnk6ICdTY2llbmNlcyAmIEVudHJhbmNlJyxcbiAgICBkZXNjcmlwdGlvbjpcbiAgICAgICdUaGUgU3JpIFZhYXJpIFNjaWVudGlmaWMgQXB0aXR1ZGUgJiBQc3ljaG9tZXRyaWMgQXNzZXNzbWVudCBpcyBhbiBpbmRpdmlkdWFsaXplZCBkaWFnbm9zdGljIGV2YWx1YXRpb24gZGVzaWduZWQgdG8gYWNjdXJhdGVseSBtYXAgYSBzdHVkZW504oCZcyBuYXR1cmFsIGNvZ25pdGl2ZSBzdHJlbmd0aHMsIGxvZ2ljYWwgcmVhc29uaW5nLCBudW1lcmljYWwgYXB0aXR1ZGUsIHNwYXRpYWwgdmlzdWFsaXphdGlvbiwgYW5kIHBlcnNvbmFsaXR5IG9yaWVudGF0aW9uIHRvIGFwcHJvcHJpYXRlIHByb2Zlc3Npb25hbCBkZWdyZWVzLiBBZG1pbmlzdGVyZWQgdW5kZXIgY2VydGlmaWVkIGNhcmVlciBjb3Vuc2Vsb3JzIGFuZCBlZHVjYXRpb25hbCBwc3ljaG9sb2dpc3RzLCB0aGlzIDIgdG8gMy1ob3VyIGFzc2Vzc21lbnQgZWxpbWluYXRlcyBjb25mdXNpb24gYmV0d2VlbiBtZWRpY2luZSwgZW5naW5lZXJpbmcsIG1hbmFnZW1lbnQsIGFuZCBjaXZpbCBzZXJ2aWNlcywgcHJvdmlkaW5nIHN0dWRlbnRzIGFuZCBwYXJlbnRzIHdpdGggYSBjbGVhciwgdW5iaWFzZWQgcm9hZG1hcCBmb3IgdW5kZXJncmFkdWF0ZSBzdHJlYW0gc2VsZWN0aW9uLicsXG4gICAgcGFydGljdWxhcnM6IHtcbiAgICAgIGNvdXJzZU5hbWU6ICdBcHRpdHVkZSAmIENhcmVlciBBc3Nlc3NtZW50JyxcbiAgICAgIGZ1bGxGb3JtOiAnRGlmZmVyZW50aWFsIEFwdGl0dWRlICYgUHN5Y2hvbWV0cmljIENhcmVlciBQcm9maWxpbmcgQmF0dGVyeScsXG4gICAgICBkdXJhdGlvbjogJ0RpYWdub3N0aWMgQXNzZXNzbWVudCAoMiB0byAzIGhvdXJzKSArIDEtb24tMSBDb21wcmVoZW5zaXZlIENvdW5zZWxsaW5nIERlYnJpZWYnLFxuICAgICAgbGV2ZWw6ICdQcmUtQ29sbGVnZSBTdHJlYW0gJiBEZWdyZWUgU2VsZWN0aW9uIEFzc2Vzc21lbnQnLFxuICAgICAgZWxpZ2liaWxpdHk6ICdTdHVkZW50cyBvZiBDbGFzcyAxMCwgMTEsIDEyLCBvciBVbmRlcmdyYWR1YXRlIFNlZWtlcnMgc2Vla2luZyBjb3Vyc2UgY2xhcml0eScsXG4gICAgICBlbnRyYW5jZUV4YW1zOiAnU3RhbmRhcmRpemVkIFBzeWNob21ldHJpYyAmIERpZmZlcmVudGlhbCBBcHRpdHVkZSBUZXN0IChEQVQpJyxcbiAgICAgIG1lZGl1bTogJ0VuZ2xpc2ggLyBUYW1pbCcsXG4gICAgICBjb3Vyc2VGZWVzOiAnQ29tcGxpbWVudGFyeSB3aXRoIFNyaSBWYWFyaSBGdWxsLUNvdXJzZSBBZG1pc3Npb25zIE1lbnRvcnNoaXAnLFxuICAgICAgc2FsYXJ5UGFja2FnZTogJ01heGltdW0gY2xhcml0eSBsZWFkaW5nIHRvIGhpZ2gtZ3Jvd3RoLCBoaWdoLXNhdGlzZmFjdGlvbiBjYXJlZXIgcGF0aHMnLFxuICAgICAgam9iczogJ0VtcG93ZXJlZCBpZGVudGlmaWNhdGlvbiBvZiBiZXN0LWZpdCBjYXJlZXJzIGluIEhlYWx0aGNhcmUsIFRlY2gsIENvcnBvcmF0ZSBMYXcsIERlc2lnbiwgb3IgQ2l2aWwgU2VydmljZXMnLFxuICAgIH0sXG4gIH0sXG5dXG5cbmV4cG9ydCBjb25zdCBkb21lc3RpY1N0dWRpZXNCeVNsdWcgPSBkb21lc3RpY1N0dWRpZXNMaXN0LnJlZHVjZSgoYWNjLCBpdGVtKSA9PiB7XG4gIGFjY1tpdGVtLnNsdWddID0gaXRlbVxuICByZXR1cm4gYWNjXG59LCB7fSlcbiJdfQ==

@@ -1,80 +1,73 @@
-import { Menu, X, Home, Building, Compass, Image, Info, PhoneCall } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import { createPortal } from 'react-dom'
+import { ArrowRight, ChevronDown, Menu } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { useEnquiry } from '../context/EnquiryContext'
+import {
+  abroadStudiesMenu,
+  domesticStudiesMenu,
+  aboutMenu,
+} from '../data/navigationData'
 import { scrollToContact } from '../utils/scrollToContact'
 import Logo from './Logo'
-
-const navRoutes = [
-  { to: '/', label: 'Home', icon: Home, isHome: true },
-  { to: '/colleges', label: 'Colleges', icon: Building },
-  { to: '/services', label: 'Services', icon: Compass },
-  { to: '/gallery', label: 'Gallery', icon: Image },
-  { to: '/about', label: 'About', icon: Info },
-  { to: '/', label: 'Contact', icon: PhoneCall, isContact: true },
-]
+import MobileDrawer from './MobileDrawer'
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const { openEnquiry } = useEnquiry()
+  const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState(null) // 'domestic' | 'abroad' | 'about' | null
+  const [mobileAccordion, setMobileAccordion] = useState(null) // 'domestic' | 'abroad' | 'about' | null
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isContactInView, setIsContactInView] = useState(false)
+
+  const dropdownTimeoutRef = useRef(null)
+  const navContainerRef = useRef(null)
   const location = useLocation()
   const navigate = useNavigate()
   const isHomePage = location.pathname === '/'
 
-  // Track scroll position for header visibility and contact section highlight
+  // Track scroll position
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop
       setIsScrolled(scrollY > 80)
-
-      if (isHomePage) {
-        const contactEl = document.getElementById('contact') || document.getElementById('enquire')
-        if (contactEl) {
-          const rect = contactEl.getBoundingClientRect()
-          // Active when contact section top is within viewport
-          const inView = rect.top <= window.innerHeight * 0.6 && rect.bottom >= 100
-          setIsContactInView(inView)
-        } else {
-          setIsContactInView(false)
-        }
-      } else {
-        setIsContactInView(false)
-      }
     }
 
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [isHomePage, location.pathname])
+  }, [])
 
-  // Listen to mobile menu toggle events & escape key
+  // Close menus on outside click or escape key
   useEffect(() => {
-    const handleOpenMenu = () => setIsOpen(true)
-    const handleToggleMenu = () => setIsOpen((prev) => !prev)
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setIsOpen(false)
+      if (e.key === 'Escape') {
+        setActiveDropdown(null)
+        setIsMobileOpen(false)
+      }
     }
 
-    window.addEventListener('open-mobile-menu', handleOpenMenu)
-    window.addEventListener('toggle-mobile-menu', handleToggleMenu)
-    window.addEventListener('keydown', handleKeyDown)
+    const handleClickOutside = (e) => {
+      if (navContainerRef.current && !navContainerRef.current.contains(e.target)) {
+        setActiveDropdown(null)
+      }
+    }
 
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleClickOutside)
     return () => {
-      window.removeEventListener('open-mobile-menu', handleOpenMenu)
-      window.removeEventListener('toggle-mobile-menu', handleToggleMenu)
-      window.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
 
-  // Close menu on route change
+  // Close menus on route change
   useEffect(() => {
-    setIsOpen(false)
-  }, [location.pathname])
+    setActiveDropdown(null)
+    setIsMobileOpen(false)
+  }, [location.pathname, location.search, location.hash])
 
-  // Lock/unlock body scroll safely when mobile menu is open/closed
+  // Body scroll locking when mobile drawer is open
   useEffect(() => {
-    if (isOpen) {
+    if (isMobileOpen) {
       document.body.style.overflow = 'hidden'
       document.documentElement.style.overflow = 'hidden'
     } else {
@@ -85,171 +78,284 @@ function Navbar() {
       document.body.style.overflow = ''
       document.documentElement.style.overflow = ''
     }
-  }, [isOpen])
+  }, [isMobileOpen])
 
-  const handleLinkClick = (route, e) => {
-    if (route.isHome) {
-      if (isHomePage) {
-        if (e && typeof e.preventDefault === 'function') {
-          e.preventDefault()
-        }
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      }
-    } else if (route.isContact) {
-      if (e && typeof e.preventDefault === 'function') {
-        e.preventDefault()
-      }
-      if (isHomePage) {
-        const contactEl = document.getElementById('contact') || document.getElementById('enquire')
-        if (contactEl) {
-          contactEl.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
-      } else {
-        sessionStorage.setItem('scroll_to_contact', '1')
-        navigate('/')
-      }
+  // Smooth hover handlers with small grace period to prevent flickering
+  const handleMouseEnter = (menuKey) => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current)
     }
+    setActiveDropdown(menuKey)
   }
 
-  const getLinkClass = (route, isActive) => {
-    if (route.isHome) {
-      return `nav__link ${isHomePage && !isContactInView ? 'nav__link--active' : ''}`.trim()
-    }
-    if (route.isContact) {
-      return `nav__link ${isHomePage && isContactInView ? 'nav__link--active' : ''}`.trim()
-    }
-    return `nav__link ${isActive ? 'nav__link--active' : ''}`.trim()
+  const handleMouseLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null)
+    }, 180)
   }
 
-  const getMobileLinkClass = (route, isActive) => {
-    if (route.isHome) {
-      return `mobile-drawer__link ${isHomePage && !isContactInView ? 'mobile-drawer__link--active' : ''}`.trim()
-    }
-    if (route.isContact) {
-      return `mobile-drawer__link ${isHomePage && isContactInView ? 'mobile-drawer__link--active' : ''}`.trim()
-    }
-    return `mobile-drawer__link ${isActive ? 'mobile-drawer__link--active' : ''}`.trim()
+  const toggleDropdown = (menuKey, e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setActiveDropdown((prev) => (prev === menuKey ? null : menuKey))
   }
+
+  const isHiddenOnHome = isHomePage && !isScrolled
 
   return (
     <>
       <header
-        className={`site-header ${isHomePage ? 'site-header--home' : 'site-header--other'} ${
+        className={`site-header ${
           isScrolled ? 'site-header--scrolled' : ''
-        }`}
+        } ${
+          isHiddenOnHome ? 'site-header--home-hidden' : ''
+        }`.trim()}
       >
-        <div className="navbar container" aria-label="Primary navigation">
-          {/* Left: Logo */}
-          <Logo />
+        <div className="navbar container" ref={navContainerRef} aria-label="Primary navigation">
+          {/* Left: Brand Logo */}
+          <Logo isDark={false} onNavigate={() => setActiveDropdown(null)} />
 
-          {/* Center: Desktop Navigation Links */}
-          <nav className="nav__desktop-links" aria-label="Desktop menu">
-            {navRoutes.map((route) => (
+          {/* Center: Desktop Navigation Bar Links */}
+          <nav className="nav__desktop-menu" aria-label="Desktop menu">
+            {/* 1. HOME */}
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `nav__menu-item ${isActive ? 'nav__menu-item--active' : ''}`
+              }
+              onClick={() => {
+                setActiveDropdown(null)
+                if (isHomePage) window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+            >
+              HOME
+            </NavLink>
+
+            {/* 2. DOMESTIC STUDIES */}
+            <div
+              className={`nav__dropdown-wrapper ${
+                activeDropdown === 'domestic' ? 'nav__dropdown-wrapper--open' : ''
+              }`}
+              onMouseEnter={() => handleMouseEnter('domestic')}
+              onMouseLeave={handleMouseLeave}
+            >
               <NavLink
-                key={route.label}
-                to={route.to}
-                onClick={(e) => handleLinkClick(route, e)}
-                className={({ isActive }) => getLinkClass(route, isActive)}
+                to="/domestic-studies"
+                className={({ isActive }) =>
+                  `nav__menu-item nav__menu-item--has-arrow ${
+                    isActive || activeDropdown === 'domestic' || location.pathname.startsWith('/domestic-studies')
+                      ? 'nav__menu-item--active'
+                      : ''
+                  }`
+                }
+                onClick={() => setActiveDropdown(null)}
               >
-                {route.label}
+                <span>DOMESTIC STUDIES</span>
+                <ChevronDown size={14} className="nav__chevron-icon" aria-hidden="true" />
               </NavLink>
-            ))}
+
+              {/* 3-Column Domestic Studies Mega Menu */}
+              {activeDropdown === 'domestic' && (
+                <div
+                  className="mega-menu mega-menu--domestic"
+                  role="menu"
+                  aria-label="Domestic Studies courses"
+                >
+                  <div className="mega-menu__grid">
+                    {domesticStudiesMenu.map((column, colIdx) => (
+                      <div key={colIdx} className="mega-menu__column">
+                        <div className="mega-menu__column-title">{column.title}</div>
+                        <ul className="mega-menu__list">
+                          {column.items.map((item) => (
+                            <li key={item.name} className="mega-menu__list-item">
+                              <Link
+                                to={item.path}
+                                className="mega-menu__link"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                <img
+                                  src={item.icon}
+                                  alt=""
+                                  className="mega-menu__icon-img"
+                                  loading="lazy"
+                                  onError={(e) => {
+                                    e.currentTarget.style.display = 'none'
+                                  }}
+                                />
+                                <span className="mega-menu__item-name">{item.name}</span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* 3. ABROAD STUDIES */}
+            <div
+              className={`nav__dropdown-wrapper ${
+                activeDropdown === 'abroad' ? 'nav__dropdown-wrapper--open' : ''
+              }`}
+              onMouseEnter={() => handleMouseEnter('abroad')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <NavLink
+                to="/abroad-studies"
+                className={({ isActive }) =>
+                  `nav__menu-item nav__menu-item--has-arrow ${
+                    isActive || activeDropdown === 'abroad' || location.pathname.startsWith('/abroad-studies')
+                      ? 'nav__menu-item--active'
+                      : ''
+                  }`
+                }
+                onClick={() => setActiveDropdown(null)}
+              >
+                <span>ABROAD STUDIES</span>
+                <ChevronDown size={14} className="nav__chevron-icon" aria-hidden="true" />
+              </NavLink>
+
+              {/* 2-Column Abroad Studies Mega Menu */}
+              {activeDropdown === 'abroad' && (
+                <div
+                  className="mega-menu mega-menu--abroad"
+                  role="menu"
+                  aria-label="Abroad Studies destinations"
+                >
+                  <div className="mega-menu__grid">
+                    {abroadStudiesMenu.map((column, colIdx) => (
+                      <div key={colIdx} className="mega-menu__column">
+                        <div className="mega-menu__column-title">{column.title}</div>
+                        <ul className="mega-menu__list">
+                          {column.items.map((item) => (
+                            <li key={item.name} className="mega-menu__list-item">
+                              <Link
+                                to={item.path}
+                                className="mega-menu__link"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                <img
+                                  src={item.flag}
+                                  alt=""
+                                  className="mega-menu__flag-img"
+                                  loading="lazy"
+                                  onError={(e) => {
+                                    if (item.name === 'TAJIKISTAN' && !e.currentTarget.dataset.fallback) {
+                                      e.currentTarget.dataset.fallback = 'true'
+                                      e.currentTarget.src = 'https://flagcdn.com/w320/tj.png'
+                                    } else {
+                                      e.currentTarget.style.display = 'none'
+                                    }
+                                  }}
+                                />
+                                <span className="mega-menu__item-name">{item.name}</span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* 4. COLLEGE & UNIVERSITIES */}
+            <NavLink
+              to="/colleges"
+              className={({ isActive }) =>
+                `nav__menu-item ${isActive ? 'nav__menu-item--active' : ''}`
+              }
+              onClick={() => setActiveDropdown(null)}
+            >
+              COLLEGE & UNIVERSITIES
+            </NavLink>
+
+            {/* 5. ABOUT (Dropdown with Gallery) */}
+            <div
+              className={`nav__dropdown-wrapper nav__dropdown-wrapper--about ${
+                activeDropdown === 'about' ? 'nav__dropdown-wrapper--open' : ''
+              }`}
+              onMouseEnter={() => handleMouseEnter('about')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `nav__menu-item nav__menu-item--has-arrow ${
+                    isActive ? 'nav__menu-item--active' : ''
+                  }`
+                }
+                onClick={() => setActiveDropdown(null)}
+              >
+                <span>ABOUT</span>
+                <ChevronDown size={14} className="nav__chevron-icon" aria-hidden="true" />
+              </NavLink>
+
+              {/* About Dropdown Menu */}
+              {activeDropdown === 'about' && (
+                <div
+                  className="nav__simple-dropdown"
+                  role="menu"
+                  aria-label="About menu"
+                >
+                  {aboutMenu.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      className={`nav__simple-dropdown-link ${
+                        location.pathname === item.path ? 'nav__simple-dropdown-link--active' : ''
+                      }`}
+                      onClick={() => setActiveDropdown(null)}
+                      role="menuitem"
+                    >
+                      <span>{item.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* 6. CONTACT */}
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `nav__menu-item ${isActive ? 'nav__menu-item--active' : ''}`
+              }
+              onClick={() => setActiveDropdown(null)}
+            >
+              CONTACT
+            </NavLink>
           </nav>
 
-          {/* Right: Enquire CTA Action (Desktop Only) */}
+          {/* Right: Enquiry Now Button (Desktop) */}
           <div className="nav__actions nav__actions--desktop">
-            <Link
-              className="button button--primary nav__enquire"
-              to="/"
-              onClick={scrollToContact}
+            <button
+              type="button"
+              className="button button--primary nav__enquiry-btn blink-subtle"
+              onClick={() => openEnquiry()}
             >
-              <span>Enquire Now</span>
-            </Link>
+              ENQUIRY NOW
+            </button>
           </div>
 
-          {/* Right: Hamburger Menu Toggle Button (Mobile Only) */}
+          {/* Mobile Hamburger Button */}
           <button
             type="button"
             className="nav__hamburger-btn"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            onClick={() => setIsMobileOpen(true)}
+            aria-expanded={isMobileOpen}
+            aria-label="Open navigation menu"
           >
-            <Menu size={22} aria-hidden="true" />
+            <Menu size={24} aria-hidden="true" />
           </button>
         </div>
       </header>
 
-      {/* Mobile Slide-Over Drawer Navigation rendered via Portal to document.body */}
-      {typeof document !== 'undefined' && createPortal(
-        <>
-          {isOpen && (
-            <div
-              className="mobile-drawer-backdrop"
-              onClick={() => setIsOpen(false)}
-              aria-hidden="true"
-            />
-          )}
-
-          <div
-            className={`mobile-drawer ${isOpen ? 'mobile-drawer--open' : ''}`}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Mobile navigation menu"
-          >
-            <div className="mobile-drawer__content">
-              <div className="mobile-drawer__header">
-                <Logo onNavigate={() => setIsOpen(false)} />
-                <button
-                  type="button"
-                  className="mobile-drawer__close-btn"
-                  onClick={() => setIsOpen(false)}
-                  aria-label="Close menu"
-                >
-                  <X size={18} aria-hidden="true" />
-                </button>
-              </div>
-
-              <nav className="mobile-drawer__nav" aria-label="Mobile menu links">
-                {navRoutes.map((route) => {
-                  const Icon = route.icon
-                  return (
-                    <NavLink
-                      key={route.label}
-                      to={route.to}
-                      onClick={(e) => {
-                        setIsOpen(false)
-                        handleLinkClick(route, e)
-                      }}
-                      className={({ isActive }) => getMobileLinkClass(route, isActive)}
-                    >
-                      {Icon && <Icon size={18} aria-hidden="true" style={{ marginRight: '10px', color: 'var(--color-primary-500)' }} />}
-                      <span>{route.label}</span>
-                    </NavLink>
-                  )
-                })}
-              </nav>
-
-              <div className="mobile-drawer__footer">
-                <Link
-                  to="/"
-                  className="button button--primary mobile-drawer__cta"
-                  onClick={(e) => {
-                    setIsOpen(false)
-                    scrollToContact(e)
-                  }}
-                >
-                  <span>Enquire Now</span>
-                </Link>
-                <p className="mobile-drawer__helpline">
-                  Call <strong>+91 94432 77764</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-        </>,
-        document.body
-      )}
+      {/* Mobile Slide-Over Drawer Navigation */}
+      <MobileDrawer isOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)} />
     </>
   )
 }

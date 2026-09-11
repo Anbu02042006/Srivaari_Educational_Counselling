@@ -9,6 +9,14 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation()
 
   useEffect(() => {
+    try {
+      if (sessionStorage.getItem('scroll_to_contact')) {
+        return
+      }
+    } catch {
+      // ignore
+    }
+
     if (hash) {
       const element = document.querySelector(hash)
       if (element) {
