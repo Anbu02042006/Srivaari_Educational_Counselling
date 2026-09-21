@@ -1,45 +1,108 @@
-import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 import { scrollToContact } from '../utils/scrollToContact'
-import MobileDrawer from './MobileDrawer'
 import SriVaariEmblem from './SriVaariEmblem'
 
+const heroSlides = [
+  {
+    src: '/images/home-hero-slide-1.png',
+    fallbackSrc: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Welcome to Sri Vaari Educational Groups - A Brighter Tomorrow Begins Here',
+    title: 'WELCOME TO SRI VAARI EDUCATIONAL GROUPS',
+    lines: ['WELCOME TO SRI VAARI', 'EDUCATIONAL GROUPS'],
+    bgClass: 'hero-image-card__slide--bg-1',
+  },
+  {
+    src: '/images/home-hero-slide-2.png',
+    fallbackSrc: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Domestic and abroad educational counselling and university admissions',
+    title: 'WE PROVIDE DOMESTIC & INTERNATIONAL SERVICES',
+    lines: ['WE PROVIDE DOMESTIC &', 'INTERNATIONAL SERVICES'],
+    bgClass: 'hero-image-card__slide--bg-2',
+  },
+  {
+    src: '/images/home-hero-slide-3.png',
+    fallbackSrc: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Scholarships and financial aid guidance from 5000 to 1 lakh rupees',
+    title: 'WE PROVIDE SCHOLARSHIP FROM 5000 TO 1 LAKH RUPEES',
+    lines: ['WE PROVIDE SCHOLARSHIP', 'FROM 5000 TO 1 LAKH RUPEES'],
+    bgClass: 'hero-image-card__slide--bg-3',
+  },
+  {
+    src: '/images/home-hero-slide-4.png',
+    fallbackSrc: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Top accredited partner universities and student degree graduation success',
+    title: 'GET ADMISSIONS IN TOP COLLEGES & UNIVERSITIES',
+    lines: ['GET ADMISSIONS IN TOP', 'COLLEGES & UNIVERSITIES'],
+    bgClass: 'hero-image-card__slide--bg-4',
+  },
+]
+
 function HeroImageCard({ onContactClick, onEnquire }) {
-  const [isNavOpen, setIsNavOpen] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const touchStartX = useRef(0)
+  const touchEndX = useRef(0)
 
-  // Listen to open-mobile-menu / toggle-mobile-menu events
+  // Preload all slides into browser cache immediately for instant seamless transitions
   useEffect(() => {
-    const handleOpen = () => setIsNavOpen(true)
-    const handleToggle = () => setIsNavOpen((prev) => !prev)
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setIsNavOpen(false)
-    }
-
-    window.addEventListener('open-mobile-menu', handleOpen)
-    window.addEventListener('toggle-mobile-menu', handleToggle)
-    window.addEventListener('keydown', handleKeyDown)
-
-    return () => {
-      window.removeEventListener('open-mobile-menu', handleOpen)
-      window.removeEventListener('toggle-mobile-menu', handleToggle)
-      window.removeEventListener('keydown', handleKeyDown)
-    }
+    heroSlides.forEach((slide) => {
+      const img = new Image()
+      img.src = slide.src
+    })
   }, [])
 
-  // Safely lock/unlock body scroll when mobile navigation card is open
+  // Continuous Auto-Slideshow: advances every 2 seconds
+  // Resets timer smoothly on any user interaction (slide click or swipe)
   useEffect(() => {
-    if (isNavOpen) {
-      document.body.style.overflow = 'hidden'
-      document.documentElement.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-      document.documentElement.style.overflow = ''
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
+    }, 2000)
+
+    return () => clearInterval(timer)
+  }, [currentSlide])
+
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
+  }
+
+  const goToPrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
+  }
+
+  // Keyboard navigation for accessibility
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') {
+      goToPrev()
+    } else if (e.key === 'ArrowRight') {
+      goToNext()
     }
-    return () => {
-      document.body.style.overflow = ''
-      document.documentElement.style.overflow = ''
+  }
+
+  // Touch Swipe Support for Mobile Screens
+  const handleTouchStart = (e) => {
+    if (e.targetTouches && e.targetTouches.length > 0) {
+      touchStartX.current = e.targetTouches[0].clientX
+      touchEndX.current = e.targetTouches[0].clientX
     }
-  }, [isNavOpen])
+  }
+
+  const handleTouchMove = (e) => {
+    if (e.targetTouches && e.targetTouches.length > 0) {
+      touchEndX.current = e.targetTouches[0].clientX
+    }
+  }
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current
+    if (Math.abs(diff) > 35) {
+      if (diff > 0) {
+        goToNext()
+      } else {
+        goToPrev()
+      }
+    }
+    touchStartX.current = 0
+    touchEndX.current = 0
+  }
 
   const handleContact = (e) => {
     if (onContactClick) {
@@ -49,25 +112,15 @@ function HeroImageCard({ onContactClick, onEnquire }) {
     scrollToContact(e)
   }
 
-  const handleMenuToggle = (e) => {
-    if (e && typeof e.preventDefault === 'function') {
-      e.preventDefault()
-      e.stopPropagation()
-    }
-    setIsNavOpen((prev) => !prev)
-  }
-
-  const handleEnquireClick = (e) => {
-    setIsNavOpen(false)
-    if (onEnquire) {
-      onEnquire()
-    } else {
-      scrollToContact(e)
-    }
-  }
-
   return (
-    <div className="hero-image-card">
+    <div
+      className="hero-image-card hero-entrance-media"
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Campus guidance and student counselling slideshow"
+    >
       {/* SVG ClipPaths: Circular Fitted Notches for Mobile and Desktop */}
       <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
         <defs>
@@ -78,10 +131,10 @@ function HeroImageCard({ onContactClick, onEnquire }) {
                      C 0.96,0 1,0.04 1,0.10
                      L 1,0.835
                      C 1,0.852 0.98,0.858 0.94,0.858
-                     L 0.70,0.858
-                     C 0.665,0.858 0.65,0.878 0.65,0.915
-                     L 0.65,0.945
-                     C 0.65,0.982 0.63,1 0.59,1
+                     L 0.76,0.858
+                     C 0.73,0.858 0.71,0.878 0.71,0.915
+                     L 0.71,0.945
+                     C 0.71,0.982 0.69,1 0.65,1
                      L 0.10,1
                      C 0.04,1 0,0.96 0,0.90
                      L 0,0.08
@@ -94,12 +147,12 @@ function HeroImageCard({ onContactClick, onEnquire }) {
             <path d="M 0.08,0
                      L 0.92,0
                      C 0.97,0 1,0.03 1,0.08
-                     L 1,0.885
-                     C 1,0.895 0.985,0.905 0.96,0.905
-                     L 0.76,0.905
-                     C 0.735,0.905 0.72,0.92 0.72,0.945
-                     L 0.72,0.965
-                     C 0.72,0.99 0.70,1 0.66,1
+                     L 1,0.85
+                     C 1,0.865 0.985,0.875 0.96,0.875
+                     L 0.80,0.875
+                     C 0.775,0.875 0.76,0.895 0.76,0.925
+                     L 0.76,0.95
+                     C 0.76,0.985 0.735,1 0.70,1
                      L 0.08,1
                      C 0.03,1 0,0.97 0,0.92
                      L 0,0.08
@@ -110,20 +163,9 @@ function HeroImageCard({ onContactClick, onEnquire }) {
       </svg>
 
       {/* Top-Left Notch (Enlarged Circular Emblem Seal with Center Logo) */}
-      <div className="hero-image-card__notch hero-image-card__notch--tl">
+      <div className="hero-image-card__notch hero-image-card__notch--tl hero-entrance-badge">
         <SriVaariEmblem className="hero-image-card__logo--emblem" />
       </div>
-
-      {/* Top-Right Hamburger Menu Button (Inside Hero Card - Mobile Only) */}
-      <button
-        type="button"
-        className="hero-image-card__menu-btn"
-        onClick={handleMenuToggle}
-        aria-label={isNavOpen ? 'Close navigation menu' : 'Open navigation menu'}
-        aria-expanded={isNavOpen}
-      >
-        {isNavOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
-      </button>
 
       {/* Bottom-Right Notch (Contact Us Button) */}
       <div className="hero-image-card__notch hero-image-card__notch--br">
@@ -138,25 +180,48 @@ function HeroImageCard({ onContactClick, onEnquire }) {
       </div>
 
       <div className="hero-image-card__container">
-        {/* Main Hero Photograph */}
-        <div className="hero-image-card__image-wrapper">
-          <img
-            src="/images/counselling-partnership.jpg"
-            alt="Education counselling partnership"
-            className="hero-image-card__img"
-            loading="eager"
-            onError={(e) => {
-              const fallback = 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80'
-              if (e.target.src !== fallback) {
-                e.target.src = fallback
-              }
-            }}
-          />
+        {/* Top Slide Text Header: Dynamically synchronized with each slide */}
+        <div className="hero-image-card__top-content" aria-live="polite">
+          {heroSlides.map((slide, index) => (
+            <div
+              key={index}
+              className={`hero-image-card__text-slide ${index === currentSlide ? 'hero-image-card__text-slide--active' : ''
+                }`}
+            >
+              <h2 className="hero-image-card__slide-title">{slide.title}</h2>
+            </div>
+          ))}
+        </div>
+
+        {/* Main Hero Photograph Slideshow (4 Curated Slides) */}
+        <div
+          className="hero-image-card__image-wrapper"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {heroSlides.map((slide, index) => (
+            <div
+              key={slide.src}
+              className={`hero-image-card__slide-layer ${slide.bgClass} ${index === currentSlide ? 'hero-image-card__slide-layer--active' : ''
+                }`}
+            >
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                className="hero-image-card__img hero-image-card__slide-img"
+                loading="eager"
+                decoding="async"
+                onError={(e) => {
+                  if (e.target.src !== slide.fallbackSrc) {
+                    e.target.src = slide.fallbackSrc
+                  }
+                }}
+              />
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* Dedicated Mobile Navigation Slide-Over Drawer with newly implemented nav buttons */}
-      <MobileDrawer isOpen={isNavOpen} onClose={() => setIsNavOpen(false)} />
     </div>
   )
 }

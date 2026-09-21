@@ -23,12 +23,12 @@ function AbroadCountryDetail({ country, onContact }) {
   return (
     <section className="abroad-detail-view" aria-label={`${country.name} MBBS Information`}>
       {/* 1. TOP COURSE HEADER BANNER */}
-      <div className="abroad-study-banner">
+      <div className="abroad-study-banner hero-entrance-title">
         <h2 className="abroad-study-banner__title">{bannerTitle}</h2>
       </div>
 
       {/* 2. OVERVIEW & QUICK FACTS CONTAINER */}
-      <div className="abroad-overview-card">
+      <div className="abroad-overview-card reveal-fade-up">
         {/* Left: Destination Landmark Photo */}
         <div className="abroad-overview-media">
           <img
@@ -66,7 +66,7 @@ function AbroadCountryDetail({ country, onContact }) {
       </div>
 
       {/* 3. BOTTOM SECTION: Particulars Table + Sidebar Card */}
-      <div className="abroad-bottom-grid">
+      <div className="abroad-bottom-grid reveal-fade-up">
         {/* Left Column: 11-Point Course Particulars Table */}
         <div className="abroad-table-card">
           <table className="abroad-particulars-table" aria-label={`MBBS Course Details in ${country.name}`}>

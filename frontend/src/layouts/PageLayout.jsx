@@ -1,22 +1,29 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import EnquiryModal from '../components/EnquiryModal'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import FloatingSocialBar from '../components/FloatingSocialBar'
 import { useEnquiry } from '../context/EnquiryContext'
 import useBlobButtons from '../hooks/useBlobButtons'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 function PageLayout() {
+  const location = useLocation()
   useBlobButtons()
+  useScrollReveal([location.pathname])
   const { isOpen, closeEnquiry, enquiryContext } = useEnquiry()
+
+  const isTermsPage = location.pathname === '/terms-and-conditions' || location.pathname === '/terms'
 
   return (
     <div id="top" className="app-shell">
       <Navbar />
       <div className="app-shell__main">
-        <Outlet />
+        <div key={location.pathname} className="page-route-transition">
+          <Outlet />
+        </div>
       </div>
-      <Footer />
+      {!isTermsPage && <Footer />}
       
       {/* Floating Right-Side Social Bar and Scroll-to-Top Card */}
       <FloatingSocialBar />

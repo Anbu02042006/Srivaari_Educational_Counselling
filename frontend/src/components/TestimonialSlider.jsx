@@ -23,8 +23,10 @@ function TestimonialCard({ item }) {
           />
           <div className="testimonial-slider__meta">
             <strong className="testimonial-slider__name">{item.name}</strong>
+            {item.college && (
+              <span className="testimonial-slider__college">{item.college}</span>
+            )}
             <span className="testimonial-slider__course">{item.course}</span>
-            <span className="testimonial-slider__city">{item.city}</span>
           </div>
         </div>
 

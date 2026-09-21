@@ -4,7 +4,9 @@ import {
   CheckCircle2,
   Clock3,
   GraduationCap,
+  Heart,
   HeartHandshake,
+  Landmark,
   Mail,
   MapPin,
   Phone,
@@ -17,7 +19,6 @@ import BenefitSlider from '../components/BenefitSlider'
 import HeroImageCard from '../components/HeroImageCard'
 import EnquiryForm from '../components/EnquiryForm'
 import { useEnquiry } from '../context/EnquiryContext'
-import GallerySection from '../components/GallerySection'
 import SectionHeading from '../components/SectionHeading'
 import StatCounter from '../components/StatCounter'
 import TestimonialSlider from '../components/TestimonialSlider'
@@ -27,9 +28,9 @@ import { benefits } from '../data/homeData'
 
 const statsData = [
   { value: '500+', label: 'Courses & Programs', icon: BookOpen },
-  { value: '100+', label: 'Partner Institutions', icon: Award },
+  { value: '300+', label: 'Partner Institutions', icon: Landmark },
   { value: '10K+', label: 'Students Guided', icon: Users },
-  { value: '95%', label: 'Student Satisfaction', icon: HeartHandshake },
+  { value: '95%', label: 'Student Satisfaction', icon: Heart },
 ]
 
 function HomePage() {
@@ -75,29 +76,25 @@ function HomePage() {
 
               {/* Hero Content (Right on Desktop, Downside on Mobile) */}
               <div className="home-hero-split__content">
-                <h1 className="home-hero-split__title-clean">
+                <h1 className="home-hero-split__title-clean hero-entrance-title">
                   WELCOME TO SRI VAARI EDUCATIONAL GROUPS
                 </h1>
 
-                <div className="hero__check-paragraphs">
+                <div className="hero__check-paragraphs hero-entrance-paragraphs">
                   <p className="hero__check-para-text">
-                    With over 27 years of experience, Sri Vaari Educational Groups has been a trusted guide for students aspiring to achieve academic excellence. Since our inception in 1997, we have proudly assisted more than 10,000 students in securing admissions to their dream colleges and top universities across the nation and abroad.
+                    With over 27 years of experience since 1997, Sri Vaari Educational Groups has been a trusted mentor for students aspiring to achieve academic excellence, proudly assisting more than 10,000 aspirants in securing admissions to premier colleges and universities across the nation and abroad.
                   </p>
 
-                  <p className="hero__check-para-text">
-                    Our success is built on the foundation of an experienced and dedicated team passionate about transforming student aspirations into tangible achievements. By offering personalized career counselling, comprehensive aptitude assessments, and individual career roadmaps, we have established ourselves as a beacon of guidance for students seeking a brighter future.
+                  <p className="hero__check-para-text hero__check-para-text--desktop-only">
+                    From identifying the ideal career pathway in Medical, Engineering, Allied Health Sciences, or Management to navigating entrance cut-offs and quota counselling, our dedicated advisors provide end-to-end guidance tailored to each student's goals.
                   </p>
 
-                  <p className="hero__check-para-text">
-                    From identifying the ideal career pathway in Medical, Engineering, Allied Health Sciences, or Management to navigating entrance cut-offs, state quota counselling, and transparent institutional admissions, our advisors provide end-to-end guidance tailored to each student's goals.
-                  </p>
-
-                  <p className="hero__check-para-text">
-                    Join the thousands of successful doctors, engineers, and professionals who have trusted Sri Vaari Educational Groups to turn their ambitions into reality. Let us guide you on your journey toward enduring academic and career success.
+                  <p className="hero__check-para-text hero__check-para-text--desktop-only">
+                    Join the thousands of successful doctors, engineers, and professionals who have trusted Sri Vaari Educational Groups to turn their ambitions into reality and build enduring career success.
                   </p>
                 </div>
 
-                <div className="hero__note">
+                <div className="hero__note hero-entrance-note">
                   <CheckCircle2 size={16} aria-hidden="true" />
                   <span>Your initial counselling consultation is completely free of charge.</span>
                 </div>
@@ -107,60 +104,63 @@ function HomePage() {
             {/* Part 2: Why Choose Us (Left: Text & 4 Pillars, Right: Visual Image) */}
             <div className="why-choose-banner__card-body">
               {/* Left Side: Text & Features */}
-              <div className="why-choose-banner__text">
+              <div className="why-choose-banner__text reveal-fade-up">
                 <h2 className="why-choose-banner__title">
                   WHY CHOOSE SRI VAARI EDUCATIONAL GROUPS?
                 </h2>
 
                 <p className="why-choose-banner__desc">
-                  Choosing Sri Vaari Educational Groups means partnering with dedicated educational advisors committed to your future. With over <strong>27 years of expertise</strong> and direct relationships with premier institutions, we transform confusing cut-offs and stressful admission procedures into a clear, confident path to your dream college.
+                  <span className="why-choose-banner__desc--desktop-only">
+                    Choosing Sri Vaari Educational Groups means partnering with dedicated educational advisors committed to your future.{' '}
+                  </span>
+                  With over <strong>27 years of expertise</strong> and direct relationships with premier institutions, we transform confusing cut-offs and stressful admission procedures into a clear, confident path to your dream college.
                 </p>
 
                 {/* 4 Core Pillars */}
-                <div className="why-choose-banner__grid">
-                  <div className="why-choose-banner__feature">
+                <div className="why-choose-banner__grid reveal-stagger-group">
+                  <div className="why-choose-banner__feature reveal-stagger-item">
                     <div className="why-choose-banner__feature-icon">
                       <Users size={18} aria-hidden="true" />
                     </div>
                     <div className="why-choose-banner__feature-content">
                       <h3 className="why-choose-banner__feature-title">Personalized 1-on-1 Mentorship</h3>
-                      <p className="why-choose-banner__feature-desc">
+                      <p className="why-choose-banner__feature-desc why-choose-banner__feature-desc--desktop-only">
                         Tailored course &amp; college shortlisting matching your 12th/UG cut-offs, aptitude, and budget.
                       </p>
                     </div>
                   </div>
 
-                  <div className="why-choose-banner__feature">
+                  <div className="why-choose-banner__feature reveal-stagger-item">
                     <div className="why-choose-banner__feature-icon">
                       <Award size={18} aria-hidden="true" />
                     </div>
                     <div className="why-choose-banner__feature-content">
-                      <h3 className="why-choose-banner__feature-title">100+ Verified Top Institutions</h3>
-                      <p className="why-choose-banner__feature-desc">
+                      <h3 className="why-choose-banner__feature-title">300+ Verified Top Institutions</h3>
+                      <p className="why-choose-banner__feature-desc why-choose-banner__feature-desc--desktop-only">
                         Direct tie-ups with leading NAAC A++ &amp; NBA accredited Engineering, Medical &amp; Management colleges.
                       </p>
                     </div>
                   </div>
 
-                  <div className="why-choose-banner__feature">
+                  <div className="why-choose-banner__feature reveal-stagger-item">
                     <div className="why-choose-banner__feature-icon">
                       <CheckCircle2 size={18} aria-hidden="true" />
                     </div>
                     <div className="why-choose-banner__feature-content">
                       <h3 className="why-choose-banner__feature-title">End-to-End Admission Support</h3>
-                      <p className="why-choose-banner__feature-desc">
+                      <p className="why-choose-banner__feature-desc why-choose-banner__feature-desc--desktop-only">
                         Complete guidance on TNEA/NEET counselling, application paperwork, quota seats, and enrollment.
                       </p>
                     </div>
                   </div>
 
-                  <div className="why-choose-banner__feature">
+                  <div className="why-choose-banner__feature reveal-stagger-item">
                     <div className="why-choose-banner__feature-icon">
                       <ShieldCheck size={18} aria-hidden="true" />
                     </div>
                     <div className="why-choose-banner__feature-content">
                       <h3 className="why-choose-banner__feature-title">100% Ethical &amp; Transparent</h3>
-                      <p className="why-choose-banner__feature-desc">
+                      <p className="why-choose-banner__feature-desc why-choose-banner__feature-desc--desktop-only">
                         Zero hidden fees, transparent fee structures, and dedicated scholarship &amp; education loan support.
                       </p>
                     </div>
@@ -169,7 +169,7 @@ function HomePage() {
               </div>
 
               {/* Right Side: Visual Image with Badges */}
-              <div className="why-choose-banner__visual hero__visual">
+              <div className="why-choose-banner__visual hero__visual reveal-scale-in">
                 <div className="hero__image-wrapper">
                   <img
                     src="/images/indian-admissions-guidance.jpg"
@@ -196,25 +196,26 @@ function HomePage() {
 
       {/* 3. IMPACT STATISTICS */}
       <section className="stats-section" aria-label="Key statistics">
-        <div className="container stats-grid">
-          {statsData.map(({ value, label, icon: Icon }) => (
-            <StatCounter
-              key={label}
-              value={value}
-              label={label}
-              icon={Icon}
-              className="stat-card--ribbon"
-            />
-          ))}
+        <div className="container stats-container">
+          <div className="stats-grid reveal-stagger-group">
+            {statsData.map(({ value, label, icon: Icon }) => (
+              <StatCounter
+                key={label}
+                value={value}
+                label={label}
+                icon={Icon}
+                className="stat-card--ribbon reveal-stagger-item"
+              />
+            ))}
+          </div>
         </div>
       </section>
 
 
       {/* 4b. BENEFITS & CORE STRENGTHS SLIDER */}
       <section className="home-section home-section--tint">
-        <div className="container home-benefit-container">
+        <div className="container home-benefit-container reveal-fade-up">
           <SectionHeading
-            eyebrow="Key Advantages"
             title="Guidance Built with Care & Integrity."
             description="We don't believe in one-size-fits-all advice. We tailor every recommendation to your individual strengths, career ambitions, and family budget."
           />
@@ -223,16 +224,11 @@ function HomePage() {
         </div>
       </section>
 
-      {/* 5. PHOTO GALLERY (Layered PhotoStack Section) */}
-      <div id="gallery">
-        <GallerySection />
-      </div>
 
       {/* 6. STUDENT TESTIMONIALS */}
       <section className="home-section home-section--tint">
-        <div className="container">
+        <div className="container reveal-fade-up">
           <SectionHeading
-            eyebrow="Real Student Experiences"
             title="Stories of Clarity, Relief & Success."
             description="Hear how students and families found peace of mind and secured admissions into top colleges through our patient guidance."
           />
@@ -245,17 +241,16 @@ function HomePage() {
 
       {/* 7. CONTACT / DIRECT ENQUIRY */}
       <section className="home-section" id="contact" aria-label="Contact and Enquiry">
-        <div className="container contact-layout">
+        <div className="container contact-layout reveal-fade-up">
           {/* Left Column: Direct Contact Details */}
           <div className="contact-details">
             <SectionHeading
-              eyebrow="Get in Touch"
               title="Let’s Talk About Your Future."
               description="Reach our advisory desk directly or leave your details below. A caring senior counsellor will connect with you for a personalized session."
             />
 
-            <div className="contact-cards-grid">
-              <a href={contactInfo.phoneHref} className="contact-card">
+            <div className="contact-cards-grid reveal-stagger-group">
+              <a href={contactInfo.phoneHref} className="contact-card reveal-stagger-item">
                 <span className="contact-card__icon" aria-hidden="true">
                   <Phone size={20} />
                 </span>
@@ -265,7 +260,7 @@ function HomePage() {
                 </div>
               </a>
 
-              <a href={contactInfo.emailHref} className="contact-card">
+              <a href={contactInfo.emailHref} className="contact-card reveal-stagger-item">
                 <span className="contact-card__icon" aria-hidden="true">
                   <Mail size={20} />
                 </span>
@@ -279,7 +274,7 @@ function HomePage() {
                 href={contactInfo.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="contact-card contact-card--whatsapp"
+                className="contact-card contact-card--whatsapp reveal-stagger-item"
               >
                 <span className="contact-card__icon contact-card__icon--whatsapp" aria-hidden="true">
                   <WhatsAppIcon size={20} />
@@ -290,7 +285,7 @@ function HomePage() {
                 </div>
               </a>
 
-              <div className="contact-card contact-card--static">
+              <div className="contact-card contact-card--static reveal-stagger-item">
                 <span className="contact-card__icon" aria-hidden="true">
                   <Clock3 size={20} />
                 </span>
@@ -302,7 +297,7 @@ function HomePage() {
             </div>
 
             {/* Map & In-Person Advisory Card */}
-            <div className="map-placeholder">
+            <div className="map-placeholder reveal-fade-up">
               <div className="map-placeholder__icon-wrapper">
                 <MapPin size={28} aria-hidden="true" />
               </div>
@@ -313,10 +308,9 @@ function HomePage() {
           </div>
 
           {/* Right Column: Direct Enquiry Form Panel */}
-          <div className="enquiry-panel">
+          <div className="enquiry-panel reveal-fade-up">
             <div className="enquiry-panel__header">
-              <span className="eyebrow">Direct Enquiry</span>
-              <h2 className="enquiry-panel__title">Request for counselling</h2>
+              <h2 className="enquiry-panel__title">Contact Us</h2>
               <p className="enquiry-panel__desc">
                 Fill in your details below to schedule a 1-on-1 personalized academic guidance session.
               </p>

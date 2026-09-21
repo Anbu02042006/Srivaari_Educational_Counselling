@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import AbroadCountryDetail from '../components/AbroadCountryDetail'
+import StudyCard from '../components/StudyCard'
 import { useEnquiry } from '../context/EnquiryContext'
 import { abroadStudiesBySlug, abroadStudiesList } from '../data/abroadStudiesData'
 
@@ -78,7 +79,7 @@ function AbroadStudyPage() {
     <div className="abroad-landing-page">
       <div className="container abroad-study-container">
         {/* 1. Header Section matching reference theme */}
-        <header className="abroad-landing__header">
+        <header className="abroad-landing__header reveal-fade-up">
           <h1 className="abroad-landing__title">
             Choose Your Favourite Study Abroad Destination!
           </h1>
@@ -93,50 +94,18 @@ function AbroadStudyPage() {
         </header>
 
         {/* 2. Destination Cards Grid */}
-        <div className="colleges-cards-grid">
+        <div className="study-cards-grid reveal-stagger-group">
           {abroadStudiesList.map((item) => (
-            <article key={item.slug} className="college-grid-card college-grid-card--interactive">
-              <Link
-                to={`/abroad-studies/${item.slug}`}
-                className="college-grid-card__link"
-                aria-label={`Learn more about studying in ${item.name}`}
-              >
-                <div className="college-grid-card__circle-wrap">
-                  <div className="college-grid-card__circle-relative">
-                    <div className="college-grid-card__circle">
-                      <img
-                        className="college-grid-card__img"
-                        alt={`${item.name} landmark`}
-                        loading="lazy"
-                        src={item.image}
-                        onError={(e) => {
-                          if (!e.currentTarget.dataset.fallback) {
-                            e.currentTarget.dataset.fallback = 'true'
-                            e.currentTarget.src = item.flag || '/logo.png'
-                          }
-                        }}
-                      />
-                    </div>
-                    {item.flag && (
-                      <div className="college-grid-card__badge-flag" title={`${item.name} flag`}>
-                        <img
-                          src={item.flag}
-                          alt={`${item.name} flag`}
-                          loading="lazy"
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none'
-                          }}
-                        />
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                <div className="college-grid-card__body college-grid-card__body--minimal">
-                  <h3 className="college-grid-card__title">{item.name}</h3>
-                </div>
-              </Link>
-            </article>
+            <StudyCard
+              key={item.slug}
+              title={item.name}
+              tagline={item.tagline}
+              image={item.image}
+              badge={item.flag}
+              badgeAlt={`${item.name} flag`}
+              to={`/abroad-studies/${item.slug}`}
+              className="reveal-stagger-item"
+            />
           ))}
         </div>
       </div>

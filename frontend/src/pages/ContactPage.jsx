@@ -16,18 +16,18 @@ function ContactPage() {
       {/* 1. HERO */}
       <header className="page-hero contact-hero">
         <div className="container contact-hero__container">
-          <div className="contact-hero__eyebrow">
+          <div className="contact-hero__eyebrow page-hero-eyebrow">
             <span className="contact-hero__eyebrow-line" aria-hidden="true" />
             <span>GET IN TOUCH</span>
           </div>
-          <h1 className="contact-hero__title">
+          <h1 className="contact-hero__title page-hero-title">
             Let’s Sit Down and Talk About <span className="text-highlight">Your Future</span>.
           </h1>
-          <p className="contact-hero__lead">
+          <p className="contact-hero__lead page-hero-lead">
             Have questions about cut-offs, college fees, seats, or courses? Give us a call or drop us a message anytime for honest, caring guidance.
           </p>
 
-          <div className="contact-hero__features">
+          <div className="contact-hero__features page-hero-features">
             <div className="contact-hero__feature-item">
               <div className="contact-hero__feature-icon">
                 <Phone size={16} aria-hidden="true" />
@@ -70,7 +70,7 @@ function ContactPage() {
 
       {/* 2. CONTACT CONTENT */}
       <section className="home-section">
-        <div className="container contact-layout">
+        <div className="container contact-layout reveal-fade-up">
           {/* Left Column: Direct Contact Details & Location */}
           <div className="contact-details">
             <SectionHeading
@@ -79,9 +79,9 @@ function ContactPage() {
               description="Speak directly with a caring counsellor who will listen attentively to your goals and worries."
             />
 
-            <div className="contact-cards-grid">
+            <div className="contact-cards-grid reveal-stagger-group">
               {/* Phone */}
-              <a href={contactInfo.phoneHref} className="contact-card">
+              <a href={contactInfo.phoneHref} className="contact-card reveal-stagger-item">
                 <span className="contact-card__icon" aria-hidden="true">
                   <Phone size={20} />
                 </span>
@@ -92,7 +92,7 @@ function ContactPage() {
               </a>
 
               {/* Email */}
-              <a href={contactInfo.emailHref} className="contact-card">
+              <a href={contactInfo.emailHref} className="contact-card reveal-stagger-item">
                 <span className="contact-card__icon" aria-hidden="true">
                   <Mail size={20} />
                 </span>
@@ -107,7 +107,7 @@ function ContactPage() {
                 href={contactInfo.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="contact-card contact-card--whatsapp"
+                className="contact-card contact-card--whatsapp reveal-stagger-item"
               >
                 <span className="contact-card__icon contact-card__icon--whatsapp" aria-hidden="true">
                   <WhatsAppIcon size={20} />
@@ -119,7 +119,7 @@ function ContactPage() {
               </a>
 
               {/* Office Hours */}
-              <div className="contact-card contact-card--static">
+              <div className="contact-card contact-card--static reveal-stagger-item">
                 <span className="contact-card__icon" aria-hidden="true">
                   <Clock3 size={20} />
                 </span>
@@ -130,7 +130,7 @@ function ContactPage() {
               </div>
 
               {/* Location */}
-              <div className="contact-card contact-card--static">
+              <div className="contact-card contact-card--static reveal-stagger-item">
                 <span className="contact-card__icon" aria-hidden="true">
                   <MapPin size={20} />
                 </span>
@@ -142,7 +142,7 @@ function ContactPage() {
             </div>
 
             {/* Map Placeholder Card */}
-            <div className="map-placeholder">
+            <div className="map-placeholder reveal-fade-up">
               <div className="map-placeholder__icon-wrapper">
                 <MapPin size={28} aria-hidden="true" />
               </div>
@@ -153,7 +153,7 @@ function ContactPage() {
           </div>
 
           {/* Right Column: Contact Form Panel */}
-          <div className="enquiry-panel">
+          <div className="enquiry-panel reveal-fade-up">
             <div className="enquiry-panel__header">
               <span className="eyebrow">Direct Counselling Enquiry</span>
               <h2 className="enquiry-panel__title">Request a Free 1-on-1 Callback.</h2>

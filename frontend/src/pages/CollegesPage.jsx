@@ -1,14 +1,9 @@
 import {
-  Award,
   Building,
   Compass,
-  Cpu,
   FileCheck2,
   GraduationCap,
-  Landmark,
-  School,
-  Sparkles,
-  Stethoscope,
+  MapPin,
   TrendingUp,
   Users,
 } from 'lucide-react'
@@ -17,8 +12,8 @@ import { useSearchParams } from 'react-router-dom'
 import CollegeCard from '../components/CollegeCard'
 import EmptyState from '../components/EmptyState'
 import {
-  engineeringCategoryTabs,
   engineeringColleges,
+  engineeringLocationTabs,
   medicalColleges,
   medicalRegionTabs,
 } from '../data/collegesData'
@@ -29,99 +24,104 @@ const regionIcons = {
   Karnataka: GraduationCap,
 }
 
-const engineeringCategoryIcons = {
-  autonomous: Award,
-  deemed: Landmark,
-  university: School,
-}
+// Location tabs for Engineering with 'All Locations' option
+const enggLocationTabs = [
+  { key: 'all', label: 'All Locations', count: engineeringColleges.length },
+  ...engineeringLocationTabs.map((t) => ({
+    ...t,
+    count: engineeringColleges.filter((c) => c.location === t.key).length,
+  })),
+]
+
+// Region tabs for Medical with 'All Regions' option
+const medRegionTabs = [
+  { key: 'all', label: 'All Regions', count: medicalColleges.length },
+  ...medicalRegionTabs,
+]
 
 function CollegesPage() {
   const [searchParams] = useSearchParams()
-  const [activeStream, setActiveStream] = useState('engineering') // 'engineering' | 'medical'
-  const [activeEnggCategory, setActiveEnggCategory] = useState('autonomous') // 'autonomous' | 'deemed' | 'university'
-  const [activeMedicalRegion, setActiveMedicalRegion] = useState('Tamilnadu')
+  const [activeStream, setActiveStream] = useState('all') // 'all' | 'engineering' | 'medical'
+  const [activeEnggLocation, setActiveEnggLocation] = useState('all')
+  const [activeMedicalRegion, setActiveMedicalRegion] = useState('all')
 
   useEffect(() => {
     const stream = searchParams.get('stream')
     const region = searchParams.get('region')
-    const category = searchParams.get('category') || searchParams.get('type')
+    const locationParam = searchParams.get('location') || searchParams.get('city')
+
     if (stream === 'medical') {
       setActiveStream('medical')
       if (region && ['Tamilnadu', 'Puducherry', 'Karnataka'].includes(region)) {
         setActiveMedicalRegion(region)
+      } else {
+        setActiveMedicalRegion('all')
       }
     } else if (stream === 'engineering') {
       setActiveStream('engineering')
-      if (category && ['autonomous', 'deemed', 'university'].includes(category.toLowerCase())) {
-        setActiveEnggCategory(category.toLowerCase())
+      if (locationParam) {
+        const found = engineeringLocationTabs.find(
+          (t) => t.key.toLowerCase() === locationParam.toLowerCase()
+        )
+        setActiveEnggLocation(found ? found.key : 'all')
+      } else {
+        setActiveEnggLocation('all')
       }
+    } else {
+      // Default landing page mode: All Colleges (Engineering & Medical)
+      setActiveStream('all')
+      setActiveEnggLocation('all')
+      setActiveMedicalRegion('all')
     }
+
+    // Scroll smoothly to top on navigation change
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [searchParams])
 
-  const handleStreamClick = (stream, e) => {
-    setActiveStream(stream)
-    if (e?.currentTarget) {
-      e.currentTarget.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center',
-      })
-    }
+  const handleEnggLocationClick = (locationKey) => {
+    setActiveEnggLocation(locationKey)
   }
 
-  const handleEnggCategoryClick = (categoryKey, e) => {
-    setActiveEnggCategory(categoryKey)
-    if (e?.currentTarget) {
-      e.currentTarget.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center',
-      })
-    }
-  }
-
-  const handleRegionClick = (regionKey, e) => {
+  const handleRegionClick = (regionKey) => {
     setActiveMedicalRegion(regionKey)
-    if (e?.currentTarget) {
-      e.currentTarget.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center',
-      })
-    }
   }
 
-  // Colleges list based on active stream and sub-filters
-  const displayedColleges = useMemo(() => {
-    if (activeStream === 'medical') {
-      return medicalColleges.filter((c) => c.region === activeMedicalRegion)
+  // Filter engineering colleges by active location
+  const filteredEnggColleges = useMemo(() => {
+    if (activeEnggLocation === 'all') {
+      return engineeringColleges
     }
-    // Engineering stream: filter by 3 sub-categories (Autonomous Colleges, Deemed Universities, Universities)
-    return engineeringColleges.filter(
-      (c) => c.engineeringCategory === activeEnggCategory
-    )
-  }, [activeStream, activeMedicalRegion, activeEnggCategory])
+    return engineeringColleges.filter((c) => c.location === activeEnggLocation)
+  }, [activeEnggLocation])
+
+  // Filter medical colleges by active region
+  const displayedMedicalColleges = useMemo(() => {
+    if (activeMedicalRegion === 'all') {
+      return medicalColleges
+    }
+    return medicalColleges.filter((c) => c.region === activeMedicalRegion)
+  }, [activeMedicalRegion])
 
   return (
     <main className="colleges-page">
       {/* 1. HERO HEADER */}
       <header className="page-hero colleges-hero">
         <div className="container colleges-hero__container">
-          <div className="colleges-hero__eyebrow">
+          <div className="colleges-hero__eyebrow page-hero-eyebrow">
             <span className="colleges-hero__eyebrow-line" aria-hidden="true" />
             <span>COLLEGE GUIDANCE</span>
           </div>
 
-          <h1 className="page-hero__title colleges-hero__title">
+          <h1 className="page-hero__title colleges-hero__title page-hero-title">
             Find the Right <br />
             <span className="text-highlight">Medical & Engineering</span> College.
           </h1>
 
-          <p className="page-hero__lead colleges-hero__lead">
+          <p className="page-hero__lead colleges-hero__lead page-hero-lead">
             Explore leading medical and engineering colleges across Tamil Nadu, Puducherry, Karnataka, and accredited institutions for your future.
           </p>
 
-          <div className="colleges-hero__features">
+          <div className="colleges-hero__features page-hero-features">
             <div className="colleges-hero__feature-item">
               <div className="colleges-hero__feature-icon">
                 <GraduationCap size={16} aria-hidden="true" />
@@ -175,120 +175,124 @@ function CollegesPage() {
         </div>
       </header>
 
-      {/* 2. NAVIGATION BAR (Stream Selector + Medical Sub-regions) */}
-      <nav className="colleges-nav-sticky" aria-label="Colleges navigation">
-        <div className="container colleges-nav-container">
-          {/* PRIMARY CATEGORY / STREAM TABS */}
-          <div className="colleges-stream-wrapper">
-            <div className="colleges-stream-tabs" role="tablist" aria-label="College Stream Categories">
-              <button
-                type="button"
-                role="tab"
-                id="tab-stream-engineering"
-                aria-selected={activeStream === 'engineering'}
-                className={`colleges-stream-btn ${activeStream === 'engineering' ? 'colleges-stream-btn--active' : ''}`}
-                onClick={(e) => handleStreamClick('engineering', e)}
-              >
-                <Cpu size={18} aria-hidden="true" className="colleges-stream-btn__icon" />
-                <span className="colleges-stream-btn__label">Engineering Colleges</span>
-                <span className="colleges-stream-btn__count">{engineeringColleges.length}</span>
-              </button>
 
-              <button
-                type="button"
-                role="tab"
-                id="tab-stream-medical"
-                aria-selected={activeStream === 'medical'}
-                className={`colleges-stream-btn ${activeStream === 'medical' ? 'colleges-stream-btn--active' : ''}`}
-                onClick={(e) => handleStreamClick('medical', e)}
-              >
-                <Stethoscope size={18} aria-hidden="true" className="colleges-stream-btn__icon" />
-                <span className="colleges-stream-btn__label">Medical Colleges</span>
-                <span className="colleges-stream-btn__count">{medicalColleges.length}</span>
-              </button>
-            </div>
-          </div>
 
-          {/* SECONDARY NAVIGATION: SUB-CATEGORIES UNDER ENGINEERING COLLEGES (3 FILTER OPTIONS) */}
-          {activeStream === 'engineering' && (
-            <div className="colleges-subnav-wrapper">
-              <div className="colleges-subnav-tabs" role="tablist" aria-label="Engineering College Categories">
-                {engineeringCategoryTabs.map((tab) => {
-                  const isActive = activeEnggCategory === tab.key
-                  const TabIcon = engineeringCategoryIcons[tab.key] || Award
-
-                  return (
-                    <button
-                      key={tab.key}
-                      type="button"
-                      role="tab"
-                      id={`tab-engg-${tab.key}`}
-                      aria-selected={isActive}
-                      className={`colleges-subnav-btn ${isActive ? 'colleges-subnav-btn--active' : ''}`}
-                      onClick={(e) => handleEnggCategoryClick(tab.key, e)}
-                    >
-                      <TabIcon size={16} aria-hidden="true" className="colleges-subnav-btn__icon" />
-                      <span className="colleges-subnav-btn__label">{tab.label}</span>
-                      <span className="colleges-subnav-btn__count">{tab.count}</span>
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* SECONDARY NAVIGATION: SUB-REGIONS UNDER MEDICAL COLLEGES */}
-          {activeStream === 'medical' && (
-            <div className="colleges-subnav-wrapper">
-              <div className="colleges-subnav-tabs" role="tablist" aria-label="Medical Regions">
-                {medicalRegionTabs.map((tab) => {
-                  const isActive = activeMedicalRegion === tab.key
-                  const TabIcon = regionIcons[tab.key] || Building
-
-                  return (
-                    <button
-                      key={tab.key}
-                      type="button"
-                      role="tab"
-                      id={`tab-med-${tab.key}`}
-                      aria-selected={isActive}
-                      className={`colleges-subnav-btn ${isActive ? 'colleges-subnav-btn--active' : ''}`}
-                      onClick={(e) => handleRegionClick(tab.key, e)}
-                    >
-                      <TabIcon size={16} aria-hidden="true" className="colleges-subnav-btn__icon" />
-                      <span className="colleges-subnav-btn__label">{tab.label}</span>
-                      <span className="colleges-subnav-btn__count">{tab.count}</span>
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
-
-      {/* 3. SHOWCASE SECTION */}
-      <section className="colleges-content-section">
+      {/* 3. SHOWCASE SECTIONS */}
+      <div className="colleges-content-section">
         <div className="container">
-          {/* COLLEGES CARDS GRID */}
-          {displayedColleges.length > 0 ? (
-            <div className="colleges-cards-grid">
-              {displayedColleges.map((college) => (
-                <CollegeCard
-                  key={college.id}
-                  name={college.name}
-                  image={college.image}
-                />
-              ))}
-            </div>
-          ) : (
-            <EmptyState
-              title={`No colleges found in this section`}
-              description="Please select a different category or region tab to explore colleges."
-            />
-          )}
+          <div className="colleges-stream-content">
+
+            {/* ================= 1. ENGINEERING COLLEGES SECTION ================= */}
+            {(activeStream === 'all' || activeStream === 'engineering') && (
+              <section id="engineering-colleges" className="colleges-stream-section" aria-labelledby="heading-engg-colleges">
+                <div className="colleges-stream-section__header">
+                  <h2 id="heading-engg-colleges" className="colleges-stream-section__title">
+                    <span>Engineering Colleges</span>
+                  </h2>
+
+                  {/* Secondary Location Filter Tabs */}
+                  <div className="colleges-filter-pills" role="tablist" aria-label="Filter Engineering Colleges by Location">
+                    {enggLocationTabs.map((tab) => {
+                      const isActive = activeEnggLocation === tab.key
+                      return (
+                        <button
+                          key={tab.key}
+                          type="button"
+                          role="tab"
+                          aria-selected={isActive}
+                          className={`colleges-filter-pill ${isActive ? 'colleges-filter-pill--active' : ''}`}
+                          onClick={() => handleEnggLocationClick(tab.key)}
+                        >
+                          <MapPin size={13} aria-hidden="true" className="colleges-filter-pill__icon" />
+                          <span>{tab.label}</span>
+                          <span className="colleges-filter-pill__count">{tab.count}</span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+
+                {/* College Cards Grid */}
+                {filteredEnggColleges.length > 0 ? (
+                  <div className="colleges-cards-grid reveal-stagger-group" key={`engg-${activeEnggLocation}`}>
+                    {filteredEnggColleges.map((college) => (
+                      <CollegeCard
+                        key={college.id}
+                        name={college.name}
+                        image={college.image}
+                        className="reveal-stagger-item"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <EmptyState
+                    title="No engineering colleges found"
+                    description="No engineering colleges found for this location."
+                  />
+                )}
+              </section>
+            )}
+
+            {/* SEPARATOR BETWEEN STREAMS ON LANDING PAGE */}
+            {activeStream === 'all' && (
+              <div className="colleges-landing-divider" aria-hidden="true" />
+            )}
+
+            {/* ================= 2. MEDICAL COLLEGES SECTION ================= */}
+            {(activeStream === 'all' || activeStream === 'medical') && (
+              <section id="medical-colleges" className="colleges-stream-section colleges-stream-section--medical" aria-labelledby="heading-med-colleges">
+                <div className="colleges-stream-section__header">
+                  <h2 id="heading-med-colleges" className="colleges-stream-section__title">
+                    <span>Medical Colleges</span>
+                  </h2>
+
+                  {/* Secondary Region Filter Tabs */}
+                  <div className="colleges-filter-pills" role="tablist" aria-label="Filter Medical Colleges by Region">
+                    {medRegionTabs.map((tab) => {
+                      const isActive = activeMedicalRegion === tab.key
+                      const TabIcon = regionIcons[tab.key] || Building
+                      return (
+                        <button
+                          key={tab.key}
+                          type="button"
+                          role="tab"
+                          aria-selected={isActive}
+                          className={`colleges-filter-pill ${isActive ? 'colleges-filter-pill--active' : ''}`}
+                          onClick={() => handleRegionClick(tab.key)}
+                        >
+                          <TabIcon size={13} aria-hidden="true" className="colleges-filter-pill__icon" />
+                          <span>{tab.label}</span>
+                          <span className="colleges-filter-pill__count">{tab.count}</span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+
+                {/* College Cards Grid */}
+                {displayedMedicalColleges.length > 0 ? (
+                  <div className="colleges-cards-grid reveal-stagger-group" key={`med-${activeMedicalRegion}`}>
+                    {displayedMedicalColleges.map((college) => (
+                      <CollegeCard
+                        key={college.id}
+                        name={college.name}
+                        image={college.image}
+                        className="reveal-stagger-item"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <EmptyState
+                    title="No medical colleges found"
+                    description="No medical colleges found for this region."
+                  />
+                )}
+              </section>
+            )}
+
+          </div>
         </div>
-      </section>
+      </div>
     </main>
   )
 }

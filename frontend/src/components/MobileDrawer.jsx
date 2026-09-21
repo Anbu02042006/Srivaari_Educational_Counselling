@@ -1,24 +1,22 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { ArrowRight, X } from 'lucide-react'
-import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { X } from 'lucide-react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useEnquiry } from '../context/EnquiryContext'
 import {
   abroadStudiesMenu,
+  collegesMenu,
   domesticStudiesMenu,
-  aboutMenu,
 } from '../data/navigationData'
-import { scrollToContact } from '../utils/scrollToContact'
 import Logo from './Logo'
 
 function MobileDrawer({ isOpen, onClose }) {
   const { openEnquiry } = useEnquiry()
-  const [mobileAccordion, setMobileAccordion] = useState(null) // 'domestic' | 'abroad' | 'about' | null
+  const [mobileAccordion, setMobileAccordion] = useState(null) // 'domestic' | 'abroad' | 'colleges' | null
   const location = useLocation()
-  const navigate = useNavigate()
   const isHomePage = location.pathname === '/'
 
-  // Close accordion whenever drawer closes or page changes
+  // Close accordion when drawer closes
   useEffect(() => {
     if (!isOpen) {
       setMobileAccordion(null)
@@ -87,13 +85,13 @@ function MobileDrawer({ isOpen, onClose }) {
             </button>
           </div>
 
-          {/* Navigation Links with Newly Implemented Nav Buttons */}
+          {/* Navigation Links */}
           <nav className="mobile-drawer__nav" aria-label="Mobile menu links">
             {/* 1. HOME */}
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `mobile-drawer__link ${isActive ? 'mobile-drawer__link--active' : ''}`
+                `mobile-drawer__link ${isActive && isHomePage ? 'mobile-drawer__link--active' : ''}`
               }
               onClick={() => {
                 onClose()
@@ -103,7 +101,7 @@ function MobileDrawer({ isOpen, onClose }) {
               <span>HOME</span>
             </NavLink>
 
-            {/* 2. DOMESTIC STUDIES (Has extra filter options -> + symbol) */}
+            {/* 2. DOMESTIC STUDIES (+ accordion button) */}
             <div className="mobile-drawer__accordion-group mobile-drawer__accordion-group--split">
               <div className="mobile-drawer__accordion-header-row">
                 <NavLink
@@ -164,7 +162,7 @@ function MobileDrawer({ isOpen, onClose }) {
               )}
             </div>
 
-            {/* 3. ABROAD STUDIES (Has extra filter options -> + symbol) */}
+            {/* 3. ABROAD STUDIES (+ accordion button) */}
             <div className="mobile-drawer__accordion-group mobile-drawer__accordion-group--split">
               <div className="mobile-drawer__accordion-header-row">
                 <NavLink
@@ -230,59 +228,54 @@ function MobileDrawer({ isOpen, onClose }) {
               )}
             </div>
 
-            {/* 4. COLLEGE & UNIVERSITIES */}
-            <NavLink
-              to="/colleges"
-              className={({ isActive }) =>
-                `mobile-drawer__link ${isActive ? 'mobile-drawer__link--active' : ''}`
-              }
-              onClick={onClose}
-            >
-              <span>COLLEGE & UNIVERSITIES</span>
-            </NavLink>
-
-            {/* 5. ABOUT (Has Gallery navigation -> + symbol) */}
+            {/* 4. COLLEGE & UNIVERSITIES (+ accordion button) */}
             <div className="mobile-drawer__accordion-group mobile-drawer__accordion-group--split">
               <div className="mobile-drawer__accordion-header-row">
                 <NavLink
-                  to="/about"
+                  to="/colleges"
                   className={({ isActive }) =>
                     `mobile-drawer__link mobile-drawer__link--split ${
-                      isActive ? 'mobile-drawer__link--active' : ''
+                      isActive || location.pathname.startsWith('/colleges') ? 'mobile-drawer__link--active' : ''
                     }`
                   }
                   onClick={onClose}
                 >
-                  <span>ABOUT</span>
+                  <span>COLLEGE & UNIVERSITIES</span>
                 </NavLink>
                 <button
                   type="button"
                   className="mobile-drawer__accordion-toggle-btn"
-                  onClick={() => toggleAccordion('about')}
-                  aria-expanded={mobileAccordion === 'about'}
-                  aria-label="Toggle Gallery navigation"
+                  onClick={() => toggleAccordion('colleges')}
+                  aria-expanded={mobileAccordion === 'colleges'}
+                  aria-label="Toggle College & Universities filters"
                 >
                   <span
                     className={`mobile-drawer__accordion-toggle-symbol ${
-                      mobileAccordion === 'about' ? 'mobile-drawer__accordion-toggle-symbol--active' : ''
+                      mobileAccordion === 'colleges' ? 'mobile-drawer__accordion-toggle-symbol--active' : ''
                     }`}
                     aria-hidden="true"
                   >
-                    {mobileAccordion === 'about' ? '−' : '+'}
+                    {mobileAccordion === 'colleges' ? '−' : '+'}
                   </span>
                 </button>
               </div>
 
-              {mobileAccordion === 'about' && (
+              {mobileAccordion === 'colleges' && (
                 <div className="mobile-drawer__accordion-body">
                   <div className="mobile-drawer__accordion-subgroup">
-                    {aboutMenu.map((item) => (
+                    <div className="mobile-drawer__subgroup-title">Select Stream</div>
+                    {collegesMenu.map((item) => (
                       <Link
                         key={item.name}
                         to={item.path}
-                        className="mobile-drawer__subitem mobile-drawer__subitem--text-only"
+                        className="mobile-drawer__subitem"
                         onClick={onClose}
                       >
+                        <img
+                          src={item.icon}
+                          alt={item.name}
+                          className="mega-menu__flag-img"
+                        />
                         <span>{item.name}</span>
                       </Link>
                     ))}
@@ -290,6 +283,17 @@ function MobileDrawer({ isOpen, onClose }) {
                 </div>
               )}
             </div>
+
+            {/* 5. ABOUT */}
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `mobile-drawer__link ${isActive ? 'mobile-drawer__link--active' : ''}`
+              }
+              onClick={onClose}
+            >
+              <span>ABOUT</span>
+            </NavLink>
 
             {/* 6. CONTACT */}
             <NavLink
@@ -300,6 +304,17 @@ function MobileDrawer({ isOpen, onClose }) {
               onClick={onClose}
             >
               <span>CONTACT</span>
+            </NavLink>
+
+            {/* 7. TERMS & CONDITIONS */}
+            <NavLink
+              to="/terms-and-conditions"
+              className={({ isActive }) =>
+                `mobile-drawer__link ${isActive ? 'mobile-drawer__link--active' : ''}`
+              }
+              onClick={onClose}
+            >
+              <span>TERMS &amp; CONDITIONS</span>
             </NavLink>
           </nav>
 

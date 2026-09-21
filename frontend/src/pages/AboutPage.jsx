@@ -1,9 +1,9 @@
 import {
-  Award,
   BookOpen,
   CheckCircle2,
   GraduationCap,
-  HeartHandshake,
+  Heart,
+  Landmark,
   ShieldCheck,
   Users,
 } from 'lucide-react'
@@ -11,9 +11,9 @@ import StatCounter from '../components/StatCounter'
 
 const stats = [
   { value: '500+', label: 'Courses & Programs', icon: BookOpen },
-  { value: '100+', label: 'Partner Institutions', icon: Award },
+  { value: '300+', label: 'Partner Institutions', icon: Landmark },
   { value: '10K+', label: 'Students Guided', icon: Users },
-  { value: '95%', label: 'Student Satisfaction', icon: HeartHandshake },
+  { value: '95%', label: 'Student Satisfaction', icon: Heart },
 ]
 
 function AboutPage() {
@@ -23,20 +23,20 @@ function AboutPage() {
       {/* 1. HERO HEADER */}
       <header className="page-hero about-hero">
         <div className="container about-hero__container">
-          <div className="about-hero__eyebrow">
+          <div className="about-hero__eyebrow page-hero-eyebrow">
             <span className="about-hero__eyebrow-line" aria-hidden="true" />
             <span>DISCOVER YOUR TALENT</span>
           </div>
 
-          <h1 className="page-hero__title about-hero__title">
+          <h1 className="page-hero__title about-hero__title page-hero-title">
             Discover Your Path With <span className="text-highlight">Expert Educational Counselling:</span>
           </h1>
 
-          <p className="page-hero__lead about-hero__lead">
+          <p className="page-hero__lead about-hero__lead page-hero-lead">
             Get one-on-one guidance to choose the right course, college, and country. Let’s turn your academic dreams into a clear, achievable plan.
           </p>
 
-          <div className="about-hero__features">
+          <div className="about-hero__features page-hero-features">
             <div className="about-hero__feature-item">
               <div className="about-hero__feature-icon">
                 <GraduationCap size={16} aria-hidden="true" />
@@ -50,7 +50,7 @@ function AboutPage() {
               <div className="about-hero__feature-icon">
                 <ShieldCheck size={16} aria-hidden="true" />
               </div>
-              <span className="about-hero__feature-text">100+ Partner<br />Institutions</span>
+              <span className="about-hero__feature-text">300+ Partner<br />Institutions</span>
             </div>
 
             <div className="about-hero__feature-divider" aria-hidden="true" />
@@ -70,7 +70,7 @@ function AboutPage() {
         <div className="container">
           <div className="about-services-banner">
             {/* Left: Illustration */}
-            <div className="about-services-banner__visual">
+            <div className="about-services-banner__visual reveal-scale-in">
               <img
                 src="/images/career-direction-signpost.png"
                 alt="Career directions signpost pointing towards Arts, Health, Science, Technology, Business, and Engineering"
@@ -80,24 +80,24 @@ function AboutPage() {
             </div>
 
             {/* Right: Content */}
-            <div className="about-services-banner__content">
+            <div className="about-services-banner__content reveal-fade-up">
               <h2 className="about-services-banner__title">Our Counselling Services</h2>
               <p className="about-services-banner__lead">
                 Confused about what to study or where to start? Our certified counsellors help you understand your interests, strengths, and the best-fit academic options.
               </p>
 
-              <ul className="about-services-banner__list">
-                <li className="about-services-banner__item">
+              <ul className="about-services-banner__list reveal-stagger-group">
+                <li className="about-services-banner__item reveal-stagger-item">
                   <div className="about-services-banner__item-icon">
                     <CheckCircle2 size={20} aria-hidden="true" />
                   </div>
                   <div className="about-services-banner__item-body">
                     <strong>Career & Course Selection from 8th to 12th</strong>
-                    <p>We work with 100+ global institutions. Based on your academic profile and preferences, we match you with programs that suit your career ambitions.</p>
+                    <p>We work with 300+ global institutions. Based on your academic profile and preferences, we match you with programs that suit your career ambitions.</p>
                   </div>
                 </li>
 
-                <li className="about-services-banner__item">
+                <li className="about-services-banner__item reveal-stagger-item">
                   <div className="about-services-banner__item-icon">
                     <CheckCircle2 size={20} aria-hidden="true" />
                   </div>
@@ -107,7 +107,7 @@ function AboutPage() {
                   </div>
                 </li>
 
-                <li className="about-services-banner__item">
+                <li className="about-services-banner__item reveal-stagger-item">
                   <div className="about-services-banner__item-icon">
                     <CheckCircle2 size={20} aria-hidden="true" />
                   </div>
@@ -117,7 +117,7 @@ function AboutPage() {
                   </div>
                 </li>
 
-                <li className="about-services-banner__item">
+                <li className="about-services-banner__item reveal-stagger-item">
                   <div className="about-services-banner__item-icon">
                     <CheckCircle2 size={20} aria-hidden="true" />
                   </div>
@@ -135,9 +135,9 @@ function AboutPage() {
       {/* 3. DUAL COLUMNS: WHY CHOOSE US & WHAT WE PROVIDE */}
       <section className="about-dual-columns-section" aria-label="Why Choose Us and What We Provide">
         <div className="container">
-          <div className="about-dual-grid">
+          <div className="about-dual-grid reveal-stagger-group">
             {/* Column 1: Why You Have To Choose Us */}
-            <div className="about-dual-card">
+            <div className="about-dual-card reveal-stagger-item">
               <h3 className="about-dual-card__title">Why You Have To Choose Us</h3>
               <ul className="about-checklist">
                 <li className="about-checklist__item">
@@ -146,7 +146,7 @@ function AboutPage() {
                 </li>
                 <li className="about-checklist__item">
                   <span className="about-checklist__bullet" aria-hidden="true">•</span>
-                  <span><strong>100+ Partner Institutions</strong> Worldwide</span>
+                  <span><strong>300+ Partner Institutions</strong> Worldwide</span>
                 </li>
                 <li className="about-checklist__item">
                   <span className="about-checklist__bullet" aria-hidden="true">•</span>
@@ -164,7 +164,7 @@ function AboutPage() {
             </div>
 
             {/* Column 2: What We Provide */}
-            <div className="about-dual-card">
+            <div className="about-dual-card reveal-stagger-item">
               <h3 className="about-dual-card__title">What We Provide</h3>
               <ul className="about-checklist">
                 <li className="about-checklist__item">
@@ -187,47 +187,49 @@ function AboutPage() {
 
       {/* 4. KEY STATISTICS RIBBON */}
       <section className="stats-section" aria-label="Key statistics">
-        <div className="container stats-grid">
-          {stats.map(({ value, label, icon: Icon }) => (
-            <StatCounter
-              key={label}
-              value={value}
-              label={label}
-              icon={Icon}
-              className="stat-card--ribbon"
-            />
-          ))}
+        <div className="container stats-container">
+          <div className="stats-grid reveal-stagger-group">
+            {stats.map(({ value, label, icon: Icon }) => (
+              <StatCounter
+                key={label}
+                value={value}
+                label={label}
+                icon={Icon}
+                className="stat-card--ribbon reveal-stagger-item"
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* 5. PROCESS: OUR COUNSELLING SERVICES */}
       <section className="about-process-section" aria-label="Our Counselling Process">
-        <div className="container">
+        <div className="container reveal-fade-up">
           <h2 className="about-process-section__title">OUR COUNSELLING SERVICES</h2>
 
-          <div className="about-process-grid">
-            <div className="about-process-card">
+          <div className="about-process-grid reveal-stagger-group">
+            <div className="about-process-card reveal-stagger-item">
               <h3 className="about-process-card__title">Tell Us About You</h3>
               <p className="about-process-card__desc">
                 Simply fill out our quick online form or contact us directly to get started on your journey. Fill out our quick online form or give us a call.
               </p>
             </div>
 
-            <div className="about-process-card">
+            <div className="about-process-card reveal-stagger-item">
               <h3 className="about-process-card__title">Free Counselling Session</h3>
               <p className="about-process-card__desc">
                 Connect with our expert counsellors online or in person to explore your goals and interests.
               </p>
             </div>
 
-            <div className="about-process-card">
+            <div className="about-process-card reveal-stagger-item">
               <h3 className="about-process-card__title">Personalized Guidance</h3>
               <p className="about-process-card__desc">
                 Receive a tailored plan with the best courses, countries, and universities suited for you. Get a plan for courses.
               </p>
             </div>
 
-            <div className="about-process-card">
+            <div className="about-process-card reveal-stagger-item">
               <h3 className="about-process-card__title">Application Support</h3>
               <p className="about-process-card__desc">
                 We guide you through the entire application process, from start to finish, with full support.

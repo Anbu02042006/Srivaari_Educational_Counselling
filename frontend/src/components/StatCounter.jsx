@@ -85,17 +85,17 @@ function StatCounter({
 
   return (
     <div ref={cardRef} className={`stat-card ${className}`.trim()}>
-      <div className="stat-card__header">
-        {Icon && (
-          <span className="stat-card__icon" aria-hidden="true">
-            <Icon size={20} />
-          </span>
-        )}
+      {Icon && (
+        <span className="stat-card__icon" aria-hidden="true">
+          <Icon size={22} />
+        </span>
+      )}
+      <div className="stat-card__content">
         <strong className="stat-card__value">
           {hasAnimated ? `${prefix}${formattedNumber}${suffix}` : `${prefix}0${suffix}`}
         </strong>
+        <span className="stat-card__label">{label}</span>
       </div>
-      <span className="stat-card__label">{label}</span>
     </div>
   )
 }

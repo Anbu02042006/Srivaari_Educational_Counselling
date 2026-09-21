@@ -41,7 +41,7 @@ function Footer() {
           </p>
           <div className="site-footer__trust-badge">
             <span>◆ 10,000+ Families Supported</span>
-            <span>◆ 100+ Verified Partner Campuses</span>
+            <span>◆ 300+ Verified Partner Campuses</span>
           </div>
         </div>
 
@@ -54,8 +54,8 @@ function Footer() {
             <li><Link to="/abroad-studies">Abroad Studies</Link></li>
             <li><Link to="/colleges">Colleges &amp; Universities</Link></li>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/terms-and-conditions">Terms &amp; Conditions</Link></li>
           </ul>
         </div>
 
@@ -107,6 +107,17 @@ function Footer() {
         <p className="site-footer__copyright">
           © {currentYear} Sri Vaari Educational Counselling. All rights reserved. Built for student success.
         </p>
+        <div className="site-footer__legal-links">
+          <Link to="/terms-and-conditions" className="site-footer__legal-link">
+            Terms &amp; Conditions
+          </Link>
+          <span className="site-footer__legal-divider" aria-hidden="true">
+            •
+          </span>
+          <Link to="/contact" className="site-footer__legal-link">
+            Support &amp; Grievance
+          </Link>
+        </div>
       </div>
     </footer>
   )

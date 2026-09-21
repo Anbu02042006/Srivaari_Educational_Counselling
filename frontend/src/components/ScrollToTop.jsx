@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom'
  * Automatically resets scroll position to the top of the page on route changes.
  */
 function ScrollToTop() {
-  const { pathname, hash } = useLocation()
+  const { pathname, search, hash } = useLocation()
 
   useEffect(() => {
     try {
@@ -26,7 +26,7 @@ function ScrollToTop() {
     }
     // Instantly reset viewport scroll to starting top position
     window.scrollTo(0, 0)
-  }, [pathname, hash])
+  }, [pathname, search, hash])
 
   return null
 }

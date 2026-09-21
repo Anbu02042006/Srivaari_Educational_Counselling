@@ -4,13 +4,13 @@ import ScrollToTop from './components/ScrollToTop'
 import { EnquiryProvider } from './context/EnquiryContext'
 import PageLayout from './layouts/PageLayout'
 import AboutPage from './pages/AboutPage'
-import GalleryPage from './pages/GalleryPage'
 import AbroadStudyPage from './pages/AbroadStudyPage'
 import CollegesPage from './pages/CollegesPage'
 import ContactPage from './pages/ContactPage'
 import DomesticStudyPage from './pages/DomesticStudyPage'
 import HomePage from './pages/HomePage'
 import NotFoundPage from './pages/NotFoundPage'
+import TermsConditionsPage from './pages/TermsConditionsPage'
 
 function App() {
   return (
@@ -27,8 +27,9 @@ function App() {
             <Route path="/abroad-studies" element={<AbroadStudyPage />} />
             <Route path="/abroad-studies/:slug" element={<AbroadStudyPage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/terms-and-conditions" element={<TermsConditionsPage />} />
+            <Route path="/terms" element={<TermsConditionsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

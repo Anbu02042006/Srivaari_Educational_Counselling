@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { X, CheckCircle2, LoaderCircle } from 'lucide-react'
 
 const initialForm = {
@@ -252,6 +253,18 @@ function EnquiryModal({
                 <span>SUBMIT</span>
               )}
             </button>
+
+            <p className="enquiry-modal__disclaimer">
+              By submitting, you agree to our{' '}
+              <Link
+                to="/terms-and-conditions"
+                onClick={onClose}
+                className="enquiry-modal__disclaimer-link"
+              >
+                Terms &amp; Conditions
+              </Link>
+              .
+            </p>
           </form>
         )}
       </div>

@@ -133,6 +133,79 @@ const cityMap = {
   'Vinayaka Mission Engineering College': 'Salem',
 }
 
+// Location mapping for Engineering Colleges per user categorization
+export const engineeringLocationMap = {
+  // 📍 Bangalore
+  'Acharya Institute of Technology': 'Bangalore',
+  'Alliance University': 'Bangalore',
+  'AMC Engineering College': 'Bangalore',
+  'CHRIST University': 'Bangalore',
+  'Dayananda Sagar University': 'Bangalore',
+  'East Point Group of Institutions': 'Bangalore',
+  'Jain University': 'Bangalore',
+  'PES University': 'Bangalore',
+  'Ramaiah Institute of Technology': 'Bangalore',
+  'REVA University': 'Bangalore',
+  'RV University': 'Bangalore',
+  'Akash Institute of Engineering & Technology': 'Bangalore',
+
+  // 📍 Coimbatore
+  'Amrita Vishwa Vidyapeetham': 'Coimbatore',
+  'Coimbatore Institute of Engineering and Technology': 'Coimbatore',
+  'Coimbatore Institute of Technology': 'Coimbatore',
+  'Dr. N.G.P. Institute of Technology': 'Coimbatore',
+  'Hindusthan College of Engineering & Technology': 'Coimbatore',
+  'JCT College of Engineering and Technology': 'Coimbatore',
+  'Kalaignar Karunanidhi Institute of Technology': 'Coimbatore',
+  'Karpagam College of Engineering': 'Coimbatore',
+  'Kathir Engineering College': 'Coimbatore',
+  'KGiSL Institute of Technology': 'Coimbatore',
+  'KPR Institute of Engineering and Technology': 'Coimbatore',
+  'Kumaraguru College of Technology': 'Coimbatore',
+  'Nehru Institute of Engineering and Technology': 'Coimbatore',
+  'PPG Institute of Technology': 'Coimbatore',
+  'PSG College of Technology': 'Coimbatore',
+  'Rathinam Technical Campus': 'Coimbatore',
+  'RVS College of Engineering and Technology': 'Coimbatore',
+  'Sree Sakthi Engineering College': 'Coimbatore',
+  'Sri Krishna College of Engineering and Technology': 'Coimbatore',
+  'Adithya Institute of Technology': 'Coimbatore',
+  'Adithya institute of technology': 'Coimbatore',
+  'Study World College of Engineering': 'Coimbatore',
+
+  // 📍 Chennai
+  'AMET University': 'Chennai',
+  'Dhanalakshmi Srinivasan Engineering College': 'Chennai',
+  'Dr. M.G.R. Educational and Research Institute': 'Chennai',
+  'EASA College of Engineering and Technology': 'Chennai',
+  'Loyola College': 'Chennai',
+  'Sathyabama Institute of Science and Technology': 'Chennai',
+  'Saveetha Engineering College': 'Chennai',
+  'Sri Balaji Chockalingam Engineering College': 'Chennai',
+  'SRM Institute of Science and Technology': 'Chennai',
+  'Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology': 'Chennai',
+  'Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology': 'Chennai',
+  'Vellore Institute of Technology': 'Chennai',
+  'Vels Institute of Science, Technology & Advanced Studies': 'Chennai',
+  'SASTRA Deemed University': 'Chennai',
+  'SASTRA Deemed Uiversity': 'Chennai',
+
+  // 📍 Salem / Erode / Namakkal
+  'Gnanamani College of Technology': 'Salem / Erode / Namakkal',
+  'Mahendra Engineering College': 'Salem / Erode / Namakkal',
+  'Paavai Institutions': 'Salem / Erode / Namakkal',
+  'Selvam College of Technology': 'Salem / Erode / Namakkal',
+  'Sona College of Technology': 'Salem / Erode / Namakkal',
+  'VSB Engineering College': 'Salem / Erode / Namakkal',
+  'Excel Engineering College': 'Salem / Erode / Namakkal',
+  'Imayam College of Engineering': 'Salem / Erode / Namakkal',
+  'MAM College of Engineering': 'Salem / Erode / Namakkal',
+  'R P Sarathy Institute of Technology': 'Salem / Erode / Namakkal',
+  'Vinayaka Mission Engineering College': 'Salem / Erode / Namakkal',
+  'CARE College of Engineering': 'Salem / Erode / Namakkal',
+  'Oxford Engineering College': 'Salem / Erode / Namakkal',
+}
+
 // Engineering Sub-Category Classification Lists
 export const deemedUniversityNames = [
   'AMET University',
@@ -223,6 +296,11 @@ function parseAssetsToColleges(assetModules, regionName, stateName) {
 
     const id = `${regionName.toLowerCase()}-${rawName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`
     const city = cityMap[cleanName] || cityMap[rawName] || stateName
+    const location = isEng
+      ? (engineeringLocationMap[cleanName] || engineeringLocationMap[rawName] || city)
+      : city
+    const isAutonomous = isEng ? (enggCategory === 'autonomous') : false
+    const isUniversity = isEng ? (enggCategory === 'deemed' || enggCategory === 'university') : false
 
     list.push({
       id,
@@ -230,6 +308,9 @@ function parseAssetsToColleges(assetModules, regionName, stateName) {
       region: regionName,
       state: stateName,
       city,
+      location,
+      isAutonomous,
+      isUniversity,
       country: 'India',
       category: isEng ? 'Engineering' : 'Medical',
       engineeringCategory: enggCategory,
@@ -589,6 +670,14 @@ export const engineeringCategoryTabs = [
     count: engineeringUniversityColleges.length,
     description: 'Premier Technical State & Private Universities',
   },
+]
+
+// Engineering location filter tabs per user specification
+export const engineeringLocationTabs = [
+  { key: 'Bangalore', label: 'Bangalore' },
+  { key: 'Coimbatore', label: 'Coimbatore' },
+  { key: 'Chennai', label: 'Chennai' },
+  { key: 'Salem / Erode / Namakkal', label: 'Salem / Erode / Namakkal' },
 ]
 
 // Primary stream/category navigation (Medical vs Engineering)

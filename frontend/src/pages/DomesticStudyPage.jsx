@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, Award, Calendar, ShieldCheck, Users } from 'lucide-react'
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import StudyCard from '../components/StudyCard'
 import { useEnquiry } from '../context/EnquiryContext'
 import { domesticStudiesBySlug, domesticStudiesList } from '../data/domesticStudiesData'
 
@@ -81,12 +82,12 @@ function DomesticStudyPage() {
           {/* Detailed Course Content */}
           <section className="abroad-detail-view" aria-label={`${course.name} Course Information`}>
             {/* 1. TOP BANNER */}
-            <div className="abroad-study-banner">
+            <div className="abroad-study-banner hero-entrance-title">
               <h2 className="abroad-study-banner__title">{bannerTitle}</h2>
             </div>
 
             {/* 2. OVERVIEW CARD */}
-            <div className="abroad-overview-card">
+            <div className="abroad-overview-card reveal-fade-up">
               <div className="abroad-overview-media">
                 <img
                   src={course.image}
@@ -113,7 +114,7 @@ function DomesticStudyPage() {
             </div>
 
             {/* 3. PARTICULARS TABLE + SIDEBAR CARD */}
-            <div className="abroad-bottom-grid">
+            <div className="abroad-bottom-grid reveal-fade-up">
               <div className="abroad-table-card">
                 <table className="abroad-particulars-table" aria-label={`Particulars for ${course.name}`}>
                   <thead>
@@ -211,12 +212,12 @@ function DomesticStudyPage() {
     <div className="abroad-landing-page">
       <div className="container abroad-study-container">
         {/* 1. Header Section matching reference layout & theme */}
-        <header className="abroad-landing__header">
+        <header className="abroad-landing__header reveal-fade-up">
           <h1 className="abroad-landing__title">
             Choose Your Desired Degree &amp; Career Pathway!
           </h1>
           <p className="abroad-landing__subtitle">
-            Explore India's premier undergraduate and professional programs across Medical, AYUSH, Healthcare, Engineering, Architecture, Law, and Sciences. Backed by <strong>27+ years of excellence</strong> and direct tie-ups with <strong>100+ accredited institutions</strong>, Sri Vaari Educational Groups provides end-to-end guidance on cut-offs, transparent quota admissions, scholarship opportunities, and personalized career roadmaps.
+            Explore India's premier undergraduate and professional programs across Medical, AYUSH, Healthcare, Engineering, Architecture, Law, and Sciences. Backed by <strong>27+ years of excellence</strong> and direct tie-ups with <strong>300+ accredited institutions</strong>, Sri Vaari Educational Groups provides end-to-end guidance on cut-offs, transparent quota admissions, scholarship opportunities, and personalized career roadmaps.
           </p>
           <div className="abroad-landing__divider" aria-hidden="true">
             <span className="abroad-landing__divider-dark" />
@@ -225,36 +226,18 @@ function DomesticStudyPage() {
         </header>
 
         {/* 2. Domestic Courses Cards Grid */}
-        <div className="colleges-cards-grid">
+        <div className="study-cards-grid reveal-stagger-group">
           {domesticStudiesList.map((item) => (
-            <article key={item.slug} className="college-grid-card college-grid-card--interactive">
-              <Link
-                to={`/domestic-studies/${item.slug}`}
-                className="college-grid-card__link"
-                aria-label={`Learn more about ${item.name}`}
-              >
-                <div className="college-grid-card__circle-wrap">
-                  <div className="college-grid-card__circle">
-                    <img
-                      className="college-grid-card__img"
-                      alt={`${item.name} logo`}
-                      loading="lazy"
-                      src={item.image}
-                      onError={(e) => {
-                        if (!e.currentTarget.dataset.fallback) {
-                          e.currentTarget.dataset.fallback = 'true'
-                          e.currentTarget.src = '/logo.png'
-                        }
-                      }}
-                    />
-                  </div>
-                </div>
-
-                <div className="college-grid-card__body college-grid-card__body--minimal">
-                  <h3 className="college-grid-card__title">{item.name}</h3>
-                </div>
-              </Link>
-            </article>
+            <StudyCard
+              key={item.slug}
+              title={item.name}
+              tagline={item.tagline}
+              image={item.image}
+              badge={item.badge}
+              badgeAlt={`${item.name} icon`}
+              to={`/domestic-studies/${item.slug}`}
+              className="reveal-stagger-item"
+            />
           ))}
         </div>
       </div>

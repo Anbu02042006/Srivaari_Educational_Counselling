@@ -1,11 +1,15 @@
-import { ArrowRight, ChevronDown, Menu } from 'lucide-react'
+import { ChevronDown, Globe, GraduationCap, Landmark, MapPin, Menu } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useEnquiry } from '../context/EnquiryContext'
 import {
+  engineeringLocationTabs,
+  medicalRegionTabs,
+} from '../data/collegesData'
+import {
   abroadStudiesMenu,
+  collegesMenu,
   domesticStudiesMenu,
-  aboutMenu,
 } from '../data/navigationData'
 import { scrollToContact } from '../utils/scrollToContact'
 import Logo from './Logo'
@@ -14,8 +18,7 @@ import MobileDrawer from './MobileDrawer'
 function Navbar() {
   const { openEnquiry } = useEnquiry()
   const [isMobileOpen, setIsMobileOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState(null) // 'domestic' | 'abroad' | 'about' | null
-  const [mobileAccordion, setMobileAccordion] = useState(null) // 'domestic' | 'abroad' | 'about' | null
+  const [activeDropdown, setActiveDropdown] = useState(null) // 'domestic' | 'abroad' | 'colleges' | null
   const [isScrolled, setIsScrolled] = useState(false)
 
   const dropdownTimeoutRef = useRef(null)
@@ -142,7 +145,7 @@ function Navbar() {
               <NavLink
                 to="/domestic-studies"
                 className={({ isActive }) =>
-                  `nav__menu-item nav__menu-item--has-arrow ${
+                  `nav__menu-item ${
                     isActive || activeDropdown === 'domestic' || location.pathname.startsWith('/domestic-studies')
                       ? 'nav__menu-item--active'
                       : ''
@@ -205,7 +208,7 @@ function Navbar() {
               <NavLink
                 to="/abroad-studies"
                 className={({ isActive }) =>
-                  `nav__menu-item nav__menu-item--has-arrow ${
+                  `nav__menu-item ${
                     isActive || activeDropdown === 'abroad' || location.pathname.startsWith('/abroad-studies')
                       ? 'nav__menu-item--active'
                       : ''
@@ -217,106 +220,199 @@ function Navbar() {
                 <ChevronDown size={14} className="nav__chevron-icon" aria-hidden="true" />
               </NavLink>
 
-              {/* 2-Column Abroad Studies Mega Menu */}
+              {/* 2-Column Abroad Studies Dropdown Card (4 | 3 split with divider) */}
               {activeDropdown === 'abroad' && (
                 <div
                   className="mega-menu mega-menu--abroad"
                   role="menu"
                   aria-label="Abroad Studies destinations"
                 >
-                  <div className="mega-menu__grid">
-                    {abroadStudiesMenu.map((column, colIdx) => (
-                      <div key={colIdx} className="mega-menu__column">
-                        <div className="mega-menu__column-title">{column.title}</div>
-                        <ul className="mega-menu__list">
-                          {column.items.map((item) => (
-                            <li key={item.name} className="mega-menu__list-item">
-                              <Link
-                                to={item.path}
-                                className="mega-menu__link"
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                <img
-                                  src={item.flag}
-                                  alt=""
-                                  className="mega-menu__flag-img"
-                                  loading="lazy"
-                                  onError={(e) => {
-                                    if (item.name === 'TAJIKISTAN' && !e.currentTarget.dataset.fallback) {
-                                      e.currentTarget.dataset.fallback = 'true'
-                                      e.currentTarget.src = 'https://flagcdn.com/w320/tj.png'
-                                    } else {
-                                      e.currentTarget.style.display = 'none'
-                                    }
-                                  }}
-                                />
-                                <span className="mega-menu__item-name">{item.name}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                  <div className="mega-menu__column-title mega-menu__column-title--center">
+                    TOP DESTINATIONS
+                  </div>
+
+                  <div className="mega-menu--abroad__columns">
+                    {/* Left Column (4 items) */}
+                    <ul className="mega-menu__list">
+                      {(abroadStudiesMenu[0]?.items || []).slice(0, 4).map((item) => (
+                        <li key={item.name} className="mega-menu__list-item">
+                          <Link
+                            to={item.path}
+                            className="mega-menu__link"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <img
+                              src={item.flag}
+                              alt=""
+                              className="mega-menu__flag-img"
+                              loading="lazy"
+                              onError={(e) => {
+                                if (item.name === 'TAJIKISTAN' && !e.currentTarget.dataset.fallback) {
+                                  e.currentTarget.dataset.fallback = 'true'
+                                  e.currentTarget.src = 'https://flagcdn.com/w320/tj.png'
+                                } else {
+                                  e.currentTarget.style.display = 'none'
+                                }
+                              }}
+                            />
+                            <span className="mega-menu__item-name">{item.name}</span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Vertical Divider */}
+                    <div className="mega-menu--abroad__divider" aria-hidden="true" />
+
+                    {/* Right Column (3 items) */}
+                    <ul className="mega-menu__list">
+                      {(abroadStudiesMenu[0]?.items || []).slice(4).map((item) => (
+                        <li key={item.name} className="mega-menu__list-item">
+                          <Link
+                            to={item.path}
+                            className="mega-menu__link"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <img
+                              src={item.flag}
+                              alt=""
+                              className="mega-menu__flag-img"
+                              loading="lazy"
+                              onError={(e) => {
+                                if (item.name === 'TAJIKISTAN' && !e.currentTarget.dataset.fallback) {
+                                  e.currentTarget.dataset.fallback = 'true'
+                                  e.currentTarget.src = 'https://flagcdn.com/w320/tj.png'
+                                } else {
+                                  e.currentTarget.style.display = 'none'
+                                }
+                              }}
+                            />
+                            <span className="mega-menu__item-name">{item.name}</span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               )}
             </div>
 
-            {/* 4. COLLEGE & UNIVERSITIES */}
+            {/* 4. COLLEGE & UNIVERSITIES (Dropdown with stream & category filters) */}
+            <div
+              className={`nav__dropdown-wrapper ${
+                activeDropdown === 'colleges' ? 'nav__dropdown-wrapper--open' : ''
+              }`}
+              onMouseEnter={() => handleMouseEnter('colleges')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <NavLink
+                to="/colleges"
+                className={({ isActive }) =>
+                  `nav__menu-item ${
+                    isActive || activeDropdown === 'colleges' || location.pathname.startsWith('/colleges')
+                      ? 'nav__menu-item--active'
+                      : ''
+                  }`
+                }
+                onClick={() => setActiveDropdown(null)}
+              >
+                <span>COLLEGE & UNIVERSITIES</span>
+                <ChevronDown size={14} className="nav__chevron-icon" aria-hidden="true" />
+              </NavLink>
+
+              {/* 2-Option Card (Engineering & Medical) with location filters for Desktop view */}
+              {activeDropdown === 'colleges' && (
+                <div
+                  className="mega-menu mega-menu--colleges-stream"
+                  role="menu"
+                  aria-label="Colleges and Universities streams"
+                >
+                  <div className="mega-menu__column-title mega-menu__column-title--center">
+                    SELECT STREAM
+                  </div>
+
+                  <div className="mega-menu--colleges-stream__columns">
+                    {/* Left: Engineering with Locations */}
+                    <div className="mega-menu--colleges-stream__column">
+                      <Link
+                        to="/colleges?stream=engineering"
+                        className="mega-menu__stream-header mega-menu__stream-header--link"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        <img
+                          src="/img/dropdown/eng.png"
+                          alt=""
+                          className="mega-menu__flag-img"
+                          loading="lazy"
+                        />
+                        <span className="mega-menu__item-name">ENGINEERING</span>
+                      </Link>
+
+                      <ul className="mega-menu__sublocations-list">
+                        {engineeringLocationTabs.map((loc) => (
+                          <li key={loc.key} className="mega-menu__sublocations-item">
+                            <Link
+                              to={`/colleges?stream=engineering&location=${encodeURIComponent(loc.key)}`}
+                              className="mega-menu__sublocation-link"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              <MapPin size={12} className="mega-menu__sublocation-icon" aria-hidden="true" />
+                              <span>{loc.label}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Vertical Divider */}
+                    <div className="mega-menu--colleges-stream__divider" aria-hidden="true" />
+
+                    {/* Right: Medical with Regions */}
+                    <div className="mega-menu--colleges-stream__column">
+                      <Link
+                        to="/colleges?stream=medical"
+                        className="mega-menu__stream-header mega-menu__stream-header--link"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        <img
+                          src="/img/dropdown/mbbs.png"
+                          alt=""
+                          className="mega-menu__flag-img"
+                          loading="lazy"
+                        />
+                        <span className="mega-menu__item-name">MEDICAL</span>
+                      </Link>
+
+                      <ul className="mega-menu__sublocations-list">
+                        {medicalRegionTabs.map((reg) => (
+                          <li key={reg.key} className="mega-menu__sublocations-item">
+                            <Link
+                              to={`/colleges?stream=medical&region=${encodeURIComponent(reg.key)}`}
+                              className="mega-menu__sublocation-link"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              <MapPin size={12} className="mega-menu__sublocation-icon" aria-hidden="true" />
+                              <span>{reg.label}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* 5. ABOUT */}
             <NavLink
-              to="/colleges"
+              to="/about"
               className={({ isActive }) =>
                 `nav__menu-item ${isActive ? 'nav__menu-item--active' : ''}`
               }
               onClick={() => setActiveDropdown(null)}
             >
-              COLLEGE & UNIVERSITIES
+              ABOUT
             </NavLink>
-
-            {/* 5. ABOUT (Dropdown with Gallery) */}
-            <div
-              className={`nav__dropdown-wrapper nav__dropdown-wrapper--about ${
-                activeDropdown === 'about' ? 'nav__dropdown-wrapper--open' : ''
-              }`}
-              onMouseEnter={() => handleMouseEnter('about')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  `nav__menu-item nav__menu-item--has-arrow ${
-                    isActive ? 'nav__menu-item--active' : ''
-                  }`
-                }
-                onClick={() => setActiveDropdown(null)}
-              >
-                <span>ABOUT</span>
-                <ChevronDown size={14} className="nav__chevron-icon" aria-hidden="true" />
-              </NavLink>
-
-              {/* About Dropdown Menu */}
-              {activeDropdown === 'about' && (
-                <div
-                  className="nav__simple-dropdown"
-                  role="menu"
-                  aria-label="About menu"
-                >
-                  {aboutMenu.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.path}
-                      className={`nav__simple-dropdown-link ${
-                        location.pathname === item.path ? 'nav__simple-dropdown-link--active' : ''
-                      }`}
-                      onClick={() => setActiveDropdown(null)}
-                      role="menuitem"
-                    >
-                      <span>{item.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
 
             {/* 6. CONTACT */}
             <NavLink
@@ -352,6 +448,56 @@ function Navbar() {
             <Menu size={24} aria-hidden="true" />
           </button>
         </div>
+
+        {/* Mobile Quick Sub-Navbar (Domestic | Colleges | Abroad) */}
+        <nav className="nav__mobile-subbar" aria-label="Quick category navigation">
+          <div className="nav__mobile-subbar-container">
+            <NavLink
+              to="/domestic-studies"
+              className={({ isActive }) =>
+                `nav__mobile-subbar-link ${
+                  isActive || location.pathname.startsWith('/domestic-studies')
+                    ? 'nav__mobile-subbar-link--active'
+                    : ''
+                }`
+              }
+              onClick={() => setActiveDropdown(null)}
+            >
+              <GraduationCap size={15} className="nav__mobile-subbar-icon" aria-hidden="true" />
+              <span>Domestic</span>
+            </NavLink>
+
+            <NavLink
+              to="/colleges"
+              className={({ isActive }) =>
+                `nav__mobile-subbar-link ${
+                  isActive || location.pathname.startsWith('/colleges')
+                    ? 'nav__mobile-subbar-link--active'
+                    : ''
+                }`
+              }
+              onClick={() => setActiveDropdown(null)}
+            >
+              <Landmark size={15} className="nav__mobile-subbar-icon" aria-hidden="true" />
+              <span>Colleges</span>
+            </NavLink>
+
+            <NavLink
+              to="/abroad-studies"
+              className={({ isActive }) =>
+                `nav__mobile-subbar-link ${
+                  isActive || location.pathname.startsWith('/abroad-studies')
+                    ? 'nav__mobile-subbar-link--active'
+                    : ''
+                }`
+              }
+              onClick={() => setActiveDropdown(null)}
+            >
+              <Globe size={15} className="nav__mobile-subbar-icon" aria-hidden="true" />
+              <span>Abroad</span>
+            </NavLink>
+          </div>
+        </nav>
       </header>
 
       {/* Mobile Slide-Over Drawer Navigation */}

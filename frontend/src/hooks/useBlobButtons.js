@@ -25,9 +25,9 @@ export default function useBlobButtons() {
           btn.classList.contains('mobile-drawer__close-btn') ||
           btn.classList.contains('lightbox-btn') ||
           btn.classList.contains('whatsapp-button') ||
+          btn.classList.contains('terms-bottom-bar__whatsapp') ||
           btn.classList.contains('custom-select-trigger') ||
           btn.classList.contains('benefit-slider__dot') ||
-          btn.classList.contains('hero-image-card__menu-btn') ||
           btn.classList.contains('hero-image-card__notch-btn')
         ) {
           return

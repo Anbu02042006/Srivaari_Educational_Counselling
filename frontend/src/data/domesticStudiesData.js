@@ -5,6 +5,8 @@ export const domesticStudiesList = [
     bannerTitle: 'MBBS (BACHELOR OF MEDICINE AND BACHELOR OF SURGERY)',
     title: 'MBBS (Bachelor of Medicine and Bachelor of Surgery)',
     image: '/images/domestic/mbbs.jpg',
+    badge: '/img/dropdown/mbbs.png',
+    tagline: 'Flagship 5.5-year medical degree conferring Doctor title & clinical practice.',
     category: 'Medical & AYUSH',
     description:
       'MBBS (Bachelor of Medicine and Bachelor of Surgery) is the flagship 5.5-year undergraduate medical degree in India that confers the title of Doctor. Regulated by the National Medical Commission (NMC), the curriculum includes 4.5 years of intensive preclinical, paraclinical, and clinical coursework followed by 1 year of compulsory rotating medical internship. Students undergo hands-on clinical rotations across general medicine, general surgery, obstetrics & gynaecology, paediatrics, and community health. Completing MBBS qualifies graduates to practice modern medicine, register with State Medical Councils or NMC, and pursue postgraduate specialisations (MD, MS, DNB) or super-speciality medical careers.',
@@ -23,10 +25,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'bds',
-    name: 'DENTAL (BDS)',
+    name: 'Dental (BDS)',
     bannerTitle: 'BDS (BACHELOR OF DENTAL SURGERY)',
     title: 'BDS (Bachelor of Dental Surgery)',
     image: '/images/domestic/bds.jpg',
+    badge: '/img/dropdown/bds.png',
+    tagline: 'Premier dental surgery degree for certified oral healthcare careers.',
     category: 'Medical & AYUSH',
     description:
       'BDS (Bachelor of Dental Surgery) is a 5-years undergraduate program and the only approved professional dental course in India. Students become doctors after the BDS course. It is a compulsory course for students aspiring to work as dentists at government or private hospitals. BDS mainly focuses on training and introducing students to the dental sciences and surgeries. The 5-year program involves 4 years of classroom education and 1 year of compulsory rotating internship. The degree is regulated by the Dental Council of India (DCI). The various BDS subjects taught in the program include Dental Histology, Oral Pathology, Oral Surgery, etc. It is necessary for the students to register themselves in the Dental Council of India which regulates the BDS course so that they become eligible to practice their profession after the completion of their degree.',
@@ -45,10 +49,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'bams',
-    name: 'AYURVEDA (BAMS)',
+    name: 'Ayurveda (BAMS)',
     bannerTitle: 'BAMS (BACHELOR OF AYURVEDIC MEDICINE AND SURGERY)',
     title: 'BAMS (Bachelor of Ayurvedic Medicine and Surgery)',
     image: '/images/domestic/bams.jpg',
+    badge: '/img/dropdown/ayurveda.png',
+    tagline: 'Vedic medical science combined with modern diagnostics & treatments.',
     category: 'Medical & AYUSH',
     description:
       'BAMS (Bachelor of Ayurvedic Medicine and Surgery) is a premier 5.5-year undergraduate program blending timeless Vedic medical science with modern anatomy, diagnostics, and pharmacology. Governed by the National Commission for Indian System of Medicine (NCISM) under the Ministry of AYUSH, the program consists of 4.5 years of academic study and 1 year of compulsory rotatory clinical internship. Students master Panchakarma therapy, herbology (Dravyaguna), surgical principles (Shalya Tantra), and internal medicine (Kayachikitsa). Graduates earn registration as Ayurvedic Medical Practitioners and are widely recruited in wellness centres, government dispensaries, and pharmaceutical research.',
@@ -67,10 +73,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'bsms',
-    name: 'SIDDHA (BSMS)',
+    name: 'Siddha (BSMS)',
     bannerTitle: 'BSMS (BACHELOR OF SIDDHA MEDICINE AND SURGERY)',
     title: 'BSMS (Bachelor of Siddha Medicine and Surgery)',
     image: '/images/domestic/bsms.jpg',
+    badge: '/img/dropdown/bsms.png',
+    tagline: 'Ancient holistic medicine focused on herbal therapies and Varmam science.',
     category: 'Medical & AYUSH',
     description:
       'BSMS (Bachelor of Siddha Medicine and Surgery) is an ancient, holistic medical education system native to South India that focuses on restoring equilibrium among the three vital humours (Vali, Azhal, and Iyyam). Governed by the National Commission for Indian System of Medicine (NCISM), this 5.5-year undergraduate course spans 4.5 years of didactic study and 1 year of mandatory rotatory clinical internship. Students receive specialized instruction in Gunapadam (Siddha pharmacology), Varmam therapy (vital point science), Kayakarpam (rejuvenation), and pathology. Registered Siddha physicians serve in government hospitals, research councils (CCRS), and private healthcare institutions.',
@@ -89,10 +97,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'bums',
-    name: 'UNANI (BUMS)',
+    name: 'Unani (BUMS)',
     bannerTitle: 'BUMS (BACHELOR OF UNANI MEDICINE AND SURGERY)',
     title: 'BUMS (Bachelor of Unani Medicine and Surgery)',
     image: '/images/domestic/bums.jpg',
+    badge: '/img/dropdown/unani.png',
+    tagline: 'Greco-Arabic medical doctrine with specialized regimental therapies.',
     category: 'Medical & AYUSH',
     description:
       'BUMS (Bachelor of Unani Medicine and Surgery), also known as Kamil-e-Tibb-wa-Jarahat, is a 5.5-year professional medical degree based on the Greco-Arabic medical doctrine established by Hippocrates and Ibn Sina (Avicenna). Regulated by NCISM under the Ministry of AYUSH, the degree includes 4.5 years of coursework and 1 year of compulsory hospital internship. Key therapies taught include Ilaj-bit-Tadbeer (regimental therapies like cupping and leeching), Ilaj-bil-Ghiza (dietotherapy), and Ilaj-bid-Dawa (pharmacotherapy). Registered Hakeems and Unani physicians enjoy significant demand in public health dispensaries and global herbal wellness clinics.',
@@ -111,10 +121,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'bhms',
-    name: 'HOMEOPATHY (BHMS)',
+    name: 'Homeopathy (BHMS)',
     bannerTitle: 'BHMS (BACHELOR OF HOMEOPATHIC MEDICINE AND SURGERY)',
     title: 'BHMS (Bachelor of Homeopathic Medicine and Surgery)',
     image: '/images/domestic/bhms.jpg',
+    badge: '/img/dropdown/homeopathy.png',
+    tagline: 'Holistic healing science focusing on individualized natural remedies.',
     category: 'Medical & AYUSH',
     description:
       'BHMS (Bachelor of Homeopathic Medicine and Surgery) is a 5.5-year medical degree rooted in the holistic principle of "Similia Similibus Curentur" (like cures like). The program is monitored by the National Commission for Homoeopathy (NCH) and entails 4.5 years of comprehensive medical science education paired with 1 year of hands-on rotating clinical internship. The syllabus encompasses human anatomy, pathology, forensic medicine, organon of medicine, and homoeopathic materia medica. Graduating doctors receive government licensing to prescribe individualized natural remedies and manage acute and chronic ailments in hospitals, clinics, and research institutions.',
@@ -133,10 +145,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'bvsc',
-    name: 'VETERINARY SCIENCE (BVSC)',
+    name: 'Veterinary Science (BVSC)',
     bannerTitle: 'BVSC & AH (BACHELOR OF VETERINARY SCIENCE & ANIMAL HUSBANDRY)',
     title: 'B.V.Sc & A.H. (Bachelor of Veterinary Science & Animal Husbandry)',
     image: '/images/domestic/bvsc.jpg',
+    badge: '/img/dropdown/veternary.png',
+    tagline: 'Comprehensive animal healthcare, veterinary surgery, and epidemiology.',
     category: 'Medical & AYUSH',
     description:
       'B.V.Sc & A.H. (Bachelor of Veterinary Science and Animal Husbandry) is a 5.5-year professional degree regulated by the Veterinary Council of India (VCI). The program includes 4.5 years of intensive clinical and surgical education coupled with a 1-year compulsory internship comprising clinical practice, livestock farm training, and veterinary ambulatory work. Students gain extensive proficiency in animal physiology, surgical intervention, veterinary radiology, herd epidemiology, and zoological medicine. Graduates enjoy rewarding careers as veterinary surgeons, livestock development officers, wildlife conservationists, and pharmaceutical specialists.',
@@ -155,10 +169,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'bnys',
-    name: 'YOGA & NATUROPATHY (BNYS)',
+    name: 'Yoga & Naturopathy (BNYS)',
     bannerTitle: 'BNYS (BACHELOR OF NATUROPATHY AND YOGIC SCIENCES)',
     title: 'BNYS (Bachelor of Naturopathy and Yogic Sciences)',
     image: '/images/domestic/bnys.jpg',
+    badge: '/img/dropdown/yoga.png',
+    tagline: 'Drugless therapies, clinical yogic science, and lifestyle medicine.',
     category: 'Healthcare & Technical',
     description:
       'BNYS (Bachelor of Naturopathy and Yogic Sciences) is a prestigious 5.5-year medical degree combining evidence-based non-invasive therapies with yogic postures, hydrotherapy, mud therapy, nutrition, and lifestyle medicine. Monitored under the Ministry of AYUSH, students spend 4.5 years studying human anatomy, biochemistry, clinical diagnostics, and natural therapeutic modalities, culminating in 1 year of compulsory rotating hospital internship. Graduates are titled Naturopathy Doctors and are licensed to operate lifestyle rehabilitation clinics, corporate wellness sanctuaries, and clinical wellness hospitals globally.',
@@ -177,10 +193,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'bpt',
-    name: 'PHYSIOTHERAPY (BPT)',
+    name: 'Physiotherapy (BPT)',
     bannerTitle: 'BPT (BACHELOR OF PHYSIOTHERAPY)',
     title: 'BPT (Bachelor of Physiotherapy)',
     image: '/images/domestic/bpt.jpg',
+    badge: '/img/dropdown/bpt.png',
+    tagline: 'Rehabilitation therapy, biomechanics, and specialized sports healthcare.',
     category: 'Healthcare & Technical',
     description:
       'BPT (Bachelor of Physiotherapy) is a 4.5-year healthcare degree recognized by the National Commission for Allied and Healthcare Professions (NCAHP). Comprising 4 years of classroom and clinical instruction plus 6 months of mandatory rotatory hospital internship, the course trains students in biomechanics, electrotherapy, exercise physiology, orthopedic rehabilitation, neurological mobility, and sports science. Physiotherapists play an indispensable role in patient recovery, intensive care unit mobilizations, athletic conditioning, and post-surgical rehabilitation across multispeciality hospitals and elite sporting federations.',
@@ -199,10 +217,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'pharmacy',
-    name: 'PHARMACY',
+    name: 'Pharmacy',
     bannerTitle: 'B.PHARM (BACHELOR OF PHARMACY)',
     title: 'B.Pharm (Bachelor of Pharmacy)',
     image: '/images/domestic/pharmacy.jpg',
+    badge: '/img/dropdown/pharmacy.png',
+    tagline: 'Medicinal chemistry, drug formulations, and licensed pharmacist careers.',
     category: 'Healthcare & Technical',
     description:
       'B.Pharm (Bachelor of Pharmacy) is a comprehensive 4-year (8-semester) professional degree regulated by the Pharmacy Council of India (PCI). The curriculum covers the entire pharmaceutical value chain, including medicinal chemistry, pharmaceutics, pharmacology, pharmacognosy, clinical drug trials, and pharmaceutical analysis. Students acquire practical laboratory expertise in drug formulation, synthetic medicine design, and quality assurance. Graduates are officially registered as Registered Pharmacists and hold lucrative career pathways across multinational pharmaceutical corporations, regulatory bodies, and healthcare chains.',
@@ -221,10 +241,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'allied-health-science',
-    name: 'ALLIED HEALTH SCIENCE',
+    name: 'Allied Health Science',
     bannerTitle: 'B.SC ALLIED HEALTH SCIENCES',
     title: 'B.Sc Allied Health Sciences (Cardiac, Dialysis, Radiology, MLT, OT & Anaesthesia)',
     image: '/images/domestic/allied-health-science.jpg',
+    badge: '/img/dropdown/ahs.png',
+    tagline: 'Critical diagnostic technology, radiology, dialysis, and OT support.',
     category: 'Healthcare & Technical',
     description:
       'B.Sc in Allied Health Sciences comprises specialized 3 to 4-year undergraduate programs regulated under the National Commission for Allied and Healthcare Professions (NCAHP). Offerings span critical disciplines such as Cardiac Technology, Medical Laboratory Technology (MLT), Radiology & Imaging, Dialysis Technology, Respiratory Therapy, and Operation Theatre & Anaesthesia Technology. Allied health professionals work directly alongside surgeons and critical care specialists, operating vital life-support systems, precision diagnostic instruments, and invasive monitoring equipment in tertiary care hospitals.',
@@ -243,10 +265,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'engineering',
-    name: 'ENGINEERING',
+    name: 'Engineering',
     bannerTitle: 'B.E. / B.TECH (BACHELOR OF ENGINEERING & TECHNOLOGY)',
     title: 'B.E. / B.Tech (Engineering & Technology)',
     image: '/images/domestic/engineering.jpg',
+    badge: '/img/dropdown/eng.png',
+    tagline: 'Premier B.E./B.Tech degrees across AI, Robotics, Software, and Core branches.',
     category: 'Healthcare & Technical',
     description:
       'B.E. / B.Tech is an intensive 4-year (8-semester) technical degree approved by the All India Council for Technical Education (AICTE). Covering premier branches like Computer Science & Engineering (AI, ML, Cybersecurity), Electronics & Communication, Mechanical, Robotics, Civil, and Electrical Engineering, the program synthesizes foundational mathematics and engineering sciences with industry capstones. Graduates drive modern innovation in software architecture, cloud platforms, autonomous systems, smart manufacturing, and global R&D labs with attractive campus placement records.',
@@ -265,10 +289,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'architecture',
-    name: 'ARCHITECTURE',
+    name: 'Architecture',
     bannerTitle: 'B.ARCH (BACHELOR OF ARCHITECTURE)',
     title: 'B.Arch (Bachelor of Architecture)',
     image: '/images/domestic/architecture.jpg',
+    badge: '/img/dropdown/archi.png',
+    tagline: 'Creative spatial design, sustainable engineering, and COA certification.',
     category: 'Healthcare & Technical',
     description:
       'B.Arch (Bachelor of Architecture) is a 5-year (10-semester) professional degree strictly regulated by the Council of Architecture (COA). The curriculum merges artistic spatial design, structural engineering, sustainable materials, computer-aided drafting (BIM), building acoustics, and urban climatology. Students spend substantial time in architectural design studios, site surveying, and complete 6 months to 1 year of practical architectural apprenticeship under licensed architects. Completion grants official registration with the COA to practice as a licensed Architect in India and globally.',
@@ -287,10 +313,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'marine',
-    name: 'MARINE',
+    name: 'Marine Studies',
     bannerTitle: 'MARINE ENGINEERING & NAUTICAL SCIENCE',
     title: 'Marine Engineering (B.E. Marine) & B.Sc Nautical Science',
     image: '/images/domestic/marine.jpg',
+    badge: '/img/dropdown/marine.png',
+    tagline: 'Maritime engineering, nautical science, and global merchant shipping.',
     category: 'Healthcare & Technical',
     description:
       'Marine Engineering and Nautical Science are specialized maritime degrees governed by the Directorate General of Shipping (DGS), Ministry of Ports, Shipping and Waterways. The program blends naval architecture, marine propulsion, high-voltage electrical machinery, celestial navigation, cargo handling, and international maritime law (STCW). Cadets undergo strict paramilitary regimentation, shipboard simulator training, and fire-fighting certifications followed by required sea time. Graduating officers join international merchant shipping fleets with tax-free compensation and accelerated global leadership ranks.',
@@ -309,10 +337,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'agriculture',
-    name: 'AGRICULTURE',
+    name: 'Agriculture',
     bannerTitle: 'B.SC (HONS) AGRICULTURE & HORTICULTURE',
     title: 'B.Sc (Hons) Agriculture / Horticulture',
     image: '/images/domestic/agriculture.jpg',
+    badge: '/img/dropdown/agree.png',
+    tagline: 'Agronomy, precision farming, biotechnology, and agri-business degrees.',
     category: 'Sciences & Entrance',
     description:
       'B.Sc (Hons) Agriculture is a comprehensive 4-year undergraduate program accredited by the Indian Council of Agricultural Research (ICAR). The syllabus encompasses agronomy, soil science, plant genetics, agricultural biotechnology, precision irrigation, crop protection, and agricultural economics. A key feature of the final year is the Rural Agricultural Work Experience (RAWE) and Agro-Industrial Attachment (AIA), where students work alongside farming communities and agri-business enterprises. Graduates step directly into banking (AFO), agribusiness, food corporations, and government research departments.',
@@ -331,10 +361,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'arts-science',
-    name: 'ARTS & SCIENCE',
+    name: 'Arts & Science',
     bannerTitle: 'ARTS, SCIENCE & COMMERCE (B.A., B.SC, B.COM, BBA, BCA)',
     title: 'Arts & Science (B.A., B.Sc, B.Com, BBA, BCA)',
     image: '/images/domestic/arts-science.jpg',
+    badge: '/img/dropdown/arts.png',
+    tagline: 'Foundation degrees across Commerce, IT, Humanities, and Pure Sciences.',
     category: 'Sciences & Entrance',
     description:
       'Arts & Science undergraduate programs provide comprehensive foundation degrees in Humanities, Pure Sciences, Commerce, Management, and Computing under the National Education Policy (NEP 2020) framework. Offerings include B.Com (Professional Accounting, FinTech), BBA, BCA, B.Sc (Data Science, Biotechnology, Physics, Mathematics), and B.A. (English, Economics, Psychology). These programs emphasize analytical thinking, multidisciplinary minors, project internships, and digital literacy, preparing students for competitive examinations (UPSC, Banking), corporate placements, and prestigious master’s degrees.',
@@ -353,10 +385,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'integrated-courses',
-    name: 'INTEGRATED COURSES',
+    name: 'Integrated Courses',
     bannerTitle: '5-YEAR INTEGRATED DUAL DEGREE PROGRAMS',
     title: 'Integrated Courses (Integrated M.Tech, M.Sc, MBA, Dual Degrees)',
     image: '/images/domestic/integrated-courses.jpg',
+    badge: '/img/dropdown/integarted-courses.png',
+    tagline: 'Streamlined 5-year dual degree programs combining Bachelor\'s and Master\'s.',
     category: 'Sciences & Entrance',
     description:
       'Integrated Courses are streamlined 5-year dual-degree programs that combine an undergraduate degree seamlessly with a master’s qualification without the requirement of writing a separate post-graduate entrance test. Prominent formats include Integrated M.Tech in Software Engineering / Data Science, Integrated M.Sc in Biotechnology / Physics, and Integrated MBA (BBA+MBA). Regulated by UGC and AICTE, these programs offer continuous research exposure, early semester industry projects, and save one full academic year for ambitious students targeting high-level corporate and research roles.',
@@ -375,10 +409,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'law',
-    name: 'LAW',
+    name: 'Law',
     bannerTitle: 'INTEGRATED LAW (B.A. LL.B / B.B.A. LL.B / B.COM LL.B)',
     title: 'Integrated Law (B.A. LL.B / B.B.A. LL.B / 3-Year LL.B)',
     image: '/images/domestic/law.jpg',
+    badge: '/img/dropdown/law.png',
+    tagline: 'Professional 5-year legal degree with moot court and courtroom advocacy.',
     category: 'Sciences & Entrance',
     description:
       'Integrated Law (B.A. LL.B / B.B.A. LL.B / B.Com LL.B) is a rigorous 5-year professional program recognized and monitored by the Bar Council of India (BCI). The curriculum combines foundational arts, business administration, or commerce coursework with exhaustive legal training in constitutional law, criminal jurisprudence, corporate governance, intellectual property, cyber law, and international arbitration. Students actively participate in national moot court competitions, legal aid clinics, and mandatory judicial internships. Graduates are entitled to appear for the All India Bar Examination (AIBE) to practice as licensed advocates.',
@@ -401,6 +437,8 @@ export const domesticStudiesList = [
     bannerTitle: 'NEET-UG (MEDICAL ENTRANCE COUNSELLING & COACHING)',
     title: 'NEET (National Eligibility cum Entrance Test) Guidance & Admissions',
     image: '/images/domestic/neet.jpg',
+    badge: '/img/dropdown/neet.png',
+    tagline: 'Strategic score mapping, cut-off predictions, and medical seat counselling.',
     category: 'Sciences & Entrance',
     description:
       'The National Eligibility cum Entrance Test (NEET-UG) is India’s sole and mandatory entrance gateway conducted by the National Testing Agency (NTA) for admission into MBBS, BDS, BAMS, BSMS, BUMS, BHMS, and B.V.Sc programs across all government, private, and deemed medical colleges. Sri Vaari provides expert mentorship encompassing cut-off predictions, institutional profiling, All India Quota (MCC) counselling, State Quota seat allocation strategies, and category reservation optimization. We guide students and parents through every critical documentation stage to secure the best medical seat within their score and budget.',
@@ -423,6 +461,8 @@ export const domesticStudiesList = [
     bannerTitle: 'JEE MAIN & JEE ADVANCED (ENGINEERING ENTRANCE ADMISSIONS)',
     title: 'JEE (Joint Entrance Examination) Guidance & Seat Matrix Counselling',
     image: '/images/domestic/jee.jpg',
+    badge: '/img/dropdown/jee.png',
+    tagline: 'JoSAA/CSAB choice-filling and top engineering college admissions advisory.',
     category: 'Sciences & Entrance',
     description:
       'The Joint Entrance Examination (JEE), comprising JEE Main and JEE Advanced, is India’s premier national engineering examination for entry into the Indian Institutes of Technology (IITs), National Institutes of Technology (NITs), IIITs, and premier government-funded technical institutions (GFTIs). Sri Vaari delivers dedicated guidance on score mapping, percentile analysis, JoSAA (Joint Seat Allocation Authority) counselling, CSAB special rounds, and state engineering counselling (TNEA/KEA). Our advisors assist students in pinpointing high-placement branches and securing top-tier engineering seats.',
@@ -441,10 +481,12 @@ export const domesticStudiesList = [
   },
   {
     slug: 'aptitude-test',
-    name: 'APTITUDE TEST',
+    name: 'Aptitude Test',
     bannerTitle: 'CAREER APTITUDE & PSYCHOMETRIC PROFILING ASSESSMENT',
     title: 'Aptitude Test & Scientific Career Assessment',
     image: '/images/domestic/aptitude-test.jpg',
+    badge: '/img/dropdown/apptitude.png',
+    tagline: 'Scientific psychometric testing to discover your optimal career pathway.',
     category: 'Sciences & Entrance',
     description:
       'The Sri Vaari Scientific Aptitude & Psychometric Assessment is an individualized diagnostic evaluation designed to accurately map a student’s natural cognitive strengths, logical reasoning, numerical aptitude, spatial visualization, and personality orientation to appropriate professional degrees. Administered under certified career counselors and educational psychologists, this 2 to 3-hour assessment eliminates confusion between medicine, engineering, management, and civil services, providing students and parents with a clear, unbiased roadmap for undergraduate stream selection.',

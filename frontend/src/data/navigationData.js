@@ -45,11 +45,6 @@ export const abroadStudiesMenu = [
       { name: 'GEORGIA', path: '/abroad-studies/georgia', flag: '/img/abroad/falgs/georgia.png' },
       { name: 'UZBEKISTAN', path: '/abroad-studies/uzbekistan', flag: '/img/abroad/falgs/uzbekistan.png' },
       { name: 'KAZAKHSTAN', path: '/abroad-studies/kazakhstan', flag: '/img/abroad/falgs/kazakhstan.png' },
-    ],
-  },
-  {
-    title: 'Popular Medical Hubs',
-    items: [
       { name: 'KYRGYZSTAN', path: '/abroad-studies/kyrgyzstan', flag: '/img/abroad/falgs/kyrgyzstan.png' },
       { name: 'TAJIKISTAN', path: '/abroad-studies/tajikistan', flag: '/img/abroad/falgs/tajikistan.png' },
       { name: 'PHILIPPINES', path: '/abroad-studies/philippines', flag: '/img/abroad/falgs/philippines.png' },
@@ -57,8 +52,7 @@ export const abroadStudiesMenu = [
   },
 ]
 
-export const aboutMenu = [
-  { name: 'GALLERY', path: '/gallery' },
+export const collegesMenu = [
+  { name: 'ENGINEERING', path: '/colleges?stream=engineering', icon: '/img/dropdown/eng.png' },
+  { name: 'MEDICAL', path: '/colleges?stream=medical', icon: '/img/dropdown/mbbs.png' },
 ]
-
-
