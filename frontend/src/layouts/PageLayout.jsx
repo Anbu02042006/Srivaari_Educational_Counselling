@@ -1,4 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom'
+import AdmissionsPopup from '../components/AdmissionsPopup'
 import EnquiryModal from '../components/EnquiryModal'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -36,8 +37,12 @@ function PageLayout() {
         initialCourse={enquiryContext?.course}
         initialLocation={enquiryContext?.location}
       />
+
+      {/* Sri Vaari Admissions 2026-27 Announcement Popup (temporarily disabled) */}
+      {/* <AdmissionsPopup /> */}
     </div>
   )
 }
 
 export default PageLayout
+
