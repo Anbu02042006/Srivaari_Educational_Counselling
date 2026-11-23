@@ -1,18 +1,13 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { X } from 'lucide-react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { useEnquiry } from '../context/EnquiryContext'
-import {
-  abroadStudiesMenu,
-  collegesMenu,
-  domesticStudiesMenu,
-} from '../data/navigationData'
 import Logo from './Logo'
 
 function MobileDrawer({ isOpen, onClose }) {
   const { openEnquiry } = useEnquiry()
-  const [mobileAccordion, setMobileAccordion] = useState(null) // 'domestic' | 'abroad' | 'colleges' | null
+  const [mobileAccordion, setMobileAccordion] = useState(null)
   const location = useLocation()
   const isHomePage = location.pathname === '/'
 
@@ -101,190 +96,39 @@ function MobileDrawer({ isOpen, onClose }) {
               <span>HOME</span>
             </NavLink>
 
-            {/* 2. DOMESTIC STUDIES (+ accordion button) */}
-            <div className="mobile-drawer__accordion-group mobile-drawer__accordion-group--split">
-              <div className="mobile-drawer__accordion-header-row">
-                <NavLink
-                  to="/domestic-studies"
-                  className={({ isActive }) =>
-                    `mobile-drawer__link mobile-drawer__link--split ${
-                      isActive || location.pathname.startsWith('/domestic-studies') ? 'mobile-drawer__link--active' : ''
-                    }`
-                  }
-                  onClick={onClose}
-                >
-                  <span>DOMESTIC STUDIES</span>
-                </NavLink>
-                <button
-                  type="button"
-                  className="mobile-drawer__accordion-toggle-btn"
-                  onClick={() => toggleAccordion('domestic')}
-                  aria-expanded={mobileAccordion === 'domestic'}
-                  aria-label="Toggle Domestic Studies courses"
-                >
-                  <span
-                    className={`mobile-drawer__accordion-toggle-symbol ${
-                      mobileAccordion === 'domestic' ? 'mobile-drawer__accordion-toggle-symbol--active' : ''
-                    }`}
-                    aria-hidden="true"
-                  >
-                    {mobileAccordion === 'domestic' ? '−' : '+'}
-                  </span>
-                </button>
-              </div>
+            {/* 2. DISTANCE MODE EDUCATION */}
+            <NavLink
+              to="/distance-education"
+              className={({ isActive }) =>
+                `mobile-drawer__link ${
+                  isActive || location.pathname.startsWith('/distance-education')
+                    ? 'mobile-drawer__link--active'
+                    : ''
+                }`
+              }
+              onClick={onClose}
+            >
+              <span>DISTANCE MODE EDUCATION</span>
+            </NavLink>
 
-              {mobileAccordion === 'domestic' && (
-                <div className="mobile-drawer__accordion-body">
-                  {domesticStudiesMenu.map((group, idx) => (
-                    <div key={idx} className="mobile-drawer__accordion-subgroup">
-                      <div className="mobile-drawer__subgroup-title">{group.title}</div>
-                      {group.items.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.path}
-                          className="mobile-drawer__subitem"
-                          onClick={onClose}
-                        >
-                          <img
-                            src={item.icon}
-                            alt=""
-                            className="mega-menu__icon-img"
-                            onError={(e) => {
-                              e.currentTarget.style.display = 'none'
-                            }}
-                          />
-                          <span>{item.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* 3. COURSES FOR 10TH, 11TH & 12TH */}
+            <NavLink
+              to="/school-courses"
+              className={({ isActive }) =>
+                `mobile-drawer__link ${
+                  isActive ||
+                  location.pathname.startsWith('/school-courses') ||
+                  location.pathname.startsWith('/courses-for-10th-11th-12th')
+                    ? 'mobile-drawer__link--active'
+                    : ''
+                }`
+              }
+              onClick={onClose}
+            >
+              <span>COURSES FOR 10TH, 11TH &amp; 12TH</span>
+            </NavLink>
 
-            {/* 3. ABROAD STUDIES (+ accordion button) */}
-            <div className="mobile-drawer__accordion-group mobile-drawer__accordion-group--split">
-              <div className="mobile-drawer__accordion-header-row">
-                <NavLink
-                  to="/abroad-studies"
-                  className={({ isActive }) =>
-                    `mobile-drawer__link mobile-drawer__link--split ${
-                      isActive || location.pathname.startsWith('/abroad-studies') ? 'mobile-drawer__link--active' : ''
-                    }`
-                  }
-                  onClick={onClose}
-                >
-                  <span>ABROAD STUDIES</span>
-                </NavLink>
-                <button
-                  type="button"
-                  className="mobile-drawer__accordion-toggle-btn"
-                  onClick={() => toggleAccordion('abroad')}
-                  aria-expanded={mobileAccordion === 'abroad'}
-                  aria-label="Toggle Abroad Studies destinations"
-                >
-                  <span
-                    className={`mobile-drawer__accordion-toggle-symbol ${
-                      mobileAccordion === 'abroad' ? 'mobile-drawer__accordion-toggle-symbol--active' : ''
-                    }`}
-                    aria-hidden="true"
-                  >
-                    {mobileAccordion === 'abroad' ? '−' : '+'}
-                  </span>
-                </button>
-              </div>
-
-              {mobileAccordion === 'abroad' && (
-                <div className="mobile-drawer__accordion-body">
-                  {abroadStudiesMenu.map((group, idx) => (
-                    <div key={idx} className="mobile-drawer__accordion-subgroup">
-                      <div className="mobile-drawer__subgroup-title">{group.title}</div>
-                      {group.items.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.path}
-                          className="mobile-drawer__subitem"
-                          onClick={onClose}
-                        >
-                          <img
-                            src={item.flag}
-                            alt=""
-                            className="mega-menu__flag-img"
-                            onError={(e) => {
-                              if (item.name === 'TAJIKISTAN' && !e.currentTarget.dataset.fallback) {
-                                e.currentTarget.dataset.fallback = 'true'
-                                e.currentTarget.src = 'https://flagcdn.com/w320/tj.png'
-                              } else {
-                                e.currentTarget.style.display = 'none'
-                              }
-                            }}
-                          />
-                          <span>{item.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* 4. COLLEGE & UNIVERSITIES (+ accordion button) */}
-            <div className="mobile-drawer__accordion-group mobile-drawer__accordion-group--split">
-              <div className="mobile-drawer__accordion-header-row">
-                <NavLink
-                  to="/colleges"
-                  className={({ isActive }) =>
-                    `mobile-drawer__link mobile-drawer__link--split ${
-                      isActive || location.pathname.startsWith('/colleges') ? 'mobile-drawer__link--active' : ''
-                    }`
-                  }
-                  onClick={onClose}
-                >
-                  <span>COLLEGE & UNIVERSITIES</span>
-                </NavLink>
-                <button
-                  type="button"
-                  className="mobile-drawer__accordion-toggle-btn"
-                  onClick={() => toggleAccordion('colleges')}
-                  aria-expanded={mobileAccordion === 'colleges'}
-                  aria-label="Toggle College & Universities filters"
-                >
-                  <span
-                    className={`mobile-drawer__accordion-toggle-symbol ${
-                      mobileAccordion === 'colleges' ? 'mobile-drawer__accordion-toggle-symbol--active' : ''
-                    }`}
-                    aria-hidden="true"
-                  >
-                    {mobileAccordion === 'colleges' ? '−' : '+'}
-                  </span>
-                </button>
-              </div>
-
-              {mobileAccordion === 'colleges' && (
-                <div className="mobile-drawer__accordion-body">
-                  <div className="mobile-drawer__accordion-subgroup">
-                    <div className="mobile-drawer__subgroup-title">Select Stream</div>
-                    {collegesMenu.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.path}
-                        className="mobile-drawer__subitem"
-                        onClick={onClose}
-                      >
-                        <img
-                          src={item.icon}
-                          alt={item.name}
-                          className="mega-menu__flag-img"
-                        />
-                        <span>{item.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* 5. ABOUT */}
+            {/* 4. ABOUT */}
             <NavLink
               to="/about"
               className={({ isActive }) =>
@@ -295,7 +139,7 @@ function MobileDrawer({ isOpen, onClose }) {
               <span>ABOUT</span>
             </NavLink>
 
-            {/* 6. CONTACT */}
+            {/* 5. CONTACT */}
             <NavLink
               to="/contact"
               className={({ isActive }) =>
@@ -306,7 +150,7 @@ function MobileDrawer({ isOpen, onClose }) {
               <span>CONTACT</span>
             </NavLink>
 
-            {/* 7. TERMS & CONDITIONS */}
+            {/* 6. TERMS & CONDITIONS */}
             <NavLink
               to="/terms-and-conditions"
               className={({ isActive }) =>

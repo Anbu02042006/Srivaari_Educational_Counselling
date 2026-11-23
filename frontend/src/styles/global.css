@@ -1193,19 +1193,19 @@ main {
 .nav__menu-item {
   color: #1e293b;
   font-family: var(--font-sans);
-  font-size: clamp(0.72rem, 0.85vw, 0.82rem);
+  font-size: clamp(0.67rem, 0.76vw, 0.82rem);
   font-weight: 750;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.015em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.48rem 0.65rem;
+  padding: 0.45rem clamp(0.32rem, 0.45vw, 0.62rem);
   border-radius: 6px;
   background: transparent;
   border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.25rem;
   white-space: nowrap;
   transition: all 0.18s ease;
 }
@@ -1838,7 +1838,7 @@ main {
   .nav__desktop-menu {
     display: flex;
     align-items: center;
-    gap: clamp(0.15rem, 0.7vw, 0.75rem);
+    gap: clamp(0.1rem, 0.35vw, 0.55rem);
     margin: 0 auto;
   }
 
@@ -2231,11 +2231,21 @@ main {
   background-image: url('/images/about-hero-bg.png');
 }
 
+.distance-page .page-hero {
+  background-image: url('/images/services-hero-bg.png');
+}
+
+.school-page .page-hero {
+  background-image: url('/images/domestic-hero-bg.png');
+}
+
 .about-page .page-hero::before,
 .colleges-page .page-hero::before,
 .services-page .page-hero::before,
 .contact-page .page-hero::before,
 .terms-page .page-hero::before,
+.distance-page .page-hero::before,
+.school-page .page-hero::before,
 .page-hero::before {
   content: '';
   position: absolute;
@@ -2251,6 +2261,8 @@ main {
 .services-hero__container,
 .gallery-hero__container,
 .contact-hero__container,
+.distance-hero__container,
+.school-hero__container,
 .page-hero .container {
   position: relative;
   z-index: 2;
@@ -2266,7 +2278,9 @@ main {
 .colleges-hero__eyebrow,
 .services-hero__eyebrow,
 .gallery-hero__eyebrow,
-.contact-hero__eyebrow {
+.contact-hero__eyebrow,
+.distance-hero__eyebrow,
+.school-hero__eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -2282,7 +2296,9 @@ main {
 .colleges-hero__eyebrow-line,
 .services-hero__eyebrow-line,
 .gallery-hero__eyebrow-line,
-.contact-hero__eyebrow-line {
+.contact-hero__eyebrow-line,
+.distance-hero__eyebrow-line,
+.school-hero__eyebrow-line {
   width: 24px;
   height: 2px;
   background-color: #3b82f6;
@@ -2293,7 +2309,9 @@ main {
 .colleges-hero__title,
 .services-hero__title,
 .gallery-hero__title,
-.contact-hero__title {
+.contact-hero__title,
+.distance-hero__title,
+.school-hero__title {
   text-align: left !important;
   margin: 0 0 0.85rem 0 !important;
   max-width: 38rem !important;
@@ -2310,7 +2328,9 @@ main {
 .colleges-hero__title .text-highlight,
 .services-hero__title .text-highlight,
 .gallery-hero__title .text-highlight,
-.contact-hero__title .text-highlight {
+.contact-hero__title .text-highlight,
+.distance-hero__title .text-highlight,
+.school-hero__title .text-highlight {
   color: #60a5fa !important;
 }
 
@@ -2318,7 +2338,9 @@ main {
 .colleges-hero__lead,
 .services-hero__lead,
 .gallery-hero__lead,
-.contact-hero__lead {
+.contact-hero__lead,
+.distance-hero__lead,
+.school-hero__lead {
   text-align: left !important;
   margin: 0 0 1.5rem 0 !important;
   max-width: 34rem !important;
@@ -2333,7 +2355,9 @@ main {
 .colleges-hero__features,
 .services-hero__features,
 .gallery-hero__features,
-.contact-hero__features {
+.contact-hero__features,
+.distance-hero__features,
+.school-hero__features {
   display: flex;
   align-items: center;
   gap: 0.85rem;
@@ -2344,7 +2368,9 @@ main {
 .colleges-hero__feature-item,
 .services-hero__feature-item,
 .gallery-hero__feature-item,
-.contact-hero__feature-item {
+.contact-hero__feature-item,
+.distance-hero__feature-item,
+.school-hero__feature-item {
   display: flex;
   align-items: center;
   gap: 0.55rem;
@@ -2354,7 +2380,9 @@ main {
 .colleges-hero__feature-icon,
 .services-hero__feature-icon,
 .gallery-hero__feature-icon,
-.contact-hero__feature-icon {
+.contact-hero__feature-icon,
+.distance-hero__feature-icon,
+.school-hero__feature-icon {
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -2371,7 +2399,9 @@ main {
 .colleges-hero__feature-text,
 .services-hero__feature-text,
 .gallery-hero__feature-text,
-.contact-hero__feature-text {
+.contact-hero__feature-text,
+.distance-hero__feature-text,
+.school-hero__feature-text {
   font-size: 0.78rem;
   font-weight: 600;
   line-height: 1.25;
@@ -2384,7 +2414,9 @@ main {
 .colleges-hero__feature-divider,
 .services-hero__feature-divider,
 .gallery-hero__feature-divider,
-.contact-hero__feature-divider {
+.contact-hero__feature-divider,
+.distance-hero__feature-divider,
+.school-hero__feature-divider {
   width: 1px;
   height: 26px;
   background: rgba(255, 255, 255, 0.2);
@@ -7494,6 +7526,8 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .services-hero__container,
   .gallery-hero__container,
   .contact-hero__container,
+  .distance-hero__container,
+  .school-hero__container,
   .page-hero .container {
     width: 100% !important;
     max-width: 100% !important;
@@ -7507,7 +7541,9 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .colleges-hero__eyebrow,
   .services-hero__eyebrow,
   .gallery-hero__eyebrow,
-  .contact-hero__eyebrow {
+  .contact-hero__eyebrow,
+  .distance-hero__eyebrow,
+  .school-hero__eyebrow {
     font-size: 0.72rem !important;
     margin-bottom: 0.45rem !important;
   }
@@ -7516,7 +7552,9 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .colleges-hero__title,
   .services-hero__title,
   .gallery-hero__title,
-  .contact-hero__title {
+  .contact-hero__title,
+  .distance-hero__title,
+  .school-hero__title {
     font-family: var(--font-display, var(--font-sans)) !important;
     font-size: clamp(1.35rem, 5.2vw, 1.85rem) !important;
     font-weight: 850 !important;
@@ -7531,7 +7569,9 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .colleges-hero__lead,
   .services-hero__lead,
   .gallery-hero__lead,
-  .contact-hero__lead {
+  .contact-hero__lead,
+  .distance-hero__lead,
+  .school-hero__lead {
     font-size: 0.86rem !important;
     line-height: 1.5 !important;
     margin-bottom: 1.15rem !important;
@@ -7542,7 +7582,9 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .colleges-hero__features,
   .services-hero__features,
   .gallery-hero__features,
-  .contact-hero__features {
+  .contact-hero__features,
+  .distance-hero__features,
+  .school-hero__features {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
@@ -7558,7 +7600,9 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .colleges-hero__feature-item,
   .services-hero__feature-item,
   .gallery-hero__feature-item,
-  .contact-hero__feature-item {
+  .contact-hero__feature-item,
+  .distance-hero__feature-item,
+  .school-hero__feature-item {
     display: flex !important;
     align-items: center !important;
     gap: 0.25rem !important;
@@ -7570,7 +7614,9 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .colleges-hero__feature-icon,
   .services-hero__feature-icon,
   .gallery-hero__feature-icon,
-  .contact-hero__feature-icon {
+  .contact-hero__feature-icon,
+  .distance-hero__feature-icon,
+  .school-hero__feature-icon {
     width: 26px !important;
     height: 26px !important;
     min-width: 26px !important;
@@ -7581,7 +7627,9 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .colleges-hero__feature-icon svg,
   .services-hero__feature-icon svg,
   .gallery-hero__feature-icon svg,
-  .contact-hero__feature-icon svg {
+  .contact-hero__feature-icon svg,
+  .distance-hero__feature-icon svg,
+  .school-hero__feature-icon svg {
     width: 13px !important;
     height: 13px !important;
   }
@@ -7590,7 +7638,9 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .colleges-hero__feature-text,
   .services-hero__feature-text,
   .gallery-hero__feature-text,
-  .contact-hero__feature-text {
+  .contact-hero__feature-text,
+  .distance-hero__feature-text,
+  .school-hero__feature-text {
     font-size: clamp(0.58rem, 2.1vw, 0.72rem) !important;
     line-height: 1.2 !important;
     font-weight: 600 !important;
@@ -7604,7 +7654,9 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   .colleges-hero__feature-divider,
   .services-hero__feature-divider,
   .gallery-hero__feature-divider,
-  .contact-hero__feature-divider {
+  .contact-hero__feature-divider,
+  .distance-hero__feature-divider,
+  .school-hero__feature-divider {
     height: 20px !important;
     margin: 0 0.1rem !important;
     opacity: 0.35 !important;
@@ -8250,21 +8302,22 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.85rem;
   border-bottom: 1px solid #e2e8f0;
 }
 
 .colleges-stream-section__title-group {
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 0.85rem;
   width: 100%;
 }
 
 .colleges-stream-section__text-col {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  justify-content: center;
+  gap: 0.25rem;
   flex: 1;
   min-width: 0;
 }
@@ -8277,8 +8330,12 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-top: 0.15rem;
+  margin-top: 0;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.colleges-stream-section__icon-wrap svg {
+  display: block;
 }
 
 .colleges-stream-section__icon-wrap--engineering {
@@ -8303,26 +8360,39 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
 }
 
 .colleges-stream-section__title {
-  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
   font-weight: 800;
   color: #0f172a;
   letter-spacing: -0.02em;
-  line-height: 1.15;
+  line-height: 1.25;
   margin: 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.65rem;
+}
+
+.colleges-stream-section__title > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
 }
 
 .colleges-stream-section__count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 0.78rem;
   font-weight: 700;
-  padding: 0.25rem 0.65rem;
+  line-height: 1;
+  padding: 0.28rem 0.65rem;
   border-radius: 9999px;
   background: #eff6ff;
   color: #1d4ed8;
   border: 1px solid #bfdbfe;
+  letter-spacing: normal;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 .colleges-stream-section__count-badge--medical {
@@ -10892,8 +10962,20 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
 
 /* --- 1. Page Route Transition --- */
 .page-route-transition {
-  animation: pageFadeSlideIn 0.45s var(--ease-out-expo) forwards;
+  animation: pageSmoothEntrance 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   will-change: opacity, transform;
+}
+
+@keyframes pageSmoothEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pageFadeSlideIn {
@@ -11013,7 +11095,8 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
 
 /* Stagger Groups (Grids) */
 .reveal-stagger-group .reveal-stagger-item,
-.study-cards-grid .study-card-item {
+.study-cards-grid .study-card-item,
+.distance-cards-row .distance-course-card {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.8s var(--ease-out-expo),
@@ -11025,8 +11108,10 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
 
 .reveal-stagger-group.is-revealed .reveal-stagger-item,
 .study-cards-grid.is-revealed .study-card-item,
+.distance-cards-row.is-revealed .distance-course-card,
 .reveal-stagger-item.is-revealed,
-.study-card-item.is-revealed {
+.study-card-item.is-revealed,
+.distance-course-card.is-revealed {
   opacity: 1;
   transform: translateY(0);
 }
@@ -11202,30 +11287,79 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
 
 /* College Cards */
 .college-grid-card {
-  transition: transform 0.28s var(--ease-out-expo),
-    box-shadow 0.28s var(--ease-out-expo),
-    border-color 0.22s ease,
-    background 0.22s ease !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease,
+    background 0.25s ease !important;
   cursor: pointer !important;
 }
 
 .college-grid-card:hover {
-  transform: translateY(-5px) !important;
-  box-shadow: 0 14px 28px -4px rgba(37, 99, 235, 0.16), 0 4px 10px -2px rgba(15, 23, 42, 0.06) !important;
-  border-color: #93c5fd !important;
+  transform: translateY(-7px) scale(1.015) !important;
+  box-shadow: 0 18px 36px -4px rgba(37, 99, 235, 0.2), 0 6px 14px -2px rgba(15, 23, 42, 0.08) !important;
+  border-color: #60a5fa !important;
   background: linear-gradient(145deg, #f0f7ff 0%, #dbeafe 100%) !important;
 }
 
 .college-grid-card__circle {
-  transition: transform 0.32s var(--ease-out-expo),
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.25s ease,
     box-shadow 0.25s ease !important;
 }
 
 .college-grid-card:hover .college-grid-card__circle {
-  transform: scale(1.05) !important;
-  border-color: #3b82f6 !important;
-  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.16) !important;
+  transform: scale(1.08) rotate(1deg) !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.22) !important;
+}
+
+/* Hero Feature Badges Micro-Interactions */
+.school-hero__feature-item,
+.distance-hero__feature-item,
+.colleges-hero__feature-item {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  border-radius: 8px;
+}
+
+.school-hero__feature-item:hover,
+.distance-hero__feature-item:hover,
+.colleges-hero__feature-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.school-hero__feature-icon,
+.distance-hero__feature-icon,
+.colleges-hero__feature-icon {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.school-hero__feature-item:hover .school-hero__feature-icon,
+.distance-hero__feature-item:hover .distance-hero__feature-icon,
+.colleges-hero__feature-item:hover .colleges-hero__feature-icon {
+  transform: scale(1.18);
+}
+
+/* Stream section title group hover interaction */
+.colleges-stream-section__icon-wrap {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.colleges-stream-section__header:hover .colleges-stream-section__icon-wrap {
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.15);
+}
+
+.colleges-stream-section__count-badge {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.colleges-stream-section__header:hover .colleges-stream-section__count-badge {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.2);
 }
 
 /* Course Cards */
@@ -12174,5 +12308,1648 @@ a.site-footer__contact-link:hover .site-footer__contact-icon svg {
     transform: none !important;
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   DISTANCE MODE EDUCATION & SCHOOL COURSES (10TH, 11TH, 12TH) PAGES
+   ========================================================================== */
+.distance-page,
+.school-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.distance-page .colleges-content-section,
+.school-page .colleges-content-section {
+  padding-top: clamp(2rem, 3.5vw, 3rem);
+}
+
+.distance-section,
+.school-section {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.distance-section__header,
+.school-section__header {
+  margin-bottom: clamp(1.75rem, 3.5vw, 2.5rem);
+}
+
+.distance-section__header--center,
+.school-section__header--center {
+  text-align: center;
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.distance-section__title,
+.school-section__title {
+  font-size: clamp(1.6rem, 2.8vw, 2.35rem);
+  font-weight: 850;
+  color: #0a2558;
+  letter-spacing: -0.02em;
+  margin: 0.35rem 0 0.6rem;
+  line-height: 1.22;
+}
+
+.distance-section__desc,
+.school-section__desc {
+  font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+  color: #475569;
+  line-height: 1.6;
+  max-width: 48rem;
+  margin: 0;
+}
+
+/* Distance Mode Education Tabs */
+.distance-tabs {
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.distance-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(10, 37, 88, 0.04);
+}
+
+.distance-tab-btn:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0a2558;
+}
+
+.distance-tab-btn--active {
+  background: linear-gradient(135deg, #0a2558 0%, #0066ff 100%) !important;
+  color: #ffffff !important;
+  border-color: #0a2558 !important;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.28) !important;
+}
+
+.distance-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.9rem 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(10, 37, 88, 0.03);
+}
+
+.distance-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+}
+
+.distance-meta-label {
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+}
+
+.distance-meta-val {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.distance-meta-divider {
+  width: 1px;
+  height: 1.2rem;
+  background-color: #e2e8f0;
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .distance-meta-divider {
+    display: block;
+  }
+}
+
+/* Distance Courses Grid */
+.distance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 1.5rem;
+}
+
+.distance-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  box-shadow: 0 2px 10px rgba(10, 37, 88, 0.03);
+}
+
+.distance-card:hover {
+  transform: translateY(-4px);
+  border-color: #93c5fd;
+  box-shadow: 0 12px 28px -6px rgba(10, 37, 88, 0.1);
+}
+
+.distance-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.distance-card__icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #0066ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.distance-card__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0a2558;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.distance-card__desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0 0 1.25rem 0;
+  flex: 1;
+}
+
+.distance-card__specs {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.distance-card__specs-label {
+  font-size: 0.74rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  color: #64748b;
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.distance-card__specs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.distance-card__spec-badge {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  background-color: #dbeafe;
+  padding: 0.22rem 0.55rem;
+  border-radius: 6px;
+}
+
+.distance-card__footer {
+  margin-top: auto;
+}
+
+.distance-card__btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.88rem;
+  padding: 0.65rem 1rem;
+}
+
+/* Partner Universities Section */
+.distance-varsities-section {
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
+}
+
+.distance-varsities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+  gap: 1.35rem;
+}
+
+.distance-uni-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.distance-uni-card:hover {
+  background: #ffffff;
+  border-color: #93c5fd;
+  box-shadow: 0 8px 24px -4px rgba(10, 37, 88, 0.08);
+}
+
+.distance-uni-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.distance-uni-card__icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: #0a2558;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.distance-uni-card__name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.distance-uni-card__loc {
+  font-size: 0.78rem;
+  color: #64748b;
+  display: block;
+  font-weight: 600;
+}
+
+.distance-uni-card__accreditation {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #059669;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.distance-uni-check {
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.distance-uni-card__highlight {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 0.85rem 0;
+}
+
+.distance-uni-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.distance-uni-card__tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+.distance-uni-card__btn {
+  margin-top: auto;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.84rem;
+  border-radius: 8px;
+}
+
+/* Distance Benefits Grid */
+.distance-benefits-section {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.distance-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 1.35rem;
+}
+
+.distance-benefit-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.35rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.distance-benefit-card:hover {
+  border-color: #0066ff;
+  box-shadow: 0 8px 20px -4px rgba(10, 37, 88, 0.08);
+}
+
+.distance-benefit-card__number {
+  font-size: 1.25rem;
+  font-weight: 850;
+  color: #0066ff;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-sans);
+}
+
+.distance-benefit-card__title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0a2558;
+  margin: 0 0 0.5rem 0;
+}
+
+.distance-benefit-card__text {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Call to Action Card */
+.distance-cta-section,
+.school-cta-section {
+  margin-top: 1rem;
+}
+
+.distance-cta-card,
+.school-cta-card {
+  background: linear-gradient(135deg, #071c42 0%, #0a2558 50%, #004ecc 100%);
+  border-radius: 18px;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem);
+  color: #ffffff;
+  box-shadow: 0 16px 40px -8px rgba(10, 37, 88, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.distance-cta-card__badge,
+.school-cta-card__badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #93c5fd;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.85rem;
+}
+
+.distance-cta-card__title,
+.school-cta-card__title {
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-weight: 850;
+  line-height: 1.25;
+  color: #ffffff;
+  margin: 0 0 0.85rem 0;
+  max-width: 48rem;
+}
+
+.distance-cta-card__lead,
+.school-cta-card__lead {
+  font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+  color: #e2e8f0;
+  line-height: 1.6;
+  max-width: 45rem;
+  margin: 0 0 1.75rem 0;
+}
+
+.distance-cta-card__actions,
+.school-cta-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.distance-cta-card__btn,
+.school-cta-card__btn {
+  background: #ffffff !important;
+  color: #0a2558 !important;
+  font-weight: 800 !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+}
+
+.distance-cta-card__btn:hover,
+.school-cta-card__btn:hover {
+  background: #f8fafc !important;
+  transform: translateY(-2px);
+}
+
+.distance-cta-card__phone-btn,
+.school-cta-card__phone-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.distance-cta-card__phone-btn:hover,
+.school-cta-card__phone-btn:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   COURSES FOR 10TH, 11TH & 12TH SPECIFIC STYLES
+   ========================================================================== */
+.school-nav-pills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.school-nav-pill {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(10, 37, 88, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.school-nav-pill:hover {
+  border-color: #0066ff;
+  background-color: #f8fafc;
+}
+
+.school-nav-pill--active {
+  background: #eff6ff !important;
+  border-color: #0066ff !important;
+  box-shadow: 0 4px 16px rgba(0, 102, 255, 0.18) !important;
+  position: relative;
+}
+
+.school-nav-pill__badge {
+  font-size: 0.72rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  color: #0066ff;
+  letter-spacing: 0.04em;
+}
+
+.school-nav-pill__title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0a2558;
+  line-height: 1.3;
+}
+
+/* Spotlight Card for Active School Program */
+.school-spotlight-card {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: 0 4px 20px rgba(10, 37, 88, 0.05);
+  margin-bottom: 3rem;
+}
+
+.school-spotlight-card__header {
+  margin-bottom: 1.75rem;
+}
+
+.school-spotlight-card__badge-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.school-badge-primary {
+  background: #0a2558;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 750;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+
+.school-badge-subtle {
+  background: #dbeafe;
+  color: #1e3a8a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.school-spotlight-card__title {
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  font-weight: 850;
+  color: #0a2558;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.school-spotlight-card__desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.school-spotlight-card__meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.school-meta-box__label {
+  font-size: 0.72rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  color: #64748b;
+  display: block;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.04em;
+}
+
+.school-meta-box__val {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Streams Grid in 12th */
+.school-streams-section {
+  margin-bottom: 1.75rem;
+}
+
+.school-streams-section__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0a2558;
+  margin: 0 0 0.85rem 0;
+}
+
+.school-streams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1rem;
+}
+
+.school-stream-item {
+  background: #f1f5f9;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.school-stream-item__name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0a2558;
+  margin: 0;
+}
+
+.school-stream-item__subjects,
+.school-stream-item__target {
+  font-size: 0.82rem;
+  color: #334155;
+  line-height: 1.45;
+}
+
+/* Subjects block */
+.school-subjects-block {
+  margin-bottom: 1.75rem;
+}
+
+.school-subjects-block__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0a2558;
+  margin: 0 0 0.75rem 0;
+}
+
+.school-subjects-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.school-subject-tag {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+}
+
+/* Features List */
+.school-features-block {
+  margin-bottom: 2rem;
+}
+
+.school-features-block__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0a2558;
+  margin: 0 0 0.85rem 0;
+}
+
+.school-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.school-features-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.school-features-icon {
+  color: #059669;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.school-spotlight-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.school-spotlight-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.92rem;
+}
+
+.school-spotlight-phone-btn {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* 4-Step Flow */
+.school-steps-section {
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.school-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 1.25rem;
+}
+
+.school-step-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(10, 37, 88, 0.03);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.school-step-card:hover {
+  border-color: #0066ff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -4px rgba(10, 37, 88, 0.08);
+}
+
+.school-step-card__num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #0066ff;
+  line-height: 1;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-sans);
+}
+
+.school-step-card__title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0a2558;
+  margin: 0 0 0.5rem 0;
+}
+
+.school-step-card__desc {
+  font-size: 0.86rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* School Benefits Section */
+.school-benefits-section {
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
+  margin-bottom: 2rem;
+}
+
+.school-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1.35rem;
+}
+
+.school-benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.school-benefit-card__icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.school-benefit-card__body {
+  flex: 1;
+}
+
+.school-benefit-card__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0a2558;
+  margin: 0 0 0.4rem 0;
+}
+
+.school-benefit-card__text {
+  font-size: 0.86rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   DISTANCE COLLEGE COURSES (5 PROGRAM CARDS) PAGE
+   ========================================================================== */
+.distance-courses-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.distance-courses-hero {
+  padding-top: clamp(1.25rem, 2.5vw, 2rem);
+  padding-bottom: 0.5rem;
+}
+
+.distance-courses-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.distance-courses-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+.distance-courses-breadcrumb__link {
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.distance-courses-breadcrumb__link:hover {
+  color: #0066ff;
+  text-decoration: underline;
+}
+
+.distance-courses-breadcrumb__separator {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.distance-courses-breadcrumb__current {
+  color: #0a2558;
+  font-weight: 700;
+}
+
+.distance-courses-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 0.45rem 0.95rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+}
+
+.distance-courses-back-btn:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #0066ff;
+  transform: translateX(-2px);
+}
+
+.distance-courses-accred-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+}
+
+.distance-courses-header-card__body {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.distance-courses-header-card__logo-wrap {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  border: 2px solid #e2e8f0;
+  padding: 0.4rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.distance-courses-header-card__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.distance-courses-header-card__info {
+  flex: 1;
+  min-width: min(100%, 320px);
+}
+
+.distance-courses-header-card__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.distance-courses-header-card__tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0066ff;
+}
+
+.distance-courses-header-card__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.82rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.distance-courses-header-card__title {
+  font-size: clamp(1.4rem, 2.5vw, 1.95rem);
+  font-weight: 800;
+  color: #0a2558;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 0.4rem 0;
+}
+
+.distance-courses-header-card__desc {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 48rem;
+}
+
+.distance-courses-header-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.distance-courses-enquire-btn,
+.distance-courses-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.15rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+/* University Switcher Tabs */
+.distance-univ-switcher {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.distance-univ-switcher__label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.distance-univ-switcher__pills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.distance-univ-switcher__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.distance-univ-switcher__pill:hover {
+  border-color: #0066ff;
+  color: #0066ff;
+  background: #eff6ff;
+}
+
+.distance-univ-switcher__pill--active {
+  background: #0066ff;
+  color: #ffffff;
+  border-color: #0066ff;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.25);
+}
+
+.distance-univ-switcher__pill--active:hover {
+  background: #0052cc;
+  color: #ffffff;
+}
+
+/* Slogan Banner */
+.distance-slogan-section {
+  padding: clamp(1rem, 2vw, 1.75rem) 0;
+}
+
+.distance-slogan-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.distance-slogan-line {
+  flex: 1;
+  max-width: 14rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d97706);
+  position: relative;
+  transition: max-width 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.distance-slogan-banner.is-revealed .distance-slogan-line--left {
+  animation: sloganLineExpandLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.distance-slogan-banner.is-revealed .distance-slogan-line--right {
+  animation: sloganLineExpandRight 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+@keyframes sloganLineExpandLeft {
+  from {
+    max-width: 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+  to {
+    max-width: 14rem;
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: right center;
+  }
+}
+
+@keyframes sloganLineExpandRight {
+  from {
+    max-width: 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+  to {
+    max-width: 14rem;
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+
+.distance-slogan-line--right {
+  background: linear-gradient(90deg, #d97706, transparent);
+}
+
+.distance-slogan-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  background: #d97706;
+  transition: transform 0.4s ease;
+}
+
+.distance-slogan-banner:hover .distance-slogan-line::after {
+  transform: translateY(-50%) rotate(225deg) scale(1.2);
+}
+
+.distance-slogan-line--left::after {
+  right: 0;
+}
+
+.distance-slogan-line--right::after {
+  left: 0;
+}
+
+.distance-slogan-title {
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  font-weight: 800;
+  color: #0a2558;
+  letter-spacing: -0.01em;
+  margin: 0;
+  white-space: nowrap;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.distance-slogan-banner:hover .distance-slogan-title {
+  transform: scale(1.02);
+}
+
+/* Course Cards Grid & Cards */
+.distance-course-cards-section {
+  padding-top: 0.5rem;
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.distance-cards-row {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.distance-cards-row--top {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 1.5rem;
+}
+
+.distance-cards-row--bottom {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.distance-course-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease;
+}
+
+.distance-course-card:hover {
+  transform: translateY(-7px) scale(1.012);
+}
+
+/* Color theme borders & Hover Glow */
+.distance-course-card--green {
+  border: 2px solid #0d5c3a;
+}
+
+.distance-course-card--green:hover {
+  box-shadow: 0 20px 38px -6px rgba(13, 92, 58, 0.24), 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.distance-course-card--red {
+  border: 2px solid #881337;
+}
+
+.distance-course-card--red:hover {
+  box-shadow: 0 20px 38px -6px rgba(136, 19, 55, 0.24), 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.distance-course-card--blue {
+  border: 2px solid #0369a1;
+}
+
+.distance-course-card--blue:hover {
+  box-shadow: 0 20px 38px -6px rgba(3, 105, 161, 0.24), 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.distance-course-card--purple {
+  border: 2px solid #6b21a8;
+}
+
+.distance-course-card--purple:hover {
+  box-shadow: 0 20px 38px -6px rgba(107, 33, 168, 0.24), 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.distance-course-card--teal {
+  border: 2px solid #0f766e;
+}
+
+.distance-course-card--teal:hover {
+  box-shadow: 0 20px 38px -6px rgba(15, 118, 110, 0.24), 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Header Pill */
+.distance-course-card__header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.35rem 1.4rem 0.35rem 0.4rem;
+  border-radius: 9999px;
+  margin: 1rem 1rem 0.6rem 1rem;
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.distance-course-card:hover .distance-course-card__header-pill {
+  transform: translateX(3px);
+}
+
+.distance-course-card--green .distance-course-card__header-pill {
+  background: linear-gradient(135deg, #0d5c3a 0%, #15803d 100%);
+  box-shadow: 0 4px 12px rgba(13, 92, 58, 0.25);
+}
+
+.distance-course-card--red .distance-course-card__header-pill {
+  background: linear-gradient(135deg, #881337 0%, #991b1b 100%);
+  box-shadow: 0 4px 12px rgba(136, 19, 55, 0.25);
+}
+
+.distance-course-card--blue .distance-course-card__header-pill {
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+  box-shadow: 0 4px 12px rgba(3, 105, 161, 0.25);
+}
+
+.distance-course-card--purple .distance-course-card__header-pill {
+  background: linear-gradient(135deg, #6b21a8 0%, #7e22ce 100%);
+  box-shadow: 0 4px 12px rgba(107, 33, 168, 0.25);
+}
+
+.distance-course-card--teal .distance-course-card__header-pill {
+  background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+}
+
+.distance-course-card__icon-badge {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.distance-course-card:hover .distance-course-card__icon-badge {
+  transform: rotate(-10deg) scale(1.08);
+}
+
+.distance-course-card__cap-icon {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.distance-course-card:hover .distance-course-card__cap-icon {
+  transform: scale(1.15);
+}
+
+.distance-course-card__pill-title {
+  font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Card Body */
+.distance-course-card__body {
+  padding: 0.5rem 1.35rem 1.35rem 1.35rem;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.distance-course-card__columns-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.distance-course-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.distance-course-card__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e293b;
+  padding: 0.22rem 0.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.distance-course-card__item:hover {
+  background: #f1f5f9;
+  transform: translateX(6px);
+}
+
+.distance-course-card--green .distance-course-card__item:hover {
+  color: #0d5c3a;
+  background: #f0fdf4;
+}
+
+.distance-course-card--red .distance-course-card__item:hover {
+  color: #881337;
+  background: #fef2f2;
+}
+
+.distance-course-card--blue .distance-course-card__item:hover {
+  color: #0369a1;
+  background: #f0f9ff;
+}
+
+.distance-course-card--purple .distance-course-card__item:hover {
+  color: #6b21a8;
+  background: #faf5ff;
+}
+
+.distance-course-card--teal .distance-course-card__item:hover {
+  color: #0f766e;
+  background: #f0fdfa;
+}
+
+.distance-course-card__bullet {
+  font-size: 1.15rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.distance-course-card__item:hover .distance-course-card__bullet {
+  transform: scale(1.35);
+}
+
+.distance-course-card--green .distance-course-card__bullet {
+  color: #0d5c3a;
+}
+
+.distance-course-card--red .distance-course-card__bullet {
+  color: #881337;
+}
+
+.distance-course-card--blue .distance-course-card__bullet {
+  color: #0369a1;
+}
+
+.distance-course-card--purple .distance-course-card__bullet {
+  color: #6b21a8;
+}
+
+.distance-course-card--teal .distance-course-card__bullet {
+  color: #0f766e;
+}
+
+.distance-course-card__name {
+  line-height: 1.35;
+}
+
+/* Watermark illustration with smooth float on hover */
+.distance-course-card__watermark {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.25rem;
+  pointer-events: none;
+  opacity: 0.08;
+  z-index: 1;
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.distance-course-card:hover .distance-course-card__watermark {
+  opacity: 0.18;
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.distance-course-card--green .distance-course-card__watermark {
+  color: #0d5c3a;
+}
+
+.distance-course-card--red .distance-course-card__watermark {
+  color: #881337;
+}
+
+.distance-course-card--blue .distance-course-card__watermark {
+  color: #0369a1;
+}
+
+.distance-course-card--purple .distance-course-card__watermark {
+  color: #6b21a8;
+}
+
+.distance-course-card--teal .distance-course-card__watermark {
+  color: #0f766e;
+}
+
+/* Bottom CTA section */
+.distance-courses-cta-section {
+  padding-top: 1rem;
+}
+
+.distance-courses-cta-card {
+  background: linear-gradient(135deg, #0a2558 0%, #0044aa 100%);
+  border-radius: 20px;
+  padding: clamp(2rem, 4vw, 3rem);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(10, 37, 88, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.distance-courses-cta-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.distance-courses-cta-card__content {
+  position: relative;
+  z-index: 2;
+  max-width: 52rem;
+}
+
+.distance-courses-cta-card__badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  margin-bottom: 0.85rem;
+}
+
+.distance-courses-cta-card__title {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0 0 0.85rem 0;
+}
+
+.distance-courses-cta-card__desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+}
+
+.distance-courses-cta-card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.distance-courses-cta-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #e0f2fe;
+}
+
+.distance-courses-cta-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.distance-courses-cta-btn {
+  background: #ffffff !important;
+  color: #0a2558 !important;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.distance-courses-cta-btn:hover {
+  background: #f1f5f9 !important;
+  transform: translateY(-2px);
+}
+
+.distance-courses-cta-phone {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.distance-courses-cta-phone:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .distance-cards-row--top,
+  .distance-cards-row--bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .distance-course-card__columns-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .distance-courses-header-card__actions {
+    width: 100%;
+  }
+
+  .distance-courses-enquire-btn,
+  .distance-courses-call-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .distance-slogan-line {
+    display: none;
   }
 }

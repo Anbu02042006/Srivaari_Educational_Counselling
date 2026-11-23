@@ -80,8 +80,8 @@ function EnquiryForm({ onSuccess }) {
           <Link className="button button--primary" to="/">
             <span>Back to Home</span>
           </Link>
-          <Link className="button button--secondary" to="/colleges">
-            <span>Explore Colleges</span>
+          <Link className="button button--secondary" to="/distance-education">
+            <span>Distance Education</span>
             <ChevronRight size={16} aria-hidden="true" />
           </Link>
         </div>

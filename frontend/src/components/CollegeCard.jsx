@@ -4,9 +4,25 @@ function CollegeCard({
   name,
   image,
   className = '',
+  onClick,
 }) {
   return (
-    <article className={`college-grid-card ${className}`.trim()}>
+    <article
+      className={`college-grid-card ${onClick ? 'college-grid-card--interactive' : ''} ${className}`.trim()}
+      onClick={onClick}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={
+        onClick
+          ? (e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                onClick(e)
+              }
+            }
+          : undefined
+      }
+    >
       {/* Circle Logo Frame */}
       <div className="college-grid-card__circle-wrap">
         <div className="college-grid-card__circle">

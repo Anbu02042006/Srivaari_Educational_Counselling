@@ -50,9 +50,8 @@ function Footer() {
           <h3 className="site-footer__heading">Explore</h3>
           <ul className="site-footer__nav-list">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/domestic-studies">Domestic Studies</Link></li>
-            <li><Link to="/abroad-studies">Abroad Studies</Link></li>
-            <li><Link to="/colleges">Colleges &amp; Universities</Link></li>
+            <li><Link to="/distance-education">Distance Mode Education</Link></li>
+            <li><Link to="/school-courses">Courses for 10th, 11th &amp; 12th</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/terms-and-conditions">Terms &amp; Conditions</Link></li>

@@ -34,9 +34,9 @@ function NotFoundPage() {
               <Home size={17} aria-hidden="true" />
               <span>Back to Home</span>
             </Link>
-            <Link className="button button--secondary" to="/colleges">
-              <Compass size={17} aria-hidden="true" />
-              <span>Explore Colleges</span>
+            <Link className="button button--secondary" to="/distance-education">
+              <GraduationCap size={17} aria-hidden="true" />
+              <span>Distance Education</span>
             </Link>
           </div>
 
@@ -47,13 +47,13 @@ function NotFoundPage() {
                 <Sparkles size={16} aria-hidden="true" />
                 <span>About Us</span>
               </Link>
-              <Link to="/domestic-studies" className="not-found-link-item">
-                <Compass size={16} aria-hidden="true" />
-                <span>Domestic Studies</span>
-              </Link>
-              <Link to="/colleges" className="not-found-link-item">
+              <Link to="/distance-education" className="not-found-link-item">
                 <GraduationCap size={16} aria-hidden="true" />
-                <span>Colleges</span>
+                <span>Distance Education</span>
+              </Link>
+              <Link to="/school-courses" className="not-found-link-item">
+                <Compass size={16} aria-hidden="true" />
+                <span>10th, 11th &amp; 12th</span>
               </Link>
               <Link to="/contact" className="not-found-link-item">
                 <PhoneCall size={16} aria-hidden="true" />

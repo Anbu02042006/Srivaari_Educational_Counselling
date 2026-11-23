@@ -18,7 +18,7 @@ export default function useScrollReveal(dependencies = []) {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) {
       document
-        .querySelectorAll('.reveal-on-scroll, .reveal-fade-up, .reveal-scale-in, .reveal-stagger-group')
+        .querySelectorAll('.reveal-on-scroll, .reveal-fade-up, .reveal-scale-in, .reveal-stagger-group, .distance-cards-row')
         .forEach((el) => {
           el.classList.add('is-revealed')
         })
@@ -31,10 +31,14 @@ export default function useScrollReveal(dependencies = []) {
           const target = entry.target
 
           // If this is a staggered group, apply sequential delays to its direct child items
-          if (target.classList.contains('reveal-stagger-group') || target.classList.contains('study-cards-grid')) {
-            const items = target.querySelectorAll('.reveal-stagger-item, .study-card-item')
+          if (
+            target.classList.contains('reveal-stagger-group') ||
+            target.classList.contains('study-cards-grid') ||
+            target.classList.contains('distance-cards-row')
+          ) {
+            const items = target.querySelectorAll('.reveal-stagger-item, .study-card-item, .distance-course-card')
             items.forEach((item, index) => {
-              const delay = Math.min(index * 115, 950) // Calm, graceful stagger wave
+              const delay = Math.min(index * 95, 800) // Crisp, graceful stagger wave
               item.style.transitionDelay = `${delay}ms`
               requestAnimationFrame(() => {
                 item.classList.add('is-revealed')
@@ -53,13 +57,13 @@ export default function useScrollReveal(dependencies = []) {
 
     const observer = new IntersectionObserver(observerCallback, {
       root: null,
-      rootMargin: '0px 0px -30px 0px', // Trigger slightly before hitting viewport bottom
-      threshold: 0.08,
+      rootMargin: '0px 0px -20px 0px', // Trigger smoothly as it enters viewport
+      threshold: 0.05,
     })
 
     const attachElements = () => {
       const targets = document.querySelectorAll(
-        '.reveal-on-scroll:not(.is-revealed), .reveal-fade-up:not(.is-revealed), .reveal-scale-in:not(.is-revealed), .reveal-stagger-group:not(.is-revealed), .study-cards-grid:not(.is-revealed)'
+        '.reveal-on-scroll:not(.is-revealed), .reveal-fade-up:not(.is-revealed), .reveal-scale-in:not(.is-revealed), .reveal-stagger-group:not(.is-revealed), .study-cards-grid:not(.is-revealed), .distance-cards-row:not(.is-revealed)'
       )
       targets.forEach((el) => observer.observe(el))
     }
