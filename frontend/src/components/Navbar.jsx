@@ -121,7 +121,7 @@ function Navbar() {
               HOME
             </NavLink>
 
-            {/* 2. DISTANCE MODE EDUCATION */}
+            {/* 2. COLLEGES */}
             <NavLink
               to="/distance-education"
               className={({ isActive }) =>
@@ -132,7 +132,7 @@ function Navbar() {
               }
               onClick={() => setActiveDropdown(null)}
             >
-              <span>DISTANCE MODE EDUCATION</span>
+              <span>COLLEGES</span>
             </NavLink>
 
             {/* 3. COURSES FOR 10TH, 11TH & 12TH */}
@@ -211,7 +211,7 @@ function Navbar() {
               onClick={() => setActiveDropdown(null)}
             >
               <GraduationCap size={15} className="nav__mobile-subbar-icon" aria-hidden="true" />
-              <span>Distance</span>
+              <span>Colleges</span>
             </NavLink>
 
             <NavLink

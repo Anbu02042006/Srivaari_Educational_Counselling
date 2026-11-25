@@ -96,31 +96,29 @@ function MobileDrawer({ isOpen, onClose }) {
               <span>HOME</span>
             </NavLink>
 
-            {/* 2. DISTANCE MODE EDUCATION */}
+            {/* 2. COLLEGES */}
             <NavLink
               to="/distance-education"
               className={({ isActive }) =>
-                `mobile-drawer__link ${
-                  isActive || location.pathname.startsWith('/distance-education')
-                    ? 'mobile-drawer__link--active'
-                    : ''
+                `mobile-drawer__link ${isActive || location.pathname.startsWith('/distance-education')
+                  ? 'mobile-drawer__link--active'
+                  : ''
                 }`
               }
               onClick={onClose}
             >
-              <span>DISTANCE MODE EDUCATION</span>
+              <span>COLLEGES</span>
             </NavLink>
 
             {/* 3. COURSES FOR 10TH, 11TH & 12TH */}
             <NavLink
               to="/school-courses"
               className={({ isActive }) =>
-                `mobile-drawer__link ${
-                  isActive ||
+                `mobile-drawer__link ${isActive ||
                   location.pathname.startsWith('/school-courses') ||
                   location.pathname.startsWith('/courses-for-10th-11th-12th')
-                    ? 'mobile-drawer__link--active'
-                    : ''
+                  ? 'mobile-drawer__link--active'
+                  : ''
                 }`
               }
               onClick={onClose}
